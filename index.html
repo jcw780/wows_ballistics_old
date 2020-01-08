@@ -363,8 +363,13 @@
 				for(var j=0; j<numAngles; j++){
 					chartData.detDist[j].push( instance.postPenData().get(i+j*instance.getImpactSize()+
 						Module.postPenDataIndex.x.value  *instance.getPostPenSize()));
+					console.log("nf", i+j*instance.getImpactSize()+
+						Module.postPenDataIndex.x.value  *instance.getPostPenSize());
+					
 					chartData.detDistF[j].push(instance.postPenData().get(i+j*instance.getImpactSize()+
 						Module.postPenDataIndex.xwf.value*instance.getPostPenSize()));
+					console.log("wf", i+j*instance.getImpactSize()+
+						Module.postPenDataIndex.xwf.value*instance.getPostPenSize());
 				}
 			}
 			console.log(Module.postPenDataIndex.xwf.value*instance.getPostPenSize());
