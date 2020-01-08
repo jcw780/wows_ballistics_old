@@ -357,7 +357,7 @@
 			for(var i=0; i<instance.getImpactSize(); i++){
 				chartData.labels.push(          instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.distance.value ));
 				chartData.effectivePen.push(    instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.ePenHN.value));
-				chartData.angleBelt.push(       instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactAHD.value));
+				chartData.angleBelt.push(   -1* instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactAHD.value));
 				chartData.effectivePenDeck.push(instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.ePenDN.value));
 				chartData.angleDeck.push(       instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactADD.value));
 
