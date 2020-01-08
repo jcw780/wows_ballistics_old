@@ -352,6 +352,7 @@
 				chartData.detDist.push( []);
 				chartData.detDistF.push([]);
 			}
+			instance.printPostPen();
 
 			for(var i=0; i<instance.getImpactSize(); i++){
 				chartData.labels.push(          instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.distance.value ));
