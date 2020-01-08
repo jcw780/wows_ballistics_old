@@ -358,7 +358,7 @@
 				chartData.effectivePen.push(    instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.ePenHN.value));
 				chartData.angleBelt.push(       instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactAHD.value));
 				chartData.effectivePenDeck.push(instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.ePenDN.value));
-				chartData.angleBelt.push(       instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactADD.value));
+				chartData.angleDeck.push(       instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactADD.value));
 
 				for(var j=0; j<numAngles; j++){
 					chartData.detDist[j].push( instance.postPenData().get(i+j*instance.getImpactSize()+
@@ -367,6 +367,8 @@
 						Module.postPenDataIndex.xwf.value*instance.getPostPenSize()));
 				}
 			}
+			console.log(Module.postPenDataIndex.xwf.value*instance.getPostPenSize());
+			console.log(Module.postPenDataIndex.x.value  *instance.getPostPenSize());
 			console.log(chartData);
 			setChart(chartData);
 
