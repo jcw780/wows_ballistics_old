@@ -6,26 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-	<script>
-		function handleLoad(e) {
-			console.log('Loaded import: ' + e.target.href);
-		}
-		function handleError(e) {
-			console.log('Error loading import: ' + e.target.href);
-		}
-	</script>
-	<link rel="import" onload="handleLoad(event)" onerror="handleError(event)" href="css.html">
-	<link rel="import" onload="handleLoad(event)" onerror="handleError(event)" href="js.html">
-	<link rel="import" onload="handleLoad(event)" onerror="handleError(event)" href="bootstrap_defaults.html.html">
-
     <title>World of Warships Overpen Calculator</title>
-	
-
 	</head>
 	<body>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<script>
+			function handleLoad(e) {
+				console.log('Loaded import: ' + e.target.href);
+			}
+			function handleError(e) {
+				console.log('Error loading import: ' + e.target.href);
+			}
+		</script>
+		<link rel="import" onload="handleLoad(event)" onerror="handleError(event)" href="css.html">
+		<link rel="import" onload="handleLoad(event)" onerror="handleError(event)" href="js.html">
+		<link rel="import" onload="handleLoad(event)" onerror="handleError(event)" href="bootstrap_defaults.html.html">
+		
 		<h1>World of Warships Overpen Calculator</h1>
 		<style>
 			table, th, td, tr {
