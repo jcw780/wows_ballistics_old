@@ -496,6 +496,13 @@
 		$(document).ready(function(){
 			generateVersion();
 		})
+
+		var Module = {
+			onRuntimeInitialized: function() {
+				console.log("Compile Successful");
+				jQCall();
+			}
+		};
     </script>
     <script src="shellWasm.js"></script>
 	</body>
