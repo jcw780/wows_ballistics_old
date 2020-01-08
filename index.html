@@ -325,31 +325,17 @@
 			for(var i=0; i<numAngles; i++){
 				v_angles[i] = document.getElementById("angle" + i).value;
 			}
-			$.ajax({
-				method: "GET",
-				url: "/api/chart/data/",
-				data: { 
-					mv: v_mv,
-					caliber: v_caliber,
-					krupp: v_krupp,
-					mass: v_mass,
-					normal: v_normal,
-					cD: v_cD,
-					threshold: v_threshold,
-					fusetime: v_fusetime,
-					armor: v_armor,
-					angle0: v_angles[0], angle1: v_angles[1], angle2: v_angles[2], angle3: v_angles[3],
-					angle4: v_angles[4], angle5: v_angles[5], angle6: v_angles[6], angle7: v_angles[7],
-				},
-				success: function(response){
-					//console.log(response)
-					setChart(response)
-				},
-				error: function(error_data){
-					console.log("error")
-					console.log(error_data)
-				}
-			});
+
+			var instance = new Module.shell(v_mv, v_caliber, v_krupp, v_mass, v_normal, v_cD, v_threshold, v_fusetime);
+			//console.log(instance);
+			instance.calcImpact();
+			instance.printImpact();
+			console.log("ran");
+			instance.calcPostPen(100, v_angles);
+			console.log("ran");
+			instance.printPostPen();
+			//instance.delete();
+			
 		}
 		
 		var impactCharts = []
@@ -509,9 +495,8 @@
 
 		$(document).ready(function(){
 			generateVersion();
-			jQCall();
 		})
     </script>
-    
+    <script src="shellWasm.js"></script>
 	</body>
 </html>
