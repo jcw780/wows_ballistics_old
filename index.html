@@ -322,10 +322,10 @@
 			var v_fusetime  = parseFloat(document.getElementById("fusetime" ).value);
 			var v_armor     = parseFloat(document.getElementById("armor"    ).value);
 
-			console.log(v_mv)
+			//console.log(v_mv)
 			
 			for(var i=0; i<numAngles; i++){
-				v_angles[i] = document.getElementById("angle" + i).value;
+				v_angles[i] = parseFloat(document.getElementById("angle" + i).value);
 			}
 
 			var instance = new Module.shell(v_mv, v_caliber, v_krupp, v_mass, v_normal, v_cD, v_threshold, v_fusetime);
