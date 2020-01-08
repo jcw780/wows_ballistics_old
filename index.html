@@ -49,17 +49,17 @@
 					<p>Type:<select id=type    onchange="onChangeType('type')"></select></p>
 					<p>Ship:<select id=ship    onchange="onChangeShip('ship')"></select></p>
 					<p>Artillery:<select id=shell   onchange="onChangeShell('shell')"></select></p>
-					<button onclick="onSubmitPredefined()">Apply</button>
+					<!--<button onclick="onSubmitPredefined()">Apply</button>-->
 				</td>
 				<td>
-					<p>Muzzle Velocity : <input type="number" step="any" min="0" id="mv" value="780"> m/s </p>
-					<p>Caliber         : <input type="number" step="any" min="0" id="caliber" value=".460"> m </p>
-					<p>Krupp           : <input type="number" step="any" min="0" id="krupp" value="2574"> </p>
-					<p>Mass (kg)       : <input type="number" step="any" min="0" id="mass" value="1460"> kg </p>
-					<p>Normalization   : <input type="number" step="any" min="0" id="normal" value="6"> ° </p>
-					<p>Drag Coefficient: <input type="number" step="any" min="0" id="cD" value=".292"> </p>
-					<p>Threshold       : <input type="number" step="any" min="0" id="threshold" value="77"> mm </p>
-					<p>Fusetime        : <input type="number" step="any" min="0" id="fusetime" value=".033"> s </p>
+					<p>Muzzle Velocity : <input type="number" step="any" min="0" id="mv" value="841"> m/s </p>
+					<p>Caliber         : <input type="number" step="any" min="0" id="caliber" value=".152"> m </p>
+					<p>Krupp           : <input type="number" step="any" min="0" id="krupp" value="2609"> </p>
+					<p>Mass (kg)       : <input type="number" step="any" min="0" id="mass" value="50.8"> kg </p>
+					<p>Normalization   : <input type="number" step="any" min="0" id="normal" value="8.5"> ° </p>
+					<p>Drag Coefficient: <input type="number" step="any" min="0" id="cD" value=".3297"> </p>
+					<p>Threshold       : <input type="number" step="any" min="0" id="threshold" value="25"> mm </p>
+					<p>Fusetime        : <input type="number" step="any" min="0" id="fusetime" value=".025"> s </p>
 				</td>
 			</tr>
 		</table>
@@ -193,6 +193,7 @@
 		}
 		function onChangeShell(shellID){
 			shellValue = document.getElementById(shellID).value;
+			onSubmitPredefined();
 		}
 
 		function onSubmitPredefined(){
@@ -539,7 +540,6 @@
 
 		$(document).ready(function(){
 			generateVersion();
-			onSubmitPredefined();
 		})
 
 		var Module = {
