@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <title>World of Warships Overpen Calculator</title>
+	
+	<script> 
+		$(function(){
+		  $("#includedContent0").load("css.html");
+		  $("#includedContent1").load("js.html"); 
+		  $("#includedContent2").load("bootstrap_defaults.html"); 
+		});
+	</script>
+	<div id="includedContent0"></div>
+	<div id="includedContent1"></div>
+	<div id="includedContent2"></div>
+
+	</head>
+	<body>
+		<h1>World of Warships Overpen Calculator</h1>
+		<style>
+			table, th, td, tr {
+			  border: 20px solid white;
+			}
+		</style>
+		<table>
+			<tr>
+				<td>
+					<h2>Predefined Shells</h2>
+				</td>
+				<td>
+
+					<h2>Shell Characteristics</h2>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Version: <select id=version onchange="onChangeVersion('version')"></select></p>
+					<p>Nation:<select id=nation  onchange="onChangeNation('nation')"></select></p>
+					<p>Type:<select id=type    onchange="onChangeType('type')"></select></p>
+					<p>Ship:<select id=ship    onchange="onChangeShip('ship')"></select></p>
+					<p>Artillery:<select id=shell   onchange="onChangeShell('shell')"></select></p>
+					<button onclick="onSubmitPredefined()">Apply</button>
+				</td>
+				<td>
+					<p>Muzzle Velocity : <input type="number" step="any" min="0" id="mv" value="780"> m/s </p>
+					<p>Caliber         : <input type="number" step="any" min="0" id="caliber" value=".460"> m </p>
+					<p>Krupp           : <input type="number" step="any" min="0" id="krupp" value="2574"> </p>
+					<p>Mass (kg)       : <input type="number" step="any" min="0" id="mass" value="1460"> kg </p>
+					<p>Normalization   : <input type="number" step="any" min="0" id="normal" value="6"> ° </p>
+					<p>Drag Coefficient: <input type="number" step="any" min="0" id="cD" value=".292"> </p>
+					<p>Threshold       : <input type="number" step="any" min="0" id="threshold" value="77"> mm </p>
+					<p>Fusetime        : <input type="number" step="any" min="0" id="fusetime" value=".033"> s </p>
+				</td>
+			</tr>
+		</table>
+		<h2>Target Characteristics</h2>
+		Targeted Armor (mm)  : <input type="number" id="armor" value="70">
+		Ship Width (m) : <input type="number" id="width" value="18">
+		<p></p>
+		Lateral Angle 0      : <input type="number" step="any" id="angle0" value="0"> °
+		Lateral Angle 1      : <input type="number" step="any" id="angle1" value="5"> °
+		Lateral Angle 2      : <input type="number" step="any" id="angle2" value="10"> °
+		Lateral Angle 3      : <input type="number" step="any" id="angle3" value="15"> °
+		<p></p>
+		Lateral Angle 4      : <input type="number" step="any" id="angle4" value="20"> °
+		Lateral Angle 5      : <input type="number" step="any" id="angle5" value="25"> °
+		Lateral Angle 6      : <input type="number" step="any" id="angle6" value="30"> °
+		Lateral Angle 7      : <input type="number" step="any" id="angle7" value="35"> °
+
+		<button onclick="jQCall()"; >Calculate</button>
+		
+		<script>
+		var versionValue;
+		var nationValue;
+		var typeValue;
+		var shipValue;
+		var shellValue; 
+		var typeData; 
+		function generateVersion(){
+			console.log("Generating version")
+			$.ajax({
+				url: "static/data/versions.json",
+				type: "GET",
+				dataType: "json",
+				success: function (data) {
+					document.getElementById("version").innerHTML = '';
+					var i;
+					for(i=0; i<data.length; i++){
+						document.getElementById("version").innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+					}
+
+					onChangeVersion("version");
+				},
+				error: function(response){
+					console.log("Generating version failed")
+					console.log(response);
+					console.log(response['status'])
+					console.log(response.statusCode())
+					//console.log(b);
+					//console.log(c);
+				}
+			})
+		}
+		function onChangeVersion(versionID){
+			versionValue = document.getElementById(versionID).value;
+			generateNation("nation");
+		}
+
+		function generateNation(nationID){
+			$.ajax({
+				url: "static/data/" + versionValue + "/nations.json",
+				type: "GET",
+				dataType: "json",
+				success: function (data) {
+					document.getElementById(nationID).innerHTML = '';
+					var i;
+					for(i=0; i<data.length; i++){
+						document.getElementById(nationID).innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+					}
+					onChangeNation(nationID);
+				}
+			})
+		}
+		function onChangeNation(nationID){
+			nationValue = document.getElementById(nationID).value;
+			generateType('type');
+		}
+
+		function generateType(typeID){
+			$.ajax({
+				url: "static/data/" + versionValue + "/" + nationValue + "/shiptypes.json",
+				type: "GET",
+				dataType: "json",
+				success: function (data) {
+					document.getElementById(typeID).innerHTML = '';
+					var i;
+					for(i=0; i<data.length; i++){
+						document.getElementById(typeID).innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+					}
+					onChangeType(typeID);
+				}
+			})
+		}
+		function onChangeType(typeID){
+			typeValue = document.getElementById(typeID).value;
+			generateShip('ship')
+		}
+
+		function generateShip(shipID){
+			$.ajax({
+				url: "static/data/" + versionValue + "/" + nationValue + "/" + nationValue + "_" + typeValue + ".json",
+				type: "GET",
+				dataType: "json",
+				success: function (data) {
+					typeData = data;
+					document.getElementById(shipID).innerHTML = '';
+					var sorted = []
+					for(var ship in data){
+						sorted.push(ship);
+					}
+					sorted.sort(function(a, b){return typeData[a]['Tier'] - typeData[b]['Tier']});
+					for(var ship of sorted){
+						document.getElementById(shipID).innerHTML += "<option value=" + ship + ">" + "Tier " + typeData[ship]['Tier'] + " " + ship + "</option>"
+					}
+					onChangeShip(shipID);
+				}
+			})
+		}
+		function onChangeShip(shipID){
+			shipValue = document.getElementById(shipID).value;
+			generateShell('shell');
+		}
+
+		function generateShell(shellID){
+			selector = document.getElementById(shellID);
+			selector.innerHTML = '';
+			for(var shell in typeData[shipValue]){
+				if(shell.includes('Artillery')){
+					selector.innerHTML += "<option value=" + shell + ">" + shell + "</option>"
+				}
+			}
+			onChangeShell(shellID);
+		}
+		function onChangeShell(shellID){
+			shellValue = document.getElementById(shellID).value;
+		}
+
+		function onSubmitPredefined(){
+			targetShell = typeData[shipValue][shellValue]['AP']
+			document.getElementById("mv").value      = targetShell["bulletSpeed"];
+			document.getElementById("caliber").value = targetShell["bulletDiametr"];
+			document.getElementById("krupp").value = targetShell["bulletKrupp"];
+			document.getElementById("mass").value = targetShell["bulletMass"];
+			document.getElementById("cD").value = targetShell["bulletAirDrag"];
+			document.getElementById("threshold").value = targetShell["bulletDetonatorThreshold"];
+			document.getElementById("fusetime").value = targetShell["bulletDetonator"];
+			
+			var caliber = document.getElementById("caliber").value;
+			if (caliber <= 0.13) {
+				document.getElementById("normal").value = 10.;
+			} else if (caliber <= 0.152) {
+				document.getElementById("normal").value = 8.5;
+			} else if (caliber <= 0.22) {
+				document.getElementById("normal").value = 7.;
+			} else {
+				document.getElementById("normal").value = 6.;
+			}
+		}
+		</script>
+
+		<script>
+			function hideFunction(target, button) {
+				var x = document.getElementById(target);
+				var b = document.getElementById(button);
+				//console.log(b)
+				if (x.style.display === "none") {
+					x.style.display = "block";
+					b.innerText = "Hide";
+				} else {
+					x.style.display = "none";
+					b.innerText = "Show";
+				}
+			}
+		</script>
+		<h2>Graphs</h2>
+		<h3>At Impact <button onclick="hideFunction('impactCharts', 'impactChartToggle')" id=impactChartToggle>Hide</button> </h3>
+		<div class="container-fluid" id=impactCharts>
+			<h4>Horizontal Penetration <button onclick="hideFunction('penChart0', 'pC0')" id=pC0>Hide</button> </h4>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="penChart0" width="1000" height="300"></canvas>
+				</div>	
+			</div>
+
+			<h4>Deck Penetration <button onclick="hideFunction('penChart1', 'pC1')" id=pC1>Hide</button> </h4>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="penChart1" width="1000" height="300"></canvas>
+				</div>	
+			</div>
+		</div>
+
+		<h3>Post Penetration <button onclick="hideFunction('postPenCharts', 'postPenChartToggle')" id=postPenChartToggle>Hide</button> </h3>
+		<div class="container-fluid" id=postPenCharts>
+			<h4 id="A0">Lateral Angle (0)</h4>
+			<button onclick="hideFunction('postPen0', 'post0')" id=post0>Hide</button>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="postPen0" width="1000" height="300"></canvas>
+				</div>
+			</div>
+			<h4 id="A1">Lateral Angle (1)</h4>
+			<button onclick="hideFunction('postPen1', 'post1')" id=post1>Hide</button>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="postPen1" width="1000" height="300"></canvas>
+				</div>
+			</div>
+			<h4 id="A2">Lateral Angle (2)</h4>
+			<button onclick="hideFunction('postPen2', 'post2')" id=post2>Hide</button>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="postPen2" width="1000" height="300"></canvas>
+				</div>
+			</div>
+			<h4 id="A3">Lateral Angle (3)</h3>
+			<button onclick="hideFunction('postPen3', 'post3')" id=post3>Hide</button>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="postPen3" width="1000" height="300"></canvas>
+				</div>
+			</div>
+			<h4 id="A4">Lateral Angle (4)</h3>
+			<button onclick="hideFunction('postPen4', 'post4')" id=post4>Hide</button>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="postPen4" width="1000" height="300"></canvas>
+				</div>
+			</div>
+			<h4 id="A5">Lateral Angle 5</h4>
+			<button onclick="hideFunction('postPen5', 'post5')" id=post5>Hide</button>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="postPen5" width="1000" height="300"></canvas>
+				</div>
+			</div>
+			<h4 id="A6">Lateral Angle 6</h4>
+			<button onclick="hideFunction('postPen6', 'post6')" id=post6>Hide</button>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="postPen6" width="1000" height="300"></canvas>
+				</div>
+			</div>
+			<h4 id="A7">Lateral Angle 7</h3>
+			<button onclick="hideFunction('postPen7', 'post7')" id=post7>Hide</button>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="postPen7" width="1000" height="300"></canvas>
+				</div>
+			</div>
+		</div>
+    
+    <script>
+		var v_angles = [];
+		var numAngles = 8;
+		function jQCall(){
+			var v_mv = document.getElementById("mv").value;
+			var v_caliber = document.getElementById("caliber").value;
+			var v_krupp = document.getElementById("krupp").value;
+			var v_mass = document.getElementById("mass").value;
+			var v_normal = document.getElementById("normal").value;
+			var v_cD = document.getElementById("cD").value;
+			var v_threshold = document.getElementById("threshold").value;
+			var v_fusetime = document.getElementById("fusetime").value;
+			var v_armor = document.getElementById("armor").value;
+			
+			for(var i=0; i<numAngles; i++){
+				v_angles[i] = document.getElementById("angle" + i).value;
+			}
+			$.ajax({
+				method: "GET",
+				url: "/api/chart/data/",
+				data: { 
+					mv: v_mv,
+					caliber: v_caliber,
+					krupp: v_krupp,
+					mass: v_mass,
+					normal: v_normal,
+					cD: v_cD,
+					threshold: v_threshold,
+					fusetime: v_fusetime,
+					armor: v_armor,
+					angle0: v_angles[0], angle1: v_angles[1], angle2: v_angles[2], angle3: v_angles[3],
+					angle4: v_angles[4], angle5: v_angles[5], angle6: v_angles[6], angle7: v_angles[7],
+				},
+				success: function(response){
+					//console.log(response)
+					setChart(response)
+				},
+				error: function(error_data){
+					console.log("error")
+					console.log(error_data)
+				}
+			});
+		}
+		
+		var impactCharts = []
+		var postCharts = []		
+		function setChart(response){
+			var xStepSize = 2500
+			//Set Impact
+			if(impactCharts[0]){
+				impactCharts[0].destroy();
+			}
+			impactCharts[0] = new Chart(document.getElementById("penChart0"), {
+				type: 'scatter',
+				data: {
+					datasets: [
+						{
+							data: generatePoints(response.labels, response.effectivePen, false),
+							label: "Effective Penetration (mm)", yAxisID: "Penetration",
+							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
+							data: generatePoints(response.labels, response.angleBelt, true),
+							label: "Impact Angle (°)", yAxisID: "Angle",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						}
+					]
+				},
+				options: {
+					scales: {
+						xAxes: [{
+							ticks:{
+								min: 0, stepSize: xStepSize
+							}
+						}],
+						yAxes: [{
+							id: "Penetration", postition: "left",
+							ticks: {
+								stepSize: 100
+							}
+						},{
+							id: "Angle", position: "right"
+						}
+						]
+					}
+				}
+			});
+
+			if(impactCharts[1]){
+				impactCharts[1].destroy();
+			}
+			impactCharts[1] = new Chart(document.getElementById("penChart1"), {
+				type: 'scatter',
+				data: {
+					datasets: [
+						{
+							data: generatePoints(response.labels, response.effectivePenDeck, false),
+							label: "Effective Deck Penetration (mm)", yAxisID: "Penetration",
+							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
+							data: generatePoints(response.labels, response.angleDeck, true),
+							label: "Deck Impact Angle (°)", yAxisID: "Angle",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						}
+					]
+				},
+				options: {
+					scales: {
+						xAxes: [{
+							ticks:{
+								min: 0, stepSize: xStepSize
+							}
+						}],
+						yAxes: [{
+							id: "Penetration", postition: "left",
+							ticks: {
+								stepSize: 100
+							}
+						},{
+							id: "Angle", position: "right"
+						}
+						]
+					}
+				}
+			});
+			
+			//Set PostPen
+			var width = document.getElementById("width").value
+			var i;
+			for(i=0; i<numAngles; i++){
+				var str = "Lateral Angle " + i + ": " + v_angles[i];
+				document.getElementById("A" + i).textContent = str;
+				if(postCharts[i]){
+					postCharts[i].destroy()
+				}
+				postCharts[i] = new Chart(document.getElementById("postPen" + i), {
+					type: 'scatter',
+					data: {
+						datasets: [
+							{
+								data: generatePoints(response.labels, response.detDistF[i], false),
+								label: "Detonation Distance with Fusing (m)",
+								borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							},{
+								data: generatePoints(response.labels, response.detDist[i], false),
+								label: "Detonation Distance (m)",
+								borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							}, {
+								data: generatePoints(response.labels, width, false),
+								label: "Ship Width (m)",
+								borderColor: "#ff0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							}
+						]
+					},
+					options: {
+						scales: {
+							xAxes: [{
+								ticks:{
+									min: 0, stepSize: xStepSize
+								}
+							}],
+						}
+					}
+				});
+			}
+		}
+
+		function generatePoints(xArr, yArr, keepNegative){
+			var data = [];
+			if(Array.isArray(yArr)){
+				if(xArr.length != yArr.length){
+					console.log("Mismatched array lengths");
+				}else{
+					for(var i=0; i<xArr.length; i++){
+						if(yArr[i] >= 0 || keepNegative){
+							data.push(
+								{
+									x: parseFloat(xArr[i]),
+									y: parseFloat(yArr[i])
+								}
+							)
+						}
+					}
+					return data
+				}
+			}else{
+				if(yArr >= 0){
+					for(var i=0; i<xArr.length; i++){
+						data.push(
+							{
+								x: parseFloat(xArr[i]),
+								y: parseFloat(yArr)
+							}
+						)
+					}
+				}
+				return data
+			}
+		}
+
+		$(document).ready(function(){
+			generateVersion();
+			jQCall();
+		})
+    </script>
+    
+	</body>
+</html>
