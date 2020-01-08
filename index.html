@@ -312,15 +312,15 @@
 		var v_angles = [];
 		var numAngles = 8;
 		function jQCall(){
-			var v_mv = document.getElementById("mv").value;
-			var v_caliber = document.getElementById("caliber").value;
-			var v_krupp = document.getElementById("krupp").value;
-			var v_mass = document.getElementById("mass").value;
-			var v_normal = document.getElementById("normal").value;
-			var v_cD = document.getElementById("cD").value;
-			var v_threshold = document.getElementById("threshold").value;
-			var v_fusetime = document.getElementById("fusetime").value;
-			var v_armor = document.getElementById("armor").value;
+			var v_mv        = parseFloat(document.getElementById("mv"       ).value);
+			var v_caliber   = parseFloat(document.getElementById("caliber"  ).value);
+			var v_krupp     = parseFloat(document.getElementById("krupp"    ).value);
+			var v_mass      = parseFloat(document.getElementById("mass"     ).value);
+			var v_normal    = parseFloat(document.getElementById("normal"   ).value);
+			var v_cD        = parseFloat(document.getElementById("cD"       ).value);
+			var v_threshold = parseFloat(document.getElementById("threshold").value);
+			var v_fusetime  = parseFloat(document.getElementById("fusetime" ).value);
+			var v_armor     = parseFloat(document.getElementById("armor"    ).value);
 			
 			for(var i=0; i<numAngles; i++){
 				v_angles[i] = document.getElementById("angle" + i).value;
