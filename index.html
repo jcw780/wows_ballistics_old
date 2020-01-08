@@ -29,7 +29,7 @@
 		<h1>World of Warships Overpen Calculator</h1>
 		<style>
 			table, th, td, tr {
-			  border: 20px solid white;
+			  border: 5px solid white;
 			}
 		</style>
 		<table>
@@ -38,44 +38,101 @@
 					<h2>Predefined Shells</h2>
 				</td>
 				<td>
-
 					<h2>Shell Characteristics</h2>
+				</td>
+				<td>
+					<h2>Target Characteristics</h2>
+				</td>
+				<td>
+					<h2>Horizontal Impact Angles</h2>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<p>Version: <select id=version onchange="onChangeVersion('version')"></select></p>
-					<p>Nation:<select id=nation  onchange="onChangeNation('nation')"></select></p>
-					<p>Type:<select id=type    onchange="onChangeType('type')"></select></p>
-					<p>Ship:<select id=ship    onchange="onChangeShip('ship')"></select></p>
-					<p>Artillery:<select id=shell   onchange="onChangeShell('shell')"></select></p>
+					<table>
+						<tr>
+							<td>Version</td>
+							<td><select id=version onchange="onChangeVersion('version')"></select></td>
+						</tr>
+						<tr>
+							<td>Nation</td>
+							<td><select id=nation  onchange="onChangeNation('nation')"></select></td>
+						</tr>
+						<tr>
+							<td>Type</td>
+							<td><select id=type    onchange="onChangeType('type')"></select></td>
+						</tr>
+						<tr>
+							<td>Ship</td>
+							<td><select id=ship    onchange="onChangeShip('ship')"></select></td>
+						</tr>
+						<tr>
+							<td>Artillery</td>
+							<td><select id=shell   onchange="onChangeShell('shell')"></select></td>
+						</tr>
+					</table>
 					<!--<button onclick="onSubmitPredefined()">Apply</button>-->
 				</td>
 				<td>
-					<p>Muzzle Velocity : <input type="number" step="any" min="0" id="mv"        value=""> m/s </p>
-					<p>Caliber         : <input type="number" step="any" min="0" id="caliber"   value=""> m   </p>
-					<p>Krupp           : <input type="number" step="any" min="0" id="krupp"     value="">     </p>
-					<p>Mass (kg)       : <input type="number" step="any" min="0" id="mass"      value=""> kg  </p>
-					<p>Normalization   : <input type="number" step="any" min="0" id="normal"    value=""> °   </p>
-					<p>Drag Coefficient: <input type="number" step="any" min="0" id="cD"        value="">     </p>
-					<p>Threshold       : <input type="number" step="any" min="0" id="threshold" value=""> mm  </p>
-					<p>Fusetime        : <input type="number" step="any" min="0" id="fusetime"  value=""> s   </p>
+					<table>
+						<tr>
+							<td>Muzzle Velocity</td>
+							<td><input type="number" step="any" min="0" id="mv"        value=""> m/s</td>
+						</tr>
+						<tr>
+							<td>Caliber</td>
+							<td><input type="number" step="any" min="0" id="caliber"   value=""> m</td>
+						</tr>
+						<tr>
+							<td>Krupp</td>
+							<td><input type="number" step="any" min="0" id="krupp"     value=""></td>
+						</tr>
+						<tr>
+							<td>Mass</td>
+							<td><input type="number" step="any" min="0" id="mass"      value=""> kg</td>
+						</tr>
+						<tr>
+							<td>Normalization</td>
+							<td><input type="number" step="any" min="0" id="normal"    value=""> °</td>
+						</tr>
+						<tr>
+							<td>Drag Coefficient</td>
+							<td><input type="number" step="any" min="0" id="cD"        value=""></td>
+						</tr>
+						<tr>
+							<td>Fusing Threshold</td>
+							<td><input type="number" step="any" min="0" id="threshold" value=""> mm</td>
+						</tr>
+						<tr>
+							<td>Fusetime</td>
+							<td><input type="number" step="any" min="0" id="fusetime"  value=""> s</td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<table>
+						<tr>
+							<td>Targeted Armor (mm)</td>
+							<td><input type="number" id="armor" value="70"></td>
+						</tr>
+						<tr>
+							<td>Ship Width (m)</td>
+							<td><input type="number" id="width" value="18"> </p></td>
+						</tr>
+					</table>
+				</td>
+				<td>
+					<p>Lateral Angle 0      : <input type="number" step="any" id="angle0" value="0" > ° </p>
+					<p>Lateral Angle 1      : <input type="number" step="any" id="angle1" value="5" > ° </p>
+					<p>Lateral Angle 2      : <input type="number" step="any" id="angle2" value="10"> ° </p>
+					<p>Lateral Angle 3      : <input type="number" step="any" id="angle3" value="15"> ° </p>
+					<p>Lateral Angle 4      : <input type="number" step="any" id="angle4" value="20"> ° </p>
+					<p>Lateral Angle 5      : <input type="number" step="any" id="angle5" value="25"> ° </p>
+					<p>Lateral Angle 6      : <input type="number" step="any" id="angle6" value="30"> ° </p>
+					<p>Lateral Angle 7      : <input type="number" step="any" id="angle7" value="35"> ° </p>
 				</td>
 			</tr>
 		</table>
-		<h2>Target Characteristics</h2>
-		Targeted Armor (mm)  : <input type="number" id="armor" value="70">
-		Ship Width (m)       : <input type="number" id="width" value="18">
-		<p></p>
-		Lateral Angle 0      : <input type="number" step="any" id="angle0" value="0"> °
-		Lateral Angle 1      : <input type="number" step="any" id="angle1" value="5"> °
-		Lateral Angle 2      : <input type="number" step="any" id="angle2" value="10"> °
-		Lateral Angle 3      : <input type="number" step="any" id="angle3" value="15"> °
-		<p></p>
-		Lateral Angle 4      : <input type="number" step="any" id="angle4" value="20"> °
-		Lateral Angle 5      : <input type="number" step="any" id="angle5" value="25"> °
-		Lateral Angle 6      : <input type="number" step="any" id="angle6" value="30"> °
-		Lateral Angle 7      : <input type="number" step="any" id="angle7" value="35"> °
 
 		<button onclick="jQCall()"; >Calculate</button>
 		
