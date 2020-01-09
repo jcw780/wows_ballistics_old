@@ -113,11 +113,15 @@
 					<table>
 						<tr>
 							<td>Targeted Armor (mm)</td>
-							<td><input type="number" id="armor" value="70"></td>
+							<td><input type="number" step="any" min="0" id="armor" value="70"></td>
+						</tr>
+						<tr>
+							<td>Targeted Armor Inclination (°)</td>
+							<td><input type="number" step="any" id="inclination" value="0"></td>
 						</tr>
 						<tr>
 							<td>Ship Width (m)</td>
-							<td><input type="number" id="width" value="18"> </p></td>
+							<td><input type="number" step="any" min="0" id="width" value="18"> </p></td>
 						</tr>
 					</table>
 				</td>
@@ -372,15 +376,16 @@
 		var v_angles = [];
 		var numAngles = 8;
 		function jQCall(){
-			var v_mv        = parseFloat(document.getElementById("mv"       ).value);
-			var v_caliber   = parseFloat(document.getElementById("caliber"  ).value);
-			var v_krupp     = parseFloat(document.getElementById("krupp"    ).value);
-			var v_mass      = parseFloat(document.getElementById("mass"     ).value);
-			var v_normal    = parseFloat(document.getElementById("normal"   ).value);
-			var v_cD        = parseFloat(document.getElementById("cD"       ).value);
-			var v_threshold = parseFloat(document.getElementById("threshold").value);
-			var v_fusetime  = parseFloat(document.getElementById("fusetime" ).value);
-			var v_armor     = parseFloat(document.getElementById("armor"    ).value);
+			var v_mv         = parseFloat(document.getElementById("mv"         ).value);
+			var v_caliber    = parseFloat(document.getElementById("caliber"    ).value);
+			var v_krupp      = parseFloat(document.getElementById("krupp"      ).value);
+			var v_mass       = parseFloat(document.getElementById("mass"       ).value);
+			var v_normal     = parseFloat(document.getElementById("normal"     ).value);
+			var v_cD         = parseFloat(document.getElementById("cD"         ).value);
+			var v_threshold  = parseFloat(document.getElementById("threshold"  ).value);
+			var v_fusetime   = parseFloat(document.getElementById("fusetime"   ).value);
+			var v_armor      = parseFloat(document.getElementById("armor"      ).value);
+			var v_inclination= parseFloat(document.getElementById("inclination").value);
 
 			//console.log(v_mv)
 			
@@ -389,14 +394,8 @@
 			}
 
 			var instance = new Module.shell(v_mv, v_caliber, v_krupp, v_mass, v_normal, v_cD, v_threshold, v_fusetime);
-			//console.log(instance);
 			instance.calcImpact();
-			//instance.printImpact();
-			//console.log("ran");
-			instance.calcPostPen(v_armor, v_angles);
-			//console.log("ran");
-			//instance.printPostPen();
-			//instance.delete();
+			instance.calcPostPen(v_armor, v_inclination, v_angles);
 			chartData = {
 				labels           : [],
 				effectivePen     : [],
