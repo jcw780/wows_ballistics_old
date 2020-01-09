@@ -188,7 +188,6 @@
 		var typeData = [];
 		var initialized = false;
 		function generateVersion(){
-			console.log("Generating version")
 			$.ajax({
 				url: "static/data/versions.json",
 				type: "GET",
@@ -243,9 +242,7 @@
 			})
 		}
 		function onChangeNation(nationID){
-			console.log(nationID);
 			var id = parseInt(nationID.slice(-1));
-			console.log(id);
 			nationValue[id] = document.getElementById(nationID).value;
 			generateType('type' + id);
 		}
@@ -276,7 +273,6 @@
 			})
 		}
 		function onChangeType(typeID){
-			console.log('changed', typeID);
 			var id = parseInt(typeID.slice(-1));
 			typeValue[id] = document.getElementById(typeID).value;
 			generateShip('ship' + id)
@@ -327,8 +323,7 @@
 			onChangeShell(shellID);
 		}
 		function onChangeShell(shellID){
-			console.log("shell", shellID, typeof(shellID));
-			var id = parseInt(shellID.splice(-1));
+			var id = parseInt(shellID.slice(-1));
 			shellValue[id] = document.getElementById(shellID).value;
 			onSubmitPredefined(id);
 			if(!initialized){
@@ -736,12 +731,11 @@
 
 		$(document).ready(function(){
 			generateVersion();
-			//generateVersion(1);
 		})
 
 		var Module = {
 			onRuntimeInitialized: function() {
-				console.log("Compile Successful");
+				console.log("Wasm Compile Successful");
 				jQCall();
 			}
 		};
