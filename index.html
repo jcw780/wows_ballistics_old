@@ -292,7 +292,7 @@
 					}
 					sorted.sort(function(a, b){return data[a]['Tier'] - data[b]['Tier']});
 					for(var ship of sorted){
-						document.getElementById(shipID).innerHTML += "<option value=" + ship + ">" + "Tier " + data['Tier'] + " " + ship + "</option>"
+						document.getElementById(shipID).innerHTML += "<option value=" + ship + ">" + "Tier " + data[ship]['Tier'] + " " + ship + "</option>"
 					}
 					onChangeShip(shipID);
 				},
