@@ -221,6 +221,7 @@
 		}
 
 		function generateNation(nationID){
+			console.log(nationID);
 			$.ajax({
 				url: "static/data/" + versionValue + "/nations.json",
 				type: "GET",
@@ -236,7 +237,9 @@
 			})
 		}
 		function onChangeNation(nationID){
+			console.log(nationID);
 			var id = parseInt(nationID.slice(-1));
+			console.log(id);
 			nationValue[id] = document.getElementById(nationID).value;
 			generateType('type' + id);
 		}
@@ -439,11 +442,10 @@
 			var v_cD0         = parseFloat(document.getElementById("cD0"         ).value);
 			var v_threshold0  = parseFloat(document.getElementById("threshold0"  ).value);
 			var v_fusetime0   = parseFloat(document.getElementById("fusetime0"   ).value);
-			var v_armor0      = parseFloat(document.getElementById("armor0"      ).value);
-			var v_inclination0= parseFloat(document.getElementById("inclination0").value);
 
-			//console.log(v_mv)
-			
+
+			var v_armor0      = parseFloat(document.getElementById("armor"      ).value);
+			var v_inclination0= parseFloat(document.getElementById("inclination").value);
 			for(var i=0; i<numAngles; i++){
 				v_angles[i] = parseFloat(document.getElementById("angle" + i).value);
 			}
