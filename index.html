@@ -326,19 +326,17 @@
 		function onChangeShell(shellID){
 			var id = parseInt(shellID.slice(-1));
 			shellValue[id] = document.getElementById(shellID).value;
-			onSubmitPredefined(id);
 			if(!initialized){
 				copyStartValues();
 			}
+			onSubmitPredefined(id);
 		}
 
 		function onSubmitPredefined(id){
-			if(initialized){
-				targetShell = typeData[id][shipValue][shellValue]['AP']
-			}else{
-				console.log(typeData)
-				targetShell = typeData[0][shipValue][shellValue]['AP']
-			}
+			console.log(id, typeData);
+			console.log(id, typeData[id]);
+			var targetShell = typeData[id][shipValue][shellValue]['AP'];
+
 			document.getElementById("mv"        + id).value = targetShell["bulletSpeed"];
 			document.getElementById("caliber"   + id).value = targetShell["bulletDiametr"];
 			document.getElementById("krupp"     + id).value = targetShell["bulletKrupp"];
