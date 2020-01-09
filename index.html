@@ -364,6 +364,12 @@
 			document.getElementById("type1").innerHTML    = document.getElementById("type0").innerHTML;
 			document.getElementById("ship1").innerHTML    = document.getElementById("ship0").innerHTML;
 			document.getElementById("shell1").innerHTML   = document.getElementById("shell0").innerHTML;
+			versionValue[1] = versionValue[0];
+			nationValue[1]  = nationValue[0];
+			typeValue[1]    = typeValue[0];
+			shipValue[1]    = shipValue[0];
+			shellValue[1]   = shellValue[0]; 
+			typeData[1]     = typeData[0];
 			onSubmitPredefined(1);
 
 			initialized=true;
@@ -525,26 +531,25 @@
 				}
 			}
 			//instance.printPostPen();
+			//Values same for both shells
+			var impactSize = instances[0].getImpactSize()
+			var impactSizeAligned = instances[0].getImpactSizeAligned();
+			var postPenSize = instances[0].getPostPenSize();
 			for(var k=0; k<2; k++){
-				for(var i=0; i<instance.getImpactSize(); i++){
-					chartData.labels[k].push(          instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.distance.value));
-					chartData.effectivePen[k].push(    instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.ePenHN.value));
-					chartData.angleBelt[k].push(   -1* instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactAHD.value));
-					chartData.effectivePenDeck[k].push(instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.ePenDN.value));
-					chartData.angleDeck[k].push(       instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactADD.value));
-					chartData.impactVelocity[k].push(  instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactV.value));
-					chartData.flightTime[k].push(      instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.tToTargetA.value));
+				for(var i=0; i<impactSize; i++){
+					chartData.labels[k].push(          instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.distance.value));
+					chartData.effectivePen[k].push(    instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.ePenHN.value));
+					chartData.angleBelt[k].push(   -1* instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.impactAHD.value));
+					chartData.effectivePenDeck[k].push(instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.ePenDN.value));
+					chartData.angleDeck[k].push(       instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.impactADD.value));
+					chartData.impactVelocity[k].push(  instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.impactV.value));
+					chartData.flightTime[k].push(      instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.tToTargetA.value));
 
 					for(var j=0; j<numAngles; j++){
-						chartData.detDist[k][j].push( instance.postPenData().get(i+j*instance.getImpactSize()+
-							Module.postPenDataIndex.x.value  *instance.getPostPenSize()));
-						//console.log("nf", i+j*instance.getImpactSize()+
-						//	Module.postPenDataIndex.x.value  *instance.getPostPenSize());
-						
-						chartData.detDistF[k][j].push(instance.postPenData().get(i+j*instance.getImpactSize()+
-							Module.postPenDataIndex.xwf.value*instance.getPostPenSize()));
-						//console.log("wf", i+j*instance.getImpactSize()+
-						//	Module.postPenDataIndex.xwf.value*instance.getPostPenSize());
+						chartData.detDist[k][j].push( instances[k].postPenData().get(i+j*instances[k].getImpactSize()+
+							Module.postPenDataIndex.x.value  *postPenSize));
+						chartData.detDistF[k][j].push(instances[k].postPenData().get(i+j*instances[k].getImpactSize()+
+							Module.postPenDataIndex.xwf.value*postPenSize));
 					}
 				}
 			}
@@ -577,6 +582,14 @@
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[0], response.angleBelt[0], true),
+							label: "Impact Angle (°)", yAxisID: "Angle",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
+							data: generatePoints(response.labels[1], response.effectivePen[1], false),
+							label: "Effective Penetration (mm)", yAxisID: "Penetration",
+							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
+							data: generatePoints(response.labels[1], response.angleBelt[1], true),
 							label: "Impact Angle (°)", yAxisID: "Angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
@@ -617,6 +630,14 @@
 							data: generatePoints(response.labels[0], response.angleDeck[0], true),
 							label: "Deck Impact Angle (°)", yAxisID: "Angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
+							data: generatePoints(response.labels[1], response.effectivePenDeck[1], false),
+							label: "Effective Deck Penetration (mm)", yAxisID: "Penetration",
+							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
+							data: generatePoints(response.labels[1], response.angleDeck[1], true),
+							label: "Deck Impact Angle (°)", yAxisID: "Angle",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
 					]
 				},
@@ -653,6 +674,14 @@
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[0], response.flightTime[0], true),
+							label: "Flight Time (s)", yAxisID: "Time",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
+							data: generatePoints(response.labels[1], response.impactVelocity[1], false),
+							label: "Impact Velocity (m/s)", yAxisID: "Impact Velocity",
+							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
+							data: generatePoints(response.labels[1], response.flightTime[1], true),
 							label: "Flight Time (s)", yAxisID: "Time",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
@@ -700,7 +729,15 @@
 								data: generatePoints(response.labels[0], response.detDist[0][i], false),
 								label: "Detonation Distance (m)",
 								borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
-							}, {
+							},{
+								data: generatePoints(response.labels[1], response.detDistF[1][i], false),
+								label: "Detonation Distance with Fusing (m)",
+								borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							},{
+								data: generatePoints(response.labels[1], response.detDist[1][i], false),
+								label: "Detonation Distance (m)",
+								borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							},{
 								data: generatePoints(response.labels[0], width, false),
 								label: "Ship Width (m)",
 								borderColor: "#800080", fill: false, pointRadius: 0, pointHitRadius: 5
