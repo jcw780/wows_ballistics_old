@@ -608,17 +608,29 @@
 				options: {
 					scales: {
 						xAxes: [{
+							scaleLabel: {
+								display: true,
+								labelString: "Distance from Launch (m)",
+							},
 							ticks:{
 								min: 0, stepSize: xStepSize
 							}
 						}],
 						yAxes: [{
 							id: "Penetration", postition: "left",
+							scaleLabel: {
+								display: true,
+								labelString: "Belt Penetration (mm)",
+							},
 							ticks: {
 								stepSize: 100
 							}
 						},{
-							id: "Angle", position: "right"
+							id: "Angle", position: "right",
+							scaleLabel: {
+								display: true,
+								labelString: "Belt Impact Angle (°)",
+							},
 						}
 						]
 					}
@@ -658,17 +670,29 @@
 				options: {
 					scales: {
 						xAxes: [{
+							scaleLabel: {
+								display: true,
+								labelString: "Distance from Launch (m)",
+							},
 							ticks:{
 								min: 0, stepSize: xStepSize
 							}
 						}],
 						yAxes: [{
 							id: "Penetration", postition: "left",
+							scaleLabel: {
+								display: true,
+								labelString: "Deck Penetration (mm)",
+							},
 							ticks: {
 								stepSize: 100
 							}
 						},{
-							id: "Angle", position: "right"
+							id: "Angle", position: "right",
+							scaleLabel: {
+								display: true,
+								labelString: "Deck Impact Angle (°)",
+							},
 						}
 						]
 					}
@@ -708,17 +732,29 @@
 				options: {
 					scales: {
 						xAxes: [{
+							scaleLabel: {
+								display: true,
+								labelString: "Distance from Launch (m)",
+							},
 							ticks:{
 								min: 0, stepSize: xStepSize
 							}
 						}],
 						yAxes: [{
 							id: "Impact Velocity", postition: "left",
+							scaleLabel: {
+								display: true,
+								labelString: "Impact Velocity (m/s)",
+							},
 							ticks: {
 								stepSize: 100
 							}
 						},{
-							id: "Time", position: "right"
+							id: "Time", position: "right",
+							scaleLabel: {
+								display: true,
+								labelString: "Flight Time (s)",
+							},
 						}
 						]
 					}
@@ -768,10 +804,20 @@
 					options: {
 						scales: {
 							xAxes: [{
+								scaleLabel: {
+									display: true,
+									labelString: "Distance from Launch (m)",
+								},
 								ticks:{
-									min: 0, stepSize: xStepSize
+									min: 0, stepSize: xStepSize,
 								}
 							}],
+							yAxes: [{
+								scaleLabel: {
+									display: true,
+									labelString: "Shell Detonation Distance (m)",
+								},
+							}]
 						}
 					}
 				});
