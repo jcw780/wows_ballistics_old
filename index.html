@@ -325,9 +325,6 @@
 		}
 
 		function onSubmitPredefined(id){
-			console.log(id, typeData);
-			console.log(id, typeData[id]);
-			console.log(shipValue[id]);
 			var targetShell = typeData[id][shipValue[id]][shellValue[id]]['AP'];
 
 			document.getElementById("mv"        + id).value = targetShell["bulletSpeed"];
@@ -559,7 +556,6 @@
 		var impactCharts = []
 		var postCharts = []		
 		function setChart(response){
-			console.log(shipValue)
 			var xStepSize = 2500
 			//Set Impact
 			if(impactCharts[0]){
