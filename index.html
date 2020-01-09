@@ -185,21 +185,22 @@
 		var typeValue = [];
 		var shipValue = [];
 		var shellValue = []; 
-		var typeData = []; 
-		function generateVersion(id){
+		var typeData = [];
+		var initialized = false;
+		function generateVersion(){
 			console.log("Generating version")
 			$.ajax({
 				url: "static/data/versions.json",
 				type: "GET",
 				dataType: "json",
 				success: function (data) {
-					document.getElementById("version" + id).innerHTML = '';
+					document.getElementById("version0").innerHTML = '';
 					var i;
 					for(i=0; i<data.length; i++){
-						document.getElementById("version" + id).innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+						document.getElementById("version0").innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
 					}
 
-					onChangeVersion("version" + id);
+					onChangeVersion("version0");
 				},
 				error: function(response){
 					console.log("Generating version failed")
@@ -329,6 +330,9 @@
 			var id = parseInt(shellID.splice(-1));
 			shellValue[id] = document.getElementById(shellID).value;
 			onSubmitPredefined(id);
+			if(!initialized){
+				copyStartValues();
+			}
 		}
 
 		function onSubmitPredefined(id){
@@ -351,6 +355,14 @@
 			} else {
 				document.getElementById("normal" + id).value = 6.;
 			}
+		}
+
+		function copyStartValues(){
+			document.getElementById("version1").innerHTML = document.getElementById("version0").innerHTML;
+			document.getElementById("nation1").innerHTML = document.getElementById("nation0").innerHTML;
+			document.getElementById("type1").innerHTML = document.getElementById("nation0").innerHTML;
+			document.getElementById("ship1").innerHTML = document.getElementById("nation0").innerHTML;
+			document.getElementById("shell1").innerHTML = document.getElementById("nation0").innerHTML;
 		}
 		</script>
 
@@ -719,7 +731,7 @@
 		}
 
 		$(document).ready(function(){
-			generateVersion(0);
+			generateVersion();
 			//generateVersion(1);
 		})
 
