@@ -50,9 +50,7 @@
 			<tr>
 				<td>
 					<table>
-						<tr>
-							<td>Ship A:</td>
-						</tr>
+						<tr><td>Ship A:</td></tr>
 						<tr>
 							<td>Version</td>
 							<td><select id=version onchange="onChangeVersion('version')"></select></td>
@@ -129,14 +127,14 @@
 					</table>
 				</td>
 				<td>
-					<p>Lateral Angle 0      : <input type="number" step="any" id="angle0" value="0" > ° </p>
-					<p>Lateral Angle 1      : <input type="number" step="any" id="angle1" value="5" > ° </p>
-					<p>Lateral Angle 2      : <input type="number" step="any" id="angle2" value="10"> ° </p>
-					<p>Lateral Angle 3      : <input type="number" step="any" id="angle3" value="15"> ° </p>
-					<p>Lateral Angle 4      : <input type="number" step="any" id="angle4" value="20"> ° </p>
-					<p>Lateral Angle 5      : <input type="number" step="any" id="angle5" value="25"> ° </p>
-					<p>Lateral Angle 6      : <input type="number" step="any" id="angle6" value="30"> ° </p>
-					<p>Lateral Angle 7      : <input type="number" step="any" id="angle7" value="35"> ° </p>
+					<p>Lateral Angle 0  <input type="number" step="any" id="angle0" value="0" > ° </p>
+					<p>Lateral Angle 1  <input type="number" step="any" id="angle1" value="5" > ° </p>
+					<p>Lateral Angle 2  <input type="number" step="any" id="angle2" value="10"> ° </p>
+					<p>Lateral Angle 3  <input type="number" step="any" id="angle3" value="15"> ° </p>
+					<p>Lateral Angle 4  <input type="number" step="any" id="angle4" value="20"> ° </p>
+					<p>Lateral Angle 5  <input type="number" step="any" id="angle5" value="25"> ° </p>
+					<p>Lateral Angle 6  <input type="number" step="any" id="angle6" value="30"> ° </p>
+					<p>Lateral Angle 7  <input type="number" step="any" id="angle7" value="35"> ° </p>
 				</td>
 			</tr>
 		</table>
@@ -313,6 +311,14 @@
 					<canvas id="penChart1" width="1000" height="300"></canvas>
 				</div>	
 			</div>
+			
+			<h4>Shell Speed <button onclick="hideFunction('penChart2', 'pC2')" id=pC2>Hide</button> </h4>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="penChart2" width="1000" height="300"></canvas>
+				</div>	
+			</div>
+
 		</div>
 
 		<h3>Post Penetration <button onclick="hideFunction('postPenCharts', 'postPenChartToggle')" id=postPenChartToggle>Hide</button> </h3>
@@ -405,6 +411,8 @@
 				angleBelt        : [],
 				effectivePenDeck : [],
 				angleDeck        : [],
+				impactVelocity   : [],
+				flightTime       : [],
 				detDist          : [],
 				detDistF         : [] 
 			}
@@ -415,11 +423,13 @@
 			//instance.printPostPen();
 
 			for(var i=0; i<instance.getImpactSize(); i++){
-				chartData.labels.push(          instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.distance.value ));
+				chartData.labels.push(          instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.distance.value));
 				chartData.effectivePen.push(    instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.ePenHN.value));
 				chartData.angleBelt.push(   -1* instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactAHD.value));
 				chartData.effectivePenDeck.push(instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.ePenDN.value));
 				chartData.angleDeck.push(       instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactADD.value));
+				chartData.impactVelocity.push(  instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactV.value));
+				chartData.flightTime.push(      instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.tToTargetA.value));
 
 				for(var j=0; j<numAngles; j++){
 					chartData.detDist[j].push( instance.postPenData().get(i+j*instance.getImpactSize()+
@@ -522,6 +532,45 @@
 					}
 				}
 			});
+
+			if(impactCharts[2]){
+				impactCharts[2].destroy();
+			}
+			impactCharts[2] = new Chart(document.getElementById("penChart2"), {
+				type: 'scatter',
+				data: {
+					datasets: [
+						{
+							data: generatePoints(response.labels, response.impactVelocity, false),
+							label: "Impact Velocity (m/s)", yAxisID: "Impact Velocity",
+							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
+							data: generatePoints(response.labels, response.flightTime, true),
+							label: "Flight Time (s)", yAxisID: "Time",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						}
+					]
+				},
+				options: {
+					scales: {
+						xAxes: [{
+							ticks:{
+								min: 0, stepSize: xStepSize
+							}
+						}],
+						yAxes: [{
+							id: "Impact Velocity", postition: "left",
+							ticks: {
+								stepSize: 100
+							}
+						},{
+							id: "Time", position: "right"
+						}
+						]
+					}
+				}
+			});
+
 			
 			//Set PostPen
 			var width = document.getElementById("width").value
