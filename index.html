@@ -335,7 +335,8 @@
 		function onSubmitPredefined(id){
 			console.log(id, typeData);
 			console.log(id, typeData[id]);
-			var targetShell = typeData[id][shipValue][shellValue]['AP'];
+			console.log(shipValue[id]);
+			var targetShell = typeData[id][shipValue[id]][shellValue[id]]['AP'];
 
 			document.getElementById("mv"        + id).value = targetShell["bulletSpeed"];
 			document.getElementById("caliber"   + id).value = targetShell["bulletDiametr"];
@@ -586,11 +587,11 @@
 						},{
 							data: generatePoints(response.labels[1], response.effectivePen[1], false),
 							label: "Effective Penetration (mm)", yAxisID: "Penetration",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[1], response.angleBelt[1], true),
 							label: "Impact Angle (°)", yAxisID: "Angle",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
 					]
 				},
@@ -632,11 +633,11 @@
 						},{
 							data: generatePoints(response.labels[1], response.effectivePenDeck[1], false),
 							label: "Effective Deck Penetration (mm)", yAxisID: "Penetration",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[1], response.angleDeck[1], true),
 							label: "Deck Impact Angle (°)", yAxisID: "Angle",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
 					]
 				},
@@ -678,11 +679,11 @@
 						},{
 							data: generatePoints(response.labels[1], response.impactVelocity[1], false),
 							label: "Impact Velocity (m/s)", yAxisID: "Impact Velocity",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[1], response.flightTime[1], true),
 							label: "Flight Time (s)", yAxisID: "Time",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
 					]
 				},
@@ -731,11 +732,11 @@
 							},{
 								data: generatePoints(response.labels[1], response.detDistF[1][i], false),
 								label: "Detonation Distance with Fusing (m)",
-								borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
 								data: generatePoints(response.labels[1], response.detDist[1][i], false),
 								label: "Detonation Distance (m)",
-								borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
 								data: generatePoints(response.labels[0], width, false),
 								label: "Ship Width (m)",
