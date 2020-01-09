@@ -218,9 +218,9 @@
 		}
 
 		function generateNation(nationID){
-			console.log(nationID);
+			var id = parseInt(nationID.slice(-1));
 			$.ajax({
-				url: "static/data/" + versionValue + "/nations.json",
+				url: "static/data/" + versionValue[id] + "/nations.json",
 				type: "GET",
 				dataType: "json",
 				success: function (data) {
@@ -248,13 +248,12 @@
 		}
 
 		function generateType(typeID){
-			console.log('changing', typeID);
+			var id = parseInt(typeID.slice(-1));
 			$.ajax({
-				url: "static/data/" + versionValue + "/" + nationValue + "/shiptypes.json",
+				url: "static/data/" + versionValue[id] + "/" + nationValue[id] + "/shiptypes.json",
 				type: "GET",
 				dataType: "json",
 				success: function (data) {
-					console.log('get sucessful', typeID);
 					document.getElementById(typeID).innerHTML = '';
 					var i;
 					for(i=0; i<data.length; i++){
@@ -279,12 +278,13 @@
 		}
 
 		function generateShip(shipID){
+			var id = parseInt(shipID.slice(-1));
 			$.ajax({
-				url: "static/data/" + versionValue + "/" + nationValue + "/" + nationValue + "_" + typeValue + ".json",
+				url: "static/data/" + versionValue[id] + "/" + nationValue[id] + "/" + nationValue[id] + "_" + typeValue[id] + ".json",
 				type: "GET",
 				dataType: "json",
 				success: function (data) {
-					typeData = data;
+					typeData[id] = data;
 					document.getElementById(shipID).innerHTML = '';
 					var sorted = []
 					for(var ship in data){
@@ -313,9 +313,10 @@
 		}
 
 		function generateShell(shellID){
+			var id = parseInt(shellID.slice(-1));
 			selector = document.getElementById(shellID);
 			selector.innerHTML = '';
-			for(var shell in typeData[shipValue]){
+			for(var shell in typeData[id][shipValue]){
 				if(shell.includes('Artillery')){
 					selector.innerHTML += "<option value=" + shell + ">" + shell + "</option>"
 				}
@@ -332,7 +333,7 @@
 		}
 
 		function onSubmitPredefined(id){
-			targetShell = typeData[shipValue][shellValue]['AP']
+			targetShell = typeData[id][shipValue][shellValue]['AP']
 			document.getElementById("mv"        + id).value = targetShell["bulletSpeed"];
 			document.getElementById("caliber"   + id).value = targetShell["bulletDiametr"];
 			document.getElementById("krupp"     + id).value = targetShell["bulletKrupp"];
@@ -478,6 +479,15 @@
 			var v_threshold0  = parseFloat(document.getElementById("threshold0"  ).value);
 			var v_fusetime0   = parseFloat(document.getElementById("fusetime0"   ).value);
 
+			var v_mv1         = parseFloat(document.getElementById("mv1"         ).value);
+			var v_caliber1    = parseFloat(document.getElementById("caliber1"    ).value);
+			var v_krupp1      = parseFloat(document.getElementById("krupp1"      ).value);
+			var v_mass1       = parseFloat(document.getElementById("mass1"       ).value);
+			var v_normal1     = parseFloat(document.getElementById("normal1"     ).value);
+			var v_cD1         = parseFloat(document.getElementById("cD1"         ).value);
+			var v_threshold1  = parseFloat(document.getElementById("threshold1"  ).value);
+			var v_fusetime1   = parseFloat(document.getElementById("fusetime1"   ).value);
+
 
 			var v_armor       = parseFloat(document.getElementById("armor"      ).value);
 			var v_inclination = parseFloat(document.getElementById("inclination").value);
@@ -485,9 +495,13 @@
 				v_angles[i] = parseFloat(document.getElementById("angle" + i).value);
 			}
 
-			var instance = new Module.shell(v_mv0, v_caliber0, v_krupp0, v_mass0, v_normal0, v_cD0, v_threshold0, v_fusetime0);
+			var instance  = new Module.shell(v_mv0, v_caliber0, v_krupp0, v_mass0, v_normal0, v_cD0, v_threshold0, v_fusetime0);
+			var instance1 = new Module.shell(v_mv1, v_caliber1, v_krupp1, v_mass1, v_normal1, v_cD1, v_threshold1, v_fusetime1);
+
 			instance.calcImpact();
-			instance.calcPostPen(v_armor, v_inclination, v_angles);
+			instance1.calcImpact();
+			instance.calcPostPen( v_armor, v_inclination, v_angles);
+			instance1.calcPostPen(v_armor, v_inclination, v_angles);
 			chartData = {
 				labels           : [],
 				effectivePen     : [],
