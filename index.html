@@ -230,6 +230,14 @@
 						document.getElementById(nationID).innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
 					}
 					onChangeNation(nationID);
+				},
+				error: function(response){
+					console.log("Generating nation failed")
+					console.log(response);
+					console.log(response['status'])
+					console.log(response.statusCode())
+					//console.log(b);
+					//console.log(c);
 				}
 			})
 		}
@@ -255,6 +263,14 @@
 						document.getElementById(typeID).innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
 					}
 					onChangeType(typeID);
+				},
+				error: function(response){
+					console.log("Generating type failed")
+					console.log(response);
+					console.log(response['status'])
+					console.log(response.statusCode())
+					//console.log(b);
+					//console.log(c);
 				}
 			})
 		}
@@ -282,6 +298,14 @@
 						document.getElementById(shipID).innerHTML += "<option value=" + ship + ">" + "Tier " + typeData[ship]['Tier'] + " " + ship + "</option>"
 					}
 					onChangeShip(shipID);
+				},
+				error: function(response){
+					console.log("Generating ship failed")
+					console.log(response);
+					console.log(response['status'])
+					console.log(response.statusCode())
+					//console.log(b);
+					//console.log(c);
 				}
 			})
 		}
@@ -696,7 +720,7 @@
 
 		$(document).ready(function(){
 			generateVersion(0);
-			generateVersion(1);
+			//generateVersion(1);
 		})
 
 		var Module = {
