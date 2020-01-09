@@ -327,7 +327,7 @@
 			onChangeShell(shellID);
 		}
 		function onChangeShell(shellID){
-			console.log("shell", shellID);
+			console.log("shell", shellID, typeof(shellID));
 			var id = parseInt(shellID.splice(-1));
 			shellValue[id] = document.getElementById(shellID).value;
 			onSubmitPredefined(id);
