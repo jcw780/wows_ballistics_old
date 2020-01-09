@@ -729,31 +729,34 @@
 			//Set PostPen
 			var width = document.getElementById("width").value
 			var i;
+			var WFL = "Detonation Distance with Fusing (m) ";
+			var NFL = "Detonation Distance (m) ";
 			for(i=0; i<numAngles; i++){
 				var str = "Lateral Angle " + i + ": " + v_angles[i];
 				document.getElementById("A" + i).textContent = str;
 				if(postCharts[i]){
 					postCharts[i].destroy()
 				}
+
 				postCharts[i] = new Chart(document.getElementById("postPen" + i), {
 					type: 'scatter',
 					data: {
 						datasets: [
 							{
 								data: generatePoints(response.labels[0], response.detDistF[0][i], false),
-								label: "Detonation Distance with Fusing (m) " + shipValue[0] + " " + svs[0],
+								label: WFL + shipValue[0] + " " + svs[0],
 								borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
 								data: generatePoints(response.labels[0], response.detDist[0][i], false),
-								label: "Detonation Distance (m) " + shipValue[0] + " " + svs[0],
+								label: NFL + shipValue[0] + " " + svs[0],
 								borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
 								data: generatePoints(response.labels[1], response.detDistF[1][i], false),
-								label: "Detonation Distance with Fusing (m) " + shipValue[1] + " " + svs[1],
+								label: WFL + shipValue[1] + " " + svs[1],
 								borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
 								data: generatePoints(response.labels[1], response.detDist[1][i], false),
-								label: "Detonation Distance (m) " + shipValue[1] + " " + svs[1],
+								label: NFL + shipValue[1] + " " + svs[1],
 								borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
 								data: generatePoints(response.labels[0], width, false),
