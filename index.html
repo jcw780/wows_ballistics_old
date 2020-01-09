@@ -186,23 +186,20 @@
 		var shipValue = [];
 		var shellValue = []; 
 		var typeData = []; 
-		function generateVersion(){
+		function generateVersion(id){
 			console.log("Generating version")
 			$.ajax({
 				url: "static/data/versions.json",
 				type: "GET",
 				dataType: "json",
 				success: function (data) {
-					document.getElementById("version0").innerHTML = '';
-					document.getElementById("version1").innerHTML = '';
+					document.getElementById("version" + id).innerHTML = '';
 					var i;
 					for(i=0; i<data.length; i++){
-						document.getElementById("version0").innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
-						document.getElementById("version1").innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+						document.getElementById("version" + id).innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
 					}
 
-					onChangeVersion("version0");
-					onChangeVersion("version1");
+					onChangeVersion("version" + id);
 				},
 				error: function(response){
 					console.log("Generating version failed")
@@ -698,7 +695,8 @@
 		}
 
 		$(document).ready(function(){
-			generateVersion();
+			generateVersion(0);
+			generateVersion(1);
 		})
 
 		var Module = {
