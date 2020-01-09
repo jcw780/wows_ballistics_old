@@ -562,8 +562,13 @@
 				impactCharts[0].destroy();
 			}
 			var svs = []
-			for(var k=0; k<2; k++){
-				svs[k] = shellValue[k].slice(-1);
+			if(initialized){
+				for(var k=0; k<2; k++){
+					svs[k] = shellValue[k].slice(-1);
+				}
+			}else{
+				svs[0] = 0;
+				svs[1] = 0;
 			}
 
 			var EPL = "Effective Penetration ";
