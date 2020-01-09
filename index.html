@@ -290,9 +290,9 @@
 					for(var ship in data){
 						sorted.push(ship);
 					}
-					sorted.sort(function(a, b){return typeData[a]['Tier'] - typeData[b]['Tier']});
+					sorted.sort(function(a, b){return data[a]['Tier'] - data[b]['Tier']});
 					for(var ship of sorted){
-						document.getElementById(shipID).innerHTML += "<option value=" + ship + ">" + "Tier " + typeData[ship]['Tier'] + " " + ship + "</option>"
+						document.getElementById(shipID).innerHTML += "<option value=" + ship + ">" + "Tier " + data['Tier'] + " " + ship + "</option>"
 					}
 					onChangeShip(shipID);
 				},
@@ -494,50 +494,58 @@
 			for(var i=0; i<numAngles; i++){
 				v_angles[i] = parseFloat(document.getElementById("angle" + i).value);
 			}
+			
+			var instances = []
+			instances[0] = new Module.shell(v_mv0, v_caliber0, v_krupp0, v_mass0, v_normal0, v_cD0, v_threshold0, v_fusetime0);
+			instance1[1] = new Module.shell(v_mv1, v_caliber1, v_krupp1, v_mass1, v_normal1, v_cD1, v_threshold1, v_fusetime1);
 
-			var instance  = new Module.shell(v_mv0, v_caliber0, v_krupp0, v_mass0, v_normal0, v_cD0, v_threshold0, v_fusetime0);
-			var instance1 = new Module.shell(v_mv1, v_caliber1, v_krupp1, v_mass1, v_normal1, v_cD1, v_threshold1, v_fusetime1);
-
+			for(var k=0; k<2; k++){
+				instances[k].calcImpact();
+				instances[k].calcPostPen(v_armor, v_inclination, v_angles);
+			}
 			instance.calcImpact();
 			instance1.calcImpact();
 			instance.calcPostPen( v_armor, v_inclination, v_angles);
 			instance1.calcPostPen(v_armor, v_inclination, v_angles);
 			chartData = {
-				labels           : [],
-				effectivePen     : [],
-				angleBelt        : [],
-				effectivePenDeck : [],
-				angleDeck        : [],
-				impactVelocity   : [],
-				flightTime       : [],
-				detDist          : [],
-				detDistF         : [] 
+				labels           : [[], []],
+				effectivePen     : [[], []],
+				angleBelt        : [[], []],
+				effectivePenDeck : [[], []],
+				angleDeck        : [[], []],
+				impactVelocity   : [[], []],
+				flightTime       : [[], []],
+				detDist          : [[], []],
+				detDistF         : [[], []] 
 			}
-			for(var j=0; j<numAngles; j++){
-				chartData.detDist.push( []);
-				chartData.detDistF.push([]);
+			for(var k=0; k<2; k++){
+				for(var j=0; j<numAngles; j++){
+					chartData.detDist[k].push( []);
+					chartData.detDistF[k].push([]);
+				}
 			}
 			//instance.printPostPen();
+			for(var k=0; k<2; k++){
+				for(var i=0; i<instance.getImpactSize(); i++){
+					chartData.labels[k].push(          instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.distance.value));
+					chartData.effectivePen[k].push(    instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.ePenHN.value));
+					chartData.angleBelt[k].push(   -1* instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactAHD.value));
+					chartData.effectivePenDeck[k].push(instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.ePenDN.value));
+					chartData.angleDeck[k].push(       instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactADD.value));
+					chartData.impactVelocity[k].push(  instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactV.value));
+					chartData.flightTime[k].push(      instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.tToTargetA.value));
 
-			for(var i=0; i<instance.getImpactSize(); i++){
-				chartData.labels.push(          instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.distance.value));
-				chartData.effectivePen.push(    instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.ePenHN.value));
-				chartData.angleBelt.push(   -1* instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactAHD.value));
-				chartData.effectivePenDeck.push(instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.ePenDN.value));
-				chartData.angleDeck.push(       instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactADD.value));
-				chartData.impactVelocity.push(  instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.impactV.value));
-				chartData.flightTime.push(      instance.impactData().get(i+instance.getImpactSizeAligned()*Module.impactDataIndex.tToTargetA.value));
-
-				for(var j=0; j<numAngles; j++){
-					chartData.detDist[j].push( instance.postPenData().get(i+j*instance.getImpactSize()+
-						Module.postPenDataIndex.x.value  *instance.getPostPenSize()));
-					//console.log("nf", i+j*instance.getImpactSize()+
-					//	Module.postPenDataIndex.x.value  *instance.getPostPenSize());
-					
-					chartData.detDistF[j].push(instance.postPenData().get(i+j*instance.getImpactSize()+
-						Module.postPenDataIndex.xwf.value*instance.getPostPenSize()));
-					//console.log("wf", i+j*instance.getImpactSize()+
-					//	Module.postPenDataIndex.xwf.value*instance.getPostPenSize());
+					for(var j=0; j<numAngles; j++){
+						chartData.detDist[k][j].push( instance.postPenData().get(i+j*instance.getImpactSize()+
+							Module.postPenDataIndex.x.value  *instance.getPostPenSize()));
+						//console.log("nf", i+j*instance.getImpactSize()+
+						//	Module.postPenDataIndex.x.value  *instance.getPostPenSize());
+						
+						chartData.detDistF[k][j].push(instance.postPenData().get(i+j*instance.getImpactSize()+
+							Module.postPenDataIndex.xwf.value*instance.getPostPenSize()));
+						//console.log("wf", i+j*instance.getImpactSize()+
+						//	Module.postPenDataIndex.xwf.value*instance.getPostPenSize());
+					}
 				}
 			}
 			//instance.printPostPen();
@@ -545,8 +553,10 @@
 			//console.log(Module.postPenDataIndex.x.value  *instance.getPostPenSize());
 			//console.log(chartData);
 			setChart(chartData);
-
-			instance.delete();
+			
+			for(var k=0; k<2; k++){
+				instances[k].delete();
+			}
 		}
 		
 		var impactCharts = []
@@ -562,11 +572,11 @@
 				data: {
 					datasets: [
 						{
-							data: generatePoints(response.labels, response.effectivePen, false),
+							data: generatePoints(response.labels[0], response.effectivePen[0], false),
 							label: "Effective Penetration (mm)", yAxisID: "Penetration",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: generatePoints(response.labels, response.angleBelt, true),
+							data: generatePoints(response.labels[0], response.angleBelt[0], true),
 							label: "Impact Angle (°)", yAxisID: "Angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
@@ -600,11 +610,11 @@
 				data: {
 					datasets: [
 						{
-							data: generatePoints(response.labels, response.effectivePenDeck, false),
+							data: generatePoints(response.labels[0], response.effectivePenDeck[0], false),
 							label: "Effective Deck Penetration (mm)", yAxisID: "Penetration",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: generatePoints(response.labels, response.angleDeck, true),
+							data: generatePoints(response.labels[0], response.angleDeck[0], true),
 							label: "Deck Impact Angle (°)", yAxisID: "Angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
@@ -638,11 +648,11 @@
 				data: {
 					datasets: [
 						{
-							data: generatePoints(response.labels, response.impactVelocity, false),
+							data: generatePoints(response.labels[0], response.impactVelocity[0], false),
 							label: "Impact Velocity (m/s)", yAxisID: "Impact Velocity",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: generatePoints(response.labels, response.flightTime, true),
+							data: generatePoints(response.labels[0], response.flightTime[0], true),
 							label: "Flight Time (s)", yAxisID: "Time",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
@@ -683,15 +693,15 @@
 					data: {
 						datasets: [
 							{
-								data: generatePoints(response.labels, response.detDistF[i], false),
+								data: generatePoints(response.labels[0], response.detDistF[0][i], false),
 								label: "Detonation Distance with Fusing (m)",
 								borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
-								data: generatePoints(response.labels, response.detDist[i], false),
+								data: generatePoints(response.labels[0], response.detDist[0][i], false),
 								label: "Detonation Distance (m)",
 								borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 							}, {
-								data: generatePoints(response.labels, width, false),
+								data: generatePoints(response.labels[0], width, false),
 								label: "Ship Width (m)",
 								borderColor: "#800080", fill: false, pointRadius: 0, pointHitRadius: 5
 							}
