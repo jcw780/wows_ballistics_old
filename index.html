@@ -566,28 +566,30 @@
 				svs[k] = shellValue[k].slice(-1);
 			}
 
+			var EPL = "Effective Penetration ";
+			var IAL = "Impact Angle ";
 			impactCharts[0] = new Chart(document.getElementById("penChart0"), {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
 							data: generatePoints(response.labels[0], response.effectivePen[0], false),
-							label: "Effective Penetration (mm) " + shipValue[0] + " " + svs[0], 
+							label: EPL + shipValue[0] + " " + svs[0], 
 							yAxisID: "Penetration",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[0], response.angleBelt[0], true),
-							label: "Impact Angle (°) " + shipValue[0] + " " + svs[0],
+							label: IAL + shipValue[0] + " " + svs[0],
 							yAxisID: "Angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[1], response.effectivePen[1], false),
-							label: "Effective Penetration (mm) " + shipValue[1] + " " + svs[1],
+							label: EPL + shipValue[1] + " " + svs[1],
 							yAxisID: "Penetration",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[1], response.angleBelt[1], true),
-							label: "Impact Angle (°) " + shipValue[1] + " " + svs[1], 
+							label: IAL + shipValue[1] + " " + svs[1], 
 							yAxisID: "Angle",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
@@ -628,28 +630,30 @@
 			if(impactCharts[1]){
 				impactCharts[1].destroy();
 			}
+			var EDP = "Effective Deck Penetration ";
+			var DIA = "Deck Impact Angle ";
 			impactCharts[1] = new Chart(document.getElementById("penChart1"), {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
 							data: generatePoints(response.labels[0], response.effectivePenDeck[0], false),
-							label: "Effective Deck Penetration (mm) " + shipValue[0] + " " + svs[0],
+							label: EDP + shipValue[0] + " " + svs[0],
 							yAxisID: "Penetration",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[0], response.angleDeck[0], true),
-							label: "Deck Impact Angle (°) " + shipValue[0] + " " + svs[0], 
+							label: DIA + shipValue[0] + " " + svs[0], 
 							yAxisID: "Angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[1], response.effectivePenDeck[1], false),
-							label: "Effective Deck Penetration (mm) " + shipValue[1] + " " + svs[1],
+							label: EDP + shipValue[1] + " " + svs[1],
 							yAxisID: "Penetration",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[1], response.angleDeck[1], true),
-							label: "Deck Impact Angle (°) " + shipValue[1] + " " + svs[1], 
+							label: DIA + shipValue[1] + " " + svs[1], 
 							yAxisID: "Angle",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
@@ -690,28 +694,30 @@
 			if(impactCharts[2]){
 				impactCharts[2].destroy();
 			}
+			var IVL = "Impact Velocity ";
+			var FTL = "Flight Time ";
 			impactCharts[2] = new Chart(document.getElementById("penChart2"), {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
 							data: generatePoints(response.labels[0], response.impactVelocity[0], false),
-							label: "Impact Velocity (m/s) " + shipValue[0] + " " + svs[0], 
+							label: IVL + shipValue[0] + " " + svs[0], 
 							yAxisID: "Impact Velocity",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[0], response.flightTime[0], true),
-							label: "Flight Time (s) " + shipValue[0] + " " + svs[0], 
+							label: FTL + shipValue[0] + " " + svs[0], 
 							yAxisID: "Time",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[1], response.impactVelocity[1], false),
-							label: "Impact Velocity (m/s) " + shipValue[1] + " " + svs[1], 
+							label: IVL + shipValue[1] + " " + svs[1], 
 							yAxisID: "Impact Velocity",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: generatePoints(response.labels[1], response.flightTime[1], true),
-							label: "Flight Time (s) " + shipValue[1] + " " + svs[1], 
+							label: FTL + shipValue[1] + " " + svs[1], 
 							yAxisID: "Time",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
@@ -753,8 +759,8 @@
 			//Set PostPen
 			var width = document.getElementById("width").value
 			var i;
-			var WFL = "Detonation Distance with Fusing (m) ";
-			var NFL = "Detonation Distance (m) ";
+			var WFL = "Check Fusing ";
+			var NFL = "Always Fusing ";
 			for(i=0; i<numAngles; i++){
 				var str = "Lateral Angle " + i + ": " + v_angles[i];
 				document.getElementById("A" + i).textContent = str;
@@ -785,7 +791,7 @@
 							},{
 								data: generatePoints(response.labels[0], width, false),
 								label: "Ship Width (m)",
-								borderColor: "#3C3C3C", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#505050", fill: false, pointRadius: 0, pointHitRadius: 5
 							}
 						]
 					},
