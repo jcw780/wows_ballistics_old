@@ -333,7 +333,11 @@
 		}
 
 		function onSubmitPredefined(id){
-			targetShell = typeData[id][shipValue][shellValue]['AP']
+			if(initialized){
+				targetShell = typeData[id][shipValue][shellValue]['AP']
+			}else{
+				targetShell = typeData[0][shipValue][shellValue]['AP']
+			}
 			document.getElementById("mv"        + id).value = targetShell["bulletSpeed"];
 			document.getElementById("caliber"   + id).value = targetShell["bulletDiametr"];
 			document.getElementById("krupp"     + id).value = targetShell["bulletKrupp"];
@@ -497,7 +501,7 @@
 			
 			var instances = []
 			instances[0] = new Module.shell(v_mv0, v_caliber0, v_krupp0, v_mass0, v_normal0, v_cD0, v_threshold0, v_fusetime0);
-			instance1[1] = new Module.shell(v_mv1, v_caliber1, v_krupp1, v_mass1, v_normal1, v_cD1, v_threshold1, v_fusetime1);
+			instances[1] = new Module.shell(v_mv1, v_caliber1, v_krupp1, v_mass1, v_normal1, v_cD1, v_threshold1, v_fusetime1);
 
 			for(var k=0; k<2; k++){
 				instances[k].calcImpact();
