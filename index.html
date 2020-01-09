@@ -32,7 +32,7 @@
 			  border: 5px solid white;
 			}
 		</style>
-		<table>
+		<table id=parameterTable>
 			<tr>
 				<td>
 					<h2>Predefined Shells</h2>
@@ -155,7 +155,7 @@
 						<tr>
 							<td>Targeted Armor Inclination (°)</td>
 						</tr><tr>
-							<td><input type="number" step="any" id="inclination" value="0"></td>
+							<td><input type="number" step="any" min="-90" max="180" id="inclination" value="0"></td>
 						</tr>
 						<tr>
 							<td>Ship Width (m)</td>
@@ -176,9 +176,8 @@
 				</td>
 			</tr>
 		</table>
-
-		<button onclick="jQCall()"; >Calculate</button>
-		
+		<button onclick="hideFunction('parameterTable', 'parameterToggle')" id=parameterToggle>Hide</button>
+		<button onclick="jQCall()"; >Generate Graphs</button>
 		<script>
 		var versionValue = [];
 		var nationValue = [];
