@@ -327,6 +327,7 @@
 			onChangeShell(shellID);
 		}
 		function onChangeShell(shellID){
+			console.log("shell", shellID);
 			var id = parseInt(shellID.splice(-1));
 			shellValue[id] = document.getElementById(shellID).value;
 			onSubmitPredefined(id);
@@ -363,6 +364,9 @@
 			document.getElementById("type1").innerHTML = document.getElementById("nation0").innerHTML;
 			document.getElementById("ship1").innerHTML = document.getElementById("nation0").innerHTML;
 			document.getElementById("shell1").innerHTML = document.getElementById("nation0").innerHTML;
+			onSubmitPredefined(1);
+
+			initialized=true;
 		}
 		</script>
 
