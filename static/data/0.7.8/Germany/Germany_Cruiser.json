@@ -1,5 +1,7 @@
 {
-    "PGSC001_Hermelin_1940": {},
+    "PGSC001_Hermelin_1940": {
+        "Tier": 1
+    },
     "PGSC002_Drezden_1908": {
         "Artillery0": {
             "AP": {
