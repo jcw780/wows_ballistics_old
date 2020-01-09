@@ -38,13 +38,13 @@
 					<h2>Predefined Shells</h2>
 				</td>
 				<td>
-					<h2>Shell Characteristics</h2>
+					<center><h2>Shell Parameters</h2></center>
 				</td>
 				<td>
-					<h2>Target Characteristics</h2>
+					<h2>Target Parameters</h2>
 				</td>
 				<td>
-					<h2>Horizontal Impact Angles</h2>
+					<h2>Lateral Impact Angles</h2>
 				</td>
 			</tr>
 			<tr>
@@ -53,23 +53,45 @@
 						<tr><td>Ship A:</td></tr>
 						<tr>
 							<td>Version</td>
-							<td><select id=version onchange="onChangeVersion('version')"></select></td>
+							<td><select id=version0 onchange="onChangeVersion('version0')"></select></td>
 						</tr>
 						<tr>
 							<td>Nation</td>
-							<td><select id=nation  onchange="onChangeNation('nation')"></select></td>
+							<td><select id=nation0  onchange="onChangeNation('nation0')"></select></td>
 						</tr>
 						<tr>
 							<td>Type</td>
-							<td><select id=type    onchange="onChangeType('type')"></select></td>
+							<td><select id=type0    onchange="onChangeType('type0')"></select></td>
 						</tr>
 						<tr>
 							<td>Ship</td>
-							<td><select id=ship    onchange="onChangeShip('ship')"></select></td>
+							<td><select id=ship0    onchange="onChangeShip('ship0')"></select></td>
 						</tr>
 						<tr>
 							<td>Artillery</td>
-							<td><select id=shell   onchange="onChangeShell('shell')"></select></td>
+							<td><select id=shell0   onchange="onChangeShell('shell0')"></select></td>
+						</tr>
+
+						<tr><td>Ship B:</td></tr>
+						<tr>
+							<td>Version</td>
+							<td><select id=version1 onchange="onChangeVersion('version1')"></select></td>
+						</tr>
+						<tr>
+							<td>Nation</td>
+							<td><select id=nation1  onchange="onChangeNation('nation1')"></select></td>
+						</tr>
+						<tr>
+							<td>Type</td>
+							<td><select id=type1    onchange="onChangeType('type1')"></select></td>
+						</tr>
+						<tr>
+							<td>Ship</td>
+							<td><select id=ship1    onchange="onChangeShip('ship1')"></select></td>
+						</tr>
+						<tr>
+							<td>Artillery</td>
+							<td><select id=shell1   onchange="onChangeShell('shell1')"></select></td>
 						</tr>
 					</table>
 					<!--<button onclick="onSubmitPredefined()">Apply</button>-->
@@ -77,36 +99,49 @@
 				<td>
 					<table>
 						<tr>
-							<td>Muzzle Velocity</td>
-							<td><input type="number" step="any" min="0" id="mv"        value=""> m/s</td>
+							<td></td>
+							<td>Ship A:</td>
+							<td>Ship B:</td>
 						</tr>
 						<tr>
-							<td>Caliber</td>
-							<td><input type="number" step="any" min="0" id="caliber"   value=""> m</td>
+							<td>Muzzle Velocity m/s</td>
+							<td><input type="number" step="any" min="0" id="mv0"        value=""></td>
+							<td><input type="number" step="any" min="0" id="mv1"        value=""></td>
+						</tr>
+						<tr>
+							<td>Caliber m</td>
+							<td><input type="number" step="any" min="0" id="caliber0"   value=""></td>
+							<td><input type="number" step="any" min="0" id="caliber1"   value=""></td>
 						</tr>
 						<tr>
 							<td>Krupp</td>
-							<td><input type="number" step="any" min="0" id="krupp"     value=""></td>
+							<td><input type="number" step="any" min="0" id="krupp0"     value=""></td>
+							<td><input type="number" step="any" min="0" id="krupp1"     value=""></td>
 						</tr>
 						<tr>
-							<td>Mass</td>
-							<td><input type="number" step="any" min="0" id="mass"      value=""> kg</td>
+							<td>Mass kg</td>
+							<td><input type="number" step="any" min="0" id="mass0"      value=""></td>
+							<td><input type="number" step="any" min="0" id="mass1"      value=""></td>
 						</tr>
 						<tr>
-							<td>Normalization</td>
-							<td><input type="number" step="any" min="0" id="normal"    value=""> °</td>
+							<td>Normalization °</td>
+							<td><input type="number" step="any" min="0" id="normal0"    value=""></td>
+							<td><input type="number" step="any" min="0" id="normal1"    value=""></td>
 						</tr>
 						<tr>
 							<td>Drag Coefficient</td>
-							<td><input type="number" step="any" min="0" id="cD"        value=""></td>
+							<td><input type="number" step="any" min="0" id="cD0"        value=""></td>
+							<td><input type="number" step="any" min="0" id="cD1"        value=""></td>
 						</tr>
 						<tr>
-							<td>Fusing Threshold</td>
-							<td><input type="number" step="any" min="0" id="threshold" value=""> mm</td>
+							<td>Fusing Threshold mm</td>
+							<td><input type="number" step="any" min="0" id="threshold0" value=""></td>
+							<td><input type="number" step="any" min="0" id="threshold1" value=""></td>
 						</tr>
 						<tr>
-							<td>Fusetime</td>
-							<td><input type="number" step="any" min="0" id="fusetime"  value=""> s</td>
+							<td>Fusetime s</td>
+							<td><input type="number" step="any" min="0" id="fusetime0"  value=""></td>
+							<td><input type="number" step="any" min="0" id="fusetime1"  value=""></td>
 						</tr>
 					</table>
 				</td>
@@ -114,14 +149,17 @@
 					<table>
 						<tr>
 							<td>Targeted Armor (mm)</td>
+						</tr><tr>
 							<td><input type="number" step="any" min="0" id="armor" value="70"></td>
 						</tr>
 						<tr>
 							<td>Targeted Armor Inclination (°)</td>
+						</tr><tr>
 							<td><input type="number" step="any" id="inclination" value="0"></td>
 						</tr>
 						<tr>
 							<td>Ship Width (m)</td>
+						</tr><tr>
 							<td><input type="number" step="any" min="0" id="width" value="18"> </p></td>
 						</tr>
 					</table>
@@ -142,12 +180,12 @@
 		<button onclick="jQCall()"; >Calculate</button>
 		
 		<script>
-		var versionValue;
-		var nationValue;
-		var typeValue;
-		var shipValue;
-		var shellValue; 
-		var typeData; 
+		var versionValue = [];
+		var nationValue = [];
+		var typeValue = [];
+		var shipValue = [];
+		var shellValue = []; 
+		var typeData = []; 
 		function generateVersion(){
 			console.log("Generating version")
 			$.ajax({
@@ -155,13 +193,16 @@
 				type: "GET",
 				dataType: "json",
 				success: function (data) {
-					document.getElementById("version").innerHTML = '';
+					document.getElementById("version0").innerHTML = '';
+					document.getElementById("version1").innerHTML = '';
 					var i;
 					for(i=0; i<data.length; i++){
-						document.getElementById("version").innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+						document.getElementById("version0").innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+						document.getElementById("version1").innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
 					}
 
-					onChangeVersion("version");
+					onChangeVersion("version0");
+					onChangeVersion("version1");
 				},
 				error: function(response){
 					console.log("Generating version failed")
@@ -174,8 +215,9 @@
 			})
 		}
 		function onChangeVersion(versionID){
-			versionValue = document.getElementById(versionID).value;
-			generateNation("nation");
+			var id = parseInt(versionID.slice(-1));
+			versionValue[id] = document.getElementById(versionID).value;
+			generateNation("nation" + id);
 		}
 
 		function generateNation(nationID){
@@ -194,8 +236,9 @@
 			})
 		}
 		function onChangeNation(nationID){
-			nationValue = document.getElementById(nationID).value;
-			generateType('type');
+			var id = parseInt(nationID.slice(-1));
+			nationValue[id] = document.getElementById(nationID).value;
+			generateType('type' + id);
 		}
 
 		function generateType(typeID){
@@ -214,8 +257,9 @@
 			})
 		}
 		function onChangeType(typeID){
-			typeValue = document.getElementById(typeID).value;
-			generateShip('ship')
+			var id = parseInt(typeID.slice(-1));
+			typeValue[id] = document.getElementById(typeID).value;
+			generateShip('ship' + id)
 		}
 
 		function generateShip(shipID){
@@ -239,8 +283,9 @@
 			})
 		}
 		function onChangeShip(shipID){
-			shipValue = document.getElementById(shipID).value;
-			generateShell('shell');
+			var id = parseInt(shipID.slice(-1));
+			shipValue[id] = document.getElementById(shipID).value;
+			generateShell('shell' + id);
 		}
 
 		function generateShell(shellID){
@@ -254,29 +299,30 @@
 			onChangeShell(shellID);
 		}
 		function onChangeShell(shellID){
-			shellValue = document.getElementById(shellID).value;
-			onSubmitPredefined();
+			var id = parseInt(shellID.splice(-1));
+			shellValue[id] = document.getElementById(shellID).value;
+			onSubmitPredefined(id);
 		}
 
-		function onSubmitPredefined(){
+		function onSubmitPredefined(id){
 			targetShell = typeData[shipValue][shellValue]['AP']
-			document.getElementById("mv").value      = targetShell["bulletSpeed"];
-			document.getElementById("caliber").value = targetShell["bulletDiametr"];
-			document.getElementById("krupp").value = targetShell["bulletKrupp"];
-			document.getElementById("mass").value = targetShell["bulletMass"];
-			document.getElementById("cD").value = targetShell["bulletAirDrag"];
-			document.getElementById("threshold").value = targetShell["bulletDetonatorThreshold"];
-			document.getElementById("fusetime").value = targetShell["bulletDetonator"];
+			document.getElementById("mv"        + id).value = targetShell["bulletSpeed"];
+			document.getElementById("caliber"   + id).value = targetShell["bulletDiametr"];
+			document.getElementById("krupp"     + id).value = targetShell["bulletKrupp"];
+			document.getElementById("mass"      + id).value = targetShell["bulletMass"];
+			document.getElementById("cD"        + id).value = targetShell["bulletAirDrag"];
+			document.getElementById("threshold" + id).value = targetShell["bulletDetonatorThreshold"];
+			document.getElementById("fusetime"  + id).value = targetShell["bulletDetonator"];
 			
-			var caliber = document.getElementById("caliber").value;
+			var caliber = document.getElementById("caliber" + id).value;
 			if (caliber <= 0.13) {
-				document.getElementById("normal").value = 10.;
+				document.getElementById("normal" + id).value = 10.;
 			} else if (caliber <= 0.152) {
-				document.getElementById("normal").value = 8.5;
+				document.getElementById("normal" + id).value = 8.5;
 			} else if (caliber <= 0.22) {
-				document.getElementById("normal").value = 7.;
+				document.getElementById("normal" + id).value = 7.;
 			} else {
-				document.getElementById("normal").value = 6.;
+				document.getElementById("normal" + id).value = 6.;
 			}
 		}
 		</script>
@@ -385,16 +431,16 @@
 		var v_angles = [];
 		var numAngles = 8;
 		function jQCall(){
-			var v_mv         = parseFloat(document.getElementById("mv"         ).value);
-			var v_caliber    = parseFloat(document.getElementById("caliber"    ).value);
-			var v_krupp      = parseFloat(document.getElementById("krupp"      ).value);
-			var v_mass       = parseFloat(document.getElementById("mass"       ).value);
-			var v_normal     = parseFloat(document.getElementById("normal"     ).value);
-			var v_cD         = parseFloat(document.getElementById("cD"         ).value);
-			var v_threshold  = parseFloat(document.getElementById("threshold"  ).value);
-			var v_fusetime   = parseFloat(document.getElementById("fusetime"   ).value);
-			var v_armor      = parseFloat(document.getElementById("armor"      ).value);
-			var v_inclination= parseFloat(document.getElementById("inclination").value);
+			var v_mv0         = parseFloat(document.getElementById("mv0"         ).value);
+			var v_caliber0    = parseFloat(document.getElementById("caliber0"    ).value);
+			var v_krupp0      = parseFloat(document.getElementById("krupp0"      ).value);
+			var v_mass0       = parseFloat(document.getElementById("mass0"       ).value);
+			var v_normal0     = parseFloat(document.getElementById("normal0"     ).value);
+			var v_cD0         = parseFloat(document.getElementById("cD0"         ).value);
+			var v_threshold0  = parseFloat(document.getElementById("threshold0"  ).value);
+			var v_fusetime0   = parseFloat(document.getElementById("fusetime0"   ).value);
+			var v_armor0      = parseFloat(document.getElementById("armor0"      ).value);
+			var v_inclination0= parseFloat(document.getElementById("inclination0").value);
 
 			//console.log(v_mv)
 			
