@@ -336,6 +336,7 @@
 			if(initialized){
 				targetShell = typeData[id][shipValue][shellValue]['AP']
 			}else{
+				console.log(typeData)
 				targetShell = typeData[0][shipValue][shellValue]['AP']
 			}
 			document.getElementById("mv"        + id).value = targetShell["bulletSpeed"];
