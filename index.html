@@ -245,11 +245,13 @@
 		}
 
 		function generateType(typeID){
+			console.log('changing', typeID);
 			$.ajax({
 				url: "static/data/" + versionValue + "/" + nationValue + "/shiptypes.json",
 				type: "GET",
 				dataType: "json",
 				success: function (data) {
+					console.log('get sucessful', typeID);
 					document.getElementById(typeID).innerHTML = '';
 					var i;
 					for(i=0; i<data.length; i++){
@@ -260,6 +262,7 @@
 			})
 		}
 		function onChangeType(typeID){
+			console.log('changed', typeID);
 			var id = parseInt(typeID.slice(-1));
 			typeValue[id] = document.getElementById(typeID).value;
 			generateShip('ship' + id)
@@ -450,7 +453,7 @@
 				v_angles[i] = parseFloat(document.getElementById("angle" + i).value);
 			}
 
-			var instance = new Module.shell(v_mv, v_caliber, v_krupp, v_mass, v_normal, v_cD, v_threshold, v_fusetime);
+			var instance = new Module.shell(v_mv0, v_caliber0, v_krupp0, v_mass0, v_normal0, v_cD0, v_threshold0, v_fusetime0);
 			instance.calcImpact();
 			instance.calcPostPen(v_armor, v_inclination, v_angles);
 			chartData = {
