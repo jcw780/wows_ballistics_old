@@ -511,7 +511,7 @@
 
 			for(var k=0; k<2; k++){
 				instances[k].calcImpact();
-				instances[k].calcPostPen(v_armor, v_inclination, v_angles);
+				instances[k].calcPostPen(v_armor, v_inclination, v_angles, true, false);
 			}
 			chartData = {
 				labels           : [[], []],
