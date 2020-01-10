@@ -1,4 +1,4 @@
-# Overpen_Calculator
+# World of Warships Overpen Calculator
 ## Functionality
 ### Calculate AP performance at impact
 - Belt/Deck penetration - Belt/Deck Impact Angle - Impact Velocity - Flight Time
