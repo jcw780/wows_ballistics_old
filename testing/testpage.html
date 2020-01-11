@@ -224,19 +224,19 @@
 		var initialized = false;
         var compiled = false;
         var dataURL = "../static/data/"
-		function generateVersion(){
+		function generateVersion(id){
 			$.ajax({
 				url: dataURL + "versions.json",
 				type: "GET",
 				dataType: "json",
 				success: function (data) {
-					document.getElementById("version0").innerHTML = '';
+					document.getElementById("version" + id).innerHTML = '';
 					var i;
 					for(i=0; i<data.length; i++){
-						document.getElementById("version0").innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+						document.getElementById("version" + id).innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
 					}
 
-					onChangeVersion("version0");
+					onChangeVersion("version" + id);
 				},
 				error: function(response){
 					console.log("Generating version failed")
@@ -355,18 +355,7 @@
 		function onChangeShell(shellID){
 			var id = parseInt(shellID.slice(-1));
 			shellValue[id] = document.getElementById(shellID).value;
-			if(!initialized){
-				copyStartValues();
-                onSubmitPredefined(id);
-                initialized = true;
-                if(compiled){
-                    jQCall();
-                }
-			}else{
-                onSubmitPredefined(id);
-            }
-
-
+            onSubmitPredefined(id);
 		}
 
 		function onSubmitPredefined(id){
@@ -390,7 +379,7 @@
 			} else {
 				document.getElementById("normal" + id).value = 6.;
 			}
-            return 1;
+            
 		}
 
 		function copyStartValues(){
@@ -937,7 +926,9 @@
 		}
 
 		$(document).ready(function(){
-			generateVersion();
+			generateVersion(0);
+            generateVersion(1);
+            initialized = true;
 		})
 
 		var Module = {
