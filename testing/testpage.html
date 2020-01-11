@@ -931,26 +931,13 @@
             //copyStartValues();
 
             initialized = true;
-            if(compiled){
-                console.log("entered generate side");
-                while(!document.getElementById("mv0").value){
-                    console.log("wait");
-                }
-                jQCall();
-            }
 		})
 
 		var Module = {
 			onRuntimeInitialized: function() {
 				console.log("Wasm Compile Successful");
                 compiled = true;
-                if(initialized){
-                    console.log("entered compile side");
-                    while(!document.getElementById("mv0").value){
-                        console.log("wait");
-                    }
-                    jQCall();
-                }
+
 			}
 		};
     </script>
