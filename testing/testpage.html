@@ -40,13 +40,16 @@
 		<p>Overpen calculations are experimental - further testing may be needed to confirm results.</p>
 		<p>Site will be updated if and when more accurate information becomes available.</p>
 		<style>
-			table, th, td, tr {
+			table{
+                border: 20px solid white;
+            }
+            td, tr {
 			    border: 5px solid white;
 			}
 
             th{
-                background-color: lightgray;
-                border: 5px solid lightgray;
+                background-color: darkgray;
+                border: 20px solid darkgray;
             }
             .container-fluid{
                 background-color: lightgray;
@@ -54,7 +57,8 @@
             canvas{
                 background-color: white;
             }
-		</style>
+        </style>
+
 		<table id=parameterTable>
 			<tr>
 				<th>
@@ -198,9 +202,11 @@
 					<p>Angle 7  <input type="number" step="any" id="angle7" value="35"> ° </p>
 				</td>
 			</tr>
-		</table>
+        </table>
+        
 		<button onclick="hideFunction('parameterTable', 'parameterToggle')" id=parameterToggle>Hide</button>
-		<button onclick="jQCall()"; >Generate Graphs</button>
+        <button onclick="jQCall()"; >Generate Graphs</button>
+
 		<script>
 		var versionValue = [];
 		var nationValue = [];
