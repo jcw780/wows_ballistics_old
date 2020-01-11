@@ -927,9 +927,12 @@
 
 		$(document).ready(function(){
 			generateVersion(0);
-            generateVersion(1);
+            //generateVersion(1);
+            copyStartValues();
+            
             initialized = true;
             if(compiled){
+                console.log("entered generate side");
                 jQCall();
             }
 		})
@@ -939,6 +942,7 @@
 				console.log("Wasm Compile Successful");
                 compiled = true;
                 if(initialized){
+                    console.log("entered compile side");
                     jQCall();
                 }
 			}
