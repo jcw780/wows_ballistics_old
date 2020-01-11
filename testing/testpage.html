@@ -358,8 +358,16 @@
 			shellValue[id] = document.getElementById(shellID).value;
 			if(!initialized){
 				copyStartValues();
-			}
-			onSubmitPredefined(id);
+                onSubmitPredefined(id);
+                labeled = true;
+                if(compiled){
+                    jQCall();
+                }
+			}else{
+                onSubmitPredefined(id);
+            }
+
+
 		}
 
 		function onSubmitPredefined(id){
@@ -383,7 +391,7 @@
 			} else {
 				document.getElementById("normal" + id).value = 6.;
 			}
-            return true;
+            return 1;
 		}
 
 		function copyStartValues(){
@@ -398,14 +406,7 @@
 			shipValue[1]    = shipValue[0];
 			shellValue[1]   = shellValue[0]; 
 			typeData[1]     = typeData[0];
-			labeled = onSubmitPredefined(1);
-
-			initialized=true;
-            //labeled=true;
-
-            if(compiled && labeled){
-                jQCall();
-            }
+			onSubmitPredefined(1);
 		}
 		</script>
 
@@ -537,7 +538,7 @@
             console.log(v_krupp0  , v_krupp1);
             console.log(v_mass0, v_mass1);
             console.log(v_normal0, v_normal1);
-            console.log(v_cD0, v_cD0);
+            console.log(v_cD0, v_cD1);
             console.log(v_threshold0, v_threshold1);
             console.log(v_fusetime0, v_fusetime1);
 
