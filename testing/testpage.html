@@ -934,6 +934,7 @@
 		var Module = {
 			onRuntimeInitialized: function() {
 				console.log("Wasm Compile Successful");
+                compiled = true;
                 if(labeled){
                     jQCall();
                 }
