@@ -403,6 +403,7 @@
             labeled=true;
 
             if(compiled){
+                setTimeout(pollDOM, 300);
                 jQCall();
             }
 		}
@@ -936,6 +937,7 @@
 				console.log("Wasm Compile Successful");
                 compiled = true;
                 if(labeled){
+                    setTimeout(pollDOM, 300);
                     jQCall();
                 }
 			}
