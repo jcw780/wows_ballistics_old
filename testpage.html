@@ -596,14 +596,14 @@
 					for(var j=0; j<numAngles; j++){
 						chartData.detDist[k][j].push(
                             {
-                                x: instances[k].getPostPenPoint(i, Module.postPenIndex.distance.value, j),
-                                y: instances[k].getPostPenPoint(i, Module.postPenIndex.x.value, j)
+                                x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
+                                y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.x.value, j)
                             }
                         );
 						chartData.detDistF[k][j].push(
                             {
-                                x: instances[k].getPostPenPoint(i, Module.postPenIndex.distance.value, j),
-                                y: instances[k].getPostPenPoint(i, Module.postPenIndex.xwf.value, j)
+                                x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
+                                y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j)
                             }
                         );
 					}
