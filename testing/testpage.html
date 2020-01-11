@@ -222,6 +222,8 @@
 		var shellValue = []; 
 		var typeData = [];
 		var initialized = false;
+        var labeled = false;
+        var compiled = false;
         var dataURL = "../static/data/"
 		function generateVersion(){
 			$.ajax({
@@ -398,6 +400,11 @@
 			onSubmitPredefined(1);
 
 			initialized=true;
+            labeled=true;
+
+            if(compiled){
+                jQCall();
+            }
 		}
 		</script>
 
@@ -927,6 +934,9 @@
 		var Module = {
 			onRuntimeInitialized: function() {
 				console.log("Wasm Compile Successful");
+                if(labeled){
+                    jQCall();
+                }
 			}
 		};
     </script>
