@@ -36,20 +36,26 @@
 
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
 
-		<h1>World of Warships Overpen Calculator</h1>
-		<p>Overpen calculations are experimental - further testing may be needed to confirm results.</p>
-		<p>Site will be updated if and when more accurate information becomes available.</p>
+		<h1>&nbsp;World of Warships Overpen Calculator</h1>
+		<p>&nbsp;Overpen calculations are experimental - further testing may be needed to confirm results.</p>
+		<p>&nbsp;Site will be updated if and when more accurate information becomes available.</p>
 		<style>
 			table{
-                border: 20px solid white;
+                border: 15px solid lightgray;
+                background-color: lightgray;
             }
-            td, tr {
-			    border: 5px solid white;
+            td{
+                border: 5px solid lightgray;
+                background-color: lightgray;
+            }
+            tr {
+			    border: 5px solid lightgray;
+                background-color: lightgray;
 			}
 
             th{
+                border: 15px solid lightgray;
                 background-color: lightgray;
-                border: 20px solid lightgray;
             }
             .container-fluid{
                 background-color: lightgray;
@@ -58,20 +64,20 @@
                 background-color: white;
             }
         </style>
-
+        <div class="container-fluid">
 		<table id=parameterTable>
 			<tr>
 				<th>
-					<h2>Predefined Shells</h2>
+					<h2><u>Predefined Shells</u></h2>
 				</th>
 				<th>
-					<center><h2>Shell Data</h2></center>
+					<center><h2><u>Shell Data</u></h2></center>
 				</th>
 				<th>
-					<h2>Target Data</h2>
+					<h2><u>Target Data</u></h2>
 				</th>
 				<th>
-					<h2>Horizontal Angles</h2>
+					<h2><u>Horizontal Angles</u></h2>
 				</th>
 			</tr>
 			<tr>
@@ -131,12 +137,12 @@
 							<td>Ship B:</td>
 						</tr>
 						<tr>
-							<td>Muzzle Velocity m/s</td>
+							<td>Muzzle Velocity (m/s)</td>
 							<td><input type="number" step="any" min="0" id="mv0"        value=""></td>
 							<td><input type="number" step="any" min="0" id="mv1"        value=""></td>
 						</tr>
 						<tr>
-							<td>Caliber m</td>
+							<td>Caliber (m)</td>
 							<td><input type="number" step="any" min="0" id="caliber0"   value=""></td>
 							<td><input type="number" step="any" min="0" id="caliber1"   value=""></td>
 						</tr>
@@ -146,12 +152,12 @@
 							<td><input type="number" step="any" min="0" id="krupp1"     value=""></td>
 						</tr>
 						<tr>
-							<td>Mass kg</td>
+							<td>Mass (kg)</td>
 							<td><input type="number" step="any" min="0" id="mass0"      value=""></td>
 							<td><input type="number" step="any" min="0" id="mass1"      value=""></td>
 						</tr>
 						<tr>
-							<td>Normalization °</td>
+							<td>Normalization (°)</td>
 							<td><input type="number" step="any" min="0" id="normal0"    value=""></td>
 							<td><input type="number" step="any" min="0" id="normal1"    value=""></td>
 						</tr>
@@ -161,12 +167,12 @@
 							<td><input type="number" step="any" min="0" id="cD1"        value=""></td>
 						</tr>
 						<tr>
-							<td>Fusing Threshold mm</td>
+							<td>Fusing Threshold (mm)</td>
 							<td><input type="number" step="any" min="0" id="threshold0" value=""></td>
 							<td><input type="number" step="any" min="0" id="threshold1" value=""></td>
 						</tr>
 						<tr>
-							<td>Fusetime s</td>
+							<td>Fusetime (s)</td>
 							<td><input type="number" step="any" min="0" id="fusetime0"  value=""></td>
 							<td><input type="number" step="any" min="0" id="fusetime1"  value=""></td>
 						</tr>
@@ -175,12 +181,12 @@
 				<td>
 					<table>
 						<tr>
-							<td>Targeted Armor (mm)</td>
+							<td>Armor (mm)</td>
 						</tr><tr>
 							<td><input type="number" step="any" min="0" id="armor" value="70"></td>
 						</tr>
 						<tr>
-							<td>Targeted Armor Inclination (°)</td>
+							<td>Armor Inclination (°)</td>
 						</tr><tr>
 							<td><input type="number" step="any" min="-90" max="180" id="inclination" value="0"></td>
 						</tr>
@@ -203,6 +209,7 @@
 				</td>
 			</tr>
         </table>
+        </div>
         
 		<button onclick="hideFunction('parameterTable', 'parameterToggle')" id=parameterToggle>Hide</button>
         <button onclick="jQCall()"; >Generate Graphs</button>
@@ -407,25 +414,25 @@
 					b.innerText = "Show";
 				}
 			}
-		</script>
-		<h2>Graphs</h2>
-		<h3>At Impact <button onclick="hideFunction('impactCharts', 'impactChartToggle')" id=impactChartToggle>Hide</button> </h3>
+        </script>
+        <h2>&nbsp; Graphs</h2>
+		<h3>&nbsp;&nbsp; At Impact <button onclick="hideFunction('impactCharts', 'impactChartToggle')" id=impactChartToggle>Hide</button> </h3>
 		<div class="container-fluid" id=impactCharts>
-			<h4>Horizontal Penetration <button onclick="hideFunction('penChart0', 'pC0')" id=pC0>Hide</button> </h4>
+			<h4>&nbsp; Horizontal Penetration <button onclick="hideFunction('penChart0', 'pC0')" id=pC0>Hide</button> </h4>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="penChart0" width="1200" height="300"></canvas>
 				</div>	
 			</div>
 
-			<h4>Deck Penetration <button onclick="hideFunction('penChart1', 'pC1')" id=pC1>Hide</button> </h4>
+			<h4>&nbsp; Deck Penetration <button onclick="hideFunction('penChart1', 'pC1')" id=pC1>Hide</button> </h4>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="penChart1" width="1200" height="300"></canvas>
 				</div>	
 			</div>
 			
-			<h4>Shell Speed <button onclick="hideFunction('penChart2', 'pC2')" id=pC2>Hide</button> </h4>
+			<h4>&nbsp; Shell Speed <button onclick="hideFunction('penChart2', 'pC2')" id=pC2>Hide</button> </h4>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="penChart2" width="1200" height="300"></canvas>
@@ -434,58 +441,58 @@
             <h4></h4>
 		</div>
 
-		<h3>Post Penetration <button onclick="hideFunction('postPenCharts', 'postPenChartToggle')" id=postPenChartToggle>Hide</button> </h3>
+		<h3>&nbsp;&nbsp; Post Penetration <button onclick="hideFunction('postPenCharts', 'postPenChartToggle')" id=postPenChartToggle>Hide</button> </h3>
 		<div class="container-fluid" id=postPenCharts>
-			<h4 id="A0">Lateral Angle (0)</h4>
+			<h4 id="A0">&nbsp; Lateral Angle (0)</h4>
 			<button onclick="hideFunction('postPen0', 'post0')" id=post0>Hide</button>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="postPen0" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A1">Lateral Angle (1)</h4>
+			<h4 id="A1">&nbsp; Lateral Angle (1)</h4>
 			<button onclick="hideFunction('postPen1', 'post1')" id=post1>Hide</button>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="postPen1" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A2">Lateral Angle (2)</h4>
+			<h4 id="A2">&nbsp; Lateral Angle (2)</h4>
 			<button onclick="hideFunction('postPen2', 'post2')" id=post2>Hide</button>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="postPen2" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A3">Lateral Angle (3)</h3>
+			<h4 id="A3">&nbsp; Lateral Angle (3)</h3>
 			<button onclick="hideFunction('postPen3', 'post3')" id=post3>Hide</button>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="postPen3" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A4">Lateral Angle (4)</h3>
+			<h4 id="A4">&nbsp; Lateral Angle (4)</h3>
 			<button onclick="hideFunction('postPen4', 'post4')" id=post4>Hide</button>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="postPen4" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A5">Lateral Angle 5</h4>
+			<h4 id="A5">&nbsp; Lateral Angle 5</h4>
 			<button onclick="hideFunction('postPen5', 'post5')" id=post5>Hide</button>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="postPen5" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A6">Lateral Angle 6</h4>
+			<h4 id="A6">&nbsp; Lateral Angle 6</h4>
 			<button onclick="hideFunction('postPen6', 'post6')" id=post6>Hide</button>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="postPen6" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A7">Lateral Angle 7</h3>
+			<h4 id="A7">&nbsp; Lateral Angle 7</h3>
 			<button onclick="hideFunction('postPen7', 'post7')" id=post7>Hide</button>
 			<div class='row'>
 				<div class='col-sm-12'>
