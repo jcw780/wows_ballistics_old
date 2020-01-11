@@ -929,6 +929,9 @@
 			generateVersion(0);
             generateVersion(1);
             initialized = true;
+            if(compiled){
+                jQCall();
+            }
 		})
 
 		var Module = {
