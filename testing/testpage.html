@@ -398,12 +398,12 @@
 			shipValue[1]    = shipValue[0];
 			shellValue[1]   = shellValue[0]; 
 			typeData[1]     = typeData[0];
-			var done = onSubmitPredefined(1);
+			labeled = onSubmitPredefined(1);
 
 			initialized=true;
-            labeled=true;
+            //labeled=true;
 
-            if(compiled && done){
+            if(compiled && labeled){
                 jQCall();
             }
 		}
