@@ -383,6 +383,7 @@
 			} else {
 				document.getElementById("normal" + id).value = 6.;
 			}
+            return true;
 		}
 
 		function copyStartValues(){
@@ -397,13 +398,12 @@
 			shipValue[1]    = shipValue[0];
 			shellValue[1]   = shellValue[0]; 
 			typeData[1]     = typeData[0];
-			onSubmitPredefined(1);
+			var done = onSubmitPredefined(1);
 
 			initialized=true;
             labeled=true;
 
-            if(compiled){
-                setTimeout(pollDOM, 300);
+            if(compiled && done){
                 jQCall();
             }
 		}
@@ -937,7 +937,6 @@
 				console.log("Wasm Compile Successful");
                 compiled = true;
                 if(labeled){
-                    setTimeout(pollDOM, 300);
                     jQCall();
                 }
 			}
