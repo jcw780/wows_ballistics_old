@@ -12,3 +12,5 @@
 ## Development Status
 - Currently still recently released so expect changes 
 - Calculations may be refined if new data is provided
+### Possible Future Features
+- Maximum horizontal angle for non-ricochet / penetration
