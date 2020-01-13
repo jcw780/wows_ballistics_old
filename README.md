@@ -1,4 +1,9 @@
 # World of Warships Overpenetration Calculator
+## Code Information
+### Languages
+- HTML, CSS, JS
+### Code Source
+- Wasm backend: https://github.com/jcw780/ShellCPP
 ## Functionality
 ### Calculate AP performance at impact
 - Belt/Deck penetration - Belt/Deck Impact Angle - Impact Velocity - Flight Time
@@ -7,5 +12,3 @@
 ## Development Status
 - Currently still recently released so expect changes 
 - Calculations may be refined if new data is provided
-## Code Source
-- Wasm backend: https://github.com/jcw780/ShellCPP
