@@ -1,4 +1,4 @@
-# World of Warships Overpenetration Calculator Website
+# World of Warships Overpenetration Calculator
 ## Functionality
 ### Calculate AP performance at impact
 - Belt/Deck penetration - Belt/Deck Impact Angle - Impact Velocity - Flight Time
