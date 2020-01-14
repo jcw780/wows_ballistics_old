@@ -137,7 +137,7 @@
 							<td>Ship B:</td>
 						</tr>
 						<tr>
-							<td>Ship Names</td>
+							<td>Ship Labels</td>
 							<td><input id="shipName0" value=""></td>
 							<td><input id="shipName1" value=""></td>
 						</tr>
@@ -367,7 +367,7 @@
 		function onSubmitPredefined(id){
 			var targetShell = typeData[id][shipValue[id]][shellValue[id]]['AP'];
 			
-			document.getElementById("shipName"  + id).value = shipValue[id];
+			document.getElementById("shipName"  + id).value = shipValue[id] + " " + shellValue[id].slice(-1);
 			document.getElementById("mv"        + id).value = targetShell["bulletSpeed"];
 			document.getElementById("caliber"   + id).value = targetShell["bulletDiametr"];
 			document.getElementById("krupp"     + id).value = targetShell["bulletKrupp"];
@@ -684,22 +684,22 @@
 					datasets: [
 						{
 							data: response.effectivePen[0],
-							label: EPL + shipName[0] + " " + svs[0], 
+							label: EPL + shipName[0], //+ " " + svs[0], 
 							yAxisID: "Penetration",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.angleBelt[0],
-							label: IAL + shipName[0] + " " + svs[0],
+							label: IAL + shipName[0], // + " " + svs[0],
 							yAxisID: "Angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.effectivePen[1],
-							label: EPL + shipName[1] + " " + svs[1],
+							label: EPL + shipName[1], // + " " + svs[1],
 							yAxisID: "Penetration",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.angleBelt[1],
-							label: IAL + shipName[1] + " " + svs[1], 
+							label: IAL + shipName[1], // + " " + svs[1], 
 							yAxisID: "Angle",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
