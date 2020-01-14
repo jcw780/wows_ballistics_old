@@ -14,3 +14,5 @@
 - Calculations may be refined if new data is provided
 ### Possible Future Features
 - Maximum horizontal angle for non-ricochet / penetration
+### Updates
+- 1/13/2019 Added custom graph labels
