@@ -137,6 +137,11 @@
 							<td>Ship B:</td>
 						</tr>
 						<tr>
+							<td>Ship Names</td>
+							<td><input id="shipName0" value=""></td>
+							<td><input id="shipName1" value=""></td>
+						</tr>
+						<tr>
 							<td>Muzzle Velocity (m/s)</td>
 							<td><input type="number" step="any" min="0" id="mv0"        value=""></td>
 							<td><input type="number" step="any" min="0" id="mv1"        value=""></td>
@@ -208,11 +213,12 @@
 					<p>Angle 7  <input type="number" step="any" id="angle7" value="35"> ° </p>
 				</td>
 			</tr>
-        </table>
-        </div>
-        
+		</table>
 		<button onclick="hideFunction('parameterTable', 'parameterToggle')" id=parameterToggle>Hide</button>
         <button onclick="jQCall()">Generate Graphs</button>
+        </div>
+        
+		
 
 		<script>
 		var versionValue = [];
@@ -360,7 +366,8 @@
 
 		function onSubmitPredefined(id){
 			var targetShell = typeData[id][shipValue[id]][shellValue[id]]['AP'];
-
+			
+			document.getElementById("shipName"  + id).value = shipValue[id];
 			document.getElementById("mv"        + id).value = targetShell["bulletSpeed"];
 			document.getElementById("caliber"   + id).value = targetShell["bulletDiametr"];
 			document.getElementById("krupp"     + id).value = targetShell["bulletKrupp"];
@@ -664,6 +671,11 @@
 				svs[1] = 0;
 			}
 
+			shipName = [];
+			for(var k=0; k<2; k++){
+				shipName[k] = document.getElementById("shipName" + k).value;
+			}
+
 			var EPL = "Effective Penetration ";
 			var IAL = "Impact Angle ";
 			impactCharts[0] = new Chart(document.getElementById("penChart0"), {
@@ -672,22 +684,22 @@
 					datasets: [
 						{
 							data: response.effectivePen[0],
-							label: EPL + shipValue[0] + " " + svs[0], 
+							label: EPL + shipName[0] + " " + svs[0], 
 							yAxisID: "Penetration",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.angleBelt[0],
-							label: IAL + shipValue[0] + " " + svs[0],
+							label: IAL + shipName[0] + " " + svs[0],
 							yAxisID: "Angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.effectivePen[1],
-							label: EPL + shipValue[1] + " " + svs[1],
+							label: EPL + shipName[1] + " " + svs[1],
 							yAxisID: "Penetration",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.angleBelt[1],
-							label: IAL + shipValue[1] + " " + svs[1], 
+							label: IAL + shipName[1] + " " + svs[1], 
 							yAxisID: "Angle",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
@@ -736,22 +748,22 @@
 					datasets: [
 						{
 							data: response.effectivePenDeck[0],
-							label: EDP + shipValue[0] + " " + svs[0],
+							label: EDP + shipName[0] + " " + svs[0],
 							yAxisID: "Penetration",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.angleDeck[0],
-							label: DIA + shipValue[0] + " " + svs[0], 
+							label: DIA + shipName[0] + " " + svs[0], 
 							yAxisID: "Angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.effectivePenDeck[1],
-							label: EDP + shipValue[1] + " " + svs[1],
+							label: EDP + shipName[1] + " " + svs[1],
 							yAxisID: "Penetration",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.angleDeck[1],
-							label: DIA + shipValue[1] + " " + svs[1], 
+							label: DIA + shipName[1] + " " + svs[1], 
 							yAxisID: "Angle",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
@@ -800,22 +812,22 @@
 					datasets: [
 						{
 							data: response.impactVelocity[0],
-							label: IVL + shipValue[0] + " " + svs[0], 
+							label: IVL + shipName[0] + " " + svs[0], 
 							yAxisID: "Impact Velocity",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.flightTime[0],
-							label: FTL + shipValue[0] + " " + svs[0], 
+							label: FTL + shipName[0] + " " + svs[0], 
 							yAxisID: "Time",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.impactVelocity[1],
-							label: IVL + shipValue[1] + " " + svs[1], 
+							label: IVL + shipName[1] + " " + svs[1], 
 							yAxisID: "Impact Velocity",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.flightTime[1],
-							label: FTL + shipValue[1] + " " + svs[1], 
+							label: FTL + shipName[1] + " " + svs[1], 
 							yAxisID: "Time",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
@@ -872,19 +884,19 @@
 						datasets: [
 							{
 								data: response.detDistF[0][i],
-								label: WFL + shipValue[0] + " " + svs[0],
+								label: WFL + shipName[0] + " " + svs[0],
 								borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
 								data: response.detDist[0][i],
-								label: NFL + shipValue[0] + " " + svs[0],
+								label: NFL + shipName[0] + " " + svs[0],
 								borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
 								data: response.detDistF[1][i],
-								label: WFL + shipValue[1] + " " + svs[1],
+								label: WFL + shipName[1] + " " + svs[1],
 								borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
 								data: response.detDist[1][i],
-								label: NFL + shipValue[1] + " " + svs[1],
+								label: NFL + shipName[1] + " " + svs[1],
 								borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
 								data: response.width,
