@@ -222,23 +222,6 @@
         <button onclick="jQCall()" id=generate>Generate Graphs</button>
         </div>
 		<script>
-		//Add Hide buttons
-		var hideButtons = [
-			['parameterToggle'  , 'parameterTable'],
-			['impactChartToggle', 'impactCharts'  ],
-			['pC0'              , 'penChart0'     ],
-			['pC1'              , 'penChart1'     ],
-			['pC2'              , 'penChart2'     ],
-		]
-
-		for(const button of hideButtons){
-			document.getElementById(button[0]).addEventListener(touchEvent, hideFunction(button[1], button[0]));
-		}
-
-		document.getElementById("generate").addEventListener(touchEvent, jQCall());
-
-		
-
 		var versionValue = [];
 		var nationValue = [];
 		var typeValue = [];
@@ -421,21 +404,19 @@
 			typeData[1]     = typeData[0];
 			onSubmitPredefined(1);
 		}
-		</script>
 
-		<script>
-			function hideFunction(target, button) {
-				var x = document.getElementById(target);
-				var b = document.getElementById(button);
-				//console.log(b)
-				if (x.style.display === "none") {
-					x.style.display = "block";
-					b.innerText = "Hide";
-				} else {
-					x.style.display = "none";
-					b.innerText = "Show";
-				}
+		function hideFunction(target, button) {
+			var x = document.getElementById(target);
+			var b = document.getElementById(button);
+			//console.log(b)
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				b.innerText = "Hide";
+			} else {
+				x.style.display = "none";
+				b.innerText = "Show";
 			}
+		}
         </script>
         <h2>&nbsp; Graphs</h2>
 		<h3>&nbsp;&nbsp; At Impact <button onclick="hideFunction('impactCharts', 'impactChartToggle')" id=impactChartToggle>Hide</button> </h3>
@@ -945,6 +926,21 @@
 				});
 			}
 		}
+
+		//Add Hide buttons
+		var hideButtons = [
+			['parameterToggle'  , 'parameterTable'],
+			['impactChartToggle', 'impactCharts'  ],
+			['pC0'              , 'penChart0'     ],
+			['pC1'              , 'penChart1'     ],
+			['pC2'              , 'penChart2'     ],
+		]
+
+		for(const button of hideButtons){
+			document.getElementById(button[0]).addEventListener(touchEvent, hideFunction(button[1], button[0]));
+		}
+
+		document.getElementById("generate").addEventListener(touchEvent, jQCall());
 
 		$(document).ready(function(){
 			generateVersion(0);
