@@ -943,10 +943,10 @@
         let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
 		for(const button of hideButtons){
-			document.getElementById(button[0]).addEventListener(touchEvent, hideFunction(button[1], button[0]));
+			document.getElementById(button[0]).addEventListener(touchEvent, function(){hideFunction(button[1], button[0]);} );
 		}
 
-		document.getElementById("generate").addEventListener(touchEvent, jQCall());
+		document.getElementById("generate").addEventListener(touchEvent, function(){jQCall();});
 
 		$(document).ready(function(){
 			generateVersion(0);
