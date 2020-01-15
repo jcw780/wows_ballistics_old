@@ -15,4 +15,5 @@
 ### Possible Future Features
 - Maximum horizontal angle for non-ricochet / penetration
 ### Updates
-- 1/13/2019 Added custom graph labels
+- 1/15/2020 Fixed bug with penetration calculations
+- 1/13/2020 Added custom graph labels
