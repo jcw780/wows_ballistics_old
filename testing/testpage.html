@@ -18,6 +18,10 @@
 	gtag('config', 'UA-155844497-1');
 	</script>
 
+	<script>
+		let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+	</script>
+
 	<body>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -36,7 +40,7 @@
 
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
 
-		<h1>&nbsp;World of Warships Overpen Calculator - TESTING SITE</h1>
+		<h1>&nbsp;World of Warships Overpen Calculator</h1>
 		<p>&nbsp;Overpen calculations are experimental - further testing may be needed to confirm results.</p>
 		<p>&nbsp;Site will be updated if and when more accurate information becomes available.</p>
 		<style>
@@ -63,9 +67,6 @@
             canvas{
                 background-color: white;
             }
-			button{
-				cursor: pointer;
-			}
         </style>
         <div class="container-fluid">
 		<table id=parameterTable>
@@ -218,12 +219,26 @@
 			</tr>
 		</table>
 		<button onclick="hideFunction('parameterTable', 'parameterToggle')" id=parameterToggle>Hide</button>
-        <button onclick="jQCall()">Generate Graphs</button>
+        <button onclick="jQCall()" id=generate>Generate Graphs</button>
         </div>
-        
+		<script>
+		//Add Hide buttons
+		var hideButtons = [
+			['parameterToggle'  , 'parameterTable'],
+			['impactChartToggle', 'impactCharts'  ],
+			['pC0'              , 'penChart0'     ],
+			['pC1'              , 'penChart1'     ],
+			['pC2'              , 'penChart2'     ],
+		]
+
+		for(const button of hideButtons){
+			document.getElementById(button[0]).addEventListener(touchEvent, hideFunction(button[1], button[0]));
+		}
+
+		document.getElementById("generate").addEventListener(touchEvent, jQCall());
+
 		
 
-		<script>
 		var versionValue = [];
 		var nationValue = [];
 		var typeValue = [];
@@ -232,7 +247,7 @@
 		var typeData = [];
 		var initialized = false;
         var compiled = false;
-        var dataURL = "../static/data/"
+        var dataURL = "static/data/"
 		function generateVersion(id){
 			$.ajax({
 				url: dataURL + "versions.json",
