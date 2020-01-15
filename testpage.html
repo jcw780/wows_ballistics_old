@@ -218,8 +218,8 @@
 				</td>
 			</tr>
 		</table>
-		<button onclick="hideFunction('parameterTable', 'parameterToggle')" id=parameterToggle>Hide</button>
-        <button onclick="jQCall()" id=generate>Generate Graphs</button>
+		<button id=parameterToggle>Hide</button>
+        <button id=generate>Generate Graphs</button>
         </div>
 		<script>
 		var versionValue = [];
@@ -421,14 +421,14 @@
         <h2>&nbsp; Graphs</h2>
 		<h3>&nbsp;&nbsp; At Impact <button onclick="hideFunction('impactCharts', 'impactChartToggle')" id=impactChartToggle>Hide</button> </h3>
 		<div class="container-fluid" id=impactCharts>
-			<h4>&nbsp; Horizontal Penetration <button onclick="hideFunction('penChart0', 'pC0')" id=pC0>Hide</button> </h4>
+			<h4>&nbsp; Horizontal Penetration <button id=pC0>Hide</button> </h4>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="penChart0" width="1200" height="300"></canvas>
 				</div>	
 			</div>
 
-			<h4>&nbsp; Deck Penetration <button onclick="hideFunction('penChart1', 'pC1')" id=pC1>Hide</button> </h4>
+			<h4>&nbsp; Deck Penetration <button id=pC1>Hide</button> </h4>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="penChart1" width="1200" height="300"></canvas>
