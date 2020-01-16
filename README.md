@@ -15,5 +15,5 @@
 ### Possible Future Features
 - Maximum horizontal angle for non-ricochet / penetration
 ### Updates
-- 1/15/2020 Fixed bug with penetration calculations
+- 1/15/2020 Fixed bug with penetration calculations, Fixed bug where buttons won't work on iOS
 - 1/13/2020 Added custom graph labels
