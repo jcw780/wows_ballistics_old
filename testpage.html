@@ -452,6 +452,12 @@
 			</div>
             <h4></h4>
 		</div>
+		
+		<h3>&nbsp;&nbsp; Maximum Lateral Angle <button id=angleChartToggle>Hide</button> </h3>
+		<div class="container-fluid" id=angleCharts>
+			<p>Test</p>
+		</div>
+
 
 		<h3>&nbsp;&nbsp; Post Penetration <button id=postPenChartToggle>Hide</button> </h3>
 		<div class="container-fluid" id=postPenCharts>
@@ -528,6 +534,8 @@
 			var v_cD0         = parseFloat(document.getElementById("cD0"         ).value);
 			var v_threshold0  = parseFloat(document.getElementById("threshold0"  ).value);
 			var v_fusetime0   = parseFloat(document.getElementById("fusetime0"   ).value);
+			var v_ra0_0       = parseFloat(document.getElementById("ra0_0"       ).value);
+			var v_ra1_0       = parseFloat(document.getElementById("ra1_0"       ).value);
 
 			var v_mv1         = parseFloat(document.getElementById("mv1"         ).value);
 			var v_caliber1    = parseFloat(document.getElementById("caliber1"    ).value);
@@ -537,6 +545,8 @@
 			var v_cD1         = parseFloat(document.getElementById("cD1"         ).value);
 			var v_threshold1  = parseFloat(document.getElementById("threshold1"  ).value);
 			var v_fusetime1   = parseFloat(document.getElementById("fusetime1"   ).value);
+			var v_ra0_1       = parseFloat(document.getElementById("ra0_1"       ).value);
+			var v_ra1_1       = parseFloat(document.getElementById("ra1_1"       ).value);
         
 			var v_armor       = parseFloat(document.getElementById("armor"      ).value);
 			var v_inclination = parseFloat(document.getElementById("inclination").value);
@@ -545,8 +555,8 @@
 			}
 			
 			var instances = []
-			instances[0] = new Module.shell(v_caliber0, v_mv0, v_cD0, v_mass0, v_krupp0, v_normal0, v_fusetime0, v_threshold0, 45, 60);
-			instances[1] = new Module.shell(v_caliber1, v_mv1, v_cD1, v_mass1, v_krupp1, v_normal1, v_fusetime1, v_threshold1, 45, 60);
+			instances[0] = new Module.shell(v_caliber0, v_mv0, v_cD0, v_mass0, v_krupp0, v_normal0, v_fusetime0, v_threshold0, v_ra0_0, v_ra1_0);
+			instances[1] = new Module.shell(v_caliber1, v_mv1, v_cD1, v_mass1, v_krupp1, v_normal1, v_fusetime1, v_threshold1, v_ra0_1, v_ra1_1);
 
 			for(var k=0; k<2; k++){
 				instances[k].calcImpact();
@@ -945,6 +955,8 @@
 			['pC0'               , 'penChart0'     ],
 			['pC1'               , 'penChart1'     ],
 			['pC2'               , 'penChart2'     ],
+
+			['angleChartToggle'	 , 'angleCharts'   ],
 
             ['postPenChartToggle', 'postPenCharts' ],
             ['post0'             , 'postPen0'      ],
