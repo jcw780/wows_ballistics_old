@@ -181,6 +181,16 @@
 							<td><input type="number" step="any" min="0" id="fusetime0"  value=""></td>
 							<td><input type="number" step="any" min="0" id="fusetime1"  value=""></td>
 						</tr>
+						<tr>
+							<td>Start Ricochet (°)</td>
+							<td><input type="number" step="any" min="0" max="90" id="ra00"  value=""></td>
+							<td><input type="number" step="any" min="0" max="90" id="ra01"  value=""></td>
+						</tr>
+						<tr>
+							<td>Always Ricochet (°)</td>
+							<td><input type="number" step="any" min="0" max="90" id="ra1_0"  value=""></td>
+							<td><input type="number" step="any" min="0" max="90" id="ra1_1"  value=""></td>
+						</tr>
 					</table>
 				</td>
 				<td>
@@ -372,6 +382,8 @@
 			document.getElementById("cD"        + id).value = targetShell["bulletAirDrag"];
 			document.getElementById("threshold" + id).value = targetShell["bulletDetonatorThreshold"];
 			document.getElementById("fusetime"  + id).value = targetShell["bulletDetonator"];
+			document.getElementById("ra0_"      + id).value = targetShell["bulletRicochetAt"];
+			document.getElementById("ra1_"      + id).value = targetShell["bulletAlwaysRicochetAt"];
 			
 			var caliber = document.getElementById("caliber" + id).value;
 			if (caliber <= 0.13) {
@@ -533,8 +545,8 @@
 			}
 			
 			var instances = []
-			instances[0] = new Module.shell(v_mv0, v_caliber0, v_krupp0, v_mass0, v_normal0, v_cD0, v_threshold0, v_fusetime0);
-			instances[1] = new Module.shell(v_mv1, v_caliber1, v_krupp1, v_mass1, v_normal1, v_cD1, v_threshold1, v_fusetime1);
+			instances[0] = new Module.shell(v_caliber0, v_mv0, v_cD0, v_mass0, v_krupp0, v_normal0, v_fusetime0, v_threshold0, 45, 60);
+			instances[1] = new Module.shell(v_caliber1, v_mv1, v_cD1, v_mass1, v_krupp1, v_normal1, v_fusetime1, v_threshold1, 45, 60);
 
 			for(var k=0; k<2; k++){
 				instances[k].calcImpact();
@@ -969,7 +981,7 @@
 			}
 		};
     </script>
-	<script src="shellWasm.js"></script>
+	<script src="shellWasm1.js"></script>
 	<p>If you find a bug or want a new feature, please <a href="https://github.com/jcw780/overpen_calculator/issues">open an issue</a> at GitHub. Your suggestions will be considered at later development.</p>
 	</body>
 </html>
