@@ -455,7 +455,19 @@
 		
 		<h3>&nbsp;&nbsp; Maximum Lateral Angle <button id=angleChartToggle>Hide</button> </h3>
 		<div class="container-fluid" id=angleCharts>
-			<p>Test</p>
+			<h4>&nbsp; Maximum Lateral Angle for Penetration <button id=AC0>Hide</button> </h4>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="angleChart0" width="1200" height="300"></canvas>
+				</div>	
+			</div>
+
+			<h4>&nbsp; Minimum Lateral Angle for Fusing <button id=AC1>Hide</button> </h4>
+			<div class='row'>
+				<div class='col-sm-12'>
+					<canvas id="angleChart1" width="1200" height="300"></canvas>
+				</div>	
+			</div>
 		</div>
 
 
@@ -560,6 +572,7 @@
 
 			for(var k=0; k<2; k++){
 				instances[k].calcImpact();
+				instances[k].calcAngles(v_armor, v_inclination);
 				instances[k].calcPostPen(v_armor, v_inclination, v_angles, true, false);
 			}
 			chartData = {
@@ -570,6 +583,12 @@
 				angleDeck        : [[], []],
 				impactVelocity   : [[], []],
 				flightTime       : [[], []],
+				
+				ra0              : [[], []],
+				ra1              : [[], []],
+				maxArmor      : [[], []],
+				minFuse     : [[], []],
+
 				detDist          : [[], []],
 				detDistF         : [[], []] 
 			}
@@ -642,6 +661,31 @@
                             y: instances[k].getImpactPoint(i, Module.impactDataIndex.tToTargetA.value)
                         }
                     );
+					chartData.ra0[k].push(
+						{
+							x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+							y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra0D.value)
+						}
+					);
+					chartData.ra1[k].push(
+						{
+							x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+							y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra1D.value)
+						}
+					);
+					chartData.maxArmor[k].push(
+						{
+							x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+							y: instances[k].getAnglePoint(i, Module.angleDataIndex.armorD.value)
+						}
+					);
+					chartData.minFuse[k].push(
+						{
+							x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+							y: instances[k].getAnglePoint(i, Module.angleDataIndex.fuseD.value)
+						}
+					);
+
 
 					for(var j=0; j<numAngles; j++){
 						chartData.detDist[k][j].push(
@@ -674,6 +718,7 @@
 		}
 		
 		var impactCharts = []
+		var angleCharts = []
 		var postCharts = []		
 		function setChart(response){
 			var xStepSize = 2500
@@ -880,6 +925,71 @@
 								labelString: "Flight Time (s)",
 							},
 						}
+						]
+					}
+				}
+			});
+
+			if(angleCharts[0]){
+				angleCharts[0].destroy();
+			}
+			var armorL = "Minimum Lateral Angle of Penetration";
+			//var FTL = " ";
+			angleCharts[0] = new Chart(document.getElementById("angleChart0"), {
+				type: 'scatter',
+				data: {
+					datasets: [
+						{
+							data: response.impactVelocity[0],
+							label: armorL + shipName[0], 
+							yAxisID: "armor",
+							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+						},/*{
+							data: response.flightTime[0],
+							label: FTL + shipName[0], 
+							yAxisID: "Time",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						},*/
+						{
+							data: response.impactVelocity[1],
+							label: armorL + shipName[1], 
+							yAxisID: "armor",
+							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+						},/*{
+							data: response.flightTime[1],
+							label: FTL + shipName[1], 
+							yAxisID: "Time",
+							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+						}*/
+					]
+				},
+				options: {
+					scales: {
+						xAxes: [{
+							scaleLabel: {
+								display: true,
+								labelString: "Distance from Launch (m)",
+							},
+							ticks:{
+								min: 0, stepSize: xStepSize
+							}
+						}],
+						yAxes: [{
+							id: "Impact Velocity", postition: "left",
+							scaleLabel: {
+								display: true,
+								labelString: "Impact Velocity (m/s)",
+							},
+							ticks: {
+								stepSize: 100
+							}
+						}/*,{
+							id: "Time", position: "right",
+							scaleLabel: {
+								display: true,
+								labelString: "Flight Time (s)",
+							},
+						}*/
 						]
 					}
 				}
