@@ -933,7 +933,7 @@
 			if(angleCharts[0]){
 				angleCharts[0].destroy();
 			}
-			var armorL = "Minimum Lateral Angle of Penetration";
+			var armorL = "Maximum Lateral Angle of Penetration";
 			//var FTL = " ";
 			angleCharts[0] = new Chart(document.getElementById("angleChart0"), {
 				type: 'scatter',
@@ -980,18 +980,65 @@
 								display: true,
 								labelString: "Impact Velocity (m/s)",
 							}
-						}/*,{
-							id: "Time", position: "right",
-							scaleLabel: {
-								display: true,
-								labelString: "Flight Time (s)",
-							},
-						}*/
-						]
+						}]
 					}
 				}
 			});
-
+			
+			if(angleCharts[1]){
+				angleCharts[1].destroy();
+			}
+			var fuseL = "Minimum Lateral Angle of Fusing";
+			//var FTL = " ";
+			angleCharts[1] = new Chart(document.getElementById("angleChart1"), {
+				type: 'scatter',
+				data: {
+					datasets: [
+						{
+							data: response.minFuse[0],
+							label: fuseL + shipName[0], 
+							yAxisID: "armor",
+							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+						},/*{
+							data: response.flightTime[0],
+							label: FTL + shipName[0], 
+							yAxisID: "Time",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						},*/
+						{
+							data: response.minFuse[1],
+							label: fuseL + shipName[1], 
+							yAxisID: "armor",
+							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+						},/*{
+							data: response.flightTime[1],
+							label: FTL + shipName[1], 
+							yAxisID: "Time",
+							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+						}*/
+					]
+				},
+				options: {
+					scales: {
+						xAxes: [{
+							scaleLabel: {
+								display: true,
+								labelString: "Distance from Launch (m)",
+							},
+							ticks:{
+								min: 0, stepSize: xStepSize
+							}
+						}],
+						yAxes: [{
+							id: "armor", postition: "left",
+							scaleLabel: {
+								display: true,
+								labelString: "Impact Velocity (m/s)",
+							}
+						}]
+					}
+				}
+			});
 			
 			//Set PostPen
 			var width = document.getElementById("width").value
