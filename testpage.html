@@ -940,7 +940,7 @@
 				data: {
 					datasets: [
 						{
-							data: response.impactVelocity[0],
+							data: response.maxArmor[0],
 							label: armorL + shipName[0], 
 							yAxisID: "armor",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
@@ -951,7 +951,7 @@
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},*/
 						{
-							data: response.impactVelocity[1],
+							data: response.maxArmor[1],
 							label: armorL + shipName[1], 
 							yAxisID: "armor",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
@@ -975,13 +975,10 @@
 							}
 						}],
 						yAxes: [{
-							id: "Impact Velocity", postition: "left",
+							id: "armor", postition: "left",
 							scaleLabel: {
 								display: true,
 								labelString: "Impact Velocity (m/s)",
-							},
-							ticks: {
-								stepSize: 100
 							}
 						}/*,{
 							id: "Time", position: "right",
