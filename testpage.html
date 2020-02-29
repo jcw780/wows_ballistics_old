@@ -930,6 +930,7 @@
 				}
 			});
 
+			//Set Angle Charts
 			if(angleCharts[0]){
 				angleCharts[0].destroy();
 			}
@@ -942,7 +943,7 @@
 						{
 							data: response.maxArmor[0],
 							label: armorL + shipName[0], 
-							yAxisID: "armor",
+							yAxisID: "angle",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},/*{
 							data: response.flightTime[0],
@@ -953,7 +954,7 @@
 						{
 							data: response.maxArmor[1],
 							label: armorL + shipName[1], 
-							yAxisID: "armor",
+							yAxisID: "angle",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},/*{
 							data: response.flightTime[1],
@@ -975,10 +976,13 @@
 							}
 						}],
 						yAxes: [{
-							id: "armor", postition: "left",
+							id: "angle", postition: "left",
 							scaleLabel: {
 								display: true,
-								labelString: "Impact Velocity (m/s)",
+								labelString: "Lateral Angle (°)",
+							},
+							ticks:{
+								min: 0
 							}
 						}]
 					}
@@ -997,23 +1001,23 @@
 						{
 							data: response.minFuse[0],
 							label: fuseL + shipName[0], 
-							yAxisID: "armor",
+							yAxisID: "angle",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},/*{
 							data: response.flightTime[0],
 							label: FTL + shipName[0], 
-							yAxisID: "Time",
+							yAxisID: "angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},*/
 						{
 							data: response.minFuse[1],
 							label: fuseL + shipName[1], 
-							yAxisID: "armor",
+							yAxisID: "angle",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},/*{
 							data: response.flightTime[1],
 							label: FTL + shipName[1], 
-							yAxisID: "Time",
+							yAxisID: "angle",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						}*/
 					]
@@ -1030,10 +1034,13 @@
 							}
 						}],
 						yAxes: [{
-							id: "armor", postition: "left",
+							id: "angle", postition: "left",
 							scaleLabel: {
 								display: true,
-								labelString: "Impact Velocity (m/s)",
+								labelString: "Lateral Angle (°)",
+							},
+							ticks:{
+								min: 0
 							}
 						}]
 					}
