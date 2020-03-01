@@ -453,7 +453,7 @@
             <h4></h4>
 		</div>
 		
-		<h3>&nbsp;&nbsp; Maximum Lateral Angle <button id=angleChartToggle>Hide</button> </h3>
+		<h3>&nbsp;&nbsp; Lateral Angle <button id=angleChartToggle>Hide</button> </h3>
 		<div class="container-fluid" id=angleCharts>
 			<h4>&nbsp; Maximum Lateral Angle for Penetration <button id=AC0>Hide</button> </h4>
 			<div class='row'>
@@ -934,7 +934,9 @@
 			if(angleCharts[0]){
 				angleCharts[0].destroy();
 			}
-			var armorL = "Maximum Lateral Angle of Penetration";
+			var armorL = "Maximum Penetration Angle";
+			var ra0L = "Start Ricochet"
+			var ra1L = "Always Ricochet"
 			//var FTL = " ";
 			angleCharts[0] = new Chart(document.getElementById("angleChart0"), {
 				type: 'scatter',
@@ -945,23 +947,32 @@
 							label: armorL + shipName[0], 
 							yAxisID: "angle",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
-						},/*{
-							data: response.flightTime[0],
-							label: FTL + shipName[0], 
-							yAxisID: "Time",
+						},{
+							data: response.ra0[0],
+							label: ra0L + shipName[0], 
+							yAxisID: "angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
-						},*/
-						{
+						},{
+							data: response.ra1[0],
+							label: ra1L + shipName[0], 
+							yAxisID: "angle",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
 							data: response.maxArmor[1],
 							label: armorL + shipName[1], 
 							yAxisID: "angle",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
-						},/*{
-							data: response.flightTime[1],
-							label: FTL + shipName[1], 
-							yAxisID: "Time",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
-						}*/
+						},{
+							data: response.ra0[1],
+							label: ra0L + shipName[1], 
+							yAxisID: "angle",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
+							data: response.ra1[1],
+							label: ra1L + shipName[1], 
+							yAxisID: "angle",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						}
 					]
 				},
 				options: {
@@ -992,7 +1003,7 @@
 			if(angleCharts[1]){
 				angleCharts[1].destroy();
 			}
-			var fuseL = "Minimum Lateral Angle of Fusing";
+			var fuseL = "Minimum Fusing Angle";
 			//var FTL = " ";
 			angleCharts[1] = new Chart(document.getElementById("angleChart1"), {
 				type: 'scatter',
@@ -1003,23 +1014,32 @@
 							label: fuseL + shipName[0], 
 							yAxisID: "angle",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
-						},/*{
-							data: response.flightTime[0],
-							label: FTL + shipName[0], 
+						},{
+							data: response.ra0[0],
+							label: ra0L + shipName[0], 
 							yAxisID: "angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
-						},*/
-						{
+						},{
+							data: response.ra1[0],
+							label: ra1L + shipName[0], 
+							yAxisID: "angle",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
 							data: response.minFuse[1],
 							label: fuseL + shipName[1], 
 							yAxisID: "angle",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
-						},/*{
-							data: response.flightTime[1],
-							label: FTL + shipName[1], 
+						},{
+							data: response.ra0[1],
+							label: ra0L + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
-						}*/
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						},{
+							data: response.ra1[1],
+							label: ra1L + shipName[1], 
+							yAxisID: "angle",
+							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+						}
 					]
 				},
 				options: {
