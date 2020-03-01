@@ -754,6 +754,17 @@
 				}
 			}];
 
+			yAxesPenetration = {
+				id: "Penetration", postition: "left",
+				scaleLabel: {
+					display: true,
+					labelString: "Belt Penetration (mm)",
+				},
+				ticks: {
+					stepSize: 100
+				}
+			}
+
 			var EPL = "Effective Penetration ";
 			var IAL = "Impact Angle ";
 			impactCharts[0] = new Chart(document.getElementById("penChart0"), {
@@ -786,16 +797,7 @@
 				options: {
 					scales: {
 						xAxes: xAxesDistance,
-						yAxes: [{
-							id: "Penetration", postition: "left",
-							scaleLabel: {
-								display: true,
-								labelString: "Belt Penetration (mm)",
-							},
-							ticks: {
-								stepSize: 100
-							}
-						},{
+						yAxes: [yAxesPenetration ,{
 							id: "Angle", position: "right",
 							scaleLabel: {
 								display: true,
@@ -842,16 +844,7 @@
 				options: {
 					scales: {
 						xAxes: xAxesDistance,
-						yAxes: [{
-							id: "Penetration", postition: "left",
-							scaleLabel: {
-								display: true,
-								labelString: "Deck Penetration (mm)",
-							},
-							ticks: {
-								stepSize: 100
-							}
-						},{
+						yAxes: [yAxesPenetration,{
 							id: "Angle", position: "right",
 							scaleLabel: {
 								display: true,
