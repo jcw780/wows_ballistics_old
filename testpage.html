@@ -740,6 +740,16 @@
 			for(var k=0; k<2; k++){
 				shipName[k] = document.getElementById("shipName" + k).value;
 			}
+			
+			xAxesDistance = [{
+				scaleLabel: {
+					display: true,
+					labelString: "Distance from Launch (m)",
+				},
+				ticks:{
+					min: 0, stepSize: xStepSize
+				}
+			}];
 
 			var EPL = "Effective Penetration ";
 			var IAL = "Impact Angle ";
@@ -772,15 +782,7 @@
 				},
 				options: {
 					scales: {
-						xAxes: [{
-							scaleLabel: {
-								display: true,
-								labelString: "Distance from Launch (m)",
-							},
-							ticks:{
-								min: 0, stepSize: xStepSize
-							}
-						}],
+						xAxes: xAxesDistance,
 						yAxes: [{
 							id: "Penetration", postition: "left",
 							scaleLabel: {
@@ -836,15 +838,7 @@
 				},
 				options: {
 					scales: {
-						xAxes: [{
-							scaleLabel: {
-								display: true,
-								labelString: "Distance from Launch (m)",
-							},
-							ticks:{
-								min: 0, stepSize: xStepSize
-							}
-						}],
+						xAxes: xAxesDistance,
 						yAxes: [{
 							id: "Penetration", postition: "left",
 							scaleLabel: {
@@ -900,15 +894,7 @@
 				},
 				options: {
 					scales: {
-						xAxes: [{
-							scaleLabel: {
-								display: true,
-								labelString: "Distance from Launch (m)",
-							},
-							ticks:{
-								min: 0, stepSize: xStepSize
-							}
-						}],
+						xAxes: xAxesDistance,
 						yAxes: [{
 							id: "Impact Velocity", postition: "left",
 							scaleLabel: {
@@ -934,9 +920,9 @@
 			if(angleCharts[0]){
 				angleCharts[0].destroy();
 			}
-			var armorL = "Maximum Penetration Angle";
-			var ra0L = "Start Ricochet"
-			var ra1L = "Always Ricochet"
+			var armorL = "Maximum Penetration Angle ";
+			var ra0L = "Start Ricochet "
+			var ra1L = "Always Ricochet "
 			//var FTL = " ";
 			angleCharts[0] = new Chart(document.getElementById("angleChart0"), {
 				type: 'scatter',
@@ -977,15 +963,7 @@
 				},
 				options: {
 					scales: {
-						xAxes: [{
-							scaleLabel: {
-								display: true,
-								labelString: "Distance from Launch (m)",
-							},
-							ticks:{
-								min: 0, stepSize: xStepSize
-							}
-						}],
+						xAxes: xAxesDistance,
 						yAxes: [{
 							id: "angle", postition: "left",
 							scaleLabel: {
@@ -1003,7 +981,7 @@
 			if(angleCharts[1]){
 				angleCharts[1].destroy();
 			}
-			var fuseL = "Minimum Fusing Angle";
+			var fuseL = "Minimum Fusing Angle ";
 			//var FTL = " ";
 			angleCharts[1] = new Chart(document.getElementById("angleChart1"), {
 				type: 'scatter',
@@ -1044,15 +1022,7 @@
 				},
 				options: {
 					scales: {
-						xAxes: [{
-							scaleLabel: {
-								display: true,
-								labelString: "Distance from Launch (m)",
-							},
-							ticks:{
-								min: 0, stepSize: xStepSize
-							}
-						}],
+						xAxes: xAxesDistance,
 						yAxes: [{
 							id: "angle", postition: "left",
 							scaleLabel: {
@@ -1108,15 +1078,7 @@
 					},
 					options: {
 						scales: {
-							xAxes: [{
-								scaleLabel: {
-									display: true,
-									labelString: "Distance from Launch (m)",
-								},
-								ticks:{
-									min: 0, stepSize: xStepSize,
-								}
-							}],
+							xAxes: xAxesDistance,
 							yAxes: [{
 								scaleLabel: {
 									display: true,
