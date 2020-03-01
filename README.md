@@ -9,6 +9,8 @@ https://jcw780.github.io/overpen_calculator/
 ## Functionality
 ### Calculate AP performance at impact
 - Belt/Deck penetration - Belt/Deck Impact Angle - Impact Velocity - Flight Time
+### Calculate Critical Angles
+- Maximum angle for penetration - Minimum angle for fusing - Lateral ricochet angles
 ### Calculate AP performance post penetration
 - Shell detonation distance after penetration - Checking whether the armor is thick enough to arm the shell
 ## Development Status
@@ -17,5 +19,7 @@ https://jcw780.github.io/overpen_calculator/
 ### Possible Future Features
 - Maximum horizontal angle for non-ricochet / penetration
 ### Updates
+- 2/29/2020 Added critical lateral angle graphs
 - 1/15/2020 Fixed bug with penetration calculations, Fixed bug where buttons won't work on iOS
 - 1/13/2020 Added custom graph labels
+
