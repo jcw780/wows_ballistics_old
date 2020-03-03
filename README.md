@@ -17,8 +17,9 @@ https://jcw780.github.io/overpen_calculator/
 - Currently still recently released so expect changes 
 - Calculations may be refined if new data is provided
 ### Possible Future Features
-- Maximum horizontal angle for non-ricochet / penetration
+- Add HE shells
 ### Updates
+- 3/2/2020 Added version 0.9.1.1 shells
 - 2/29/2020 Added critical lateral angle graphs
 - 1/15/2020 Fixed bug with penetration calculations, Fixed bug where buttons won't work on iOS
 - 1/13/2020 Added custom graph labels
