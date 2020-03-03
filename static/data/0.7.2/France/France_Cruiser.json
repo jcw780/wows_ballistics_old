@@ -8,11 +8,13 @@
                 "bulletDiametr": 0.165,
                 "bulletKrupp": 1883.0,
                 "bulletMass": 54.2,
-                "bulletName": "PFPA006_165MM_45_1893_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 770.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 7.0
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "name": "PFPA006_165MM_45_1893_AP",
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 28.0
             }
         },
         "Artillery1": {
@@ -22,11 +24,13 @@
                 "bulletDiametr": 0.165,
                 "bulletKrupp": 1883.0,
                 "bulletMass": 54.2,
-                "bulletName": "PFPA006_165MM_45_1893_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 770.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 7.0
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "name": "PFPA006_165MM_45_1893_AP",
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 28.0
             }
         },
         "Nation": "France",
@@ -41,11 +45,13 @@
                 "bulletDiametr": 0.139,
                 "bulletKrupp": 2041.0,
                 "bulletMass": 39.5,
-                "bulletName": "PFPA008_139MM_55_1923_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 790.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA008_139MM_55_1923_AP",
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 23.0
             }
         },
         "Nation": "France",
@@ -60,11 +66,13 @@
                 "bulletDiametr": 0.155,
                 "bulletKrupp": 2214.0,
                 "bulletMass": 56.5,
-                "bulletName": "PFPA011_155MM_50_1920_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 870.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 7.0
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "name": "PFPA011_155MM_50_1920_AP",
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 26.0
             }
         },
         "Nation": "France",
@@ -79,11 +87,13 @@
                 "bulletDiametr": 0.152,
                 "bulletKrupp": 2184.0,
                 "bulletMass": 56.0,
-                "bulletName": "PFPA013_152MM_55_1930_AP_1931",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 870.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 8.5
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "name": "PFPA013_152MM_55_1930_AP_1931",
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0
             }
         },
         "Artillery1": {
@@ -93,11 +103,13 @@
                 "bulletDiametr": 0.152,
                 "bulletKrupp": 2225.0,
                 "bulletMass": 57.1,
-                "bulletName": "PFPA015_152MM_55_1930_AP_1937",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 870.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 8.5
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "name": "PFPA015_152MM_55_1930_AP_1937",
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0
             }
         },
         "Nation": "France",
@@ -112,11 +124,13 @@
                 "bulletDiametr": 0.152,
                 "bulletKrupp": 2225.0,
                 "bulletMass": 57.1,
-                "bulletName": "PFPA015_152MM_55_1930_AP_1937",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 870.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 8.5
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "name": "PFPA015_152MM_55_1930_AP_1937",
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0
             }
         },
         "Nation": "France",
@@ -131,11 +145,13 @@
                 "bulletDiametr": 0.203,
                 "bulletKrupp": 2434.0,
                 "bulletMass": 134.0,
-                "bulletName": "PFPA019_203MM_50_1924_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 820.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 7.0
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "name": "PFPA019_203MM_50_1924_AP",
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0
             }
         },
         "Nation": "France",
@@ -150,11 +166,13 @@
                 "bulletDiametr": 0.203,
                 "bulletKrupp": 2434.0,
                 "bulletMass": 134.0,
-                "bulletName": "PFPA021_203MM_55_1931_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 845.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 7.0
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "name": "PFPA021_203MM_55_1931_AP",
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0
             }
         },
         "Artillery1": {
@@ -164,11 +182,13 @@
                 "bulletDiametr": 0.203,
                 "bulletKrupp": 2434.0,
                 "bulletMass": 134.0,
-                "bulletName": "PFPA019_203MM_50_1924_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 820.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 7.0
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "name": "PFPA019_203MM_50_1924_AP",
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0
             }
         },
         "Artillery2": {
@@ -178,11 +198,13 @@
                 "bulletDiametr": 0.203,
                 "bulletKrupp": 2434.0,
                 "bulletMass": 134.0,
-                "bulletName": "PFPA019_203MM_50_1924_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 820.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 7.0
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "name": "PFPA019_203MM_50_1924_AP",
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0
             }
         },
         "Nation": "France",
@@ -197,11 +219,13 @@
                 "bulletDiametr": 0.203,
                 "bulletKrupp": 2434.0,
                 "bulletMass": 134.0,
-                "bulletName": "PFPA021_203MM_55_1931_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 845.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 7.0
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "name": "PFPA021_203MM_55_1931_AP",
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0
             }
         },
         "Nation": "France",
@@ -216,11 +240,13 @@
                 "bulletDiametr": 0.24,
                 "bulletKrupp": 2882.0,
                 "bulletMass": 220.0,
-                "bulletName": "PFPA023_240MM_55_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 845.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 7.0
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "name": "PFPA023_240MM_55_AP",
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 40.0
             }
         },
         "Nation": "France",
@@ -235,11 +261,13 @@
                 "bulletDiametr": 0.152,
                 "bulletKrupp": 2225.0,
                 "bulletMass": 57.1,
-                "bulletName": "PFPA027_152MM_GRASSE_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 870.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 8.5
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "name": "PFPA027_152MM_GRASSE_AP",
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0
             }
         },
         "Nation": "France",

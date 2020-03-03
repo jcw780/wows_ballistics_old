@@ -9,11 +9,11 @@
                 "bulletDiametr": 0.305,
                 "bulletKrupp": 2627.0,
                 "bulletMass": 470.9,
-                "bulletName": "PRPA015_305_AP_1911",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 762.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PRPA015_305_AP_1911"
             }
         },
         "Nation": "Russia",
@@ -30,11 +30,11 @@
                 "bulletDiametr": 0.305,
                 "bulletKrupp": 2627.0,
                 "bulletMass": 470.9,
-                "bulletName": "PRPA070_305_AP_REV",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 762.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PRPA070_305_AP_REV"
             }
         },
         "Nation": "Russia",

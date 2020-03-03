@@ -9,11 +9,11 @@
                 "bulletDiametr": 0.305,
                 "bulletKrupp": 1924.0,
                 "bulletMass": 386.0,
-                "bulletName": "PJPA033_Shell_305mm_AP_APC_41_year_Type",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 810.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA033_Shell_305mm_AP_APC_41_year_Type"
             }
         },
         "Artillery1": {
@@ -25,11 +25,11 @@
                 "bulletDiametr": 0.305,
                 "bulletKrupp": 2028.0,
                 "bulletMass": 386.0,
-                "bulletName": "PJPA030_Shell_305mm_AP_APC_41_year_Type",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 869.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA030_Shell_305mm_AP_APC_41_year_Type"
             }
         },
         "Nation": "Japan",
@@ -50,11 +50,11 @@
                 "bulletDiametr": 0.356,
                 "bulletKrupp": 2500.0,
                 "bulletMass": 635.5,
-                "bulletName": "PJPA035_Shell_356mm_AP_AP_Type_5",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 790.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA035_Shell_356mm_AP_AP_Type_5"
             }
         },
         "Artillery1": {
@@ -66,11 +66,11 @@
                 "bulletDiametr": 0.356,
                 "bulletKrupp": 2500.0,
                 "bulletMass": 635.5,
-                "bulletName": "PJPA035_Shell_356mm_AP_AP_Type_5",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 790.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA035_Shell_356mm_AP_AP_Type_5"
             }
         },
         "Nation": "Japan",
@@ -91,11 +91,11 @@
                 "bulletDiametr": 0.356,
                 "bulletKrupp": 2657.0,
                 "bulletMass": 673.5,
-                "bulletName": "PJPA001_Shell_356mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 775.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA001_Shell_356mm_AP_APC_Type_91"
             }
         },
         "Artillery1": {
@@ -107,11 +107,11 @@
                 "bulletDiametr": 0.356,
                 "bulletKrupp": 2657.0,
                 "bulletMass": 673.5,
-                "bulletName": "PJPA001_Shell_356mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 775.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA001_Shell_356mm_AP_APC_Type_91"
             }
         },
         "Nation": "Japan",
@@ -132,11 +132,11 @@
                 "bulletDiametr": 0.356,
                 "bulletKrupp": 2500.0,
                 "bulletMass": 635.5,
-                "bulletName": "PJPA035_Shell_356mm_AP_AP_Type_5",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 790.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA035_Shell_356mm_AP_AP_Type_5"
             }
         },
         "Artillery1": {
@@ -148,11 +148,11 @@
                 "bulletDiametr": 0.356,
                 "bulletKrupp": 2657.0,
                 "bulletMass": 673.5,
-                "bulletName": "PJPA001_Shell_356mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 775.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA001_Shell_356mm_AP_APC_Type_91"
             }
         },
         "Nation": "Japan",
@@ -173,11 +173,11 @@
                 "bulletDiametr": 0.305,
                 "bulletKrupp": 2327.0,
                 "bulletMass": 386.0,
-                "bulletName": "PJPA050_305mm_AP_APC_Mark_VI",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 831.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA050_305mm_AP_APC_Mark_VI"
             }
         },
         "Nation": "Japan",
@@ -198,11 +198,11 @@
                 "bulletDiametr": 0.41,
                 "bulletKrupp": 2711.0,
                 "bulletMass": 1020.0,
-                "bulletName": "PJPA005_Shell_410mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 806.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA005_Shell_410mm_AP_APC_Type_91"
             }
         },
         "Artillery1": {
@@ -214,11 +214,11 @@
                 "bulletDiametr": 0.41,
                 "bulletKrupp": 2711.0,
                 "bulletMass": 1020.0,
-                "bulletName": "PJPA005_Shell_410mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 806.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA005_Shell_410mm_AP_APC_Type_91"
             }
         },
         "Nation": "Japan",
@@ -239,11 +239,11 @@
                 "bulletDiametr": 0.305,
                 "bulletKrupp": 1373.0,
                 "bulletMass": 386.0,
-                "bulletName": "PJPA060_SHELL_305MM_AP_850LBS",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 732.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA060_SHELL_305MM_AP_850LBS"
             }
         },
         "Nation": "Japan",
@@ -264,11 +264,11 @@
                 "bulletDiametr": 0.41,
                 "bulletKrupp": 2711.0,
                 "bulletMass": 1020.0,
-                "bulletName": "PJPA005_Shell_410mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 806.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA005_Shell_410mm_AP_APC_Type_91"
             }
         },
         "Nation": "Japan",
@@ -289,11 +289,11 @@
                 "bulletDiametr": 0.46,
                 "bulletKrupp": 2574.0,
                 "bulletMass": 1460.0,
-                "bulletName": "PJPA017_Shell_460mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 780.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA017_Shell_460mm_AP_APC_Type_91"
             }
         },
         "Nation": "Japan",
@@ -314,11 +314,11 @@
                 "bulletDiametr": 0.41,
                 "bulletKrupp": 2711.0,
                 "bulletMass": 1020.0,
-                "bulletName": "PJPA053_410mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 870.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA053_410mm_AP_APC_Type_91"
             }
         },
         "Artillery1": {
@@ -330,11 +330,11 @@
                 "bulletDiametr": 0.41,
                 "bulletKrupp": 2711.0,
                 "bulletMass": 1020.0,
-                "bulletName": "PJPA053_410mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 870.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA053_410mm_AP_APC_Type_91"
             }
         },
         "Nation": "Japan",
@@ -355,11 +355,11 @@
                 "bulletDiametr": 0.41,
                 "bulletKrupp": 2200.0,
                 "bulletMass": 1000.0,
-                "bulletName": "PJPA069_410MM_AP_MUTSU",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 790.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA069_410MM_AP_MUTSU"
             }
         },
         "Nation": "Japan",
@@ -380,11 +380,11 @@
                 "bulletDiametr": 0.41,
                 "bulletKrupp": 2711.0,
                 "bulletMass": 1020.0,
-                "bulletName": "PJPA071_410MM_AP_ASHITAKA",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 806.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA071_410MM_AP_ASHITAKA"
             }
         },
         "Nation": "Japan",
@@ -405,11 +405,11 @@
                 "bulletDiametr": 0.41,
                 "bulletKrupp": 2711.0,
                 "bulletMass": 1020.0,
-                "bulletName": "PJPA080_Shell_410mm_AP_KII",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 806.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA080_Shell_410mm_AP_KII"
             }
         },
         "Nation": "Japan",
@@ -430,11 +430,11 @@
                 "bulletDiametr": 0.46,
                 "bulletKrupp": 2574.0,
                 "bulletMass": 1460.0,
-                "bulletName": "PJPA017_Shell_460mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 780.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA017_Shell_460mm_AP_APC_Type_91"
             }
         },
         "Nation": "Japan",
@@ -455,11 +455,11 @@
                 "bulletDiametr": 0.356,
                 "bulletKrupp": 2657.0,
                 "bulletMass": 673.5,
-                "bulletName": "PJPA001_Shell_356mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 775.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA001_Shell_356mm_AP_APC_Type_91"
             }
         },
         "Nation": "Japan",
@@ -480,11 +480,11 @@
                 "bulletDiametr": 0.356,
                 "bulletKrupp": 2657.0,
                 "bulletMass": 673.5,
-                "bulletName": "PJPA001_Shell_356mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 775.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA001_Shell_356mm_AP_APC_Type_91"
             }
         },
         "Nation": "Japan",
@@ -505,11 +505,11 @@
                 "bulletDiametr": 0.356,
                 "bulletKrupp": 2657.0,
                 "bulletMass": 673.5,
-                "bulletName": "PJPA001_Shell_356mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 775.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA001_Shell_356mm_AP_APC_Type_91"
             }
         },
         "Nation": "Japan",
@@ -530,11 +530,11 @@
                 "bulletDiametr": 0.356,
                 "bulletKrupp": 2657.0,
                 "bulletMass": 673.5,
-                "bulletName": "PJPA001_Shell_356mm_AP_APC_Type_91",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 775.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PJPA001_Shell_356mm_AP_APC_Type_91"
             }
         },
         "Nation": "Japan",

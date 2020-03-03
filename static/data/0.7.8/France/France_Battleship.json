@@ -9,11 +9,11 @@
                 "bulletDiametr": 0.305,
                 "bulletKrupp": 2300.0,
                 "bulletMass": 428.35,
-                "bulletName": "PFPA032_305MM_45_1910_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 798.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA032_305MM_45_1910_AP"
             }
         },
         "Nation": "France",
@@ -30,11 +30,11 @@
                 "bulletDiametr": 0.305,
                 "bulletKrupp": 2300.0,
                 "bulletMass": 428.35,
-                "bulletName": "PFPA032_305MM_45_1910_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 798.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA032_305MM_45_1910_AP"
             }
         },
         "Nation": "France",
@@ -51,11 +51,11 @@
                 "bulletDiametr": 0.34,
                 "bulletKrupp": 2350.0,
                 "bulletMass": 585.0,
-                "bulletName": "PFPA034_340MM_45_1912_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 780.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA034_340MM_45_1912_AP"
             }
         },
         "Artillery1": {
@@ -67,11 +67,11 @@
                 "bulletDiametr": 0.34,
                 "bulletKrupp": 2350.0,
                 "bulletMass": 585.0,
-                "bulletName": "PFPA034_340MM_45_1912_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 780.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA034_340MM_45_1912_AP"
             }
         },
         "Nation": "France",
@@ -88,11 +88,11 @@
                 "bulletDiametr": 0.34,
                 "bulletKrupp": 2408.0,
                 "bulletMass": 585.0,
-                "bulletName": "PFPA042_340MM_45_1930_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 780.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA042_340MM_45_1930_AP"
             }
         },
         "Artillery1": {
@@ -104,11 +104,11 @@
                 "bulletDiametr": 0.34,
                 "bulletKrupp": 2408.0,
                 "bulletMass": 585.0,
-                "bulletName": "PFPA042_340MM_45_1930_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 780.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA042_340MM_45_1930_AP"
             }
         },
         "Nation": "France",
@@ -125,11 +125,11 @@
                 "bulletDiametr": 0.34,
                 "bulletKrupp": 2408.0,
                 "bulletMass": 585.0,
-                "bulletName": "PFPA042_340MM_45_1930_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 780.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA042_340MM_45_1930_AP"
             }
         },
         "Artillery1": {
@@ -141,11 +141,11 @@
                 "bulletDiametr": 0.34,
                 "bulletKrupp": 2408.0,
                 "bulletMass": 585.0,
-                "bulletName": "PFPA042_340MM_45_1930_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 780.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA042_340MM_45_1930_AP"
             }
         },
         "Nation": "France",
@@ -162,11 +162,11 @@
                 "bulletDiametr": 0.38,
                 "bulletKrupp": 2347.0,
                 "bulletMass": 885.0,
-                "bulletName": "PFPA036_380MM_45_1935_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 830.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA036_380MM_45_1935_AP"
             }
         },
         "Artillery1": {
@@ -178,11 +178,11 @@
                 "bulletDiametr": 0.38,
                 "bulletKrupp": 2347.0,
                 "bulletMass": 885.0,
-                "bulletName": "PFPA036_380MM_45_1935_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 830.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA036_380MM_45_1935_AP"
             }
         },
         "Nation": "France",
@@ -199,11 +199,11 @@
                 "bulletDiametr": 0.38,
                 "bulletKrupp": 2347.0,
                 "bulletMass": 885.0,
-                "bulletName": "PFPA036_380MM_45_1935_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 830.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA036_380MM_45_1935_AP"
             }
         },
         "Nation": "France",
@@ -220,11 +220,11 @@
                 "bulletDiametr": 0.431,
                 "bulletKrupp": 2550.0,
                 "bulletMass": 1321.0,
-                "bulletName": "PFPA038_431MM_50_1939_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 840.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA038_431MM_50_1939_AP"
             }
         },
         "Nation": "France",
@@ -241,11 +241,11 @@
                 "bulletDiametr": 0.33,
                 "bulletKrupp": 2428.0,
                 "bulletMass": 560.0,
-                "bulletName": "PFPA001_330MM_AP_D",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 870.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA001_330MM_AP_D"
             }
         },
         "Nation": "France",
@@ -262,11 +262,11 @@
                 "bulletDiametr": 0.38,
                 "bulletKrupp": 2347.0,
                 "bulletMass": 885.0,
-                "bulletName": "PFPA046_380MM_AP_GASCOGNE",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 830.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA046_380MM_AP_GASCOGNE"
             }
         },
         "Nation": "France",
@@ -283,11 +283,11 @@
                 "bulletDiametr": 0.38,
                 "bulletKrupp": 2347.0,
                 "bulletMass": 885.0,
-                "bulletName": "PFPA036_380MM_45_1935_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 830.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA036_380MM_45_1935_AP"
             }
         },
         "Nation": "France",
@@ -304,11 +304,11 @@
                 "bulletDiametr": 0.38,
                 "bulletKrupp": 2347.0,
                 "bulletMass": 885.0,
-                "bulletName": "PFPA049_380MM_AP_JBART",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 830.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PFPA049_380MM_AP_JBART"
             }
         },
         "Nation": "France",

@@ -9,11 +9,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 1721.0,
                 "bulletMass": 24.0,
-                "bulletName": "PWPA002_120_AP_BLYSKAWICA",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 900.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PWPA002_120_AP_BLYSKAWICA"
             }
         },
         "Nation": "Poland",
@@ -34,11 +34,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 2400.0,
                 "bulletMass": 23.5,
-                "bulletName": "PHPA002_120_AP_FRIESLAND",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 825.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PHPA002_120_AP_FRIESLAND"
             }
         },
         "Nation": "Poland",

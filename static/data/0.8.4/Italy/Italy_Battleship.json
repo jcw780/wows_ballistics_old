@@ -9,11 +9,11 @@
                 "bulletDiametr": 0.32,
                 "bulletKrupp": 2600.0,
                 "bulletMass": 525.0,
-                "bulletName": "PIPA005_320MM_AP_Model1936",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 830.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PIPA005_320MM_AP_Model1936"
             }
         },
         "Nation": "Italy",
@@ -34,11 +34,11 @@
                 "bulletDiametr": 0.381,
                 "bulletKrupp": 2434.0,
                 "bulletMass": 884.8,
-                "bulletName": "PIPA012_381MM_50_AP_ROMA",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 850.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PIPA012_381MM_50_AP_ROMA"
             }
         },
         "Nation": "Italy",
@@ -59,11 +59,11 @@
                 "bulletDiametr": 0.32,
                 "bulletKrupp": 2600.0,
                 "bulletMass": 525.0,
-                "bulletName": "PIPA018_320MM_AP_GCESARE",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 830.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 6.0
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "name": "PIPA018_320MM_AP_GCESARE"
             }
         },
         "Nation": "Italy",

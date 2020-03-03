@@ -9,11 +9,11 @@
                 "bulletDiametr": 0.1,
                 "bulletKrupp": 2100.0,
                 "bulletMass": 13.5,
-                "bulletName": "PFPA060_100MM_45_1892_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 780.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA060_100MM_45_1892_AP"
             }
         },
         "Nation": "France",
@@ -34,11 +34,11 @@
                 "bulletDiametr": 0.1,
                 "bulletKrupp": 2100.0,
                 "bulletMass": 13.5,
-                "bulletName": "PFPA060_100MM_45_1892_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 780.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA060_100MM_45_1892_AP"
             }
         },
         "Nation": "France",
@@ -59,11 +59,11 @@
                 "bulletDiametr": 0.13,
                 "bulletKrupp": 1803.0,
                 "bulletMass": 32.05,
-                "bulletName": "PFPA028_130MM_40_1919_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 725.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA028_130MM_40_1919_AP"
             }
         },
         "Nation": "France",
@@ -84,11 +84,11 @@
                 "bulletDiametr": 0.13,
                 "bulletKrupp": 1803.0,
                 "bulletMass": 32.05,
-                "bulletName": "PFPA028_130MM_40_1919_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 725.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA028_130MM_40_1919_AP"
             }
         },
         "Nation": "France",
@@ -109,11 +109,11 @@
                 "bulletDiametr": 0.139,
                 "bulletKrupp": 2124.0,
                 "bulletMass": 40.4,
-                "bulletName": "PFPA004_138MM_40_1923_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 700.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA004_138MM_40_1923_AP"
             }
         },
         "Nation": "France",
@@ -134,11 +134,11 @@
                 "bulletDiametr": 0.139,
                 "bulletKrupp": 2124.0,
                 "bulletMass": 40.4,
-                "bulletName": "PFPA004_138MM_40_1923_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 700.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA004_138MM_40_1923_AP"
             }
         },
         "Nation": "France",
@@ -159,11 +159,11 @@
                 "bulletDiametr": 0.139,
                 "bulletKrupp": 2400.0,
                 "bulletMass": 39.9,
-                "bulletName": "PFPA055_AP_TST_TERRIBLE",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 840.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA055_AP_TST_TERRIBLE"
             }
         },
         "Nation": "France",
@@ -184,11 +184,11 @@
                 "bulletDiametr": 0.139,
                 "bulletKrupp": 2400.0,
                 "bulletMass": 39.9,
-                "bulletName": "PFPA059_139MM_55_1924_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 840.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA059_139MM_55_1924_AP"
             }
         },
         "Nation": "France",
@@ -209,11 +209,11 @@
                 "bulletDiametr": 0.139,
                 "bulletKrupp": 2400.0,
                 "bulletMass": 39.9,
-                "bulletName": "PFPA059_139MM_55_1924_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 840.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA059_139MM_55_1924_AP"
             }
         },
         "Nation": "France",
@@ -234,11 +234,11 @@
                 "bulletDiametr": 0.13,
                 "bulletKrupp": 1803.0,
                 "bulletMass": 32.05,
-                "bulletName": "PFPA057_130MM_AP_SIROCCO",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 725.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA057_130MM_AP_SIROCCO"
             }
         },
         "Nation": "France",
@@ -259,11 +259,11 @@
                 "bulletDiametr": 0.139,
                 "bulletKrupp": 2124.0,
                 "bulletMass": 40.4,
-                "bulletName": "PFPA030_138MM_AP_AIGLE",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 700.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA030_138MM_AP_AIGLE"
             }
         },
         "Nation": "France",
@@ -284,11 +284,11 @@
                 "bulletDiametr": 0.139,
                 "bulletKrupp": 2400.0,
                 "bulletMass": 39.9,
-                "bulletName": "PFPA051_139MM_AP_TERRIBLE_1924",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 840.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA051_139MM_AP_TERRIBLE_1924"
             }
         },
         "Nation": "France",
@@ -309,11 +309,11 @@
                 "bulletDiametr": 0.13,
                 "bulletKrupp": 1803.0,
                 "bulletMass": 32.05,
-                "bulletName": "PFPA028_130MM_40_1919_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 725.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA028_130MM_40_1919_AP"
             }
         },
         "Nation": "France",
@@ -334,11 +334,11 @@
                 "bulletDiametr": 0.139,
                 "bulletKrupp": 2400.0,
                 "bulletMass": 39.9,
-                "bulletName": "PFPA055_AP_TST_TERRIBLE",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 840.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA055_AP_TST_TERRIBLE"
             }
         },
         "Nation": "France",

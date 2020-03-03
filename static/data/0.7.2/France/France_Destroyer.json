@@ -9,11 +9,11 @@
                 "bulletDiametr": 0.139,
                 "bulletKrupp": 2124.0,
                 "bulletMass": 40.4,
-                "bulletName": "PFPA030_138MM_AP_AIGLE",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 700.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA030_138MM_AP_AIGLE"
             }
         },
         "Nation": "France",
@@ -30,11 +30,11 @@
                 "bulletDiametr": 0.13,
                 "bulletKrupp": 1803.0,
                 "bulletMass": 32.05,
-                "bulletName": "PFPA028_130MM_40_1919_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 725.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PFPA028_130MM_40_1919_AP"
             }
         },
         "Nation": "France",

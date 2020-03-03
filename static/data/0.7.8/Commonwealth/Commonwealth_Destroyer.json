@@ -9,11 +9,11 @@
                 "bulletDiametr": 0.102,
                 "bulletKrupp": 2300.0,
                 "bulletMass": 15.2,
-                "bulletName": "PUPA006_102MM_SAP_VAMPIRE",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 805.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PUPA006_102MM_SAP_VAMPIRE"
             }
         },
         "Nation": "Commonwealth",
@@ -30,11 +30,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 2438.0,
                 "bulletMass": 22.68,
-                "bulletName": "PUPA008_120_AP_HAIDA",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 808.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PUPA008_120_AP_HAIDA"
             }
         },
         "Nation": "Commonwealth",

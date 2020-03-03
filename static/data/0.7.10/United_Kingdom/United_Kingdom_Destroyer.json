@@ -9,11 +9,11 @@
                 "bulletDiametr": 0.102,
                 "bulletKrupp": 1900.0,
                 "bulletMass": 14.1,
-                "bulletName": "PBPA064_102MM_AP_QF_MKIV",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 664.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA064_102MM_AP_QF_MKIV"
             }
         },
         "Artillery1": {
@@ -25,11 +25,11 @@
                 "bulletDiametr": 0.102,
                 "bulletKrupp": 1374.0,
                 "bulletMass": 17.35,
-                "bulletName": "PBPA066_102MM_AP_38LBS",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 811.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA066_102MM_AP_38LBS"
             }
         },
         "Nation": "United_Kingdom",
@@ -46,11 +46,11 @@
                 "bulletDiametr": 0.102,
                 "bulletKrupp": 1374.0,
                 "bulletMass": 17.35,
-                "bulletName": "PBPA066_102MM_AP_38LBS",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 811.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA066_102MM_AP_38LBS"
             }
         },
         "Nation": "United_Kingdom",
@@ -67,11 +67,11 @@
                 "bulletDiametr": 0.102,
                 "bulletKrupp": 1374.0,
                 "bulletMass": 17.35,
-                "bulletName": "PBPA066_102MM_AP_38LBS",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 811.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA066_102MM_AP_38LBS"
             }
         },
         "Artillery1": {
@@ -83,11 +83,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 2300.0,
                 "bulletMass": 28.12,
-                "bulletName": "PBPA068_120MM_SAP_62LBS",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 774.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA068_120MM_SAP_62LBS"
             }
         },
         "Nation": "United_Kingdom",
@@ -104,11 +104,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 2396.0,
                 "bulletMass": 22.68,
-                "bulletName": "PBPA048_120MM_QFMIX_AP_G",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 808.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA048_120MM_QFMIX_AP_G"
             }
         },
         "Nation": "United_Kingdom",
@@ -125,11 +125,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 2396.0,
                 "bulletMass": 22.68,
-                "bulletName": "PBPA048_120MM_QFMIX_AP_G",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 808.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA048_120MM_QFMIX_AP_G"
             }
         },
         "Nation": "United_Kingdom",
@@ -146,11 +146,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 2396.0,
                 "bulletMass": 22.68,
-                "bulletName": "PBPA048_120MM_QFMIX_AP_G",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 808.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA048_120MM_QFMIX_AP_G"
             }
         },
         "Nation": "United_Kingdom",
@@ -167,11 +167,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 2300.0,
                 "bulletMass": 28.12,
-                "bulletName": "PBPA068_120MM_SAP_62LBS",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 774.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA068_120MM_SAP_62LBS"
             }
         },
         "Nation": "United_Kingdom",
@@ -188,11 +188,11 @@
                 "bulletDiametr": 0.113,
                 "bulletKrupp": 1600.0,
                 "bulletMass": 25.0,
-                "bulletName": "PBPA062_114MM_SAP_55LB",
                 "bulletRicochetAt": 60.0,
                 "bulletSpeed": 746.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA062_114MM_SAP_55LB"
             }
         },
         "Artillery1": {
@@ -204,11 +204,11 @@
                 "bulletDiametr": 0.113,
                 "bulletKrupp": 1600.0,
                 "bulletMass": 25.0,
-                "bulletName": "PBPA062_114MM_SAP_55LB",
                 "bulletRicochetAt": 60.0,
                 "bulletSpeed": 746.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA062_114MM_SAP_55LB"
             }
         },
         "Nation": "United_Kingdom",
@@ -225,11 +225,11 @@
                 "bulletDiametr": 0.113,
                 "bulletKrupp": 1600.0,
                 "bulletMass": 25.0,
-                "bulletName": "PBPA062_114MM_SAP_55LB",
                 "bulletRicochetAt": 60.0,
                 "bulletSpeed": 746.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA062_114MM_SAP_55LB"
             }
         },
         "Nation": "United_Kingdom",
@@ -246,11 +246,11 @@
                 "bulletDiametr": 0.102,
                 "bulletKrupp": 1451.0,
                 "bulletMass": 14.97,
-                "bulletName": "PBPA005_102MM_AP_CAMPBELTOWN",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 884.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA005_102MM_AP_CAMPBELTOWN"
             }
         },
         "Nation": "United_Kingdom",
@@ -267,11 +267,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 2396.0,
                 "bulletMass": 22.68,
-                "bulletName": "PBPA048_120MM_QFMIX_AP_G",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 808.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA048_120MM_QFMIX_AP_G"
             }
         },
         "Nation": "United_Kingdom",
@@ -288,11 +288,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 2438.0,
                 "bulletMass": 22.68,
-                "bulletName": "PBPA061_120_AP_COSSACK",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 808.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA061_120_AP_COSSACK"
             }
         },
         "Nation": "United_Kingdom",
@@ -309,11 +309,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 2396.0,
                 "bulletMass": 22.68,
-                "bulletName": "PBPA048_120MM_QFMIX_AP_G",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 808.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PBPA048_120MM_QFMIX_AP_G"
             }
         },
         "Nation": "United_Kingdom",

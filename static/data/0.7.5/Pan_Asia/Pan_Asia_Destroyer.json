@@ -9,11 +9,11 @@
                 "bulletDiametr": 0.105,
                 "bulletKrupp": 1870.0,
                 "bulletMass": 18.2,
-                "bulletName": "PZPA015_105MM_AP_PSGR",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 715.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PZPA015_105MM_AP_PSGR"
             }
         },
         "Nation": "Pan_Asia",
@@ -30,11 +30,11 @@
                 "bulletDiametr": 0.102,
                 "bulletKrupp": 1900.0,
                 "bulletMass": 14.1,
-                "bulletName": "PZPA012_102MM_AP_QF_MKIV",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 664.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PZPA012_102MM_AP_QF_MKIV"
             }
         },
         "Nation": "Pan_Asia",
@@ -51,11 +51,11 @@
                 "bulletDiametr": 0.127,
                 "bulletKrupp": 1400.0,
                 "bulletMass": 22.7,
-                "bulletName": "PZPA014_127_AP_MK_7",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 960.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PZPA014_127_AP_MK_7"
             }
         },
         "Nation": "Pan_Asia",
@@ -72,11 +72,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 2438.0,
                 "bulletMass": 22.68,
-                "bulletName": "PZPA006_120_AP_BL_I",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 814.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PZPA006_120_AP_BL_I"
             }
         },
         "Nation": "Pan_Asia",
@@ -93,11 +93,11 @@
                 "bulletDiametr": 0.13,
                 "bulletKrupp": 1700.0,
                 "bulletMass": 33.5,
-                "bulletName": "PZPA019_130MM_AP",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 870.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PZPA019_130MM_AP"
             }
         },
         "Nation": "Pan_Asia",
@@ -114,11 +114,11 @@
                 "bulletDiametr": 0.12,
                 "bulletKrupp": 2438.0,
                 "bulletMass": 22.68,
-                "bulletName": "PZPA010_120_AP_QF_MK_IX",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 808.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PZPA010_120_AP_QF_MK_IX"
             }
         },
         "Nation": "Pan_Asia",
@@ -135,11 +135,11 @@
                 "bulletDiametr": 0.127,
                 "bulletKrupp": 2598.0,
                 "bulletMass": 25.0,
-                "bulletName": "PZPA008_127_AP_MK_38",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 792.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PZPA008_127_AP_MK_38"
             }
         },
         "Nation": "Pan_Asia",
@@ -156,11 +156,11 @@
                 "bulletDiametr": 0.127,
                 "bulletKrupp": 2598.0,
                 "bulletMass": 25.0,
-                "bulletName": "PZPA008_127_AP_MK_38",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 792.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PZPA008_127_AP_MK_38"
             }
         },
         "Nation": "Pan_Asia",
@@ -177,11 +177,11 @@
                 "bulletDiametr": 0.127,
                 "bulletKrupp": 2598.0,
                 "bulletMass": 25.0,
-                "bulletName": "PZPA008_127_AP_MK_38",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 792.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PZPA008_127_AP_MK_38"
             }
         },
         "Nation": "Pan_Asia",
@@ -198,11 +198,11 @@
                 "bulletDiametr": 0.13,
                 "bulletKrupp": 1700.0,
                 "bulletMass": 33.5,
-                "bulletName": "PZPA002_130_AP_ANSHAN",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 870.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PZPA002_130_AP_ANSHAN"
             }
         },
         "Nation": "Pan_Asia",
@@ -219,11 +219,11 @@
                 "bulletDiametr": 0.127,
                 "bulletKrupp": 2598.0,
                 "bulletMass": 25.0,
-                "bulletName": "PZPA004_127_AP_LO_YANG",
                 "bulletRicochetAt": 45.0,
                 "bulletSpeed": 792.0,
                 "alphaPiercingHE": 0.0,
-                "bulletCapNormalizeMaxAngle": 10.0
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "name": "PZPA004_127_AP_LO_YANG"
             }
         },
         "Nation": "Pan_Asia",
