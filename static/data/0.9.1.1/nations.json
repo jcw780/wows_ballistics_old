@@ -1,14 +1,14 @@
 [
-    "Pan_America",
-    "Italy",
-    "United_Kingdom",
-    "Events",
-    "USA",
-    "Japan",
-    "Russia",
-    "Europe",
-    "Pan_Asia",
     "Commonwealth",
+    "Europe",
+    "Events",
     "France",
-    "Germany"
+    "Germany",
+    "Italy",
+    "Japan",
+    "Pan_America",
+    "Pan_Asia",
+    "Russia",
+    "USA",
+    "United_Kingdom"
 ]
