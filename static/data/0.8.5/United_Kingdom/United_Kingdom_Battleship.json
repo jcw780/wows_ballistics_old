@@ -11,7 +11,9 @@
                 "bulletMass": 879.0,
                 "bulletName": "PBPA002_381mm_AP_APC_MarkXXIIb",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 732.0
+                "bulletSpeed": 732.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -34,7 +36,9 @@
                 "bulletMass": 389.8,
                 "bulletName": "PBPA028_305MM_MX_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 831.0
+                "bulletSpeed": 831.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -48,7 +52,9 @@
                 "bulletMass": 389.8,
                 "bulletName": "PBPA028_305MM_MX_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 831.0
+                "bulletSpeed": 831.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -71,7 +77,9 @@
                 "bulletMass": 567.0,
                 "bulletName": "PBPA031_343MM_MV_IIA_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 787.0
+                "bulletSpeed": 787.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -94,7 +102,9 @@
                 "bulletMass": 635.0,
                 "bulletName": "PBPA033_343MM_MV_IA_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 759.0
+                "bulletSpeed": 759.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -108,7 +118,9 @@
                 "bulletMass": 635.0,
                 "bulletName": "PBPA033_343MM_MV_IA_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 759.0
+                "bulletSpeed": 759.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -131,7 +143,9 @@
                 "bulletMass": 879.0,
                 "bulletName": "PBPA053_381MM_AP_MKXXIIB_C",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 731.5
+                "bulletSpeed": 731.5,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -145,7 +159,9 @@
                 "bulletMass": 879.0,
                 "bulletName": "PBPA053_381MM_AP_MKXXIIB_C",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 731.5
+                "bulletSpeed": 731.5,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -168,7 +184,9 @@
                 "bulletMass": 721.0,
                 "bulletName": "PBPA043_356MM_MVII_MVIIB_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 757.0
+                "bulletSpeed": 757.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -182,7 +200,9 @@
                 "bulletMass": 721.0,
                 "bulletName": "PBPA043_356MM_MVII_MVIIB_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 757.0
+                "bulletSpeed": 757.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -205,7 +225,9 @@
                 "bulletMass": 879.0,
                 "bulletName": "PBPA054_381MM_AP_MKII",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 836.0
+                "bulletSpeed": 836.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -219,7 +241,9 @@
                 "bulletMass": 879.0,
                 "bulletName": "PBPA054_381MM_AP_MKII",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 836.0
+                "bulletSpeed": 836.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -242,7 +266,9 @@
                 "bulletMass": 1157.0,
                 "bulletName": "PBPA051_419MM_MII_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 747.0
+                "bulletSpeed": 747.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -256,7 +282,9 @@
                 "bulletMass": 1080.0,
                 "bulletName": "PBPA044_406MM_MIV_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 747.0
+                "bulletSpeed": 747.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -279,7 +307,9 @@
                 "bulletMass": 1506.0,
                 "bulletName": "PBPA046_457MM_MII_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 762.0
+                "bulletSpeed": 762.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -293,7 +323,9 @@
                 "bulletMass": 1157.0,
                 "bulletName": "PBPA051_419MM_MII_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 747.0
+                "bulletSpeed": 747.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -316,7 +348,9 @@
                 "bulletMass": 879.0,
                 "bulletName": "PBPA081_381MM_AP_MKII_TEST",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 836.0
+                "bulletSpeed": 836.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -330,7 +364,9 @@
                 "bulletMass": 879.0,
                 "bulletName": "PBPA081_381MM_AP_MKII_TEST",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 836.0
+                "bulletSpeed": 836.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -353,7 +389,9 @@
                 "bulletMass": 389.8,
                 "bulletName": "PBPA075_305MM_AP_DREAD",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 831.0
+                "bulletSpeed": 831.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -376,7 +414,9 @@
                 "bulletMass": 879.0,
                 "bulletName": "PBPA024_381MM_AP_HOOD",
                 "bulletRicochetAt": 60.0,
-                "bulletSpeed": 731.5
+                "bulletSpeed": 731.5,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -399,7 +439,9 @@
                 "bulletMass": 879.0,
                 "bulletName": "PBPA072_381MM_AP_VANGUARD",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 804.0
+                "bulletSpeed": 804.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -423,7 +465,9 @@
                 "bulletMass": 929.0,
                 "bulletName": "PBPA039_406MM_MI_IB_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 788.0
+                "bulletSpeed": 788.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -446,7 +490,9 @@
                 "bulletMass": 721.0,
                 "bulletName": "PBPA059_356MM_AP_DUKE",
                 "bulletRicochetAt": 60.0,
-                "bulletSpeed": 757.0
+                "bulletSpeed": 757.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",
@@ -469,7 +515,9 @@
                 "bulletMass": 1157.0,
                 "bulletName": "PBPA080_419MM_MII_AP_TEST",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 747.0
+                "bulletSpeed": 747.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -483,7 +531,9 @@
                 "bulletMass": 1506.0,
                 "bulletName": "PBPA046_457MM_MII_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 762.0
+                "bulletSpeed": 762.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "United_Kingdom",

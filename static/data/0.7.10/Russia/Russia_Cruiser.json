@@ -11,7 +11,9 @@
                 "bulletMass": 41.4,
                 "bulletName": "PRPA001_Shell_152mm_AP_AP_91lbs",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 792.5
+                "bulletSpeed": 792.5,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5
             }
         },
         "Nation": "Russia",
@@ -30,7 +32,9 @@
                 "bulletMass": 41.4,
                 "bulletName": "PRPA001_Shell_152mm_AP_AP_91lbs",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 792.5
+                "bulletSpeed": 792.5,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5
             }
         },
         "Nation": "Russia",
@@ -49,7 +53,9 @@
                 "bulletMass": 47.7,
                 "bulletName": "PRPA006_Shell_152mm_AP_SC_Mk_27_Mod_2",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 914.0
+                "bulletSpeed": 914.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5
             }
         },
         "Nation": "Russia",
@@ -68,7 +74,9 @@
                 "bulletMass": 41.4,
                 "bulletName": "PRPA001_Shell_152mm_AP_AP_91lbs",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 792.5
+                "bulletSpeed": 792.5,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5
             }
         },
         "Nation": "Russia",
@@ -88,7 +96,9 @@
                 "bulletMass": 20.47,
                 "bulletName": "PRPA041_120_AP_P_1905",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 823.0
+                "bulletSpeed": 823.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Russia",
@@ -107,7 +117,9 @@
                 "bulletMass": 36.86,
                 "bulletName": "PRPA040_130_AP_P_1911",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 823.0
+                "bulletSpeed": 823.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Russia",
@@ -126,7 +138,9 @@
                 "bulletMass": 36.86,
                 "bulletName": "PRPA040_130_AP_P_1911",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 823.0
+                "bulletSpeed": 823.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Russia",
@@ -145,7 +159,9 @@
                 "bulletMass": 97.5,
                 "bulletName": "PRPA037_180_AP_B_32_S",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 800.0
+                "bulletSpeed": 800.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0
             }
         },
         "Nation": "Russia",
@@ -164,7 +180,9 @@
                 "bulletMass": 55.0,
                 "bulletName": "PRPA035_152MM_B35",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 950.0
+                "bulletSpeed": 950.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5
             }
         },
         "Nation": "Russia",
@@ -183,7 +201,9 @@
                 "bulletMass": 55.0,
                 "bulletName": "PRPA035_152MM_B35",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 950.0
+                "bulletSpeed": 950.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5
             }
         },
         "Nation": "Russia",
@@ -202,7 +222,9 @@
                 "bulletMass": 55.0,
                 "bulletName": "PRPA035_152MM_B35",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 950.0
+                "bulletSpeed": 950.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5
             }
         },
         "Nation": "Russia",
@@ -221,7 +243,9 @@
                 "bulletMass": 97.5,
                 "bulletName": "PRPA038_180_AP_B_32_F",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 920.0
+                "bulletSpeed": 920.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0
             }
         },
         "Nation": "Russia",
@@ -240,7 +264,9 @@
                 "bulletMass": 176.0,
                 "bulletName": "PRPA036_220_AP_B_23",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 985.0
+                "bulletSpeed": 985.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0
             }
         },
         "Nation": "Russia",
@@ -259,7 +285,9 @@
                 "bulletMass": 41.4,
                 "bulletName": "PRPA052_AP_OLEG",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 792.5
+                "bulletSpeed": 792.5,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5
             }
         },
         "Nation": "Russia",
@@ -278,7 +306,9 @@
                 "bulletMass": 33.5,
                 "bulletName": "PRPA045_130_AP_KK",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 861.0
+                "bulletSpeed": 861.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Russia",
@@ -297,7 +327,9 @@
                 "bulletMass": 97.5,
                 "bulletName": "PRPA047_180_AP_MOLOTOV",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 920.0
+                "bulletSpeed": 920.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0
             }
         },
         "Nation": "Russia",
@@ -316,7 +348,9 @@
                 "bulletMass": 55.0,
                 "bulletName": "PRPA021_152MM_B35_KUTUZOV",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 950.0
+                "bulletSpeed": 950.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5
             }
         },
         "Nation": "Russia",
@@ -335,7 +369,9 @@
                 "bulletMass": 471.0,
                 "bulletName": "PRPA086_305MM_AP_KRON",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 900.0
+                "bulletSpeed": 900.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Russia",
@@ -354,7 +390,9 @@
                 "bulletMass": 467.0,
                 "bulletName": "PRPA082_305MM_AP_STALINGRAD",
                 "bulletRicochetAt": 55.0,
-                "bulletSpeed": 950.0
+                "bulletSpeed": 950.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Russia",
@@ -373,7 +411,9 @@
                 "bulletMass": 41.4,
                 "bulletName": "PRPA084_152_AP_VARYAG",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 792.5
+                "bulletSpeed": 792.5,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5
             }
         },
         "Nation": "Russia",
@@ -392,7 +432,9 @@
                 "bulletMass": 467.0,
                 "bulletName": "PRPA188_305MM_AP_STALINGRAD_2",
                 "bulletRicochetAt": 60.0,
-                "bulletSpeed": 950.0
+                "bulletSpeed": 950.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Russia",
@@ -411,7 +453,9 @@
                 "bulletMass": 45.5,
                 "bulletName": "PRPA067_150MM_AP_MAKAROV",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 960.0
+                "bulletSpeed": 960.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5
             }
         },
         "Nation": "Russia",
@@ -430,7 +474,9 @@
                 "bulletMass": 38.0,
                 "bulletName": "PJPA999_Useless_AP_Special",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 1500.0
+                "bulletSpeed": 1500.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5
             }
         },
         "Nation": "Russia",

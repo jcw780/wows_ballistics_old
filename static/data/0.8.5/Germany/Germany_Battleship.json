@@ -11,7 +11,9 @@
                 "bulletMass": 800.0,
                 "bulletName": "PGPA001_380mm_AP_APC_L_4_4",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 820.0
+                "bulletSpeed": 820.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -34,7 +36,9 @@
                 "bulletMass": 302.0,
                 "bulletName": "PGPA056_283MM_AP_PZ_GR_L3_2",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 855.0
+                "bulletSpeed": 855.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -57,7 +61,9 @@
                 "bulletMass": 405.0,
                 "bulletName": "PGPA032_305MM_AP_PZ_GR_L3_4",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 855.0
+                "bulletSpeed": 855.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -71,7 +77,9 @@
                 "bulletMass": 415.0,
                 "bulletName": "PGPA045_305MM_AP_PZ_GR_L4_9",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 850.0
+                "bulletSpeed": 850.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -94,7 +102,9 @@
                 "bulletMass": 405.0,
                 "bulletName": "PGPA032_305MM_AP_PZ_GR_L3_4",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 855.0
+                "bulletSpeed": 855.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -108,7 +118,9 @@
                 "bulletMass": 415.0,
                 "bulletName": "PGPA045_305MM_AP_PZ_GR_L4_9",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 850.0
+                "bulletSpeed": 850.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -131,7 +143,9 @@
                 "bulletMass": 750.0,
                 "bulletName": "PGPA036_380MM_AP_PZ_GR_L3_5",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 800.0
+                "bulletSpeed": 800.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -145,7 +159,9 @@
                 "bulletMass": 750.0,
                 "bulletName": "PGPA036_380MM_AP_PZ_GR_L3_5",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 800.0
+                "bulletSpeed": 800.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -168,7 +184,9 @@
                 "bulletMass": 800.0,
                 "bulletName": "PGPA048_380MM_AP_APC_L_4_4_B",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 820.0
+                "bulletSpeed": 820.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -191,7 +209,9 @@
                 "bulletMass": 800.0,
                 "bulletName": "PGPA048_380MM_AP_APC_L_4_4_B",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 820.0
+                "bulletSpeed": 820.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -205,7 +225,9 @@
                 "bulletMass": 800.0,
                 "bulletName": "PGPA048_380MM_AP_APC_L_4_4_B",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 820.0
+                "bulletSpeed": 820.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -228,7 +250,9 @@
                 "bulletMass": 1220.0,
                 "bulletName": "PGPA052_420MM_AP_APC_L_4_6",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 800.0
+                "bulletSpeed": 800.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -242,7 +266,9 @@
                 "bulletMass": 1030.0,
                 "bulletName": "PGPA038_406MM_AP_PZ_GR_L4_4",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 810.0
+                "bulletSpeed": 810.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery2": {
@@ -256,7 +282,9 @@
                 "bulletMass": 1030.0,
                 "bulletName": "PGPA038_406MM_AP_PZ_GR_L4_4",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 810.0
+                "bulletSpeed": 810.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -279,7 +307,9 @@
                 "bulletMass": 1030.0,
                 "bulletName": "PGPA038_406MM_AP_PZ_GR_L4_4",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 810.0
+                "bulletSpeed": 810.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -293,7 +323,9 @@
                 "bulletMass": 1220.0,
                 "bulletName": "PGPA052_420MM_AP_APC_L_4_6",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 800.0
+                "bulletSpeed": 800.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -316,7 +348,9 @@
                 "bulletMass": 405.0,
                 "bulletName": "PGPA061_305MM_AP_KA",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 855.0
+                "bulletSpeed": 855.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -339,7 +373,9 @@
                 "bulletMass": 450.0,
                 "bulletName": "PEPA002_305MM_AP_VIRIBUS",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 800.0
+                "bulletSpeed": 800.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -362,7 +398,9 @@
                 "bulletMass": 600.0,
                 "bulletName": "PGPA082_350MM_AP_PEFRIEDRICH",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 815.0
+                "bulletSpeed": 815.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -385,7 +423,9 @@
                 "bulletMass": 330.0,
                 "bulletName": "PGPA054_283MM_AP_SCHARNHORST",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 890.0
+                "bulletSpeed": 890.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",
@@ -408,7 +448,9 @@
                 "bulletMass": 800.0,
                 "bulletName": "PGPA001_380mm_AP_APC_L_4_4",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 820.0
+                "bulletSpeed": 820.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "Germany",

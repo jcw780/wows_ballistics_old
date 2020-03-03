@@ -11,7 +11,9 @@
                 "bulletMass": 6.5,
                 "bulletName": "PJPA041_76mm_AP_Type_0",
                 "bulletRicochetAt": 91.0,
-                "bulletSpeed": 690.0
+                "bulletSpeed": 690.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -30,7 +32,9 @@
                 "bulletMass": 20.3,
                 "bulletName": "PJPA027_Shell_120mm_AP_C",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 660.0
+                "bulletSpeed": 660.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Artillery1": {
@@ -44,7 +48,9 @@
                 "bulletMass": 20.3,
                 "bulletName": "PJPA027_Shell_120mm_AP_C",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 660.0
+                "bulletSpeed": 660.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -63,7 +69,9 @@
                 "bulletMass": 20.3,
                 "bulletName": "PJPA027_Shell_120mm_AP_C",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 660.0
+                "bulletSpeed": 660.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Artillery1": {
@@ -77,7 +85,9 @@
                 "bulletMass": 20.3,
                 "bulletName": "PJPA027_Shell_120mm_AP_C",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 660.0
+                "bulletSpeed": 660.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -96,7 +106,9 @@
                 "bulletMass": 20.3,
                 "bulletName": "PJPA023_Shell_120mm_AP_C_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 825.0
+                "bulletSpeed": 825.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -115,7 +127,9 @@
                 "bulletMass": 20.3,
                 "bulletName": "PJPA023_Shell_120mm_AP_C_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 825.0
+                "bulletSpeed": 825.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -134,7 +148,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Artillery1": {
@@ -148,7 +164,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -167,7 +185,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Artillery1": {
@@ -181,7 +201,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -200,7 +222,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Artillery1": {
@@ -214,7 +238,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -233,7 +259,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -252,7 +280,9 @@
                 "bulletMass": 6.5,
                 "bulletName": "PJPA041_76mm_AP_Type_0",
                 "bulletRicochetAt": 91.0,
-                "bulletSpeed": 690.0
+                "bulletSpeed": 690.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -271,7 +301,9 @@
                 "bulletMass": 20.3,
                 "bulletName": "PJPA023_Shell_120mm_AP_C_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 825.0
+                "bulletSpeed": 825.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -290,7 +322,9 @@
                 "bulletMass": 20.3,
                 "bulletName": "PJPA023_Shell_120mm_AP_C_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 825.0
+                "bulletSpeed": 825.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -309,7 +343,9 @@
                 "bulletMass": 20.3,
                 "bulletName": "PJPA023_Shell_120mm_AP_C_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 825.0
+                "bulletSpeed": 825.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -328,7 +364,9 @@
                 "bulletMass": 20.3,
                 "bulletName": "PJPA023_Shell_120mm_AP_C_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 825.0
+                "bulletSpeed": 825.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -347,7 +385,9 @@
                 "bulletMass": 20.3,
                 "bulletName": "PJPA023_Shell_120mm_AP_C_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 825.0
+                "bulletSpeed": 825.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -366,7 +406,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -385,7 +427,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -404,7 +448,9 @@
                 "bulletMass": 13.0,
                 "bulletName": "PJPA063_100MM_AP_C_TYPE_98_MG",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 1000.0
+                "bulletSpeed": 1000.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -423,7 +469,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Artillery1": {
@@ -437,7 +485,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -456,7 +506,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -475,7 +527,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -494,7 +548,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -513,7 +569,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA083_127_AP_ASASHIO",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -532,7 +590,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA011_Shell_127mm_AP_Type_0",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",
@@ -551,7 +611,9 @@
                 "bulletMass": 23.0,
                 "bulletName": "PJPA075_127mm_50_AP_HAREKAZE",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 915.0
+                "bulletSpeed": 915.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Artillery1": {
@@ -565,7 +627,9 @@
                 "bulletMass": 13.0,
                 "bulletName": "PJPA077_100MM_AP_HAREKAZE",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 1000.0
+                "bulletSpeed": 1000.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Artillery2": {
@@ -579,7 +643,9 @@
                 "bulletMass": 31.75,
                 "bulletName": "PJPA074_127mm_AP_Mk42_Harekaze",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 808.0
+                "bulletSpeed": 808.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0
             }
         },
         "Nation": "Japan",

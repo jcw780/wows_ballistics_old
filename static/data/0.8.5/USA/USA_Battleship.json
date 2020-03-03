@@ -11,7 +11,9 @@
                 "bulletMass": 394.6,
                 "bulletName": "PAPA025_Shell_305mm_AP_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 823.0
+                "bulletSpeed": 823.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -25,7 +27,9 @@
                 "bulletMass": 394.6,
                 "bulletName": "PAPA025_Shell_305mm_AP_AP",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 823.0
+                "bulletSpeed": 823.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -48,7 +52,9 @@
                 "bulletMass": 394.6,
                 "bulletName": "PAPA055_305mm_AP_AP_870lbs",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 884.0
+                "bulletSpeed": 884.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -62,7 +68,9 @@
                 "bulletMass": 394.6,
                 "bulletName": "PAPA054_Shell_305mm_AP_AP_Mk15",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 884.0
+                "bulletSpeed": 884.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -85,7 +93,9 @@
                 "bulletMass": 635.0,
                 "bulletName": "PAPA039_Shell_356mm_AP_AP_1400lbs",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 792.0
+                "bulletSpeed": 792.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -99,7 +109,9 @@
                 "bulletMass": 680.4,
                 "bulletName": "PAPA035_Shell_356mm_AP_AP_Mk_16",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 792.0
+                "bulletSpeed": 792.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -122,7 +134,9 @@
                 "bulletMass": 1016.0,
                 "bulletName": "PAPA059_Shell_406mm_AP_AP_Mk_5",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 768.0
+                "bulletSpeed": 768.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -136,7 +150,9 @@
                 "bulletMass": 1016.0,
                 "bulletName": "PAPA059_Shell_406mm_AP_AP_Mk_5",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 768.0
+                "bulletSpeed": 768.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -159,7 +175,9 @@
                 "bulletMass": 1225.0,
                 "bulletName": "PAPA011_Shell_406mm_AP_AP_Mk_8",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 701.0
+                "bulletSpeed": 701.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -173,7 +191,9 @@
                 "bulletMass": 1225.0,
                 "bulletName": "PAPA011_Shell_406mm_AP_AP_Mk_8",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 701.0
+                "bulletSpeed": 701.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -196,7 +216,9 @@
                 "bulletMass": 394.6,
                 "bulletName": "PAPA055_305mm_AP_AP_870lbs",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 884.0
+                "bulletSpeed": 884.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -219,7 +241,9 @@
                 "bulletMass": 1225.0,
                 "bulletName": "PAPA014_Shell_406mm_AP_AP_Mk_8",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 762.0
+                "bulletSpeed": 762.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -242,7 +266,9 @@
                 "bulletMass": 1225.0,
                 "bulletName": "PAPA014_Shell_406mm_AP_AP_Mk_8",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 762.0
+                "bulletSpeed": 762.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -256,7 +282,9 @@
                 "bulletMass": 1225.0,
                 "bulletName": "PAPA014_Shell_406mm_AP_AP_Mk_8",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 762.0
+                "bulletSpeed": 762.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery2": {
@@ -270,7 +298,9 @@
                 "bulletMass": 1225.0,
                 "bulletName": "PAPA014_Shell_406mm_AP_AP_Mk_8",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 762.0
+                "bulletSpeed": 762.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -293,7 +323,9 @@
                 "bulletMass": 680.4,
                 "bulletName": "PAPA006_Shell_356mm_AP_AP_Mk_16",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 823.0
+                "bulletSpeed": 823.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Artillery1": {
@@ -307,7 +339,9 @@
                 "bulletMass": 680.4,
                 "bulletName": "PAPA006_Shell_356mm_AP_AP_Mk_16",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 823.0
+                "bulletSpeed": 823.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -330,7 +364,9 @@
                 "bulletMass": 680.4,
                 "bulletName": "PAPA062_SHELL_356MM_AP_MK_16_ARIZONA",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 792.0
+                "bulletSpeed": 792.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -353,7 +389,9 @@
                 "bulletMass": 1016.0,
                 "bulletName": "PAPA097_406MM_AP_WVIRGINIA",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 768.0
+                "bulletSpeed": 768.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -376,7 +414,9 @@
                 "bulletMass": 1225.0,
                 "bulletName": "PAPA076_406MM_AP_ALABAMA",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 701.0
+                "bulletSpeed": 701.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -399,7 +439,9 @@
                 "bulletMass": 1225.0,
                 "bulletName": "PAPA072_406MM_AP_MISSOURI",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 762.0
+                "bulletSpeed": 762.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -422,7 +464,9 @@
                 "bulletMass": 1225.0,
                 "bulletName": "PAPA080_406MM_AP_MASS",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 701.0
+                "bulletSpeed": 701.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -445,7 +489,9 @@
                 "bulletMass": 1225.0,
                 "bulletName": "PAPA080_406MM_AP_MASS",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 701.0
+                "bulletSpeed": 701.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -468,7 +514,9 @@
                 "bulletMass": 680.4,
                 "bulletName": "PAPA066_SHELL_356MM_AP_MK_16_TEXAS",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 792.0
+                "bulletSpeed": 792.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -491,7 +539,9 @@
                 "bulletMass": 1225.0,
                 "bulletName": "PAPA074_406MM_AP_ALABAMA",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 701.0
+                "bulletSpeed": 701.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -514,7 +564,9 @@
                 "bulletMass": 1746.0,
                 "bulletName": "PAPA105_457MM_AP_GEORGIA_SH",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 732.0
+                "bulletSpeed": 732.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
@@ -537,7 +589,9 @@
                 "bulletMass": 1225.0,
                 "bulletName": "PAPA103_406_AP_TST_MONTANA",
                 "bulletRicochetAt": 45.0,
-                "bulletSpeed": 762.0
+                "bulletSpeed": 762.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0
             }
         },
         "Nation": "USA",
