@@ -1,0 +1,74 @@
+{
+    "PISD506_Leone": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 850.0,
+                "name": "PIPA015_120MM_HE_LEONE",
+                "bulletMass": 23.15,
+                "bulletAirDrag": 0.4046,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 20.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 480.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletSpeed": 850.0,
+                "name": "PIPA016_120MM_AP_LEONE",
+                "bulletMass": 23.15,
+                "bulletAirDrag": 0.4046,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 2000.0
+            }
+        },
+        "Tier": 6,
+        "Nation": "Italy",
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PISD510_Paolo_Emilio": {
+        "Artillery0": {
+            "CS": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 80.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 825.0,
+                "name": "PIPA021_135MM_CS_P_EMILIO",
+                "bulletMass": 32.7,
+                "bulletAirDrag": 0.416,
+                "bulletRicochetAt": 70.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.135,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 23.0,
+                "bulletSpeed": 825.0,
+                "name": "PIPA022_135MM_AP_P_EMILIO",
+                "bulletMass": 32.7,
+                "bulletAirDrag": 0.416,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDiametr": 0.135,
+                "bulletKrupp": 2200.0
+            }
+        },
+        "Tier": 10,
+        "Nation": "Italy",
+        "Type": "Destroyer",
+        "ammo_num": 1
+    }
+}

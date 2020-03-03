@@ -1,0 +1,506 @@
+{
+    "PRSB001_Nikolay_I": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 762.0,
+                "name": "PRPA014_305_HE_1911",
+                "bulletMass": 470.9,
+                "bulletAirDrag": 0.4595,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 51.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletSpeed": 762.0,
+                "name": "PRPA015_305_AP_1911",
+                "bulletMass": 470.9,
+                "bulletAirDrag": 0.4595,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2627.0
+            }
+        },
+        "Tier": 4,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB103_Knyaz_Suvorov": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 762.0,
+                "name": "PRPA014_305_HE_1911",
+                "bulletMass": 470.9,
+                "bulletAirDrag": 0.4595,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 51.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletSpeed": 762.0,
+                "name": "PRPA015_305_AP_1911",
+                "bulletMass": 470.9,
+                "bulletAirDrag": 0.4595,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2627.0
+            }
+        },
+        "Tier": 3,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB104_Gangut": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 762.0,
+                "name": "PRPA014_305_HE_1911",
+                "bulletMass": 470.9,
+                "bulletAirDrag": 0.4595,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 51.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletSpeed": 762.0,
+                "name": "PRPA015_305_AP_1911",
+                "bulletMass": 470.9,
+                "bulletAirDrag": 0.4595,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2627.0
+            }
+        },
+        "Tier": 4,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB105_Pyotr_Velikiy": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 731.5,
+                "name": "PRPA072_356MM_HE_1913",
+                "bulletMass": 747.8,
+                "bulletAirDrag": 0.4753,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 59.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 385.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 59.0,
+                "bulletSpeed": 823.0,
+                "name": "PRPA073_356MM_AP_1911",
+                "bulletMass": 747.8,
+                "bulletAirDrag": 0.371,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 2350.0
+            }
+        },
+        "Tier": 5,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB106_Izmail": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 731.5,
+                "name": "PRPA072_356MM_HE_1913",
+                "bulletMass": 747.8,
+                "bulletAirDrag": 0.4753,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 59.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 385.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 59.0,
+                "bulletSpeed": 823.0,
+                "name": "PRPA073_356MM_AP_1911",
+                "bulletMass": 747.8,
+                "bulletAirDrag": 0.371,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 2350.0
+            }
+        },
+        "Tier": 6,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB107_Sinop": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 766.5,
+                "name": "PRPA075_406MM_HE_MOD1914",
+                "bulletMass": 1116.0,
+                "bulletAirDrag": 0.3813,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 68.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletSpeed": 766.5,
+                "name": "PRPA076_406MM_AP_MOD1914",
+                "bulletMass": 1116.0,
+                "bulletAirDrag": 0.3813,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2430.0
+            }
+        },
+        "Tier": 7,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB108_Vladivostok": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 793.0,
+                "name": "PRPA099_406MM_HE_MOD1914BIS",
+                "bulletMass": 1116.0,
+                "bulletAirDrag": 0.289,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 68.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletSpeed": 793.0,
+                "name": "PRPA098_406MM_AP_MOD1914BIS",
+                "bulletMass": 1116.0,
+                "bulletAirDrag": 0.289,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2300.0
+            }
+        },
+        "Tier": 8,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB109_Sovetsky_Soyuz": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 830.0,
+                "name": "PRPA078_406MM_SAP_MOD1937",
+                "bulletMass": 1108.0,
+                "bulletAirDrag": 0.3045,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 68.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletSpeed": 830.0,
+                "name": "PRPA079_406MM_AP_MOD1937",
+                "bulletMass": 1108.0,
+                "bulletAirDrag": 0.247,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2300.0
+            }
+        },
+        "Tier": 9,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB110_Sovetskaya_Rossiya": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 800.0,
+                "name": "PRPA081_457MM_HE",
+                "bulletMass": 1373.0,
+                "bulletAirDrag": 0.24,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 76.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.457,
+                "bulletKrupp": 240.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 76.0,
+                "bulletSpeed": 800.0,
+                "name": "PRPA080_457MM_AP",
+                "bulletMass": 1373.0,
+                "bulletAirDrag": 0.256,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.457,
+                "bulletKrupp": 2500.0
+            }
+        },
+        "Tier": 10,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB505_Oktyabrskaya_Revolutsiya": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 762.0,
+                "name": "PRPA069_305_HE_REV",
+                "bulletMass": 470.9,
+                "bulletAirDrag": 0.4595,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 51.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletSpeed": 762.0,
+                "name": "PRPA070_305_AP_REV",
+                "bulletMass": 470.9,
+                "bulletAirDrag": 0.4595,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2627.0
+            }
+        },
+        "Tier": 5,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB508_Poltava": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 895.0,
+                "name": "PRPA103_356MM_HE_1938_POLTAVA",
+                "bulletMass": 750.0,
+                "bulletAirDrag": 0.3449,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 59.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 385.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 59.0,
+                "bulletSpeed": 895.0,
+                "name": "PRPA104_356MM_AP_1938_POLTAVA",
+                "bulletMass": 750.0,
+                "bulletAirDrag": 0.3449,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 2400.0
+            }
+        },
+        "Tier": 7,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB510_Slava": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 870.0,
+                "name": "PRPA096_406MM_HE_B37",
+                "bulletMass": 1108.0,
+                "bulletAirDrag": 0.2204,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 68.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletSpeed": 870.0,
+                "name": "PRPA097_406MM_AP_B37",
+                "bulletMass": 1108.0,
+                "bulletAirDrag": 0.2367,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2430.0
+            }
+        },
+        "Tier": 10,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB518_Lenin": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 793.0,
+                "name": "PRPA093_406MM_HE_LENIN",
+                "bulletMass": 1116.0,
+                "bulletAirDrag": 0.3813,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 68.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletSpeed": 793.0,
+                "name": "PRPA094_406MM_AP_LENIN",
+                "bulletMass": 1116.0,
+                "bulletAirDrag": 0.3813,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2400.0
+            }
+        },
+        "Tier": 8,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PRSB528_Borodino": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 830.0,
+                "name": "PRPA105_406MM_HE_BORODINO",
+                "bulletMass": 1108.0,
+                "bulletAirDrag": 0.3045,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 68.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletSpeed": 830.0,
+                "name": "PRPA106_406MM_AP_BORODINO",
+                "bulletMass": 1108.0,
+                "bulletAirDrag": 0.247,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2300.0
+            }
+        },
+        "Tier": 8,
+        "Nation": "Russia",
+        "Type": "Battleship",
+        "ammo_num": 1
+    }
+}

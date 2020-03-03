@@ -1,0 +1,492 @@
+{
+    "PISC101_Eritrea": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 750.0,
+                "name": "PIPA020_120MM_45_1918_HE",
+                "bulletMass": 23.15,
+                "bulletAirDrag": 0.47,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 20.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 480.0
+            }
+        },
+        "Tier": 1,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC102_Nino_Bixio": {
+        "Artillery0": {
+            "CS": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 85.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 840.0,
+                "name": "PIPA023_120MM_50_1909_CS",
+                "bulletMass": 22.13,
+                "bulletAirDrag": 0.267,
+                "bulletRicochetAt": 80.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletSpeed": 850.0,
+                "name": "PIPA024_120MM_50_1909_AP",
+                "bulletMass": 22.75,
+                "bulletAirDrag": 0.28,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 2100.0
+            }
+        },
+        "Tier": 2,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC103_Taranto": {
+        "Artillery0": {
+            "CS": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 80.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 835.0,
+                "name": "PIPA026_150MM_CS_K_GR_18",
+                "bulletMass": 45.3,
+                "bulletAirDrag": 0.4074,
+                "bulletRicochetAt": 70.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.15,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.025,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 835.0,
+                "name": "PIPA027_150MM_AP_PSGR_L3_7",
+                "bulletMass": 45.3,
+                "bulletAirDrag": 0.4145,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDiametr": 0.15,
+                "bulletKrupp": 1925.0
+            }
+        },
+        "Tier": 3,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC104_Alberto_da_Giussano": {
+        "Artillery0": {
+            "CS": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 80.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 950.0,
+                "name": "PIPA028_152MM_53_CS_1926",
+                "bulletMass": 44.3,
+                "bulletAirDrag": 0.3246,
+                "bulletRicochetAt": 70.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.025,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 850.0,
+                "name": "PIPA029_152MM_53_AP_1926",
+                "bulletMass": 47.5,
+                "bulletAirDrag": 0.3381,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2142.0
+            }
+        },
+        "Tier": 4,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC105_Raimondo_Montecuccoli": {
+        "Artillery0": {
+            "CS": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 80.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 950.0,
+                "name": "PIPA028_152MM_53_CS_1926",
+                "bulletMass": 44.3,
+                "bulletAirDrag": 0.3246,
+                "bulletRicochetAt": 70.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.025,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 850.0,
+                "name": "PIPA029_152MM_53_AP_1926",
+                "bulletMass": 47.5,
+                "bulletAirDrag": 0.3381,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2142.0
+            }
+        },
+        "Tier": 5,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC106_Trento": {
+        "Artillery0": {
+            "CS": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 80.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 840.0,
+                "name": "PIPA033_203MM_50_1924_CS",
+                "bulletMass": 110.6,
+                "bulletAirDrag": 0.319,
+                "bulletRicochetAt": 70.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 840.0,
+                "name": "PIPA034_203MM_50_1924_AP",
+                "bulletMass": 125.3,
+                "bulletAirDrag": 0.3615,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2400.0
+            }
+        },
+        "Tier": 6,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC107_Zara": {
+        "Artillery0": {
+            "CS": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 80.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 900.0,
+                "name": "PIPA032_203MM_53_1927_CS",
+                "bulletMass": 110.6,
+                "bulletAirDrag": 0.256,
+                "bulletRicochetAt": 70.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 900.0,
+                "name": "PIPA035_203MM_53_1927_AP",
+                "bulletMass": 125.3,
+                "bulletAirDrag": 0.29,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2450.0
+            }
+        },
+        "Tier": 7,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC108_Amalfi": {
+        "Artillery0": {
+            "CS": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 80.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 950.0,
+                "name": "PIPA031_203MM_55_1924_CS",
+                "bulletMass": 110.5,
+                "bulletAirDrag": 0.234,
+                "bulletRicochetAt": 70.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 910.0,
+                "name": "PIPA030_203MM_55_1924_AP",
+                "bulletMass": 125.3,
+                "bulletAirDrag": 0.237,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2500.0
+            }
+        },
+        "Tier": 8,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC109_Brindisi": {
+        "Artillery0": {
+            "CS": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 80.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 950.0,
+                "name": "PIPA031_203MM_55_1924_CS",
+                "bulletMass": 110.5,
+                "bulletAirDrag": 0.234,
+                "bulletRicochetAt": 70.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 910.0,
+                "name": "PIPA030_203MM_55_1924_AP",
+                "bulletMass": 125.3,
+                "bulletAirDrag": 0.237,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2500.0
+            }
+        },
+        "Tier": 9,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC110_Venezia": {
+        "Artillery0": {
+            "CS": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 80.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 950.0,
+                "name": "PIPA041_203MM_55_1924_CS",
+                "bulletMass": 110.5,
+                "bulletAirDrag": 0.234,
+                "bulletRicochetAt": 75.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 910.0,
+                "name": "PIPA030_203MM_55_1924_AP",
+                "bulletMass": 125.3,
+                "bulletAirDrag": 0.237,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2500.0
+            }
+        },
+        "Tier": 10,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC505_Genova": {
+        "Artillery0": {
+            "CS": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 80.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 840.0,
+                "name": "PIPA036_203MM_50_CS_GENOVA",
+                "bulletMass": 110.6,
+                "bulletAirDrag": 0.319,
+                "bulletRicochetAt": 70.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 840.0,
+                "name": "PIPA037_203MM_50_AP_GENOVA",
+                "bulletMass": 125.3,
+                "bulletAirDrag": 0.3615,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2400.0
+            }
+        },
+        "Tier": 5,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC506_DucadAosta": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 950.0,
+                "name": "PIPA002_152MM_53_HE_DUCA",
+                "bulletMass": 44.3,
+                "bulletAirDrag": 0.3246,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 25.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1.0
+            },
+            "AP": {
+                "bulletDetonator": 0.025,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 1000.0,
+                "name": "PIPA004_152MM_53_AP_EARLY_DUCA",
+                "bulletMass": 50.0,
+                "bulletAirDrag": 0.3256,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2142.0
+            }
+        },
+        "Tier": 6,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC507_Duca_degli_Abruzzi": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 995.0,
+                "name": "PIPA010_152MM_55_HE_ABRUZZI",
+                "bulletMass": 44.3,
+                "bulletAirDrag": 0.3253,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 25.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1.0
+            },
+            "AP": {
+                "bulletDetonator": 0.025,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 910.0,
+                "name": "PIPA009_152MM_55_AP_ABRUZZI",
+                "bulletMass": 50.0,
+                "bulletAirDrag": 0.3325,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2140.0
+            }
+        },
+        "Tier": 7,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PISC607_Gorizia": {
+        "Artillery0": {
+            "CS": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 80.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 900.0,
+                "name": "PIPA040_203MM_53_CS_GORIZIA",
+                "bulletMass": 110.6,
+                "bulletAirDrag": 0.256,
+                "bulletRicochetAt": 70.0,
+                "alphaPiercingHE": 0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 900.0,
+                "name": "PIPA039_203MM_53_AP_GORIZIA",
+                "bulletMass": 125.3,
+                "bulletAirDrag": 0.29,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2450.0
+            }
+        },
+        "Tier": 7,
+        "Nation": "Italy",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    }
+}

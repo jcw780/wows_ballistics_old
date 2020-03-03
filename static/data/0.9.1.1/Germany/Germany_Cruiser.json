@@ -1,0 +1,666 @@
+{
+    "PGSC001_Hermelin_1940": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 900.0,
+                "name": "PGPA006_128MM_HE_SPRGR",
+                "bulletMass": 26.0,
+                "bulletAirDrag": 0.3128,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 21.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.128,
+                "bulletKrupp": 1.0
+            }
+        },
+        "Tier": 1,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC002_Drezden_1908": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 710.0,
+                "name": "PGPA015_105MM_HE_SPR_GR_L3_85",
+                "bulletMass": 17.5,
+                "bulletAirDrag": 0.415,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 18.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.105,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 18.0,
+                "bulletSpeed": 710.0,
+                "name": "PGPA014_105MM_AP_SAP_PZ_GR",
+                "bulletMass": 17.4,
+                "bulletAirDrag": 0.4125,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDiametr": 0.105,
+                "bulletKrupp": 1930.0
+            }
+        },
+        "Tier": 2,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC103_Kolberg": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 715.0,
+                "name": "PGPA008_105MM_HE_SPRGR",
+                "bulletMass": 18.0,
+                "bulletAirDrag": 0.422,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 18.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.105,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 18.0,
+                "bulletSpeed": 715.0,
+                "name": "PGPA007_105MM_AP_PSGR",
+                "bulletMass": 18.2,
+                "bulletAirDrag": 0.4125,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDiametr": 0.105,
+                "bulletKrupp": 1870.0
+            }
+        },
+        "Tier": 3,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC104_Karlsruhe": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 835.0,
+                "name": "PGPA040_150MM_HE_K_GR_18",
+                "bulletMass": 45.3,
+                "bulletAirDrag": 0.4074,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 38.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.15,
+                "bulletKrupp": 1.0
+            },
+            "AP": {
+                "bulletDetonator": 0.025,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 835.0,
+                "name": "PGPA019_150MM_AP_PSGR_L3_7",
+                "bulletMass": 45.3,
+                "bulletAirDrag": 0.4145,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDiametr": 0.15,
+                "bulletKrupp": 1925.0
+            }
+        },
+        "Tier": 4,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC105_Konigsberg": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 960.0,
+                "name": "PGPA021_150MM_HE_SPGR_L4_4_KZ",
+                "bulletMass": 45.5,
+                "bulletAirDrag": 0.3307,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 38.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.15,
+                "bulletKrupp": 32.0
+            },
+            "AP": {
+                "bulletDetonator": 0.025,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 960.0,
+                "name": "PGPA020_150MM_AP_PSGR_L3_7_C25",
+                "bulletMass": 45.5,
+                "bulletAirDrag": 0.3307,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDiametr": 0.15,
+                "bulletKrupp": 1862.0
+            }
+        },
+        "Tier": 5,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC106_Nurnberg": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 960.0,
+                "name": "PGPA021_150MM_HE_SPGR_L4_4_KZ",
+                "bulletMass": 45.5,
+                "bulletAirDrag": 0.3307,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 38.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.15,
+                "bulletKrupp": 32.0
+            },
+            "AP": {
+                "bulletDetonator": 0.025,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 960.0,
+                "name": "PGPA020_150MM_AP_PSGR_L3_7_C25",
+                "bulletMass": 45.5,
+                "bulletAirDrag": 0.3307,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDiametr": 0.15,
+                "bulletKrupp": 1862.0
+            }
+        },
+        "Tier": 6,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC107_Yorck": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 900.0,
+                "name": "PGPA084_210MM_HE_SPR_GR_L4_3",
+                "bulletMass": 113.5,
+                "bulletAirDrag": 0.224,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 53.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.21,
+                "bulletKrupp": 1.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 35.0,
+                "bulletSpeed": 900.0,
+                "name": "PGPA083_210MM_AP_PSGR_L4_1",
+                "bulletMass": 113.5,
+                "bulletAirDrag": 0.2338,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.21,
+                "bulletKrupp": 2545.0
+            }
+        },
+        "Tier": 7,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC108_Hipper": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 925.0,
+                "name": "PGPA024_203MM_HE_SPR_GR_L4_7_BDZ",
+                "bulletMass": 122.0,
+                "bulletAirDrag": 0.2974,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 51.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 32.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 925.0,
+                "name": "PGPA023_203MM_AP_PZ_SPR_GGR_L4_4",
+                "bulletMass": 122.0,
+                "bulletAirDrag": 0.2974,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2409.0
+            }
+        },
+        "Artillery1": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 925.0,
+                "name": "PGPA042_203MM_HE_SPR_GR_L4_7_KZ",
+                "bulletMass": 122.0,
+                "bulletAirDrag": 0.2974,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 51.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 32.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 925.0,
+                "name": "PGPA023_203MM_AP_PZ_SPR_GGR_L4_4",
+                "bulletMass": 122.0,
+                "bulletAirDrag": 0.2974,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2409.0
+            }
+        },
+        "Tier": 8,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 2
+    },
+    "PGSC109_Roon": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 925.0,
+                "name": "PGPA042_203MM_HE_SPR_GR_L4_7_KZ",
+                "bulletMass": 122.0,
+                "bulletAirDrag": 0.2974,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 51.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 32.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 925.0,
+                "name": "PGPA023_203MM_AP_PZ_SPR_GGR_L4_4",
+                "bulletMass": 122.0,
+                "bulletAirDrag": 0.2974,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2409.0
+            }
+        },
+        "Tier": 9,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC110_Hindenburg": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 925.0,
+                "name": "PGPA042_203MM_HE_SPR_GR_L4_7_KZ",
+                "bulletMass": 122.0,
+                "bulletAirDrag": 0.2974,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 51.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 32.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 925.0,
+                "name": "PGPA023_203MM_AP_PZ_SPR_GGR_L4_4",
+                "bulletMass": 122.0,
+                "bulletAirDrag": 0.2974,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2409.0
+            }
+        },
+        "Tier": 10,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC502_Emden_1908": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 710.0,
+                "name": "PGPA029_105MM_HE_EMDEN",
+                "bulletMass": 17.5,
+                "bulletAirDrag": 0.415,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 18.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.105,
+                "bulletKrupp": 3.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 18.0,
+                "bulletSpeed": 710.0,
+                "name": "PGPA028_105MM_AP_EMDEN",
+                "bulletMass": 17.4,
+                "bulletAirDrag": 0.4125,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDiametr": 0.105,
+                "bulletKrupp": 1450.0
+            }
+        },
+        "Tier": 2,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC506_Admiral_Graf_Spee": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 910.0,
+                "name": "PGPA076_283MM_HE_GRAF",
+                "bulletMass": 300.0,
+                "bulletAirDrag": 0.3333,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 71.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.283,
+                "bulletKrupp": 1.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 47.0,
+                "bulletSpeed": 910.0,
+                "name": "PGPA075_283MM_AP_GRAF",
+                "bulletMass": 300.0,
+                "bulletAirDrag": 0.3333,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.283,
+                "bulletKrupp": 2282.0
+            }
+        },
+        "Tier": 6,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC508_Prinz_Eugen": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 925.0,
+                "name": "PGPA064_203MM_HE_P_O",
+                "bulletMass": 122.0,
+                "bulletAirDrag": 0.2974,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 51.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 32.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 925.0,
+                "name": "PGPA063_203MM_AP_P_O",
+                "bulletMass": 122.0,
+                "bulletAirDrag": 0.2974,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2409.0
+            }
+        },
+        "Tier": 8,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC509_Siegfried": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.03,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 820.0,
+                "name": "PGPA086_380MM_HE_SIEGFRIED",
+                "bulletMass": 800.0,
+                "bulletAirDrag": 0.2763,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 95.0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDiametr": 0.381,
+                "bulletKrupp": 32.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 63.0,
+                "bulletSpeed": 820.0,
+                "name": "PGPA087_380MM_AP_SIEGFRIED",
+                "bulletMass": 800.0,
+                "bulletAirDrag": 0.2763,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.38,
+                "bulletKrupp": 2450.0
+            }
+        },
+        "Tier": 9,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC518_Mainz": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 960.0,
+                "name": "PGPA088_150MM_HE_MAINZ",
+                "bulletMass": 45.5,
+                "bulletAirDrag": 0.29,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 38.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.15,
+                "bulletKrupp": 1150.0
+            },
+            "AP": {
+                "bulletDetonator": 0.025,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletSpeed": 960.0,
+                "name": "PGPA089_150MM_AP_MAINZ",
+                "bulletMass": 45.5,
+                "bulletAirDrag": 0.29,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDiametr": 0.15,
+                "bulletKrupp": 2300.0
+            }
+        },
+        "Tier": 8,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC519_Aegir": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 865.0,
+                "name": "PGPA094_305MM_HE_L4_9_AEGIR",
+                "bulletMass": 415.0,
+                "bulletAirDrag": 0.2798,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 76.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletSpeed": 865.0,
+                "name": "PGPA093_305MM_AP_L3_8_AEGIR",
+                "bulletMass": 415.0,
+                "bulletAirDrag": 0.2798,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2450.0
+            }
+        },
+        "Tier": 9,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC706_HSF_Graf_Spee": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 910.0,
+                "name": "PGPA076_283MM_HE_GRAF",
+                "bulletMass": 300.0,
+                "bulletAirDrag": 0.3333,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 71.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDiametr": 0.283,
+                "bulletKrupp": 1.0
+            },
+            "AP": {
+                "bulletDetonator": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 47.0,
+                "bulletSpeed": 910.0,
+                "name": "PGPA075_283MM_AP_GRAF",
+                "bulletMass": 300.0,
+                "bulletAirDrag": 0.3333,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDiametr": 0.283,
+                "bulletKrupp": 2282.0
+            }
+        },
+        "Tier": 6,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PGSC910_Hindenburg": {
+        "Artillery0": {
+            "HE": {
+                "bulletDetonator": 0.001,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletSpeed": 925.0,
+                "name": "PGPA042_203MM_HE_SPR_GR_L4_7_KZ",
+                "bulletMass": 122.0,
+                "bulletAirDrag": 0.2974,
+                "bulletRicochetAt": 91.0,
+                "alphaPiercingHE": 51.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 32.0
+            },
+            "AP": {
+                "bulletDetonator": 0.033,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletSpeed": 925.0,
+                "name": "PGPA023_203MM_AP_PZ_SPR_GGR_L4_4",
+                "bulletMass": 122.0,
+                "bulletAirDrag": 0.2974,
+                "bulletRicochetAt": 45.0,
+                "alphaPiercingHE": 0.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2409.0
+            }
+        },
+        "Tier": 10,
+        "Nation": "Germany",
+        "Type": "Cruiser",
+        "ammo_num": 1
+    }
+}
