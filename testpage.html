@@ -390,7 +390,7 @@
 			document.getElementById("ra1_"      + id).value = targetShell["bulletAlwaysRicochetAt"];
 			
 			var caliber = document.getElementById("caliber" + id).value;
-			if (caliber <= 0.13) {
+			/*if (caliber <= 0.13) {
 				document.getElementById("normal" + id).value = 10.;
 			} else if (caliber <= 0.152) {
 				document.getElementById("normal" + id).value = 8.5;
@@ -398,8 +398,8 @@
 				document.getElementById("normal" + id).value = 7.;
 			} else {
 				document.getElementById("normal" + id).value = 6.;
-			}
-            
+			}*/
+            document.getElementById("normal" + id).value = targetShell['bulletCapNormalizeMaxAngle']
 		}
 
 		function copyStartValues(){
