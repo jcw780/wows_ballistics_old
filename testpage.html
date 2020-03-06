@@ -594,6 +594,8 @@
 
 
 		function jQCall(){
+			var v_HESAP = []
+
 			var v_mv0         = parseFloat(document.getElementById("mv0"         ).value);
 			var v_caliber0    = parseFloat(document.getElementById("caliber0"    ).value);
 			var v_krupp0      = parseFloat(document.getElementById("krupp0"      ).value);
@@ -604,6 +606,7 @@
 			var v_fusetime0   = parseFloat(document.getElementById("fusetime0"   ).value);
 			var v_ra0_0       = parseFloat(document.getElementById("ra0_0"       ).value);
 			var v_ra1_0       = parseFloat(document.getElementById("ra1_0"       ).value);
+			v_HESAP[0]        = parseFloat(document.getElementById("HESAP_0"     ).value);
 
 			var v_mv1         = parseFloat(document.getElementById("mv1"         ).value);
 			var v_caliber1    = parseFloat(document.getElementById("caliber1"    ).value);
@@ -615,6 +618,7 @@
 			var v_fusetime1   = parseFloat(document.getElementById("fusetime1"   ).value);
 			var v_ra0_1       = parseFloat(document.getElementById("ra0_1"       ).value);
 			var v_ra1_1       = parseFloat(document.getElementById("ra1_1"       ).value);
+			v_HESAP[1  ]     = parseFloat(document.getElementById("HESAP_1"     ).value);
         
 			var v_armor       = parseFloat(document.getElementById("armor"      ).value);
 			var v_inclination = parseFloat(document.getElementById("inclination").value);
@@ -768,7 +772,7 @@
 						chartData.effectivePen[k].push(
 							{
 								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-								y: instances[k].getImpactPoint(i, Module.impactDataIndex.ePenHN.value)
+								y: v_HESAP[k]
 							}
 						);
 						chartData.angleBelt[k].push(
@@ -781,7 +785,7 @@
 						chartData.effectivePenDeck[k].push(
 							{
 								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-								y: instances[k].getImpactPoint(i, Module.impactDataIndex.ePenDN.value)
+								y: v_HESAP[k]
 							}
 
 						);
