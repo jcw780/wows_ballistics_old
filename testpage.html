@@ -229,6 +229,12 @@
 							<td><input type="number" step="any" min="0" max="90" id="ra1_0"  value=""></td>
 							<td><input type="number" step="any" min="0" max="90" id="ra1_1"  value=""></td>
 						</tr>
+						<tr>
+							<td title="HE/SAP penetration of shell - if applicable.">HE/SAP penetration (mm)</td>
+							<td><input type="number" step="any" min="0" id="HESAP_0" value=""></td>
+							<td><input type="number" step="any" min="0" id="HESAP_1" value=""></td>
+							<td></td>
+						</tr>
 					</table>
 				</td>
 				<td>
@@ -442,6 +448,14 @@
 			document.getElementById("ra0_"      + id).value = targetShell["bulletRicochetAt"];
 			document.getElementById("ra1_"      + id).value = targetShell["bulletAlwaysRicochetAt"];
 			document.getElementById("normal" + id).value = targetShell['bulletCapNormalizeMaxAngle']
+
+			if(shellType[id] == 'AP'){
+				document.getElementById("HESAP_" + id).value = 0;
+			}else if(shellTypeID[id] == 'HE'){
+				document.getElementById("HESAP_" + id).value = targetShell["alphaPiercingHE"];
+			}else if(shellTypeID[id] == 'CS'){
+				document.getElementById("HESAP_" + id).value = targetShell["alphaPiercingCS"];
+			}
             
 		}
 
@@ -451,6 +465,7 @@
 			document.getElementById("type1").innerHTML    = document.getElementById("type0").innerHTML;
 			document.getElementById("ship1").innerHTML    = document.getElementById("ship0").innerHTML;
 			document.getElementById("shell1").innerHTML   = document.getElementById("shell0").innerHTML;
+			document.getElementById("shellType1").innerHTML = document.getElementById("shellType0").innerHTML;
 			versionValue[1] = versionValue[0];
 			nationValue[1]  = nationValue[0];
 			typeValue[1]    = typeValue[0];

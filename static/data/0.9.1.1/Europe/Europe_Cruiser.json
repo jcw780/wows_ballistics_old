@@ -2,18 +2,19 @@
     "PWSC101_Gryf": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 900.0,
-                "name": "PWPA006_120_HE_GRYF",
-                "bulletMass": 24.0,
-                "bulletAirDrag": 0.3177,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 20.0,
+                "bulletKrupp": 480.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PWPA006_120_HE_GRYF",
+                "bulletSpeed": 900.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.12,
-                "bulletKrupp": 480.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.3177,
+                "bulletMass": 24.0,
+                "bulletRicochetAt": 91.0
             }
         },
         "Tier": 1,

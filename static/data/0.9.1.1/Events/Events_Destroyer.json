@@ -2,32 +2,34 @@
     "PXSD001_VanHellsink": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 825.0,
-                "name": "PXPA015_120MM_HE_HELLSINK",
-                "bulletMass": 20.3,
-                "bulletAirDrag": 0.331,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 100.0,
+                "bulletKrupp": 480.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA015_120MM_HE_HELLSINK",
+                "bulletSpeed": 825.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.12,
-                "bulletKrupp": 480.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.331,
+                "bulletMass": 20.3,
+                "bulletRicochetAt": 91.0
             },
             "AP": {
-                "bulletDetonator": 0.01,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 20.0,
-                "bulletSpeed": 825.0,
-                "name": "PXPA014_120MM_AP_HELLSINK",
-                "bulletMass": 20.3,
-                "bulletAirDrag": 0.331,
-                "bulletRicochetAt": 45.0,
                 "alphaPiercingHE": 0.0,
+                "bulletKrupp": 1750.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA014_120MM_AP_HELLSINK",
+                "bulletSpeed": 825.0,
+                "bulletDetonator": 0.01,
                 "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonatorThreshold": 20.0,
                 "bulletDiametr": 0.12,
-                "bulletKrupp": 1750.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.331,
+                "bulletMass": 20.3,
+                "bulletRicochetAt": 45.0
             }
         },
         "Tier": 3,
@@ -38,32 +40,34 @@
     "PXSD002_Benson_1945_H2017": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 792.0,
-                "name": "PXPA065_Main_127mm_HE_C_Mk_32",
-                "bulletMass": 24.5,
-                "bulletAirDrag": 0.347,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 21.0,
+                "bulletKrupp": 1350.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA065_Main_127mm_HE_C_Mk_32",
+                "bulletSpeed": 792.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.127,
-                "bulletKrupp": 1350.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.347,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0
             },
             "AP": {
-                "bulletDetonator": 0.01,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 21.0,
-                "bulletSpeed": 792.0,
-                "name": "PXPA064_Shell_127mm_AP_SC_Mk_38",
-                "bulletMass": 25.0,
-                "bulletAirDrag": 0.347,
-                "bulletRicochetAt": 45.0,
                 "alphaPiercingHE": 0.0,
+                "bulletKrupp": 2598.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA064_Shell_127mm_AP_SC_Mk_38",
+                "bulletSpeed": 792.0,
+                "bulletDetonator": 0.01,
                 "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonatorThreshold": 21.0,
                 "bulletDiametr": 0.127,
-                "bulletKrupp": 2598.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.347,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0
             }
         },
         "Tier": 7,
@@ -74,32 +78,34 @@
     "PXSD003_Kagero_H2017": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 915.0,
-                "name": "PJPA012_Shell_127mm_HE_Type_1",
-                "bulletMass": 23.0,
-                "bulletAirDrag": 0.334,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 21.0,
+                "bulletKrupp": 450.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PJPA012_Shell_127mm_HE_Type_1",
+                "bulletSpeed": 915.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.127,
-                "bulletKrupp": 450.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.334,
+                "bulletMass": 23.0,
+                "bulletRicochetAt": 91.0
             },
             "AP": {
-                "bulletDetonator": 0.01,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 21.0,
-                "bulletSpeed": 915.0,
-                "name": "PJPA011_Shell_127mm_AP_Type_0",
-                "bulletMass": 23.0,
-                "bulletAirDrag": 0.334,
-                "bulletRicochetAt": 45.0,
                 "alphaPiercingHE": 0.0,
+                "bulletKrupp": 2266.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PJPA011_Shell_127mm_AP_Type_0",
+                "bulletSpeed": 915.0,
+                "bulletDetonator": 0.01,
                 "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonatorThreshold": 21.0,
                 "bulletDiametr": 0.127,
-                "bulletKrupp": 2266.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.334,
+                "bulletMass": 23.0,
+                "bulletRicochetAt": 45.0
             }
         },
         "Tier": 8,
@@ -110,32 +116,34 @@
     "PXSD004_FlyFire": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 792.0,
-                "name": "PXPA031_Main_127mm_HE_C_Mk_32",
-                "bulletMass": 24.5,
-                "bulletAirDrag": 0.347,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 21.0,
+                "bulletKrupp": 1350.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA031_Main_127mm_HE_C_Mk_32",
+                "bulletSpeed": 792.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.127,
-                "bulletKrupp": 1350.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.347,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0
             },
             "AP": {
-                "bulletDetonator": 0.03,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 21.0,
-                "bulletSpeed": 792.0,
-                "name": "PXPA022_Shell_127mm_AP_SC_Mk_38",
-                "bulletMass": 25.0,
-                "bulletAirDrag": 0.347,
-                "bulletRicochetAt": 45.0,
                 "alphaPiercingHE": 0.0,
+                "bulletKrupp": 2598.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA022_Shell_127mm_AP_SC_Mk_38",
+                "bulletSpeed": 792.0,
+                "bulletDetonator": 0.03,
                 "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonatorThreshold": 21.0,
                 "bulletDiametr": 0.127,
-                "bulletKrupp": 2598.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.347,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0
             }
         },
         "Tier": 7,
@@ -146,32 +154,34 @@
     "PXSD005_Blue_Aster": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 830.0,
-                "name": "PXPA024_128MM_HE_C41",
-                "bulletMass": 28.0,
-                "bulletAirDrag": 0.2752,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 21.0,
+                "bulletKrupp": 1.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA024_128MM_HE_C41",
+                "bulletSpeed": 830.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.128,
-                "bulletKrupp": 1.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.2752,
+                "bulletMass": 28.0,
+                "bulletRicochetAt": 91.0
             },
             "AP": {
-                "bulletDetonator": 0.01,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 21.0,
-                "bulletSpeed": 830.0,
-                "name": "PXPA025_128MM_AP_C41",
-                "bulletMass": 28.0,
-                "bulletAirDrag": 0.2752,
-                "bulletRicochetAt": 45.0,
                 "alphaPiercingHE": 0.0,
+                "bulletKrupp": 1647.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA025_128MM_AP_C41",
+                "bulletSpeed": 830.0,
+                "bulletDetonator": 0.01,
                 "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonatorThreshold": 21.0,
                 "bulletDiametr": 0.128,
-                "bulletKrupp": 1647.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.2752,
+                "bulletMass": 28.0,
+                "bulletRicochetAt": 45.0
             }
         },
         "Tier": 7,
@@ -182,32 +192,34 @@
     "PXSD008_Z_23_H2018": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 830.0,
-                "name": "PXPA044_128MM_HE_SK_C34",
-                "bulletMass": 28.0,
-                "bulletAirDrag": 0.3447,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 21.0,
+                "bulletKrupp": 1.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA044_128MM_HE_SK_C34",
+                "bulletSpeed": 830.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.128,
-                "bulletKrupp": 1.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.3447,
+                "bulletMass": 28.0,
+                "bulletRicochetAt": 91.0
             },
             "AP": {
-                "bulletDetonator": 0.01,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 21.0,
-                "bulletSpeed": 830.0,
-                "name": "PXPA045_128MM_AP_SK_C34",
-                "bulletMass": 28.0,
-                "bulletAirDrag": 0.3447,
-                "bulletRicochetAt": 45.0,
                 "alphaPiercingHE": 0.0,
+                "bulletKrupp": 1640.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA045_128MM_AP_SK_C34",
+                "bulletSpeed": 830.0,
+                "bulletDetonator": 0.01,
                 "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonatorThreshold": 21.0,
                 "bulletDiametr": 0.128,
-                "bulletKrupp": 1640.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.3447,
+                "bulletMass": 28.0,
+                "bulletRicochetAt": 45.0
             }
         },
         "Tier": 7,
@@ -218,32 +230,34 @@
     "PXSD009_Kiev_H2018": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 870.0,
-                "name": "PXPA046_130MM_HE_NEPREM",
-                "bulletMass": 33.4,
-                "bulletAirDrag": 0.2857,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 22.0,
+                "bulletKrupp": 52.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA046_130MM_HE_NEPREM",
+                "bulletSpeed": 870.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.13,
-                "bulletKrupp": 52.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.2857,
+                "bulletMass": 33.4,
+                "bulletRicochetAt": 91.0
             },
             "AP": {
-                "bulletDetonator": 0.01,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 22.0,
-                "bulletSpeed": 870.0,
-                "name": "PXPA047_130MM_AP_NEPREM",
-                "bulletMass": 33.5,
-                "bulletAirDrag": 0.2857,
-                "bulletRicochetAt": 45.0,
                 "alphaPiercingHE": 0.0,
+                "bulletKrupp": 1700.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA047_130MM_AP_NEPREM",
+                "bulletSpeed": 870.0,
+                "bulletDetonator": 0.01,
                 "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonatorThreshold": 22.0,
                 "bulletDiametr": 0.13,
-                "bulletKrupp": 1700.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.2857,
+                "bulletMass": 33.5,
+                "bulletRicochetAt": 45.0
             }
         },
         "Tier": 7,
@@ -254,18 +268,19 @@
     "PXSD015_Grozovoy_PA": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 700.0,
-                "name": "PXPA074_ARROW",
-                "bulletMass": 2000.0,
-                "bulletAirDrag": 0.01,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 51.0,
+                "bulletKrupp": 1.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA074_ARROW",
+                "bulletSpeed": 700.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.5,
-                "bulletKrupp": 1.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.01,
+                "bulletMass": 2000.0,
+                "bulletRicochetAt": 91.0
             }
         },
         "Tier": 10,
@@ -276,18 +291,19 @@
     "PXSD018_Harugumo_PA": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 700.0,
-                "name": "PXPA074_ARROW",
-                "bulletMass": 2000.0,
-                "bulletAirDrag": 0.01,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 51.0,
+                "bulletKrupp": 1.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA074_ARROW",
+                "bulletSpeed": 700.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.5,
-                "bulletKrupp": 1.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.01,
+                "bulletMass": 2000.0,
+                "bulletRicochetAt": 91.0
             }
         },
         "Tier": 10,
@@ -298,18 +314,19 @@
     "PXSD020_Khabarovsk_PA": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 700.0,
-                "name": "PXPA074_ARROW",
-                "bulletMass": 2000.0,
-                "bulletAirDrag": 0.01,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 51.0,
+                "bulletKrupp": 1.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA074_ARROW",
+                "bulletSpeed": 700.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.5,
-                "bulletKrupp": 1.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.01,
+                "bulletMass": 2000.0,
+                "bulletRicochetAt": 91.0
             }
         },
         "Tier": 10,
@@ -320,18 +337,19 @@
     "PXSD024_Khabarovsk_H2019": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 700.0,
-                "name": "PXPA075_ARROW_H2019",
-                "bulletMass": 2000.0,
-                "bulletAirDrag": 0.01,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 51.0,
+                "bulletKrupp": 1.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PXPA075_ARROW_H2019",
+                "bulletSpeed": 700.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.5,
-                "bulletKrupp": 1.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.01,
+                "bulletMass": 2000.0,
+                "bulletRicochetAt": 91.0
             }
         },
         "Tier": 10,

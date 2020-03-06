@@ -2,32 +2,34 @@
     "PWSB504_Viribus_Unitis": {
         "Artillery0": {
             "HE": {
-                "bulletDetonator": 0.001,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 2.0,
-                "bulletSpeed": 800.0,
-                "name": "PWPA003_305MM_HE_VIRIBUS",
-                "bulletMass": 450.0,
-                "bulletAirDrag": 0.435,
-                "bulletRicochetAt": 91.0,
                 "alphaPiercingHE": 51.0,
+                "bulletKrupp": 1.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PWPA003_305MM_HE_VIRIBUS",
+                "bulletSpeed": 800.0,
+                "bulletDetonator": 0.001,
                 "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonatorThreshold": 2.0,
                 "bulletDiametr": 0.305,
-                "bulletKrupp": 1.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.435,
+                "bulletMass": 450.0,
+                "bulletRicochetAt": 91.0
             },
             "AP": {
-                "bulletDetonator": 0.033,
-                "bulletAlwaysRicochetAt": 60.0,
-                "bulletDetonatorThreshold": 51.0,
-                "bulletSpeed": 800.0,
-                "name": "PWPA004_305MM_AP_VIRIBUS",
-                "bulletMass": 450.0,
-                "bulletAirDrag": 0.435,
-                "bulletRicochetAt": 45.0,
                 "alphaPiercingHE": 0.0,
+                "bulletKrupp": 2800.0,
+                "bulletAlwaysRicochetAt": 60.0,
+                "name": "PWPA004_305MM_AP_VIRIBUS",
+                "bulletSpeed": 800.0,
+                "bulletDetonator": 0.033,
                 "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonatorThreshold": 51.0,
                 "bulletDiametr": 0.305,
-                "bulletKrupp": 2800.0
+                "alphaPiercingCS": 0,
+                "bulletAirDrag": 0.435,
+                "bulletMass": 450.0,
+                "bulletRicochetAt": 45.0
             }
         },
         "Tier": 5,
