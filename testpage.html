@@ -623,32 +623,6 @@
 				v_HESAP[i]     = getFloatValues("HESAP" + i);
 			}
 
-			/*
-			var v_mv0         = parseFloat(document.getElementById("mv0"         ).value);
-			var v_caliber0    = parseFloat(document.getElementById("caliber0"    ).value);
-			var v_krupp0      = parseFloat(document.getElementById("krupp0"      ).value);
-			var v_mass0       = parseFloat(document.getElementById("mass0"       ).value);
-			var v_normal0     = parseFloat(document.getElementById("normal0"     ).value);
-			var v_cD0         = parseFloat(document.getElementById("cD0"         ).value);
-			var v_threshold0  = parseFloat(document.getElementById("threshold0"  ).value);
-			var v_fusetime0   = parseFloat(document.getElementById("fusetime0"   ).value);
-			var v_ra0_0       = parseFloat(document.getElementById("ra0_0"       ).value);
-			var v_ra1_0       = parseFloat(document.getElementById("ra1_0"       ).value);
-			v_HESAP[0]        = parseFloat(document.getElementById("HESAP_0"     ).value);
-
-			var v_mv1         = parseFloat(document.getElementById("mv1"         ).value);
-			var v_caliber1    = parseFloat(document.getElementById("caliber1"    ).value);
-			var v_krupp1      = parseFloat(document.getElementById("krupp1"      ).value);
-			var v_mass1       = parseFloat(document.getElementById("mass1"       ).value);
-			var v_normal1     = parseFloat(document.getElementById("normal1"     ).value);
-			var v_cD1         = parseFloat(document.getElementById("cD1"         ).value);
-			var v_threshold1  = parseFloat(document.getElementById("threshold1"  ).value);
-			var v_fusetime1   = parseFloat(document.getElementById("fusetime1"   ).value);
-			var v_ra0_1       = parseFloat(document.getElementById("ra0_1"       ).value);
-			var v_ra1_1       = parseFloat(document.getElementById("ra1_1"       ).value);
-			v_HESAP[1]        = parseFloat(document.getElementById("HESAP_1"     ).value);
-			*/
-
 			var v_armor       = parseFloat(document.getElementById("armor"      ).value);
 			var v_inclination = parseFloat(document.getElementById("inclination").value);
 			for(var i=0; i<numAngles; i++){
@@ -670,8 +644,6 @@
 					v_ra1[k]
 				);
 			}
-			//instances[0] = new Module.shell(v_caliber0, v_mv0, v_cD0, v_mass0, v_krupp0, v_normal0, v_fusetime0, v_threshold0, v_ra0_0, v_ra1_0);
-			//instances[1] = new Module.shell(v_caliber1, v_mv1, v_cD1, v_mass1, v_krupp1, v_normal1, v_fusetime1, v_threshold1, v_ra0_1, v_ra1_1);
 
 			for(var k=0; k<2; k++){
 				instances[k].calcImpact();

@@ -19,20 +19,13 @@
 	</script>
 
 	<body>
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
 
@@ -59,25 +52,59 @@
             }
             .container-fluid{
                 background-color: lightgray;
+				padding: 0 18px;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.2s ease-out;
             }
             canvas{
                 background-color: white;
             }
-        </style>
-        <div class="container-fluid">
-		<table id=parameterTable>
+			.collapsible {
+				background-color: #777;
+				color: white;
+				cursor: pointer;
+				padding: 18px;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 15px;
+			}
+
+			.btn btn-info {
+				background-color: #777;
+				color: white;
+				cursor: pointer;
+				padding: 18px;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 15px;
+			}
+
+			.active, .collapsible:hover {
+				background-color: #555;
+			}
+
+		</style>
+		
+		<button id=impactChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#parameters">Parameters</button>
+		<div class="collapse" id=parameters style="width: 100%;">
+		<table id=parameterTable style="width: 100%;">
 			<tr>
 				<th>
-					<h2><u>Predefined Shells</u></h2>
+					<center><h2><u>Predefined Shells</u></h2></center>
 				</th>
 				<th>
 					<center><h2><u>Shell Data</u></h2></center>
 				</th>
 				<th>
-					<h2><u>Target Data</u></h2>
+					<center><h2><u>Target Data</u></h2></center>
 				</th>
 				<th>
-					<h2><u>Horizontal Angles</u></h2>
+					<center><h2><u>Horizontal Angles</u></h2></center>
 				</th>
 			</tr>
 			<tr>
@@ -103,6 +130,10 @@
 						<tr>
 							<td>Artillery</td>
 							<td><select id=shell0   onchange="onChangeShell('shell0')"></select></td>
+						</tr>
+						<tr>
+							<td>Shell Type</td>
+							<td><select id=shellType0 onchange="onChangeShellType('shellType0')"></select></td>
 						</tr>
 						<tr>
 							<td>Label</td>
@@ -131,6 +162,10 @@
 							<td><select id=shell1   onchange="onChangeShell('shell1')"></select></td>
 						</tr>
 						<tr>
+							<td>Shell Type</td>
+							<td><select id=shellType1 onchange="onChangeShellType('shellType1')"></select></td>
+						</tr>
+						<tr>
 							<td>Label</td>
 							<td><input id="shipName1" value=""></td>
 						</tr>
@@ -145,71 +180,77 @@
 							<td>Ship B:</td>
 						</tr>
 						<tr>
-							<td>Caliber (m)</td>
+							<td title="Diameter of the shell in meters. All else equal, higher caliber increase shell flight time and reduces penetration.">Caliber (m)</td>
 							<td><input type="number" step="any" min="0" id="caliber0"   value=""></td>
 							<td><input type="number" step="any" min="0" id="caliber1"   value=""></td>
 						</tr>
 						<tr>
-							<td>Muzzle Velocity (m/s)</td>
+							<td title="Shell velocity at launch in meters per second. All else equal, higher muzzle velocity reduces shell flight time and increase penetration.">Muzzle Velocity (m/s)</td>
 							<td><input type="number" step="any" min="0" id="mv0"        value=""></td>
 							<td><input type="number" step="any" min="0" id="mv1"        value=""></td>
 						</tr>
 						<tr>
-							<td>Drag Coefficient</td>
+							<td title="Aerodynamic drag characteristic of the shell's shape. All else equal, higher drag coefficient increase shell flight time and reduces penetration.">Drag Coefficient</td>
 							<td><input type="number" step="any" min="0" id="cD0"        value=""></td>
 							<td><input type="number" step="any" min="0" id="cD1"        value=""></td>
 						</tr>
 						<tr>
-							<td>Mass (kg)</td>
+							<td title="Mass of the shell in kilograms. All else equal, higher mass decreases shell flight time and increases penetration.">Mass (kg)</td>
 							<td><input type="number" step="any" min="0" id="mass0"      value=""></td>
 							<td><input type="number" step="any" min="0" id="mass1"      value=""></td>
 						</tr>
 						<tr>
-							<td>Krupp</td>
+							<td title="Penetration coefficient of the shell. All else equal, higher krupp increases penetration.">Krupp</td>
 							<td><input type="number" step="any" min="0" id="krupp0"     value=""></td>
 							<td><input type="number" step="any" min="0" id="krupp1"     value=""></td>
 						</tr>
 						<tr>
-							<td>Fusetime (s)</td>
+							<td title="How many seconds it takes for the shell to detonate after fusing. Longer fusetime increases risk of overpenetration.">Fusetime (s)</td>
 							<td><input type="number" step="any" min="0" id="fusetime0"  value=""></td>
 							<td><input type="number" step="any" min="0" id="fusetime1"  value=""></td>
 						</tr>
 						<tr>
-							<td>Fusing Threshold (mm)</td>
+							<td title="How many milimeters of effective armor it takes for the shells arm. Higher fusing threshold increases the risk of overpenetration.">Fusing Threshold (mm)</td>
 							<td><input type="number" step="any" min="0" id="threshold0" value=""></td>
 							<td><input type="number" step="any" min="0" id="threshold1" value=""></td>
 						</tr>
 						<tr>
-							<td>Normalization (°)</td>
+							<td title="How many degrees of impact angle the shell can reduce. Higher normalization increases decreases effective armor thickness.">Normalization (°)</td>
 							<td><input type="number" step="any" min="0" id="normal0"    value=""></td>
 							<td><input type="number" step="any" min="0" id="normal1"    value=""></td>
 						</tr>
 						<tr>
-							<td>Start Ricochet (°)</td>
+							<td title="Minimum impact angle in degrees at which shells can ricochet - not affected by normalization.">Start Ricochet (°)</td>
 							<td><input type="number" step="any" min="0" max="90" id="ra0_0"  value=""></td>
 							<td><input type="number" step="any" min="0" max="90" id="ra0_1"  value=""></td>
 						</tr>
 						<tr>
-							<td>Always Ricochet (°)</td>
+							<td title="Minimum impact angle in degrees at which shells always ricochet - not affected by normalization.">Always Ricochet (°)</td>
 							<td><input type="number" step="any" min="0" max="90" id="ra1_0"  value=""></td>
 							<td><input type="number" step="any" min="0" max="90" id="ra1_1"  value=""></td>
+						</tr>
+						<tr>
+							<td title="HE/SAP penetration of shell - if applicable.">HE/SAP penetration (mm)</td>
+							<td><input type="number" step="any" min="0" id="HESAP0" value=""></td>
+							<td><input type="number" step="any" min="0" id="HESAP1" value=""></td>
+							<td></td>
 						</tr>
 					</table>
 				</td>
 				<td>
 					<table>
 						<tr>
-							<td>Armor (mm)</td>
+							<td title="Thickness in milimeters of the targeted plate.">Armor (mm)</td>
 						</tr><tr>
 							<td><input type="number" step="any" min="0" id="armor" value="70"></td>
 						</tr>
 						<tr>
-							<td>Armor Inclination (°)</td>
+							<td title="Vertical inclination angle of the armor: 0° - perpendicular to sea level; >0° - turtleback; <0° - angled towards keel.">Armor Inclination (°)</td>
 						</tr><tr>
 							<td><input type="number" step="any" min="-90" max="180" id="inclination" value="0"></td>
 						</tr>
 						<tr>
-							<td>Ship Width (m)</td>
+							<td title="Width (Beam) of the targeted ship in meters.">Ship Width (m)</td>
 						</tr><tr>
 							<td><input type="number" step="any" min="0" id="width" value="18"> </p></td>
 						</tr>
@@ -227,17 +268,18 @@
 				</td>
 			</tr>
 		</table>
-		<button id=parameterToggle>Hide</button>
 		<button id=generate>Generate Graphs</button>
 		<h4></h4>
-        </div>
+		</div>
+		</div>
 		<script>
 		var versionValue = [];
 		var nationValue = [];
 		var typeValue = [];
 		var shipValue = [];
-		var shellValue = []; 
+		var shellValue = [];
 		var typeData = [];
+		var shellType = [];
 		var initialized = false;
         var compiled = false;
         var dataURL = "static/data/"
@@ -364,7 +406,7 @@
 			selector.innerHTML = '';
 			for(var shell in typeData[id][shipValue[id]]){
 				if(shell.includes('Artillery')){
-					selector.innerHTML += "<option value=" + shell + ">" + shell + "</option>"
+					selector.innerHTML += "<option value=" + shell + ">" + shell + "</option>";
 				}
 			}
 			onChangeShell(shellID);
@@ -372,11 +414,28 @@
 		function onChangeShell(shellID){
 			var id = parseInt(shellID.slice(-1));
 			shellValue[id] = document.getElementById(shellID).value;
-            onSubmitPredefined(id);
+			generateShellType("shellType" + id);
+            //onSubmitPredefined(id);
+		}
+
+		function generateShellType(shellTypeID){
+			var id = parseInt(shellTypeID.slice(-1));
+			selector = document.getElementById(shellTypeID);
+			selector.innerHTML = '';
+			for(var shellType in typeData[id][shipValue[id]][shellValue[id]]){
+				selector.innerHTML += "<option value=" + shellType + ">" + shellType + "</option>";
+			}
+			onChangeShellType(shellTypeID);
+		}
+
+		function onChangeShellType(shellTypeID){
+			var id = parseInt(shellTypeID.slice(-1));
+			shellType[id] = document.getElementById(shellTypeID).value;
+			onSubmitPredefined(id);
 		}
 
 		function onSubmitPredefined(id){
-			var targetShell = typeData[id][shipValue[id]][shellValue[id]]['AP'];
+			var targetShell = typeData[id][shipValue[id]][shellValue[id]][shellType[id]];
 			
 			document.getElementById("shipName"  + id).value = shipValue[id] + " " + shellValue[id].slice(-1);
 			document.getElementById("mv"        + id).value = targetShell["bulletSpeed"];
@@ -389,6 +448,14 @@
 			document.getElementById("ra0_"      + id).value = targetShell["bulletRicochetAt"];
 			document.getElementById("ra1_"      + id).value = targetShell["bulletAlwaysRicochetAt"];
 			document.getElementById("normal" + id).value = targetShell['bulletCapNormalizeMaxAngle']
+
+			if(shellType[id] == 'AP'){
+				document.getElementById("HESAP" + id).value = 0;
+			}else if(shellType[id] == 'HE'){
+				document.getElementById("HESAP" + id).value = targetShell["alphaPiercingHE"];
+			}else if(shellType[id] == 'CS'){
+				document.getElementById("HESAP" + id).value = targetShell["alphaPiercingCS"];
+			}
             
 		}
 
@@ -398,6 +465,7 @@
 			document.getElementById("type1").innerHTML    = document.getElementById("type0").innerHTML;
 			document.getElementById("ship1").innerHTML    = document.getElementById("ship0").innerHTML;
 			document.getElementById("shell1").innerHTML   = document.getElementById("shell0").innerHTML;
+			document.getElementById("shellType1").innerHTML = document.getElementById("shellType0").innerHTML;
 			versionValue[1] = versionValue[0];
 			nationValue[1]  = nationValue[0];
 			typeValue[1]    = typeValue[0];
@@ -421,25 +489,26 @@
 			}
 		}
         </script>
-        <h2>&nbsp; Graphs</h2>
-		<h3>&nbsp;&nbsp; At Impact <button id=impactChartToggle>Hide</button> </h3>
-		<div class="container-fluid" id=impactCharts>
-			<h4>&nbsp; Horizontal Penetration <button id=pC0>Hide</button> </h4>
-			<div class='row'>
+		<h2 style="text-align:center">Graphs</h2>
+		<button id=impactChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#impactCharts">At Impact</button>
+		<div class="collapse" id=impactCharts>
+
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC0" id="PCT0"> Horizontal Penetration</button>
+			<div class='collapse' id="pC0">
 				<div class='col-sm-12'>
 					<canvas id="penChart0" width="1200" height="300"></canvas>
 				</div>	
 			</div>
-
-			<h4>&nbsp; Deck Penetration <button id=pC1>Hide</button> </h4>
-			<div class='row'>
+			
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC1" id="PCT1"> Deck Penetration</button>
+			<div class='collapse' id="pC1">
 				<div class='col-sm-12'>
 					<canvas id="penChart1" width="1200" height="300"></canvas>
 				</div>	
 			</div>
 			
-			<h4>&nbsp; Shell Speed <button id=pC2>Hide</button> </h4>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC2" id="PCT2"> Shell Speed</button>
+			<div class='collapse' id="pC2">
 				<div class='col-sm-12'>
 					<canvas id="penChart2" width="1200" height="300"></canvas>
 				</div>	
@@ -447,17 +516,17 @@
             <h4></h4>
 		</div>
 		
-		<h3>&nbsp;&nbsp; Critical Lateral Angles <button id=angleChartToggle>Hide</button> </h3>
-		<div class="container-fluid" id=angleCharts>
-			<h4>&nbsp; Maximum Lateral Angle for Penetration <button id=AC0>Hide</button> </h4>
-			<div class='row'>
+		<button id=angleChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#angleCharts">Critical Lateral Angles</button>
+		<div class="collapse" id=angleCharts>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA0" id="AC0"> Maximum Lateral Angle for Perforation</button>
+			<div class='collapse' id="CA0">
 				<div class='col-sm-12'>
 					<canvas id="angleChart0" width="1200" height="300"></canvas>
 				</div>	
 			</div>
 
-			<h4>&nbsp; Minimum Lateral Angle for Fusing <button id=AC1>Hide</button> </h4>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA1" id="AC1"> Minimum Lateral Angle for Fusing</button>
+			<div class='collapse' id="CA1">
 				<div class='col-sm-12'>
 					<canvas id="angleChart1" width="1200" height="300"></canvas>
 				</div>	
@@ -466,60 +535,52 @@
 		</div>
 
 
-		<h3>&nbsp;&nbsp; Post Penetration <button id=postPenChartToggle>Hide</button> </h3>
-		<div class="container-fluid" id=postPenCharts>
-			<h4 id="A0">&nbsp; Lateral Angle (0)</h4>
-			<button id=post0>Hide</button>
-			<div class='row'>
+		<button id=postPenChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#postPenCharts">Post Penetration</button>
+		<div class="collapse" id=postPenCharts>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA0" id="A0">Lateral Angle 0</button>
+			<div class='collapse' id="LA0">
 				<div class='col-sm-12'>
 					<canvas id="postPen0" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A1">&nbsp; Lateral Angle (1)</h4>
-			<button id=post1>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA1" id="A1">Lateral Angle 1</button>
+			<div class='collapse' id="LA1">
 				<div class='col-sm-12'>
 					<canvas id="postPen1" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A2">&nbsp; Lateral Angle (2)</h4>
-			<button id=post2>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA2" id="A2">Lateral Angle 2</button>
+			<div class='collapse' id="LA2">
 				<div class='col-sm-12'>
 					<canvas id="postPen2" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A3">&nbsp; Lateral Angle (3)</h3>
-			<button id=post3>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA3" id="A3">Lateral Angle 3</button>
+			<div class='collapse' id="LA3">
 				<div class='col-sm-12'>
 					<canvas id="postPen3" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A4">&nbsp; Lateral Angle (4)</h3>
-			<button id=post4>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA4" id="A4">Lateral Angle 4</button>
+			<div class='collapse' id="LA4">
 				<div class='col-sm-12'>
 					<canvas id="postPen4" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A5">&nbsp; Lateral Angle 5</h4>
-			<button id=post5>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA5" id="A5">Lateral Angle 5</button>
+			<div class='collapse' id="LA5">
 				<div class='col-sm-12'>
 					<canvas id="postPen5" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A6">&nbsp; Lateral Angle 6</h4>
-			<button id=post6>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA6" id="A6">Lateral Angle 6</button>
+			<div class='collapse' id="LA6">
 				<div class='col-sm-12'>
 					<canvas id="postPen6" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A7">&nbsp; Lateral Angle 7</h3>
-			<button id=post7>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA7" id="A7">Lateral Angle 7</button>
+			<div class='collapse' id="LA7">
 				<div class='col-sm-12'>
 					<canvas id="postPen7" width="1200" height="300"></canvas>
 				</div>
@@ -531,30 +592,37 @@
 		var v_angles = [];
 		var numAngles = 8;
 
+		function getFloatValues(elementId){
+			return parseFloat(document.getElementById(elementId).value);
+		}
 
 		function jQCall(){
-			var v_mv0         = parseFloat(document.getElementById("mv0"         ).value);
-			var v_caliber0    = parseFloat(document.getElementById("caliber0"    ).value);
-			var v_krupp0      = parseFloat(document.getElementById("krupp0"      ).value);
-			var v_mass0       = parseFloat(document.getElementById("mass0"       ).value);
-			var v_normal0     = parseFloat(document.getElementById("normal0"     ).value);
-			var v_cD0         = parseFloat(document.getElementById("cD0"         ).value);
-			var v_threshold0  = parseFloat(document.getElementById("threshold0"  ).value);
-			var v_fusetime0   = parseFloat(document.getElementById("fusetime0"   ).value);
-			var v_ra0_0       = parseFloat(document.getElementById("ra0_0"       ).value);
-			var v_ra1_0       = parseFloat(document.getElementById("ra1_0"       ).value);
+			var v_mv = [];
+			var v_caliber = [];
+			var v_krupp = [];
+			var v_mass = [];
+			var v_normal = [];
+			var v_cD = [];
+			var v_threshold = [];
+			var v_fusetime = [];
+			var v_ra0 = [];
+			var v_ra1 = [];
+			var v_HESAP = [];
+			
+			for(var i=0; i<2; i++){
+				v_mv[i]        = getFloatValues("mv" + i);
+				v_caliber[i]   = getFloatValues("caliber" + i);
+				v_krupp[i]     = getFloatValues("krupp" + i);
+				v_mass[i]      = getFloatValues("mass" + i);
+				v_normal[i]    = getFloatValues("normal" + i);
+				v_cD[i]        = getFloatValues("cD" + i);
+				v_threshold[i] = getFloatValues("threshold" + i);
+				v_fusetime[i]  = getFloatValues("fusetime" + i);
+				v_ra0[i]       = getFloatValues("ra0_" + i);
+				v_ra1[i]       = getFloatValues("ra1_" + i);
+				v_HESAP[i]     = getFloatValues("HESAP" + i);
+			}
 
-			var v_mv1         = parseFloat(document.getElementById("mv1"         ).value);
-			var v_caliber1    = parseFloat(document.getElementById("caliber1"    ).value);
-			var v_krupp1      = parseFloat(document.getElementById("krupp1"      ).value);
-			var v_mass1       = parseFloat(document.getElementById("mass1"       ).value);
-			var v_normal1     = parseFloat(document.getElementById("normal1"     ).value);
-			var v_cD1         = parseFloat(document.getElementById("cD1"         ).value);
-			var v_threshold1  = parseFloat(document.getElementById("threshold1"  ).value);
-			var v_fusetime1   = parseFloat(document.getElementById("fusetime1"   ).value);
-			var v_ra0_1       = parseFloat(document.getElementById("ra0_1"       ).value);
-			var v_ra1_1       = parseFloat(document.getElementById("ra1_1"       ).value);
-        
 			var v_armor       = parseFloat(document.getElementById("armor"      ).value);
 			var v_inclination = parseFloat(document.getElementById("inclination").value);
 			for(var i=0; i<numAngles; i++){
@@ -562,8 +630,20 @@
 			}
 			
 			var instances = []
-			instances[0] = new Module.shell(v_caliber0, v_mv0, v_cD0, v_mass0, v_krupp0, v_normal0, v_fusetime0, v_threshold0, v_ra0_0, v_ra1_0);
-			instances[1] = new Module.shell(v_caliber1, v_mv1, v_cD1, v_mass1, v_krupp1, v_normal1, v_fusetime1, v_threshold1, v_ra0_1, v_ra1_1);
+			for(var k=0; k<2; k++){
+				instances[k] = new Module.shell(
+					v_caliber[k], 
+					v_mv[k], 
+					v_cD[k], 
+					v_mass[k], 
+					v_krupp[k], 
+					v_normal[k], 
+					v_fusetime[k], 
+					v_threshold[k], 
+					v_ra0[k], 
+					v_ra1[k]
+				);
+			}
 
 			for(var k=0; k<2; k++){
 				instances[k].calcImpact();
@@ -585,7 +665,11 @@
 				minFuse     : [[], []],
 
 				detDist          : [[], []],
-				detDistF         : [[], []] 
+				detDistF         : [[], []],
+
+				armorPlate : v_armor,
+				inclination : v_inclination
+
 			}
 			for(var k=0; k<2; k++){
 				for(var j=0; j<numAngles; j++){
@@ -616,88 +700,175 @@
             }
 
 			for(var k=0; k<2; k++){
-				for(var i=0; i<impactSize; i++){
-					//chartData.labels[k].push(          instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.distance.value));
-					chartData.effectivePen[k].push(
-                        {
-                            x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-                            y: instances[k].getImpactPoint(i, Module.impactDataIndex.ePenHN.value)
-                        }
-                    );
-					chartData.angleBelt[k].push(
-                        {
-                            x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-                            y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactAHD.value) * -1
-                        }
+				if(shellType[k] == 'AP'){
+					for(var i=0; i<impactSize; i++){
+						//chartData.labels[k].push(          instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.distance.value));
+						chartData.effectivePen[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.ePenHN.value)
+							}
+						);
+						chartData.angleBelt[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactAHD.value) * -1
+							}
 
-                    );
-					chartData.effectivePenDeck[k].push(
-                        {
-                            x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-                            y: instances[k].getImpactPoint(i, Module.impactDataIndex.ePenDN.value)
-                        }
+						);
+						chartData.effectivePenDeck[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.ePenDN.value)
+							}
 
-                    );
-					chartData.angleDeck[k].push(
-                        {
-                            x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-                            y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactADD.value)
-                        }       
-                    );
-					chartData.impactVelocity[k].push(
-                        {
-                            x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-                            y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactV.value)
-                        }
-                    );
-					chartData.flightTime[k].push(
-                        {
-                            x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-                            y: instances[k].getImpactPoint(i, Module.impactDataIndex.tToTargetA.value)
-                        }
-                    );
-					chartData.ra0[k].push(
-						{
-							x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
-							y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra0D.value)
-						}
-					);
-					chartData.ra1[k].push(
-						{
-							x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
-							y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra1D.value)
-						}
-					);
-					chartData.maxArmor[k].push(
-						{
-							x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
-							y: instances[k].getAnglePoint(i, Module.angleDataIndex.armorD.value)
-						}
-					);
-					chartData.minFuse[k].push(
-						{
-							x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
-							y: instances[k].getAnglePoint(i, Module.angleDataIndex.fuseD.value)
-						}
-					);
+						);
+						chartData.angleDeck[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactADD.value)
+							}       
+						);
+						chartData.impactVelocity[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactV.value)
+							}
+						);
+						chartData.flightTime[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.tToTargetA.value)
+							}
+						);
+						chartData.ra0[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra0D.value)
+							}
+						);
+						chartData.ra1[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra1D.value)
+							}
+						);
+						chartData.maxArmor[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.armorD.value)
+							}
+						);
+						chartData.minFuse[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.fuseD.value)
+							}
+						);
 
 
-					for(var j=0; j<numAngles; j++){
-						chartData.detDist[k][j].push(
-                            {
-                                x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
-                                y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.x.value, j)
-                            }
-                        );
-                        var y = instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j);
-                        if(y >= 0){
-                            chartData.detDistF[k][j].push(
-                                {
-                                    x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
-                                    y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j)
-                                }
-                            );
-                        }
+						for(var j=0; j<numAngles; j++){
+							chartData.detDist[k][j].push(
+								{
+									x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
+									y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.x.value, j)
+								}
+							);
+							var y = instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j);
+							if(y >= 0){
+								chartData.detDistF[k][j].push(
+									{
+										x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
+										y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j)
+									}
+								);
+							}
+						}
+					}
+				}else{
+					for(var i=0; i<impactSize; i++){
+						//chartData.labels[k].push(          instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.distance.value));
+						chartData.effectivePen[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: v_HESAP[k]
+							}
+						);
+						chartData.angleBelt[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactAHD.value) * -1
+							}
+
+						);
+						chartData.effectivePenDeck[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: v_HESAP[k]
+							}
+
+						);
+						chartData.angleDeck[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactADD.value)
+							}       
+						);
+						chartData.impactVelocity[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactV.value)
+							}
+						);
+						chartData.flightTime[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.tToTargetA.value)
+							}
+						);
+						chartData.ra0[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra0D.value)
+							}
+						);
+						chartData.ra1[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra1D.value)
+							}
+						);
+						chartData.maxArmor[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.armorD.value)
+							}
+						);
+						chartData.minFuse[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.fuseD.value)
+							}
+						);
+
+
+						for(var j=0; j<numAngles; j++){
+							chartData.detDist[k][j].push(
+								{
+									x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
+									y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.x.value, j)
+								}
+							);
+							var y = instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j);
+							if(y >= 0){
+								chartData.detDistF[k][j].push(
+									{
+										x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
+										y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j)
+									}
+								);
+							}
+						}
 					}
 				}
 			}
@@ -757,6 +928,9 @@
 				}
 			}
 
+			targetedArmor = 'Armor Thickness: ' + response.armorPlate + 'mm';
+			targetInclination = 'Vertical Inclination: ' + response.inclination + '°'; 
+
 			var EPL = "Effective Penetration ";
 			var IAL = "Impact Angle ";
 			impactCharts[0] = new Chart(document.getElementById("penChart0"), {
@@ -787,6 +961,10 @@
 					]
 				},
 				options: {
+					title: {
+						display: true,
+						text: 'Horizontal Penetration and Impact Angle'
+					},
 					scales: {
 						xAxes: xAxesDistance,
 						yAxes: [yAxesPenetration ,{
@@ -834,6 +1012,10 @@
 					]
 				},
 				options: {
+					title: {
+						display: true,
+						text: 'Deck Penetration and Impact Angle'
+					},
 					scales: {
 						xAxes: xAxesDistance,
 						yAxes: [yAxesPenetration,{
@@ -881,6 +1063,10 @@
 					]
 				},
 				options: {
+					title: {
+						display: true,
+						text: 'Shell Flight Time and Impact Velocity'
+					},
 					scales: {
 						xAxes: xAxesDistance,
 						yAxes: [{
@@ -908,7 +1094,7 @@
 			if(angleCharts[0]){
 				angleCharts[0].destroy();
 			}
-			var armorL = "Maximum Penetration Angle ";
+			var armorL = "Maximum Perforation Angle ";
 			var ra0L = "Start Ricochet "
 			var ra1L = "Always Ricochet "
 			//var FTL = " ";
@@ -950,6 +1136,10 @@
 					]
 				},
 				options: {
+					title: {
+						display: true,
+						text: 'Maximum Angle for Perforation | ' + targetedArmor + ' | ' + targetInclination
+					},
 					scales: {
 						xAxes: xAxesDistance,
 						yAxes: [{
@@ -1009,6 +1199,10 @@
 					]
 				},
 				options: {
+					title: {
+						display: true,
+						text: 'Minimum Fusing Angle | ' + targetedArmor + ' | ' + targetInclination
+					},
 					scales: {
 						xAxes: xAxesDistance,
 						yAxes: [{
@@ -1065,6 +1259,10 @@
 						]
 					},
 					options: {
+						title: {
+							display: true,
+							text: 'Internal Width Traveled before Detonation | ' + targetedArmor + ' | ' + targetInclination + ' | Horizontal Impact Angle: ' + v_angles[i] + "°"
+						},
 						scales: {
 							xAxes: xAxesDistance,
 							yAxes: [{
@@ -1080,32 +1278,7 @@
 		}
         //Buttons 
 		//Add Hide buttons
-		var hideButtons = [
-			['parameterToggle'   , 'parameterTable'],
-			['impactChartToggle' , 'impactCharts'  ],
-			['pC0'               , 'penChart0'     ],
-			['pC1'               , 'penChart1'     ],
-			['pC2'               , 'penChart2'     ],
-
-			['angleChartToggle'	 , 'angleCharts'   ],
-
-            ['postPenChartToggle', 'postPenCharts' ],
-            ['post0'             , 'postPen0'      ],
-            ['post1'             , 'postPen1'      ],
-            ['post2'             , 'postPen2'      ],
-            ['post3'             , 'postPen3'      ],
-            ['post4'             , 'postPen4'      ],
-            ['post5'             , 'postPen5'      ],
-            ['post6'             , 'postPen6'      ],
-            ['post7'             , 'postPen7'      ],
-
-		]
         let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-
-		for(const button of hideButtons){
-			document.getElementById(button[0]).addEventListener(touchEvent, function(){hideFunction(button[1], button[0]);} );
-		}
-
 		document.getElementById("generate").addEventListener(touchEvent, function(){jQCall();});
 
 		$(document).ready(function(){
