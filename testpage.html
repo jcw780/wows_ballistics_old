@@ -132,6 +132,10 @@
 							<td><select id=shell0   onchange="onChangeShell('shell0')"></select></td>
 						</tr>
 						<tr>
+							<td>Shell Type</td>
+							<td><select id=shellType0></select></td>
+						</tr>
+						<tr>
 							<td>Label</td>
 							<td><input id="shipName0" value=""></td>
 						</tr>
@@ -156,6 +160,10 @@
 						<tr>
 							<td>Artillery</td>
 							<td><select id=shell1   onchange="onChangeShell('shell1')"></select></td>
+						</tr>
+						<tr>
+							<td>Shell Type</td>
+							<td><select id=shellType1></select></td>
 						</tr>
 						<tr>
 							<td>Label</td>
@@ -263,8 +271,9 @@
 		var nationValue = [];
 		var typeValue = [];
 		var shipValue = [];
-		var shellValue = []; 
+		var shellValue = [];
 		var typeData = [];
+		var shellType = [];
 		var initialized = false;
         var compiled = false;
         var dataURL = "static/data/"
@@ -391,7 +400,7 @@
 			selector.innerHTML = '';
 			for(var shell in typeData[id][shipValue[id]]){
 				if(shell.includes('Artillery')){
-					selector.innerHTML += "<option value=" + shell + ">" + shell + "</option>"
+					selector.innerHTML += "<option value=" + shell + ">" + shell + "</option>";
 				}
 			}
 			onChangeShell(shellID);
@@ -399,11 +408,28 @@
 		function onChangeShell(shellID){
 			var id = parseInt(shellID.slice(-1));
 			shellValue[id] = document.getElementById(shellID).value;
-            onSubmitPredefined(id);
+			generateShellType("shellType" + id);
+            //onSubmitPredefined(id);
+		}
+
+		function generateShellType(shellTypeID){
+			var id = parseInt(shellID.slice(-1));
+			selector = document.getElementById(shellTypeID);
+			selector.innerHTML = '';
+			for(var shellType in typeData[id][shipValue[id]][shellValue[id]]){
+				selector.innerHTML += "<option value=" + shellType + ">" + shellType + "</option>";
+			}
+			onChangeShellType(shellTypeID);
+		}
+
+		function onChangeShellType(shellTypeID){
+			var id = parseInt(shellTypeID.slice(-1));
+			shellType[id] = document.getElementById(shellTypeID).value;
+			onSubmitPredefined(id);
 		}
 
 		function onSubmitPredefined(id){
-			var targetShell = typeData[id][shipValue[id]][shellValue[id]]['AP'];
+			var targetShell = typeData[id][shipValue[id]][shellValue[id]][shellType[id]];
 			
 			document.getElementById("shipName"  + id).value = shipValue[id] + " " + shellValue[id].slice(-1);
 			document.getElementById("mv"        + id).value = targetShell["bulletSpeed"];
