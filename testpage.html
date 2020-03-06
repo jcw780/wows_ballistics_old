@@ -693,7 +693,11 @@
 				minFuse     : [[], []],
 
 				detDist          : [[], []],
-				detDistF         : [[], []] 
+				detDistF         : [[], []],
+
+				armorPlate : v_armor,
+				inclination : v_inclination
+
 			}
 			for(var k=0; k<2; k++){
 				for(var j=0; j<numAngles; j++){
@@ -952,6 +956,9 @@
 				}
 			}
 
+			targetedArmor = 'Armor Thickness: ' + response.armorPlate + 'mm';
+			targetInclination = 'Vertical Inclination: ' + response.inclination + '°'; 
+
 			var EPL = "Effective Penetration ";
 			var IAL = "Impact Angle ";
 			impactCharts[0] = new Chart(document.getElementById("penChart0"), {
@@ -1159,7 +1166,7 @@
 				options: {
 					title: {
 						display: true,
-						text: 'Maximum Angle for Perforation'
+						text: 'Maximum Angle for Perforation | ' + response.targetedArmor + ' | ' + response.targetInclination
 					},
 					scales: {
 						xAxes: xAxesDistance,
@@ -1220,6 +1227,10 @@
 					]
 				},
 				options: {
+					title: {
+						display: true,
+						text: 'Minimum Fusing Angle | ' + targetedArmor + ' | ' + targetInclination
+					},
 					scales: {
 						xAxes: xAxesDistance,
 						yAxes: [{
@@ -1278,7 +1289,7 @@
 					options: {
 						title: {
 							display: true,
-							text: 'Internal Width Traveled before Detonation' 
+							text: 'Internal Width Traveled before Detonation - Targeted Armor: '  + response.armorPlate + 'mm Plate Vertically Inclined at ' + response.inclination + '°'  
 						},
 						scales: {
 							xAxes: xAxesDistance,
