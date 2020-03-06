@@ -172,52 +172,52 @@
 							<td>Ship B:</td>
 						</tr>
 						<tr>
-							<td>Caliber (m)</td>
+							<td title="Diameter of the shell in meters. All else equal, higher caliber increase shell flight time and reduces penetration.">Caliber (m)</td>
 							<td><input type="number" step="any" min="0" id="caliber0"   value=""></td>
 							<td><input type="number" step="any" min="0" id="caliber1"   value=""></td>
 						</tr>
 						<tr>
-							<td>Muzzle Velocity (m/s)</td>
+							<td title="Shell velocity at launch in meters per second. All else equal, higher muzzle velocity reduces shell flight time and increase penetration.">Muzzle Velocity (m/s)</td>
 							<td><input type="number" step="any" min="0" id="mv0"        value=""></td>
 							<td><input type="number" step="any" min="0" id="mv1"        value=""></td>
 						</tr>
 						<tr>
-							<td>Drag Coefficient</td>
+							<td title="Aerodynamic drag characteristic of the shell's shape. All else equal, higher drag coefficient increase shell flight time and reduces penetration.">Drag Coefficient</td>
 							<td><input type="number" step="any" min="0" id="cD0"        value=""></td>
 							<td><input type="number" step="any" min="0" id="cD1"        value=""></td>
 						</tr>
 						<tr>
-							<td>Mass (kg)</td>
+							<td title="Mass of the shell in kilograms. All else equal, higher mass decreases shell flight time and increases penetration.">Mass (kg)</td>
 							<td><input type="number" step="any" min="0" id="mass0"      value=""></td>
 							<td><input type="number" step="any" min="0" id="mass1"      value=""></td>
 						</tr>
 						<tr>
-							<td>Krupp</td>
+							<td title="Penetration coefficient of the shell. All else equal, higher krupp increases penetration.">Krupp</td>
 							<td><input type="number" step="any" min="0" id="krupp0"     value=""></td>
 							<td><input type="number" step="any" min="0" id="krupp1"     value=""></td>
 						</tr>
 						<tr>
-							<td>Fusetime (s)</td>
+							<td title="How many seconds it takes for the shell to detonate after fusing. Longer fusetime increases risk of overpenetration.">Fusetime (s)</td>
 							<td><input type="number" step="any" min="0" id="fusetime0"  value=""></td>
 							<td><input type="number" step="any" min="0" id="fusetime1"  value=""></td>
 						</tr>
 						<tr>
-							<td>Fusing Threshold (mm)</td>
+							<td title="How many milimeters of effective armor it takes for the shells arm. Higher fusing threshold increases the risk of overpenetration.">Fusing Threshold (mm)</td>
 							<td><input type="number" step="any" min="0" id="threshold0" value=""></td>
 							<td><input type="number" step="any" min="0" id="threshold1" value=""></td>
 						</tr>
 						<tr>
-							<td>Normalization (°)</td>
+							<td title="How many degrees of impact angle the shell can reduce. Higher normalization increases decreases effective armor thickness.">Normalization (°)</td>
 							<td><input type="number" step="any" min="0" id="normal0"    value=""></td>
 							<td><input type="number" step="any" min="0" id="normal1"    value=""></td>
 						</tr>
 						<tr>
-							<td>Start Ricochet (°)</td>
+							<td title="Minimum impact angle in degrees at which shells can ricochet - not affected by normalization.">Start Ricochet (°)</td>
 							<td><input type="number" step="any" min="0" max="90" id="ra0_0"  value=""></td>
 							<td><input type="number" step="any" min="0" max="90" id="ra0_1"  value=""></td>
 						</tr>
 						<tr>
-							<td>Always Ricochet (°)</td>
+							<td title="Minimum impact angle in degrees at which shells always ricochet - not affected by normalization.">Always Ricochet (°)</td>
 							<td><input type="number" step="any" min="0" max="90" id="ra1_0"  value=""></td>
 							<td><input type="number" step="any" min="0" max="90" id="ra1_1"  value=""></td>
 						</tr>
@@ -226,17 +226,17 @@
 				<td>
 					<table>
 						<tr>
-							<td>Armor (mm)</td>
+							<td title="Thickness in milimeters of the targeted plate.">Armor (mm)</td>
 						</tr><tr>
 							<td><input type="number" step="any" min="0" id="armor" value="70"></td>
 						</tr>
 						<tr>
-							<td>Armor Inclination (°)</td>
+							<td title="Vertical inclination angle of the armor: 0° - perpendicular to sea level; >0° - turtleback; <0° - angled towards keel.">Armor Inclination (°)</td>
 						</tr><tr>
 							<td><input type="number" step="any" min="-90" max="180" id="inclination" value="0"></td>
 						</tr>
 						<tr>
-							<td>Ship Width (m)</td>
+							<td title="Width (Beam) of the targeted ship in meters.">Ship Width (m)</td>
 						</tr><tr>
 							<td><input type="number" step="any" min="0" id="width" value="18"> </p></td>
 						</tr>
@@ -448,7 +448,7 @@
 			}
 		}
         </script>
-		<h2>&nbsp; Graphs</h2>
+		<h2 style="text-align:center">Graphs</h2>
 		<button id=impactChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#impactCharts">At Impact</button>
 		<div class="collapse" id=impactCharts>
 
