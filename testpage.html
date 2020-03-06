@@ -413,7 +413,7 @@
 		}
 
 		function generateShellType(shellTypeID){
-			var id = parseInt(shellID.slice(-1));
+			var id = parseInt(shellTypeID.slice(-1));
 			selector = document.getElementById(shellTypeID);
 			selector.innerHTML = '';
 			for(var shellType in typeData[id][shipValue[id]][shellValue[id]]){
