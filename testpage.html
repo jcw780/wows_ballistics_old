@@ -23,7 +23,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
@@ -518,7 +518,7 @@
 		
 		<button id=angleChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#angleCharts">Critical Lateral Angles</button>
 		<div class="collapse" id=angleCharts>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA0" id="AC0"> Maximum Lateral Angle for Penetration</button>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA0" id="AC0"> Maximum Lateral Angle for Perforation</button>
 			<div class='collapse' id="CA0">
 				<div class='col-sm-12'>
 					<canvas id="angleChart0" width="1200" height="300"></canvas>
@@ -939,6 +939,10 @@
 					]
 				},
 				options: {
+					title: {
+						display: true,
+						text: 'Horizontal Penetration and Impact Angle'
+					},
 					scales: {
 						xAxes: xAxesDistance,
 						yAxes: [yAxesPenetration ,{
@@ -986,6 +990,10 @@
 					]
 				},
 				options: {
+					title: {
+						display: true,
+						text: 'Deck Penetration and Impact Angle'
+					},
 					scales: {
 						xAxes: xAxesDistance,
 						yAxes: [yAxesPenetration,{
@@ -1033,6 +1041,10 @@
 					]
 				},
 				options: {
+					title: {
+						display: true,
+						text: 'Shell Flight Time and Impact Velocity'
+					},
 					scales: {
 						xAxes: xAxesDistance,
 						yAxes: [{
@@ -1060,7 +1072,7 @@
 			if(angleCharts[0]){
 				angleCharts[0].destroy();
 			}
-			var armorL = "Maximum Penetration Angle ";
+			var armorL = "Maximum Perforation Angle ";
 			var ra0L = "Start Ricochet "
 			var ra1L = "Always Ricochet "
 			//var FTL = " ";
@@ -1102,6 +1114,10 @@
 					]
 				},
 				options: {
+					title: {
+						display: true,
+						text: 'Maximum Angle for Perforation'
+					},
 					scales: {
 						xAxes: xAxesDistance,
 						yAxes: [{
@@ -1217,6 +1233,10 @@
 						]
 					},
 					options: {
+						title: {
+							display: true,
+							text: 'Internal Width Traveled before Detonation' 
+						},
 						scales: {
 							xAxes: xAxesDistance,
 							yAxes: [{
