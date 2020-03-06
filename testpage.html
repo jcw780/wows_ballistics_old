@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-    <title>World of Warships Overpen Calculator</title>
+    <title>World of Warships Overpenetration Calculator</title>
 	</head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155844497-1"></script>
@@ -19,24 +19,20 @@
 	</script>
 
 	<body>
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
 
-		<h1>&nbsp;World of Warships Overpen Calculator</h1>
+		<h1>&nbsp;World of Warships Overpenetration Calculator</h1>
 		<p>&nbsp;Overpen calculations are experimental - further testing may be needed to confirm results.</p>
 		<p>&nbsp;Site will be updated if and when more accurate information becomes available.</p>
 		<style>
@@ -59,12 +55,46 @@
             }
             .container-fluid{
                 background-color: lightgray;
+				padding: 0 18px;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.2s ease-out;
             }
             canvas{
                 background-color: white;
             }
-        </style>
-        <div class="container-fluid">
+			.collapsible {
+				background-color: #777;
+				color: white;
+				cursor: pointer;
+				padding: 18px;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 15px;
+			}
+
+			.btn btn-info {
+				background-color: #777;
+				color: white;
+				cursor: pointer;
+				padding: 18px;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 15px;
+			}
+
+			.active, .collapsible:hover {
+				background-color: #555;
+			}
+
+		</style>
+		
+		<button id=impactChartToggle class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#parameters">Parameters</button>
+		<div class="collapse" id=parameters>
 		<table id=parameterTable>
 			<tr>
 				<th>
@@ -227,10 +257,10 @@
 				</td>
 			</tr>
 		</table>
-		<button id=parameterToggle>Hide</button>
 		<button id=generate>Generate Graphs</button>
 		<h4></h4>
-        </div>
+		</div>
+		</div>
 		<script>
 		var versionValue = [];
 		var nationValue = [];
@@ -388,7 +418,8 @@
 			document.getElementById("fusetime"  + id).value = targetShell["bulletDetonator"];
 			document.getElementById("ra0_"      + id).value = targetShell["bulletRicochetAt"];
 			document.getElementById("ra1_"      + id).value = targetShell["bulletAlwaysRicochetAt"];
-            document.getElementById("normal" + id).value = targetShell['bulletCapNormalizeMaxAngle']
+			document.getElementById("normal" + id).value = targetShell['bulletCapNormalizeMaxAngle']
+            
 		}
 
 		function copyStartValues(){
@@ -420,24 +451,25 @@
 			}
 		}
         </script>
-        <h2>&nbsp; Graphs</h2>
-		<h3>&nbsp;&nbsp; At Impact <button id=impactChartToggle>Hide</button> </h3>
-		<div class="container-fluid" id=impactCharts>
-			<h4>&nbsp; Horizontal Penetration <button id=pC0>Hide</button> </h4>
-			<div class='row'>
+		<h2>&nbsp; Graphs</h2>
+		<button id=impactChartToggle class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#impactCharts">At Impact</button>
+		<div class="collapse" id=impactCharts>
+
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC0" id="PCT0"> Horizontal Penetration</button>
+			<div class='collapse' id="pC0">
 				<div class='col-sm-12'>
 					<canvas id="penChart0" width="1200" height="300"></canvas>
 				</div>	
 			</div>
-
-			<h4>&nbsp; Deck Penetration <button id=pC1>Hide</button> </h4>
-			<div class='row'>
+			
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC1" id="PCT1"> Deck Penetration</button>
+			<div class='collapse' id="pC1">
 				<div class='col-sm-12'>
 					<canvas id="penChart1" width="1200" height="300"></canvas>
 				</div>	
 			</div>
 			
-			<h4>&nbsp; Shell Speed <button id=pC2>Hide</button> </h4>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC2" id="PCT2"> Shell Speed</button>
 			<div class='row'>
 				<div class='col-sm-12'>
 					<canvas id="penChart2" width="1200" height="300"></canvas>
@@ -446,17 +478,17 @@
             <h4></h4>
 		</div>
 		
-		<h3>&nbsp;&nbsp; Lateral Angle <button id=angleChartToggle>Hide</button> </h3>
-		<div class="container-fluid" id=angleCharts>
-			<h4>&nbsp; Maximum Lateral Angle for Penetration <button id=AC0>Hide</button> </h4>
-			<div class='row'>
+		<button id=angleChartToggle class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#angleCharts">Critical Lateral Angles</button>
+		<div class="collapse" id=angleCharts>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA0" id="AC0"> Maximum Lateral Angle for Penetration</button>
+			<div class='collapse' id="CA0">
 				<div class='col-sm-12'>
 					<canvas id="angleChart0" width="1200" height="300"></canvas>
 				</div>	
 			</div>
 
-			<h4>&nbsp; Minimum Lateral Angle for Fusing <button id=AC1>Hide</button> </h4>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA1" id="AC1"> Minimum Lateral Angle for Fusing</button>
+			<div class='collapse' id="CA1">
 				<div class='col-sm-12'>
 					<canvas id="angleChart1" width="1200" height="300"></canvas>
 				</div>	
@@ -465,60 +497,52 @@
 		</div>
 
 
-		<h3>&nbsp;&nbsp; Post Penetration <button id=postPenChartToggle>Hide</button> </h3>
-		<div class="container-fluid" id=postPenCharts>
-			<h4 id="A0">&nbsp; Lateral Angle (0)</h4>
-			<button id=post0>Hide</button>
-			<div class='row'>
+		<button id=postPenChartToggle class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#postPenCharts">Post Penetration</button>
+		<div class="collapse" id=postPenCharts>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA0" id="A0">Lateral Angle (0)</button>
+			<div class='collapse' id="LA0">
 				<div class='col-sm-12'>
 					<canvas id="postPen0" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A1">&nbsp; Lateral Angle (1)</h4>
-			<button id=post1>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA1" id="A1">Lateral Angle (1)</button>
+			<div class='collapse' id="LA1">
 				<div class='col-sm-12'>
 					<canvas id="postPen1" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A2">&nbsp; Lateral Angle (2)</h4>
-			<button id=post2>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA2" id="A2">Lateral Angle (2)</button>
+			<div class='collapse' id="LA2">
 				<div class='col-sm-12'>
 					<canvas id="postPen2" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A3">&nbsp; Lateral Angle (3)</h3>
-			<button id=post3>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA3" id="A3">Lateral Angle (3)</button>
+			<div class='collapse' id="LA3">
 				<div class='col-sm-12'>
 					<canvas id="postPen3" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A4">&nbsp; Lateral Angle (4)</h3>
-			<button id=post4>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA4" id="A4">Lateral Angle (4)</button>
+			<div class='collapse' id="LA4">
 				<div class='col-sm-12'>
 					<canvas id="postPen4" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A5">&nbsp; Lateral Angle 5</h4>
-			<button id=post5>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA5" id="A5">Lateral Angle (5)</button>
+			<div class='collapse' id="LA5">
 				<div class='col-sm-12'>
 					<canvas id="postPen5" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A6">&nbsp; Lateral Angle 6</h4>
-			<button id=post6>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA6" id="A6">Lateral Angle (6)</button>
+			<div class='collapse' id="LA6">
 				<div class='col-sm-12'>
 					<canvas id="postPen6" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<h4 id="A7">&nbsp; Lateral Angle 7</h3>
-			<button id=post7>Hide</button>
-			<div class='row'>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA7" id="A7">Lateral Angle (7)</button>
+			<div class='collapse' id="LA7">
 				<div class='col-sm-12'>
 					<canvas id="postPen7" width="1200" height="300"></canvas>
 				</div>
@@ -929,7 +953,7 @@
 							data: response.ra1[0],
 							label: ra1L + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFD700", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.maxArmor[1],
 							label: armorL + shipName[1], 
@@ -944,7 +968,7 @@
 							data: response.ra1[1],
 							label: ra1L + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#DC143C", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
 					]
 				},
@@ -988,7 +1012,7 @@
 							data: response.ra1[0],
 							label: ra1L + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFD700", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
 							data: response.minFuse[1],
 							label: fuseL + shipName[1], 
@@ -1003,7 +1027,7 @@
 							data: response.ra1[1],
 							label: ra1L + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#DC143C", fill: false, pointRadius: 0, pointHitRadius: 5
 						}
 					]
 				},
@@ -1079,32 +1103,7 @@
 		}
         //Buttons 
 		//Add Hide buttons
-		var hideButtons = [
-			['parameterToggle'   , 'parameterTable'],
-			['impactChartToggle' , 'impactCharts'  ],
-			['pC0'               , 'penChart0'     ],
-			['pC1'               , 'penChart1'     ],
-			['pC2'               , 'penChart2'     ],
-
-			['angleChartToggle'	 , 'angleCharts'   ],
-
-            ['postPenChartToggle', 'postPenCharts' ],
-            ['post0'             , 'postPen0'      ],
-            ['post1'             , 'postPen1'      ],
-            ['post2'             , 'postPen2'      ],
-            ['post3'             , 'postPen3'      ],
-            ['post4'             , 'postPen4'      ],
-            ['post5'             , 'postPen5'      ],
-            ['post6'             , 'postPen6'      ],
-            ['post7'             , 'postPen7'      ],
-
-		]
         let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-
-		for(const button of hideButtons){
-			document.getElementById(button[0]).addEventListener(touchEvent, function(){hideFunction(button[1], button[0]);} );
-		}
-
 		document.getElementById("generate").addEventListener(touchEvent, function(){jQCall();});
 
 		$(document).ready(function(){
