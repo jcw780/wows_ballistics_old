@@ -429,6 +429,7 @@
 		}
 
 		function onChangeShellType(shellTypeID){
+			console.log(this)
 			var id = parseInt(shellTypeID.slice(-1));
 			shellType[id] = document.getElementById(shellTypeID).value;
 			onSubmitPredefined(id);
