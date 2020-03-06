@@ -18,6 +18,8 @@ https://jcw780.github.io/overpen_calculator/
 - Currently still recently released so expect changes 
 - Calculations may be refined if contradicting data is provided
 ### Possible Future Features
+- Directly download graphs without browser extension
+- Raw data
 ### Updates
 - 3/6/2020 Improved formatting, Added support for different shell types, Added Chart Titles, Various internal refactors
 - 3/2/2020 Added version 0.9.1.1 shells
