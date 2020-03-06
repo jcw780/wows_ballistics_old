@@ -451,9 +451,9 @@
 
 			if(shellType[id] == 'AP'){
 				document.getElementById("HESAP_" + id).value = 0;
-			}else if(shellTypeID[id] == 'HE'){
+			}else if(shellType[id] == 'HE'){
 				document.getElementById("HESAP_" + id).value = targetShell["alphaPiercingHE"];
-			}else if(shellTypeID[id] == 'CS'){
+			}else if(shellType[id] == 'CS'){
 				document.getElementById("HESAP_" + id).value = targetShell["alphaPiercingCS"];
 			}
             
@@ -677,88 +677,175 @@
             }
 
 			for(var k=0; k<2; k++){
-				for(var i=0; i<impactSize; i++){
-					//chartData.labels[k].push(          instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.distance.value));
-					chartData.effectivePen[k].push(
-                        {
-                            x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-                            y: instances[k].getImpactPoint(i, Module.impactDataIndex.ePenHN.value)
-                        }
-                    );
-					chartData.angleBelt[k].push(
-                        {
-                            x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-                            y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactAHD.value) * -1
-                        }
+				if(shellType[k] == 'AP'){
+					for(var i=0; i<impactSize; i++){
+						//chartData.labels[k].push(          instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.distance.value));
+						chartData.effectivePen[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.ePenHN.value)
+							}
+						);
+						chartData.angleBelt[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactAHD.value) * -1
+							}
 
-                    );
-					chartData.effectivePenDeck[k].push(
-                        {
-                            x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-                            y: instances[k].getImpactPoint(i, Module.impactDataIndex.ePenDN.value)
-                        }
+						);
+						chartData.effectivePenDeck[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.ePenDN.value)
+							}
 
-                    );
-					chartData.angleDeck[k].push(
-                        {
-                            x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-                            y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactADD.value)
-                        }       
-                    );
-					chartData.impactVelocity[k].push(
-                        {
-                            x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-                            y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactV.value)
-                        }
-                    );
-					chartData.flightTime[k].push(
-                        {
-                            x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
-                            y: instances[k].getImpactPoint(i, Module.impactDataIndex.tToTargetA.value)
-                        }
-                    );
-					chartData.ra0[k].push(
-						{
-							x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
-							y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra0D.value)
-						}
-					);
-					chartData.ra1[k].push(
-						{
-							x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
-							y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra1D.value)
-						}
-					);
-					chartData.maxArmor[k].push(
-						{
-							x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
-							y: instances[k].getAnglePoint(i, Module.angleDataIndex.armorD.value)
-						}
-					);
-					chartData.minFuse[k].push(
-						{
-							x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
-							y: instances[k].getAnglePoint(i, Module.angleDataIndex.fuseD.value)
-						}
-					);
+						);
+						chartData.angleDeck[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactADD.value)
+							}       
+						);
+						chartData.impactVelocity[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactV.value)
+							}
+						);
+						chartData.flightTime[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.tToTargetA.value)
+							}
+						);
+						chartData.ra0[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra0D.value)
+							}
+						);
+						chartData.ra1[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra1D.value)
+							}
+						);
+						chartData.maxArmor[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.armorD.value)
+							}
+						);
+						chartData.minFuse[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.fuseD.value)
+							}
+						);
 
 
-					for(var j=0; j<numAngles; j++){
-						chartData.detDist[k][j].push(
-                            {
-                                x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
-                                y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.x.value, j)
-                            }
-                        );
-                        var y = instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j);
-                        if(y >= 0){
-                            chartData.detDistF[k][j].push(
-                                {
-                                    x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
-                                    y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j)
-                                }
-                            );
-                        }
+						for(var j=0; j<numAngles; j++){
+							chartData.detDist[k][j].push(
+								{
+									x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
+									y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.x.value, j)
+								}
+							);
+							var y = instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j);
+							if(y >= 0){
+								chartData.detDistF[k][j].push(
+									{
+										x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
+										y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j)
+									}
+								);
+							}
+						}
+					}
+				}else{
+					for(var i=0; i<impactSize; i++){
+						//chartData.labels[k].push(          instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.distance.value));
+						chartData.effectivePen[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.ePenHN.value)
+							}
+						);
+						chartData.angleBelt[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactAHD.value) * -1
+							}
+
+						);
+						chartData.effectivePenDeck[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.ePenDN.value)
+							}
+
+						);
+						chartData.angleDeck[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactADD.value)
+							}       
+						);
+						chartData.impactVelocity[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.impactV.value)
+							}
+						);
+						chartData.flightTime[k].push(
+							{
+								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
+								y: instances[k].getImpactPoint(i, Module.impactDataIndex.tToTargetA.value)
+							}
+						);
+						chartData.ra0[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra0D.value)
+							}
+						);
+						chartData.ra1[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.ra1D.value)
+							}
+						);
+						chartData.maxArmor[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.armorD.value)
+							}
+						);
+						chartData.minFuse[k].push(
+							{
+								x: instances[k].getAnglePoint(i, Module.angleDataIndex.distance.value),
+								y: instances[k].getAnglePoint(i, Module.angleDataIndex.fuseD.value)
+							}
+						);
+
+
+						for(var j=0; j<numAngles; j++){
+							chartData.detDist[k][j].push(
+								{
+									x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
+									y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.x.value, j)
+								}
+							);
+							var y = instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j);
+							if(y >= 0){
+								chartData.detDistF[k][j].push(
+									{
+										x: instances[k].getPostPenPoint(i, Module.postPenDataIndex.distance.value, j),
+										y: instances[k].getPostPenPoint(i, Module.postPenDataIndex.xwf.value, j)
+									}
+								);
+							}
+						}
 					}
 				}
 			}
