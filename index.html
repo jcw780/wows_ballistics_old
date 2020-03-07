@@ -273,6 +273,18 @@
 		</div>
 		</div>
 		<script>
+		function showCollapsibles(){
+			var targets = [
+				'parameters',
+				'impactCharts',
+				'angleCharts',
+				'postPenCharts'
+			]
+			for(const target of targets){
+				$('#' + target).collapse('show');
+			}
+		}
+		
 		var versionValue = [];
 		var nationValue = [];
 		var typeValue = [];
@@ -1284,6 +1296,7 @@
 		$(document).ready(function(){
 			generateVersion(0);
             generateVersion(1);
+			showCollapsibles();
             //copyStartValues();
 
             initialized = true;
