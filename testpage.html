@@ -275,13 +275,13 @@
 		<script>
 		function showCollapsibles(){
 			var targets = [
-				'#parameters',
-				'#impactCharts',
-				'#angleCharts',
-				'#postPenCharts'
+				'parameters',
+				'impactCharts',
+				'angleCharts',
+				'postPenCharts'
 			]
 			for(const target of targets){
-				$(target).collapse('show');
+				$('#' + target).collapse('show');
 			}
 		}
 
