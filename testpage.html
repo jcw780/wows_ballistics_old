@@ -30,8 +30,11 @@
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
 
 		<center><h1>World of Warships Overpenetration Calculator</h1></center>
-		<p>&nbsp;Overpen calculations are experimental - further testing may be needed to confirm results.</p>
-		<p>&nbsp;Site will be updated if and when more accurate information becomes available.</p>
+		<button id=impactChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#descriptions">Description</button>
+		<div class="collapse" id=descriptions style="width: 100%;">
+			<p>&nbsp;Overpen calculations are experimental - further testing may be needed to confirm results.</p>
+			<p>&nbsp;Site will be updated if and when more accurate information becomes available.</p>
+		</div>
 		<style>
 			table{
                 border: 15px solid lightgray;
@@ -49,13 +52,6 @@
             th{
                 border: 15px solid lightgray;
                 background-color: lightgray;
-            }
-            .container-fluid{
-                background-color: lightgray;
-				padding: 0 18px;
-				max-height: 0;
-				overflow: hidden;
-				transition: max-height 0.2s ease-out;
             }
             canvas{
                 background-color: white;
@@ -110,7 +106,7 @@
 			<tr>
 				<td>
 					<table>
-						<tr><td>Ship A:</td></tr>
+						<tr><center><td>Ship A:</td></center></tr>
 						<tr>
 							<td>Version</td>
 							<td><select id=version0 class="form-control" onchange="onChangeVersion('version0')"></select></td>
@@ -140,7 +136,7 @@
 							<td><input id="shipName0" class="form-control" value=""></td>
 						</tr>
 
-						<tr><td>Ship B:</td></tr>
+						<tr><center><td>Ship B:</td></center></tr>
 						<tr>
 							<td>Version</td>
 							<td><select id=version1   class="form-control" onchange="onChangeVersion('version1')"></select></td>
