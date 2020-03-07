@@ -273,6 +273,19 @@
 		</div>
 		</div>
 		<script>
+		function showCollapsibles(){
+			var targets = [
+				'parameters',
+				'impactCharts',
+				'angleCharts',
+				'postPenCharts'
+			]
+			for(const target of targets){
+				document.getElementById().collapse('show');
+			}
+		}
+
+		
 		var versionValue = [];
 		var nationValue = [];
 		var typeValue = [];
@@ -429,7 +442,6 @@
 		}
 
 		function onChangeShellType(shellTypeID){
-			console.log(this.id)
 			var id = parseInt(shellTypeID.slice(-1));
 			shellType[id] = document.getElementById(shellTypeID).value;
 			onSubmitPredefined(id);
