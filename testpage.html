@@ -253,22 +253,193 @@
 					</table>
 				</td>
 				<td>
-					<p>Angle 0 (°) <input class="form-control" type="number" step="any" id="angle0" value="0" ></p>
-					<p>Angle 1 (°) <input class="form-control" type="number" step="any" id="angle1" value="5" ></p>
-					<p>Angle 2 (°) <input class="form-control" type="number" step="any" id="angle2" value="10"></p>
-					<p>Angle 3 (°) <input class="form-control" type="number" step="any" id="angle3" value="15"></p>
-					<p>Angle 4 (°) <input class="form-control" type="number" step="any" id="angle4" value="20"></p>
-					<p>Angle 5 (°) <input class="form-control" type="number" step="any" id="angle5" value="25"></p>
-					<p>Angle 6 (°) <input class="form-control" type="number" step="any" id="angle6" value="30"></p>
-					<p>Angle 7 (°) <input class="form-control" type="number" step="any" id="angle7" value="35"></p>
+					<div class="form-group form-inline">
+						<label >Angle 0 (°)</label>
+						<div class="col-sm-1">
+							<input class="form-control" type="number" step="any" id="angle0" value="0" >
+						</div>
+					</div>
+					<div class="form-group form-inline">
+						<label >Angle 0 (°)</label>
+						<div class="col-sm-1">
+							<input class="form-control" type="number" step="any" id="angle1" value="0" >
+						</div>
+					</div>
+					<div class="form-group form-inline">
+						<label >Angle 0 (°)</label>
+						<div class="col-sm-1">
+							<input class="form-control" type="number" step="any" id="angle2" value="0" >
+						</div>
+					</div>
+					<div class="form-group form-inline">
+						<label >Angle 0 (°)</label>
+						<div class="col-sm-1">
+							<input class="form-control" type="number" step="any" id="angle3" value="0" >
+						</div>
+					</div>
+					<div class="form-group form-inline">
+						<label >Angle 0 (°)</label>
+						<div class="col-sm-1">
+							<input class="form-control" type="number" step="any" id="angle4" value="0" >
+						</div>
+					</div>
+					<div class="form-group form-inline">
+						<label >Angle 0 (°)</label>
+						<div class="col-sm-1">
+							<input class="form-control" type="number" step="any" id="angle5" value="0" >
+						</div>
+					</div>
+					<div class="form-group form-inline">
+						<label >Angle 0 (°)</label>
+						<div class="col-sm-1">
+							<input class="form-control" type="number" step="any" id="angle6" value="0" >
+						</div>
+					</div>
+					<div class="form-group form-inline">
+						<label >Angle 0 (°)</label>
+						<div class="col-sm-1">
+							<input class="form-control" type="number" step="any" id="angle7" value="0" >
+						</div>
+					</div>
+					<p>Angle 1 (°) 
+						<div class="col-sm-4">
+							<input class="form-control" type="number" step="any" id="angle1" value="5" >
+						</div>
+					</p>
+					<p>Angle 2 (°) 
+						<div class="col-sm-4">
+							<input class="form-control" type="number" step="any" id="angle2" value="10">
+						</div>
+					</p>
+					<p>Angle 3 (°) 
+						<div class="col-sm-4">
+							<input class="form-control" type="number" step="any" id="angle3" value="15">
+						</div>
+					</p>
+					<p>Angle 4 (°) 
+						<div class="col-sm-4">
+							<input class="form-control" type="number" step="any" id="angle4" value="20">
+						</div>
+					</p>
+					<p>Angle 5 (°) 
+						<div class="col-sm-4">
+							<input class="form-control" type="number" step="any" id="angle5" value="25">
+						</div>
+					</p>
+					<p>Angle 6 (°) 
+						<div class="col-sm-4">
+							<input class="form-control" type="number" step="any" id="angle6" value="30">
+						</div>
+					</p>
+					<p>Angle 7 (°) 
+						<div class="col-sm-4">
+							<input class="form-control" type="number" step="any" id="angle7" value="35">
+						</div>
+					</p>
 				</td>
 			</tr>
 		</table>
 		<button id=generate class="btn btn-primary btn-lg btn-block">Generate Graphs</button>
-		<h4></h4>
 		</div>
 		</div>
-		<script>
+		<h2 style="text-align:center">Graphs</h2>
+		<button id=impactChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#impactCharts">At Impact</button>
+		<div class="collapse" id=impactCharts>
+
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC0" id="PCT0"> Horizontal Penetration</button>
+			<div class='collapse' id="pC0">
+				<div class='col-sm-12'>
+					<canvas id="penChart0" width="1200" height="300"></canvas>
+				</div>	
+			</div>
+			
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC1" id="PCT1"> Deck Penetration</button>
+			<div class='collapse' id="pC1">
+				<div class='col-sm-12'>
+					<canvas id="penChart1" width="1200" height="300"></canvas>
+				</div>	
+			</div>
+			
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC2" id="PCT2"> Shell Speed</button>
+			<div class='collapse' id="pC2">
+				<div class='col-sm-12'>
+					<canvas id="penChart2" width="1200" height="300"></canvas>
+				</div>	
+			</div>
+		</div>
+		
+		<button id=angleChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#angleCharts">Critical Lateral Angles</button>
+		<div class="collapse" id=angleCharts>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA0" id="AC0"> Maximum Lateral Angle for Perforation</button>
+			<div class='collapse' id="CA0">
+				<div class='col-sm-12'>
+					<canvas id="angleChart0" width="1200" height="300"></canvas>
+				</div>	
+			</div>
+
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA1" id="AC1"> Minimum Lateral Angle for Fusing</button>
+			<div class='collapse' id="CA1">
+				<div class='col-sm-12'>
+					<canvas id="angleChart1" width="1200" height="300"></canvas>
+				</div>	
+			</div>
+		</div>
+
+
+		<button id=postPenChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#postPenCharts">Post Penetration</button>
+		<div class="collapse" id=postPenCharts>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA0" id="A0">Lateral Angle 0</button>
+			<div class='collapse' id="LA0">
+				<div class='col-sm-12'>
+					<canvas id="postPen0" width="1200" height="300"></canvas>
+				</div>
+			</div>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA1" id="A1">Lateral Angle 1</button>
+			<div class='collapse' id="LA1">
+				<div class='col-sm-12'>
+					<canvas id="postPen1" width="1200" height="300"></canvas>
+				</div>
+			</div>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA2" id="A2">Lateral Angle 2</button>
+			<div class='collapse' id="LA2">
+				<div class='col-sm-12'>
+					<canvas id="postPen2" width="1200" height="300"></canvas>
+				</div>
+			</div>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA3" id="A3">Lateral Angle 3</button>
+			<div class='collapse' id="LA3">
+				<div class='col-sm-12'>
+					<canvas id="postPen3" width="1200" height="300"></canvas>
+				</div>
+			</div>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA4" id="A4">Lateral Angle 4</button>
+			<div class='collapse' id="LA4">
+				<div class='col-sm-12'>
+					<canvas id="postPen4" width="1200" height="300"></canvas>
+				</div>
+			</div>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA5" id="A5">Lateral Angle 5</button>
+			<div class='collapse' id="LA5">
+				<div class='col-sm-12'>
+					<canvas id="postPen5" width="1200" height="300"></canvas>
+				</div>
+			</div>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA6" id="A6">Lateral Angle 6</button>
+			<div class='collapse' id="LA6">
+				<div class='col-sm-12'>
+					<canvas id="postPen6" width="1200" height="300"></canvas>
+				</div>
+			</div>
+			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA7" id="A7">Lateral Angle 7</button>
+			<div class='collapse' id="LA7">
+				<div class='col-sm-12'>
+					<canvas id="postPen7" width="1200" height="300"></canvas>
+				</div>
+            </div>
+		</div>
+    
+    <script>
+		//Buttons
 		function showCollapsibles(){
 			var targets = [
 				'parameters',
@@ -423,7 +594,6 @@
 			var id = parseInt(shellID.slice(-1));
 			shellValue[id] = $('#' + shellID)[0].value;
 			generateShellType("shellType" + id);
-            //onSubmitPredefined(id);
 		}
 
 		function generateShellType(shellTypeID){
@@ -444,7 +614,6 @@
 
 		function onSubmitPredefined(id){
 			var targetShell = typeData[id][shipValue[id]][shellValue[id]][shellType[id]];
-			
 			$("#shipName"  + id)[0].value = shipValue[id] + " " + shellValue[id].slice(-1);
 			$("#mv"        + id)[0].value = targetShell["bulletSpeed"];
 			$("#caliber"   + id)[0].value = targetShell["bulletDiametr"];
@@ -456,134 +625,17 @@
 			$("#ra0_"      + id)[0].value = targetShell["bulletRicochetAt"];
 			$("#ra1_"      + id)[0].value = targetShell["bulletAlwaysRicochetAt"];
 			$("#normal"    + id)[0].value = targetShell['bulletCapNormalizeMaxAngle']
-
 			if(shellType[id] == 'AP'){
 				$("#HESAP" + id)[0].value = 0;
 			}else if(shellType[id] == 'HE'){
 				$("#HESAP" + id)[0].value = targetShell["alphaPiercingHE"];
 			}else if(shellType[id] == 'CS'){
 				$("#HESAP" + id)[0].value = targetShell["alphaPiercingCS"];
-			}
-            
+			}   
 		}
 
-		function copyStartValues(){
-			$("#version1").innerHTML = $("#version0").innerHTML;
-			$("#nation1").innerHTML  = $("#nation0").innerHTML;
-			$("#type1").innerHTML    = $("#type0").innerHTML;
-			$("#ship1").innerHTML    = $("#ship0").innerHTML;
-			$("#shell1").innerHTML   = $("#shell0").innerHTML;
-			$("#shellType1").innerHTML = $("#shellType0").innerHTML;
-			versionValue[1] = versionValue[0];
-			nationValue[1]  = nationValue[0];
-			typeValue[1]    = typeValue[0];
-			shipValue[1]    = shipValue[0];
-			shellValue[1]   = shellValue[0]; 
-			typeData[1]     = typeData[0];
-			onSubmitPredefined(1);
-		}
+		//Graphs
 
-        </script>
-		<h2 style="text-align:center">Graphs</h2>
-		<button id=impactChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#impactCharts">At Impact</button>
-		<div class="collapse" id=impactCharts>
-
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC0" id="PCT0"> Horizontal Penetration</button>
-			<div class='collapse' id="pC0">
-				<div class='col-sm-12'>
-					<canvas id="penChart0" width="1200" height="300"></canvas>
-				</div>	
-			</div>
-			
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC1" id="PCT1"> Deck Penetration</button>
-			<div class='collapse' id="pC1">
-				<div class='col-sm-12'>
-					<canvas id="penChart1" width="1200" height="300"></canvas>
-				</div>	
-			</div>
-			
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC2" id="PCT2"> Shell Speed</button>
-			<div class='collapse' id="pC2">
-				<div class='col-sm-12'>
-					<canvas id="penChart2" width="1200" height="300"></canvas>
-				</div>	
-			</div>
-            <h4></h4>
-		</div>
-		
-		<button id=angleChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#angleCharts">Critical Lateral Angles</button>
-		<div class="collapse" id=angleCharts>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA0" id="AC0"> Maximum Lateral Angle for Perforation</button>
-			<div class='collapse' id="CA0">
-				<div class='col-sm-12'>
-					<canvas id="angleChart0" width="1200" height="300"></canvas>
-				</div>	
-			</div>
-
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA1" id="AC1"> Minimum Lateral Angle for Fusing</button>
-			<div class='collapse' id="CA1">
-				<div class='col-sm-12'>
-					<canvas id="angleChart1" width="1200" height="300"></canvas>
-				</div>	
-			</div>
-			<h4></h4>
-		</div>
-
-
-		<button id=postPenChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#postPenCharts">Post Penetration</button>
-		<div class="collapse" id=postPenCharts>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA0" id="A0">Lateral Angle 0</button>
-			<div class='collapse' id="LA0">
-				<div class='col-sm-12'>
-					<canvas id="postPen0" width="1200" height="300"></canvas>
-				</div>
-			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA1" id="A1">Lateral Angle 1</button>
-			<div class='collapse' id="LA1">
-				<div class='col-sm-12'>
-					<canvas id="postPen1" width="1200" height="300"></canvas>
-				</div>
-			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA2" id="A2">Lateral Angle 2</button>
-			<div class='collapse' id="LA2">
-				<div class='col-sm-12'>
-					<canvas id="postPen2" width="1200" height="300"></canvas>
-				</div>
-			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA3" id="A3">Lateral Angle 3</button>
-			<div class='collapse' id="LA3">
-				<div class='col-sm-12'>
-					<canvas id="postPen3" width="1200" height="300"></canvas>
-				</div>
-			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA4" id="A4">Lateral Angle 4</button>
-			<div class='collapse' id="LA4">
-				<div class='col-sm-12'>
-					<canvas id="postPen4" width="1200" height="300"></canvas>
-				</div>
-			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA5" id="A5">Lateral Angle 5</button>
-			<div class='collapse' id="LA5">
-				<div class='col-sm-12'>
-					<canvas id="postPen5" width="1200" height="300"></canvas>
-				</div>
-			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA6" id="A6">Lateral Angle 6</button>
-			<div class='collapse' id="LA6">
-				<div class='col-sm-12'>
-					<canvas id="postPen6" width="1200" height="300"></canvas>
-				</div>
-			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA7" id="A7">Lateral Angle 7</button>
-			<div class='collapse' id="LA7">
-				<div class='col-sm-12'>
-					<canvas id="postPen7" width="1200" height="300"></canvas>
-				</div>
-            </div>
-            <h4></h4>
-		</div>
-    
-    <script>
 		var v_angles = [];
 		var numAngles = 8;
 
@@ -1271,8 +1323,6 @@
 			generateVersion(0);
             generateVersion(1);
 			showCollapsibles();
-            //copyStartValues();
-
             initialized = true;
 		})
 
