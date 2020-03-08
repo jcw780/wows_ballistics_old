@@ -29,9 +29,12 @@
 
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
 
-		<h1>&nbsp;World of Warships Overpenetration Calculator</h1>
-		<p>&nbsp;Overpen calculations are experimental - further testing may be needed to confirm results.</p>
-		<p>&nbsp;Site will be updated if and when more accurate information becomes available.</p>
+		<center><h1>World of Warships Overpenetration Calculator</h1></center>
+		<button id=impactChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#descriptions">Description</button>
+		<div class="collapse" id=descriptions style="width: 100%;">
+			<p>&nbsp;Overpen calculations are experimental - further testing may be needed to confirm results.</p>
+			<p>&nbsp;Site will be updated if and when more accurate information becomes available.</p>
+		</div>
 		<style>
 			table{
                 border: 15px solid lightgray;
@@ -49,13 +52,6 @@
             th{
                 border: 15px solid lightgray;
                 background-color: lightgray;
-            }
-            .container-fluid{
-                background-color: lightgray;
-				padding: 0 18px;
-				max-height: 0;
-				overflow: hidden;
-				transition: max-height 0.2s ease-out;
             }
             canvas{
                 background-color: white;
@@ -91,7 +87,7 @@
 		</style>
 		
 		<button id=impactChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#parameters">Parameters</button>
-		<div class="collapse" id=parameters style="width: 100%;">
+		<div class="collapse" id=parameters style="width: 100%; background-color: lightgray;" >
 		<table id=parameterTable style="width: 100%;">
 			<tr>
 				<th>
@@ -110,64 +106,64 @@
 			<tr>
 				<td>
 					<table>
-						<tr><td>Ship A:</td></tr>
+						<tr><center><td>Ship A:</td></center></tr>
 						<tr>
 							<td>Version</td>
-							<td><select id=version0 onchange="onChangeVersion('version0')"></select></td>
+							<td><select id=version0 class="form-control" onchange="onChangeVersion('version0')"></select></td>
 						</tr>
 						<tr>
 							<td>Nation</td>
-							<td><select id=nation0  onchange="onChangeNation('nation0')"></select></td>
+							<td><select id=nation0 class="form-control" onchange="onChangeNation('nation0')"></select></td>
 						</tr>
 						<tr>
 							<td>Type</td>
-							<td><select id=type0    onchange="onChangeType('type0')"></select></td>
+							<td><select id=type0 class="form-control" onchange="onChangeType('type0')"></select></td>
 						</tr>
 						<tr>
 							<td>Ship</td>
-							<td><select id=ship0    onchange="onChangeShip('ship0')"></select></td>
+							<td><select id=ship0 class="form-control" onchange="onChangeShip('ship0')"></select></td>
 						</tr>
 						<tr>
 							<td>Artillery</td>
-							<td><select id=shell0   onchange="onChangeShell('shell0')"></select></td>
+							<td><select id=shell0 class="form-control"  onchange="onChangeShell('shell0')"></select></td>
 						</tr>
 						<tr>
 							<td>Shell Type</td>
-							<td><select id=shellType0 onchange="onChangeShellType('shellType0')"></select></td>
+							<td><select id=shellType0 class="form-control" onchange="onChangeShellType('shellType0')"></select></td>
 						</tr>
 						<tr>
 							<td>Label</td>
-							<td><input id="shipName0" value=""></td>
+							<td><input id="shipName0" class="form-control" value=""></td>
 						</tr>
 
-						<tr><td>Ship B:</td></tr>
+						<tr><center><td>Ship B:</td></center></tr>
 						<tr>
 							<td>Version</td>
-							<td><select id=version1 onchange="onChangeVersion('version1')"></select></td>
+							<td><select id=version1   class="form-control" onchange="onChangeVersion('version1')"></select></td>
 						</tr>
 						<tr>
 							<td>Nation</td>
-							<td><select id=nation1  onchange="onChangeNation('nation1')"></select></td>
+							<td><select id=nation1    class="form-control" onchange="onChangeNation('nation1')"></select></td>
 						</tr>
 						<tr>
 							<td>Type</td>
-							<td><select id=type1    onchange="onChangeType('type1')"></select></td>
+							<td><select id=type1      class="form-control"   onchange="onChangeType('type1')"></select></td>
 						</tr>
 						<tr>
 							<td>Ship</td>
-							<td><select id=ship1    onchange="onChangeShip('ship1')"></select></td>
+							<td><select id=ship1      class="form-control"   onchange="onChangeShip('ship1')"></select></td>
 						</tr>
 						<tr>
 							<td>Artillery</td>
-							<td><select id=shell1   onchange="onChangeShell('shell1')"></select></td>
+							<td><select id=shell1     class="form-control"  onchange="onChangeShell('shell1')"></select></td>
 						</tr>
 						<tr>
 							<td>Shell Type</td>
-							<td><select id=shellType1 onchange="onChangeShellType('shellType1')"></select></td>
+							<td><select id=shellType1 class="form-control"  onchange="onChangeShellType('shellType1')"></select></td>
 						</tr>
 						<tr>
 							<td>Label</td>
-							<td><input id="shipName1" value=""></td>
+							<td><input class="form-control" id="shipName1" value=""></td>
 						</tr>
 					</table>
 					<!--<button onclick="onSubmitPredefined()">Apply</button>-->
@@ -181,58 +177,58 @@
 						</tr>
 						<tr>
 							<td title="Diameter of the shell in meters. All else equal, higher caliber increase shell flight time and reduces penetration.">Caliber (m)</td>
-							<td><input type="number" step="any" min="0" id="caliber0"   value=""></td>
-							<td><input type="number" step="any" min="0" id="caliber1"   value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="caliber0"   value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="caliber1"   value=""></td>
 						</tr>
 						<tr>
 							<td title="Shell velocity at launch in meters per second. All else equal, higher muzzle velocity reduces shell flight time and increase penetration.">Muzzle Velocity (m/s)</td>
-							<td><input type="number" step="any" min="0" id="mv0"        value=""></td>
-							<td><input type="number" step="any" min="0" id="mv1"        value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="mv0"        value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="mv1"        value=""></td>
 						</tr>
 						<tr>
 							<td title="Aerodynamic drag characteristic of the shell's shape. All else equal, higher drag coefficient increase shell flight time and reduces penetration.">Drag Coefficient</td>
-							<td><input type="number" step="any" min="0" id="cD0"        value=""></td>
-							<td><input type="number" step="any" min="0" id="cD1"        value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="cD0"        value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="cD1"        value=""></td>
 						</tr>
 						<tr>
 							<td title="Mass of the shell in kilograms. All else equal, higher mass decreases shell flight time and increases penetration.">Mass (kg)</td>
-							<td><input type="number" step="any" min="0" id="mass0"      value=""></td>
-							<td><input type="number" step="any" min="0" id="mass1"      value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="mass0"      value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="mass1"      value=""></td>
 						</tr>
 						<tr>
 							<td title="Penetration coefficient of the shell. All else equal, higher krupp increases penetration.">Krupp</td>
-							<td><input type="number" step="any" min="0" id="krupp0"     value=""></td>
-							<td><input type="number" step="any" min="0" id="krupp1"     value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="krupp0"     value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="krupp1"     value=""></td>
 						</tr>
 						<tr>
 							<td title="How many seconds it takes for the shell to detonate after fusing. Longer fusetime increases risk of overpenetration.">Fusetime (s)</td>
-							<td><input type="number" step="any" min="0" id="fusetime0"  value=""></td>
-							<td><input type="number" step="any" min="0" id="fusetime1"  value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="fusetime0"  value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="fusetime1"  value=""></td>
 						</tr>
 						<tr>
 							<td title="How many milimeters of effective armor it takes for the shells arm. Higher fusing threshold increases the risk of overpenetration.">Fusing Threshold (mm)</td>
-							<td><input type="number" step="any" min="0" id="threshold0" value=""></td>
-							<td><input type="number" step="any" min="0" id="threshold1" value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="threshold0" value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="threshold1" value=""></td>
 						</tr>
 						<tr>
 							<td title="How many degrees of impact angle the shell can reduce. Higher normalization increases decreases effective armor thickness.">Normalization (°)</td>
-							<td><input type="number" step="any" min="0" id="normal0"    value=""></td>
-							<td><input type="number" step="any" min="0" id="normal1"    value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="normal0"    value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="normal1"    value=""></td>
 						</tr>
 						<tr>
 							<td title="Minimum impact angle in degrees at which shells can ricochet - not affected by normalization.">Start Ricochet (°)</td>
-							<td><input type="number" step="any" min="0" max="90" id="ra0_0"  value=""></td>
-							<td><input type="number" step="any" min="0" max="90" id="ra0_1"  value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" max="90" id="ra0_0"  value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" max="90" id="ra0_1"  value=""></td>
 						</tr>
 						<tr>
 							<td title="Minimum impact angle in degrees at which shells always ricochet - not affected by normalization.">Always Ricochet (°)</td>
-							<td><input type="number" step="any" min="0" max="90" id="ra1_0"  value=""></td>
-							<td><input type="number" step="any" min="0" max="90" id="ra1_1"  value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" max="90" id="ra1_0"  value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" max="90" id="ra1_1"  value=""></td>
 						</tr>
 						<tr>
 							<td title="HE/SAP penetration of shell - if applicable.">HE/SAP penetration (mm)</td>
-							<td><input type="number" step="any" min="0" id="HESAP0" value=""></td>
-							<td><input type="number" step="any" min="0" id="HESAP1" value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="HESAP0" value=""></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="HESAP1" value=""></td>
 							<td></td>
 						</tr>
 					</table>
@@ -242,33 +238,33 @@
 						<tr>
 							<td title="Thickness in milimeters of the targeted plate.">Armor (mm)</td>
 						</tr><tr>
-							<td><input type="number" step="any" min="0" id="armor" value="70"></td>
+							<td><input class="form-control"  type="number" step="any" min="0" id="armor" value="70"></td>
 						</tr>
 						<tr>
 							<td title="Vertical inclination angle of the armor: 0° - perpendicular to sea level; >0° - turtleback; <0° - angled towards keel.">Armor Inclination (°)</td>
 						</tr><tr>
-							<td><input type="number" step="any" min="-90" max="180" id="inclination" value="0"></td>
+							<td><input class="form-control" type="number" step="any" min="-90" max="180" id="inclination" value="0"></td>
 						</tr>
 						<tr>
 							<td title="Width (Beam) of the targeted ship in meters.">Ship Width (m)</td>
 						</tr><tr>
-							<td><input type="number" step="any" min="0" id="width" value="18"> </p></td>
+							<td><input class="form-control" type="number" step="any" min="0" id="width" value="18"> </p></td>
 						</tr>
 					</table>
 				</td>
 				<td>
-					<p>Angle 0 (°) <input type="number" step="any" id="angle0" value="0" ></p>
-					<p>Angle 1 (°) <input type="number" step="any" id="angle1" value="5" ></p>
-					<p>Angle 2 (°) <input type="number" step="any" id="angle2" value="10"></p>
-					<p>Angle 3 (°) <input type="number" step="any" id="angle3" value="15"></p>
-					<p>Angle 4 (°) <input type="number" step="any" id="angle4" value="20"></p>
-					<p>Angle 5 (°) <input type="number" step="any" id="angle5" value="25"></p>
-					<p>Angle 6 (°) <input type="number" step="any" id="angle6" value="30"></p>
-					<p>Angle 7 (°) <input type="number" step="any" id="angle7" value="35"></p>
+					<p>Angle 0 (°) <input class="form-control" type="number" step="any" id="angle0" value="0" ></p>
+					<p>Angle 1 (°) <input class="form-control" type="number" step="any" id="angle1" value="5" ></p>
+					<p>Angle 2 (°) <input class="form-control" type="number" step="any" id="angle2" value="10"></p>
+					<p>Angle 3 (°) <input class="form-control" type="number" step="any" id="angle3" value="15"></p>
+					<p>Angle 4 (°) <input class="form-control" type="number" step="any" id="angle4" value="20"></p>
+					<p>Angle 5 (°) <input class="form-control" type="number" step="any" id="angle5" value="25"></p>
+					<p>Angle 6 (°) <input class="form-control" type="number" step="any" id="angle6" value="30"></p>
+					<p>Angle 7 (°) <input class="form-control" type="number" step="any" id="angle7" value="35"></p>
 				</td>
 			</tr>
 		</table>
-		<button id=generate>Generate Graphs</button>
+		<button id=generate class="btn btn-primary btn-lg btn-block">Generate Graphs</button>
 		<h4></h4>
 		</div>
 		</div>
