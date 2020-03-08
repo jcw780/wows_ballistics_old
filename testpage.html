@@ -28,14 +28,10 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
-
-		<center><h1>World of Warships Overpenetration Calculator</h1></center>
-		<button id=impactChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#descriptions">Description</button>
-		<div class="collapse" id=descriptions style="width: 100%;">
-			<p>&nbsp;Overpen calculations are experimental - further testing may be needed to confirm results.</p>
-			<p>&nbsp;Site will be updated if and when more accurate information becomes available.</p>
-		</div>
 		<style>
+			body{
+				background-color: lightgray;
+			}
 			table{
                 border: 15px solid lightgray;
                 background-color: lightgray;
@@ -56,17 +52,6 @@
             canvas{
                 background-color: white;
             }
-			.collapsible {
-				background-color: #777;
-				color: white;
-				cursor: pointer;
-				padding: 18px;
-				width: 100%;
-				border: none;
-				text-align: left;
-				outline: none;
-				font-size: 15px;
-			}
 
 			.btn btn-info {
 				background-color: #777;
@@ -84,29 +69,36 @@
 				background-color: #555;
 			}
 
+			.margin-bottom {
+				margin-bottom:5px;
+			}
+
 		</style>
+		<center><h1>World of Warships Overpenetration Calculator</h1></center>
+		<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#descriptions">Description</button>
+		<div class="collapse" id=descriptions style="width: 100%;">
+			<p>&nbsp;Overpen calculations are experimental - further testing may be needed to confirm results.</p>
+			<p>&nbsp;Site will be updated if and when more accurate information becomes available.</p>
+		</div>
 		
-		<button id=impactChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#parameters">Parameters</button>
+		<button class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#parameters">Parameters</button>
 		<div class="collapse" id=parameters style="width: 100%; background-color: lightgray;" >
 		<table id=parameterTable style="width: 100%;">
 			<tr>
 				<th>
-					<center><h2><u>Predefined Shells</u></h2></center>
+					<center><h3><u>Predefined Shells</u></h3></center>
 				</th>
 				<th>
-					<center><h2><u>Shell Data</u></h2></center>
+					<center><h3><u>Shell Data</u></h3></center>
 				</th>
 				<th>
-					<center><h2><u>Target Data</u></h2></center>
-				</th>
-				<th>
-					<center><h2><u>Horizontal Angles</u></h2></center>
+					<center><h3><u>Target Data</u></h3></center>
 				</th>
 			</tr>
 			<tr>
 				<td>
 					<table>
-						<tr><center><td>Ship A:</td></center></tr>
+						<tr><td><h4>Ship A:</h4></td></tr>
 						<tr>
 							<td>Version</td>
 							<td><select id=version0 class="form-control" onchange="onChangeVersion('version0')"></select></td>
@@ -131,12 +123,8 @@
 							<td>Shell Type</td>
 							<td><select id=shellType0 class="form-control" onchange="onChangeShellType('shellType0')"></select></td>
 						</tr>
-						<tr>
-							<td>Label</td>
-							<td><input id="shipName0" class="form-control" value=""></td>
-						</tr>
 
-						<tr><center><td>Ship B:</td></center></tr>
+						<tr><td><h4>Ship B:</h4></td></tr>
 						<tr>
 							<td>Version</td>
 							<td><select id=version1   class="form-control" onchange="onChangeVersion('version1')"></select></td>
@@ -161,344 +149,235 @@
 							<td>Shell Type</td>
 							<td><select id=shellType1 class="form-control"  onchange="onChangeShellType('shellType1')"></select></td>
 						</tr>
-						<tr>
-							<td>Label</td>
-							<td><input class="form-control" id="shipName1" value=""></td>
-						</tr>
 					</table>
 					<!--<button onclick="onSubmitPredefined()">Apply</button>-->
 				</td>
 				<td>
-					<table>
-						<tr>
-							<td></td>
-							<td>Ship A:</td>
-							<td>Ship B:</td>
-						</tr>
-						<tr>
-							<td title="Diameter of the shell in meters. All else equal, higher caliber increase shell flight time and reduces penetration.">Caliber (m)</td>
-							<td><input class="form-control" type="number" step="any" min="0" id="caliber0"   value=""></td>
-							<td><input class="form-control" type="number" step="any" min="0" id="caliber1"   value=""></td>
-						</tr>
-						<tr>
-							<td title="Shell velocity at launch in meters per second. All else equal, higher muzzle velocity reduces shell flight time and increase penetration.">Muzzle Velocity (m/s)</td>
-							<td><input class="form-control" type="number" step="any" min="0" id="mv0"        value=""></td>
-							<td><input class="form-control" type="number" step="any" min="0" id="mv1"        value=""></td>
-						</tr>
-						<tr>
-							<td title="Aerodynamic drag characteristic of the shell's shape. All else equal, higher drag coefficient increase shell flight time and reduces penetration.">Drag Coefficient</td>
-							<td><input class="form-control" type="number" step="any" min="0" id="cD0"        value=""></td>
-							<td><input class="form-control" type="number" step="any" min="0" id="cD1"        value=""></td>
-						</tr>
-						<tr>
-							<td title="Mass of the shell in kilograms. All else equal, higher mass decreases shell flight time and increases penetration.">Mass (kg)</td>
-							<td><input class="form-control" type="number" step="any" min="0" id="mass0"      value=""></td>
-							<td><input class="form-control" type="number" step="any" min="0" id="mass1"      value=""></td>
-						</tr>
-						<tr>
-							<td title="Penetration coefficient of the shell. All else equal, higher krupp increases penetration.">Krupp</td>
-							<td><input class="form-control" type="number" step="any" min="0" id="krupp0"     value=""></td>
-							<td><input class="form-control" type="number" step="any" min="0" id="krupp1"     value=""></td>
-						</tr>
-						<tr>
-							<td title="How many seconds it takes for the shell to detonate after fusing. Longer fusetime increases risk of overpenetration.">Fusetime (s)</td>
-							<td><input class="form-control" type="number" step="any" min="0" id="fusetime0"  value=""></td>
-							<td><input class="form-control" type="number" step="any" min="0" id="fusetime1"  value=""></td>
-						</tr>
-						<tr>
-							<td title="How many milimeters of effective armor it takes for the shells arm. Higher fusing threshold increases the risk of overpenetration.">Fusing Threshold (mm)</td>
-							<td><input class="form-control" type="number" step="any" min="0" id="threshold0" value=""></td>
-							<td><input class="form-control" type="number" step="any" min="0" id="threshold1" value=""></td>
-						</tr>
-						<tr>
-							<td title="How many degrees of impact angle the shell can reduce. Higher normalization increases decreases effective armor thickness.">Normalization (°)</td>
-							<td><input class="form-control" type="number" step="any" min="0" id="normal0"    value=""></td>
-							<td><input class="form-control" type="number" step="any" min="0" id="normal1"    value=""></td>
-						</tr>
-						<tr>
-							<td title="Minimum impact angle in degrees at which shells can ricochet - not affected by normalization.">Start Ricochet (°)</td>
-							<td><input class="form-control" type="number" step="any" min="0" max="90" id="ra0_0"  value=""></td>
-							<td><input class="form-control" type="number" step="any" min="0" max="90" id="ra0_1"  value=""></td>
-						</tr>
-						<tr>
-							<td title="Minimum impact angle in degrees at which shells always ricochet - not affected by normalization.">Always Ricochet (°)</td>
-							<td><input class="form-control" type="number" step="any" min="0" max="90" id="ra1_0"  value=""></td>
-							<td><input class="form-control" type="number" step="any" min="0" max="90" id="ra1_1"  value=""></td>
-						</tr>
-						<tr>
-							<td title="HE/SAP penetration of shell - if applicable.">HE/SAP penetration (mm)</td>
-							<td><input class="form-control" type="number" step="any" min="0" id="HESAP0" value=""></td>
-							<td><input class="form-control" type="number" step="any" min="0" id="HESAP1" value=""></td>
-							<td></td>
-						</tr>
-					</table>
+					<form>
+						<div class="row margin-bottom">
+							<div class="col-sm-4"><h4>Shell Attributes</h4></div>
+							<div class="col-sm-4"><h4>Ship A:</h4></div>
+							<div class="col-sm-4"><h4>Ship B:</h4></div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label id="caliberL" class="col-sm-4 col-form-label">Caliber (m)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="caliber0"   value="">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="caliber1"   value="">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label id="mvL" class="col-sm-4 col-form-label">Muzzle Velocity (m/s)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="mv0"   value="">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="mv1"   value="">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label id="cDL" class="col-sm-4 col-form-label">Drag Coefficent</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="cD0"   value="">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="cD1"   value="">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label id="massL" class="col-sm-4 col-form-label">Mass (kg)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="mass0"   value="">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="mass1"   value="">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label id="kruppL" class="col-sm-4 col-form-label">Krupp</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="krupp0"   value="">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="krupp1"   value="">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label id="fusetimeL" class="col-sm-4 col-form-label">Fusetime (s)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="fusetime0"   value="">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="fusetime1"   value="">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label id="thresholdL" class="col-sm-4 col-form-label">Fusing Threshold (mm)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="threshold0"   value="">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="threshold1"   value="">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label id="normalL" class="col-sm-4 col-form-label">Normalization (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" max="91" id="normal0"   value="">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" max="91" id="normal1"   value="">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label id="ra0L" class="col-sm-4 col-form-label">Start Ricochet (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" max="91" id="ra0_0"   value="">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" max="91" id="ra0_1"   value="">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label id="ra1L" class="col-sm-4 col-form-label">Always Ricochet (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" max="91" id="ra1_0"   value="">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" max="91" id="ra1_1"   value="">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label id="HESAPL" class="col-sm-4 col-form-label">HE/SAP penetration (mm)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="HESAP0"   value="">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="HESAP1"   value="">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Graph Label</label>
+							<div class="col-sm-4">
+								<input class="form-control" id="shipName0" value="">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" id="shipName1" value="">
+							</div>
+						</div>
+						<div class="row margin-bottom">
+							<div class="col-sm-4"></div>
+							<div class="col-sm-4">
+								<button type="button" class="btn btn-block" id="apply0">Apply</button>
+							</div>
+							<div class="col-sm-4">
+								<button type="button" class="btn btn-block" id="apply1">Apply</button>
+							</div>
+						</div>
+						<div class="row margin-bottom">
+							<div class="col-sm-4"></div>
+							<div class="col-sm-4">
+								<div class="btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-block btn-info active">
+									  	<input id="autoApply0" type="checkbox" checked autocomplete="off"> Auto-Apply
+									</label>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-block btn-info active">
+									  	<input id="autoApply1" type="checkbox" checked autocomplete="off"> Auto-Apply
+									</label>
+								</div>
+							</div>
+						</div>
+					</form>
 				</td>
 				<td>
-					<table>
-						<tr>
-							<td title="Thickness in milimeters of the targeted plate.">Armor (mm)</td>
-						</tr><tr>
-							<td><input class="form-control"  type="number" step="any" min="0" id="armor" value="70"></td>
-						</tr>
-						<tr>
-							<td title="Vertical inclination angle of the armor: 0° - perpendicular to sea level; >0° - turtleback; <0° - angled towards keel.">Armor Inclination (°)</td>
-						</tr><tr>
-							<td><input class="form-control" type="number" step="any" min="-90" max="180" id="inclination" value="0"></td>
-						</tr>
-						<tr>
-							<td title="Width (Beam) of the targeted ship in meters.">Ship Width (m)</td>
-						</tr><tr>
-							<td><input class="form-control" type="number" step="any" min="0" id="width" value="18"> </p></td>
-						</tr>
-					</table>
-				</td>
-				<td>
-					<p>Angle 0 (°) <input class="form-control" type="number" step="any" id="angle0" value="0" ></p>
-					<p>Angle 1 (°) <input class="form-control" type="number" step="any" id="angle1" value="5" ></p>
-					<p>Angle 2 (°) <input class="form-control" type="number" step="any" id="angle2" value="10"></p>
-					<p>Angle 3 (°) <input class="form-control" type="number" step="any" id="angle3" value="15"></p>
-					<p>Angle 4 (°) <input class="form-control" type="number" step="any" id="angle4" value="20"></p>
-					<p>Angle 5 (°) <input class="form-control" type="number" step="any" id="angle5" value="25"></p>
-					<p>Angle 6 (°) <input class="form-control" type="number" step="any" id="angle6" value="30"></p>
-					<p>Angle 7 (°) <input class="form-control" type="number" step="any" id="angle7" value="35"></p>
+					<h4>Target Armor</h4>
+					<form>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-5 col-form-label" 
+							title="Thickness in milimeters of the targeted plate.">Armor (mm)</label>
+							<div class="col-sm-4">
+								<input class="form-control"  type="number" step="any" min="0" id="armor" value="70">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-5 col-form-label" 
+							title="Vertical inclination angle of the armor: 0° - perpendicular to sea level; >0° - turtleback; <0° - angled towards keel.">Armor Inclination (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="-90" max="180" id="inclination" value="0">
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-5 col-form-label" 
+							title="Width (Beam) of the targeted ship in meters.">Ship Width (m)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="0" id="width" value="18"> </p>
+							</div>
+						</div>
+					</form>
+					<h4 title="For post-penetration graphs only.">Horizontal Impact Angles</h4>
+					<form>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-5 col-form-label">Angle 0 (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" id="angle0" value="0" >
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-5 col-form-label">Angle 1 (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" id="angle1" value="5" >
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-5 col-form-label">Angle 2 (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" id="angle2" value="10" >
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-5 col-form-label">Angle 3 (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" id="angle3" value="15" >
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-5 col-form-label">Angle 4 (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" id="angle4" value="20" >
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-5 col-form-label">Angle 5 (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" id="angle5" value="25" >
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-5 col-form-label">Angle 6 (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" id="angle6" value="30" >
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-5 col-form-label">Angle 7 (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" id="angle7" value="35" >
+							</div>
+						</div>
+					</form>
 				</td>
 			</tr>
 		</table>
-		<button id=generate class="btn btn-primary btn-lg btn-block">Generate Graphs</button>
-		<h4></h4>
+		<button id=generate class="btn btn-success btn-lg btn-block">Generate Graphs</button>
 		</div>
-		</div>
-		<script>
-		function showCollapsibles(){
-			var targets = [
-				'parameters',
-				'impactCharts',
-				'angleCharts',
-				'postPenCharts'
-			]
-			for(const target of targets){
-				$('#' + target).collapse('show');
-			}
-		}
-		
-		var versionValue = [];
-		var nationValue = [];
-		var typeValue = [];
-		var shipValue = [];
-		var shellValue = [];
-		var typeData = [];
-		var shellType = [];
-		var initialized = false;
-        var compiled = false;
-        var dataURL = "static/data/"
-		function generateVersion(id){
-			$.ajax({
-				url: dataURL + "versions.json",
-				type: "GET",
-				dataType: "json",
-				success: function (data) {
-					document.getElementById("version" + id).innerHTML = '';
-					var i;
-					for(i=0; i<data.length; i++){
-						document.getElementById("version" + id).innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
-					}
-
-					onChangeVersion("version" + id);
-				},
-				error: function(response){
-					console.log("Generating version failed")
-					console.log(response);
-					console.log(response['status'])
-					console.log(response.statusCode())
-				}
-			})
-		}
-		function onChangeVersion(versionID){
-			var id = parseInt(versionID.slice(-1));
-			versionValue[id] = document.getElementById(versionID).value;
-			generateNation("nation" + id);
-		}
-
-		function generateNation(nationID){
-			var id = parseInt(nationID.slice(-1));
-			$.ajax({
-				url: dataURL + versionValue[id] + "/nations.json",
-				type: "GET",
-				dataType: "json",
-				success: function (data) {
-					document.getElementById(nationID).innerHTML = '';
-					var i;
-					for(i=0; i<data.length; i++){
-						document.getElementById(nationID).innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
-					}
-					onChangeNation(nationID);
-				},
-				error: function(response){
-					console.log("Generating nation failed")
-					console.log(response);
-					console.log(response['status'])
-					console.log(response.statusCode())
-				}
-			})
-		}
-		function onChangeNation(nationID){
-			var id = parseInt(nationID.slice(-1));
-			nationValue[id] = document.getElementById(nationID).value;
-			generateType('type' + id);
-		}
-
-		function generateType(typeID){
-			var id = parseInt(typeID.slice(-1));
-			$.ajax({
-				url: dataURL + versionValue[id] + "/" + nationValue[id] + "/shiptypes.json",
-				type: "GET",
-				dataType: "json",
-				success: function (data) {
-					document.getElementById(typeID).innerHTML = '';
-					var i;
-					for(i=0; i<data.length; i++){
-						document.getElementById(typeID).innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
-					}
-					onChangeType(typeID);
-				},
-				error: function(response){
-					console.log("Generating type failed")
-					console.log(response);
-					console.log(response['status'])
-					console.log(response.statusCode())
-				}
-			})
-		}
-		function onChangeType(typeID){
-			var id = parseInt(typeID.slice(-1));
-			typeValue[id] = document.getElementById(typeID).value;
-			generateShip('ship' + id)
-		}
-
-		function generateShip(shipID){
-			var id = parseInt(shipID.slice(-1));
-			$.ajax({
-				url: dataURL + versionValue[id] + "/" + nationValue[id] + "/" + nationValue[id] + "_" + typeValue[id] + ".json",
-				type: "GET",
-				dataType: "json",
-				success: function (data) {
-					typeData[id] = data;
-					document.getElementById(shipID).innerHTML = '';
-					var sorted = []
-					for(var ship in data){
-						sorted.push(ship);
-					}
-					sorted.sort(function(a, b){return data[a]['Tier'] - data[b]['Tier']});
-					for(var ship of sorted){
-						document.getElementById(shipID).innerHTML += "<option value=" + ship + ">" + "Tier " + data[ship]['Tier'] + " " + ship + "</option>"
-					}
-					onChangeShip(shipID);
-				},
-				error: function(response){
-					console.log("Generating ship failed")
-					console.log(response);
-					console.log(response['status'])
-					console.log(response.statusCode())
-				}
-			})
-		}
-		function onChangeShip(shipID){
-			var id = parseInt(shipID.slice(-1));
-			shipValue[id] = document.getElementById(shipID).value;
-			generateShell('shell' + id);
-		}
-
-		function generateShell(shellID){
-			var id = parseInt(shellID.slice(-1));
-			selector = document.getElementById(shellID);
-			selector.innerHTML = '';
-			for(var shell in typeData[id][shipValue[id]]){
-				if(shell.includes('Artillery')){
-					selector.innerHTML += "<option value=" + shell + ">" + shell + "</option>";
-				}
-			}
-			onChangeShell(shellID);
-		}
-		function onChangeShell(shellID){
-			var id = parseInt(shellID.slice(-1));
-			shellValue[id] = document.getElementById(shellID).value;
-			generateShellType("shellType" + id);
-            //onSubmitPredefined(id);
-		}
-
-		function generateShellType(shellTypeID){
-			var id = parseInt(shellTypeID.slice(-1));
-			selector = document.getElementById(shellTypeID);
-			selector.innerHTML = '';
-			for(var shellType in typeData[id][shipValue[id]][shellValue[id]]){
-				selector.innerHTML += "<option value=" + shellType + ">" + shellType + "</option>";
-			}
-			onChangeShellType(shellTypeID);
-		}
-
-		function onChangeShellType(shellTypeID){
-			var id = parseInt(shellTypeID.slice(-1));
-			shellType[id] = document.getElementById(shellTypeID).value;
-			onSubmitPredefined(id);
-		}
-
-		function onSubmitPredefined(id){
-			var targetShell = typeData[id][shipValue[id]][shellValue[id]][shellType[id]];
-			
-			document.getElementById("shipName"  + id).value = shipValue[id] + " " + shellValue[id].slice(-1);
-			document.getElementById("mv"        + id).value = targetShell["bulletSpeed"];
-			document.getElementById("caliber"   + id).value = targetShell["bulletDiametr"];
-			document.getElementById("krupp"     + id).value = targetShell["bulletKrupp"];
-			document.getElementById("mass"      + id).value = targetShell["bulletMass"];
-			document.getElementById("cD"        + id).value = targetShell["bulletAirDrag"];
-			document.getElementById("threshold" + id).value = targetShell["bulletDetonatorThreshold"];
-			document.getElementById("fusetime"  + id).value = targetShell["bulletDetonator"];
-			document.getElementById("ra0_"      + id).value = targetShell["bulletRicochetAt"];
-			document.getElementById("ra1_"      + id).value = targetShell["bulletAlwaysRicochetAt"];
-			document.getElementById("normal" + id).value = targetShell['bulletCapNormalizeMaxAngle']
-
-			if(shellType[id] == 'AP'){
-				document.getElementById("HESAP" + id).value = 0;
-			}else if(shellType[id] == 'HE'){
-				document.getElementById("HESAP" + id).value = targetShell["alphaPiercingHE"];
-			}else if(shellType[id] == 'CS'){
-				document.getElementById("HESAP" + id).value = targetShell["alphaPiercingCS"];
-			}
-            
-		}
-
-		function copyStartValues(){
-			document.getElementById("version1").innerHTML = document.getElementById("version0").innerHTML;
-			document.getElementById("nation1").innerHTML  = document.getElementById("nation0").innerHTML;
-			document.getElementById("type1").innerHTML    = document.getElementById("type0").innerHTML;
-			document.getElementById("ship1").innerHTML    = document.getElementById("ship0").innerHTML;
-			document.getElementById("shell1").innerHTML   = document.getElementById("shell0").innerHTML;
-			document.getElementById("shellType1").innerHTML = document.getElementById("shellType0").innerHTML;
-			versionValue[1] = versionValue[0];
-			nationValue[1]  = nationValue[0];
-			typeValue[1]    = typeValue[0];
-			shipValue[1]    = shipValue[0];
-			shellValue[1]   = shellValue[0]; 
-			typeData[1]     = typeData[0];
-			onSubmitPredefined(1);
-		}
-
-		function hideFunction(target, button) {
-            console.log("Reached Hide");
-			var x = document.getElementById(target);
-			var b = document.getElementById(button);
-			//console.log(b)
-			if (x.style.display === "none") {
-				x.style.display = "block";
-				b.innerText = "Hide";
-			} else {
-				x.style.display = "none";
-				b.innerText = "Show";
-			}
-		}
-        </script>
 		<h2 style="text-align:center">Graphs</h2>
-		<button id=impactChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#impactCharts">At Impact</button>
+		<button id=impactChartToggle class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#impactCharts">At Impact</button>
 		<div class="collapse" id=impactCharts>
 
 			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC0" id="PCT0"> Horizontal Penetration</button>
@@ -521,10 +400,9 @@
 					<canvas id="penChart2" width="1200" height="300"></canvas>
 				</div>	
 			</div>
-            <h4></h4>
 		</div>
 		
-		<button id=angleChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#angleCharts">Critical Lateral Angles</button>
+		<button id=angleChartToggle class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#angleCharts">Critical Lateral Angles</button>
 		<div class="collapse" id=angleCharts>
 			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA0" id="AC0"> Maximum Lateral Angle for Perforation</button>
 			<div class='collapse' id="CA0">
@@ -539,11 +417,9 @@
 					<canvas id="angleChart1" width="1200" height="300"></canvas>
 				</div>	
 			</div>
-			<h4></h4>
 		</div>
 
-
-		<button id=postPenChartToggle class="btn btn-primary-outline btn-lg btn-block" data-toggle="collapse" data-target="#postPenCharts">Post Penetration</button>
+		<button id=postPenChartToggle class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#postPenCharts">Post Penetration</button>
 		<div class="collapse" id=postPenCharts>
 			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA0" id="A0">Lateral Angle 0</button>
 			<div class='collapse' id="LA0">
@@ -593,18 +469,279 @@
 					<canvas id="postPen7" width="1200" height="300"></canvas>
 				</div>
             </div>
-            <h4></h4>
 		</div>
     
     <script>
+		//Buttons 
+		//Add Hide buttons
+        addTitles();
+		let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+		$("#generate")[0].addEventListener(touchEvent, makeGraphs);
+
+		function applyButton(){
+			onSubmitPredefined((this.id).slice(-1)); 
+		}
+
+		for(var i=0; i<2; i++){
+			$('#apply' + i)[0].addEventListener(touchEvent, applyButton);
+		}
+		
+		$(document).ready(function(){
+			showCollapsibles();
+			generateVersion(0);
+            generateVersion(1);
+            initialized = true;
+		})
+
+		var Module = {
+			onRuntimeInitialized: function() {
+				console.log("Wasm Compile Successful");
+                compiled = true;
+
+			}
+		};
+		//Buttons
+
+		function showCollapsibles(){
+			var targets = [
+				'parameters',
+				'impactCharts',
+				'angleCharts',
+				'postPenCharts'
+			]
+			for(const target of targets){
+				$('#' + target).collapse('show');
+			}
+		}
+		
+		function addTitles(){
+			var targets = {
+				'caliberL' : 
+					'Diameter of the shell in meters. All else equal, higher caliber increase shell flight time and reduces penetration.',
+				'mvL': 
+					'Shell velocity at launch in meters per second. All else equal, higher muzzle velocity reduces shell flight time and increase penetration.',
+				'cDL': 
+					"Aerodynamic drag characteristic of the shell's shape. All else equal, higher drag coefficient increase shell flight time and reduces penetration.",
+				'massL': 
+					"Mass of the shell in kilograms. All else equal, higher mass decreases shell flight time and increases penetration.",
+				'kruppL': 
+					"Penetration coefficient of the shell. All else equal, higher krupp increases penetration.",
+				'fusetimeL': 
+					"How many seconds it takes for the shell to detonate after fusing. Longer fusetime increases risk of overpenetration.",
+				'thresholdL': 
+					"How many milimeters of effective armor it takes for the shells arm. Higher fusing threshold increases the risk of overpenetration.",
+				'ra0L':
+					"Minimum impact angle in degrees at which shells can ricochet - not affected by normalization.",
+				'ra1L':
+					"Minimum impact angle in degrees at which shells always ricochet - not affected by normalization.",
+				'HESAPL':
+					"HE/SAP penetration of shell - if applicable.",
+				'normalL':
+					"How many degrees of impact angle the shell can reduce. Higher normalization increases decreases effective armor thickness."
+			}
+			for(const [key, value] of Object.entries(targets)){
+				$('#'+key)[0].title = value;
+			}
+		}
+
+		var versionValue = [];
+		var nationValue = [];
+		var typeValue = [];
+		var shipValue = [];
+		var shellValue = [];
+		var typeData = [];
+		var shellType = [];
+		var initialized = false;
+        var compiled = false;
+        var dataURL = "static/data/"
+		function generateVersion(id){
+			$.ajax({
+				url: dataURL + "versions.json",
+				type: "GET",
+				dataType: "json",
+				success: function (data) {
+					$('#' + "version" + id)[0].innerHTML = '';
+					var i;
+					for(i=0; i<data.length; i++){
+						$('#' + "version" + id)[0].innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+					}
+
+					onChangeVersion("version" + id);
+				},
+				error: function(response){
+					console.log("Generating version failed")
+					console.log(response);
+					console.log(response['status'])
+					console.log(response.statusCode())
+				}
+			})
+		}
+		function onChangeVersion(versionID){
+			var id = parseInt(versionID.slice(-1));
+			versionValue[id] = $('#' + versionID)[0].value;
+			generateNation("nation" + id);
+		}
+
+		function generateNation(nationID){
+			var id = parseInt(nationID.slice(-1));
+			$.ajax({
+				url: dataURL + versionValue[id] + "/nations.json",
+				type: "GET",
+				dataType: "json",
+				success: function (data) {
+					$('#' + nationID)[0].innerHTML = '';
+					var i;
+					for(i=0; i<data.length; i++){
+						$('#' + nationID)[0].innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+					}
+					onChangeNation(nationID);
+				},
+				error: function(response){
+					console.log("Generating nation failed")
+					console.log(response);
+					console.log(response['status'])
+					console.log(response.statusCode())
+				}
+			})
+		}
+		function onChangeNation(nationID){
+			var id = parseInt(nationID.slice(-1));
+			nationValue[id] = $('#' + nationID)[0].value;
+			generateType('type' + id);
+		}
+
+		function generateType(typeID){
+			var id = parseInt(typeID.slice(-1));
+			$.ajax({
+				url: dataURL + versionValue[id] + "/" + nationValue[id] + "/shiptypes.json",
+				type: "GET",
+				dataType: "json",
+				success: function (data) {
+					$('#' + typeID)[0].innerHTML = '';
+					var i;
+					for(i=0; i<data.length; i++){
+						$('#' + typeID)[0].innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+					}
+					onChangeType(typeID);
+				},
+				error: function(response){
+					console.log("Generating type failed")
+					console.log(response);
+					console.log(response['status'])
+					console.log(response.statusCode())
+				}
+			})
+		}
+		function onChangeType(typeID){
+			var id = parseInt(typeID.slice(-1));
+			typeValue[id] = $('#' + typeID)[0].value;
+			generateShip('ship' + id)
+		}
+
+		function generateShip(shipID){
+			var id = parseInt(shipID.slice(-1));
+			$.ajax({
+				url: dataURL + versionValue[id] + "/" + nationValue[id] + "/" + nationValue[id] + "_" + typeValue[id] + ".json",
+				type: "GET",
+				dataType: "json",
+				success: function (data) {
+					typeData[id] = data;
+					$('#' + shipID)[0].innerHTML = '';
+					var sorted = []
+					for(var ship in data){
+						sorted.push(ship);
+					}
+					sorted.sort(function(a, b){return data[a]['Tier'] - data[b]['Tier']});
+					for(var ship of sorted){
+						$('#' + shipID)[0].innerHTML += "<option value=" + ship + ">" + "Tier " + data[ship]['Tier'] + " " + ship + "</option>"
+					}
+					onChangeShip(shipID);
+				},
+				error: function(response){
+					console.log("Generating ship failed")
+					console.log(response);
+					console.log(response['status'])
+					console.log(response.statusCode())
+				}
+			})
+		}
+		function onChangeShip(shipID){
+			var id = parseInt(shipID.slice(-1));
+			shipValue[id] = $('#' + shipID)[0].value;
+			generateShell('shell' + id);
+		}
+
+		function generateShell(shellID){
+			var id = parseInt(shellID.slice(-1));
+			selector = $('#' + shellID)[0];
+			selector.innerHTML = '';
+			for(var shell in typeData[id][shipValue[id]]){
+				if(shell.includes('Artillery')){
+					selector.innerHTML += "<option value=" + shell + ">" + shell + "</option>";
+				}
+			}
+			onChangeShell(shellID);
+		}
+		function onChangeShell(shellID){
+			var id = parseInt(shellID.slice(-1));
+			shellValue[id] = $('#' + shellID)[0].value;
+			generateShellType("shellType" + id);
+		}
+
+		function generateShellType(shellTypeID){
+			var id = parseInt(shellTypeID.slice(-1));
+			selector = $('#' + shellTypeID)[0];
+			selector.innerHTML = '';
+			for(var shellType in typeData[id][shipValue[id]][shellValue[id]]){
+				selector.innerHTML += "<option value=" + shellType + ">" + shellType + "</option>";
+			}
+			onChangeShellType(shellTypeID);
+		}
+
+		function onChangeShellType(shellTypeID){
+			var id = parseInt(shellTypeID.slice(-1));
+			shellType[id] = $('#' + shellTypeID)[0].value;
+			if($('#autoApply'+id)[0].checked){
+				onSubmitPredefined(id);
+			}
+		}
+
+		function onSubmitPredefined(id){
+			var targetShell = typeData[id][shipValue[id]][shellValue[id]][shellType[id]];
+			$("#shipName"  + id)[0].value = shipValue[id] + " " + shellValue[id].slice(-1);
+			$("#mv"        + id)[0].value = targetShell["bulletSpeed"];
+			$("#caliber"   + id)[0].value = targetShell["bulletDiametr"];
+			$("#krupp"     + id)[0].value = targetShell["bulletKrupp"];
+			$("#mass"      + id)[0].value = targetShell["bulletMass"];
+			$("#cD"        + id)[0].value = targetShell["bulletAirDrag"];
+			$("#threshold" + id)[0].value = targetShell["bulletDetonatorThreshold"];
+			$("#fusetime"  + id)[0].value = targetShell["bulletDetonator"];
+			$("#ra0_"      + id)[0].value = targetShell["bulletRicochetAt"];
+			$("#ra1_"      + id)[0].value = targetShell["bulletAlwaysRicochetAt"];
+			$("#normal"    + id)[0].value = targetShell['bulletCapNormalizeMaxAngle']
+			if(shellType[id] == 'AP'){
+				$("#HESAP" + id)[0].value = 0;
+			}else if(shellType[id] == 'HE'){
+				$("#HESAP" + id)[0].value = targetShell["alphaPiercingHE"];
+			}else if(shellType[id] == 'CS'){
+				$("#HESAP" + id)[0].value = targetShell["alphaPiercingCS"];
+			}   
+		}
+
+		//Graphs
+
 		var v_angles = [];
 		var numAngles = 8;
 
 		function getFloatValues(elementId){
-			return parseFloat(document.getElementById(elementId).value);
+			return parseFloat($('#' + elementId)[0].value);
 		}
 
-		function jQCall(){
+		var impactCharts = []
+		var angleCharts = []
+		var postCharts = []
+
+		function makeGraphs(){
 			var v_mv = [];
 			var v_caliber = [];
 			var v_krupp = [];
@@ -630,11 +767,12 @@
 				v_ra1[i]       = getFloatValues("ra1_" + i);
 				v_HESAP[i]     = getFloatValues("HESAP" + i);
 			}
-
-			var v_armor       = parseFloat(document.getElementById("armor"      ).value);
-			var v_inclination = parseFloat(document.getElementById("inclination").value);
+			
+			var v_armor       = getFloatValues("armor");
+			var v_inclination = getFloatValues("inclination");
+			var width         = getFloatValues("width");
 			for(var i=0; i<numAngles; i++){
-				v_angles[i] = parseFloat(document.getElementById("angle" + i).value);
+				v_angles[i] = parseFloat($('#' + "angle" + i)[0].value);
 			}
 			
 			var instances = []
@@ -674,11 +812,8 @@
 
 				detDist          : [[], []],
 				detDistF         : [[], []],
-
-				armorPlate : v_armor,
-				inclination : v_inclination
-
 			}
+
 			for(var k=0; k<2; k++){
 				for(var j=0; j<numAngles; j++){
 					chartData.detDist[k].push( []);
@@ -697,7 +832,6 @@
                 max = 1;
             }
 
-            var width = document.getElementById("width").value
             for(var i=0; i<impactSize; i++){
                 chartData.width.push(
                     {
@@ -880,21 +1014,11 @@
 					}
 				}
 			}
-			//instance.printPostPen();
-			//console.log(Module.postPenDataIndex.xwf.value*instance.getPostPenSize());
-			//console.log(Module.postPenDataIndex.x.value  *instance.getPostPenSize());
-			//console.log(chartData);
-			setChart(chartData);
 			
 			for(var k=0; k<2; k++){
 				instances[k].delete();
 			}
-		}
-		
-		var impactCharts = []
-		var angleCharts = []
-		var postCharts = []		
-		function setChart(response){
+
 			var xStepSize = 2500
 			//Set Impact
 			if(impactCharts[0]){
@@ -912,7 +1036,7 @@
 
 			shipName = [];
 			for(var k=0; k<2; k++){
-				shipName[k] = document.getElementById("shipName" + k).value;
+				shipName[k] = $("#shipName" + k).value;
 			}
 			
 			xAxesDistance = [{
@@ -936,32 +1060,32 @@
 				}
 			}
 
-			targetedArmor = 'Armor Thickness: ' + response.armorPlate + 'mm';
-			targetInclination = 'Vertical Inclination: ' + response.inclination + '°'; 
+			targetedArmor = 'Armor Thickness: ' + v_armor + 'mm';
+			targetInclination = 'Vertical Inclination: ' + v_inclination + '°'; 
 
 			var EPL = "Effective Penetration ";
 			var IAL = "Impact Angle ";
-			impactCharts[0] = new Chart(document.getElementById("penChart0"), {
+			impactCharts[0] = new Chart($("#penChart0"), {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: response.effectivePen[0],
+							data: chartData.effectivePen[0],
 							label: EPL + shipName[0], 
 							yAxisID: "Penetration",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.angleBelt[0],
+							data: chartData.angleBelt[0],
 							label: IAL + shipName[0], 
 							yAxisID: "Angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.effectivePen[1],
+							data: chartData.effectivePen[1],
 							label: EPL + shipName[1], 
 							yAxisID: "Penetration",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.angleBelt[1],
+							data: chartData.angleBelt[1],
 							label: IAL + shipName[1], 
 							yAxisID: "Angle",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
@@ -992,27 +1116,27 @@
 			}
 			var EDP = "Effective Deck Penetration ";
 			var DIA = "Deck Impact Angle ";
-			impactCharts[1] = new Chart(document.getElementById("penChart1"), {
+			impactCharts[1] = new Chart($("#penChart1"), {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: response.effectivePenDeck[0],
+							data: chartData.effectivePenDeck[0],
 							label: EDP + shipName[0],
 							yAxisID: "Penetration",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.angleDeck[0],
+							data: chartData.angleDeck[0],
 							label: DIA + shipName[0], 
 							yAxisID: "Angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.effectivePenDeck[1],
+							data: chartData.effectivePenDeck[1],
 							label: EDP + shipName[1],
 							yAxisID: "Penetration",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.angleDeck[1],
+							data: chartData.angleDeck[1],
 							label: DIA + shipName[1], 
 							yAxisID: "Angle",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
@@ -1043,27 +1167,27 @@
 			}
 			var IVL = "Impact Velocity ";
 			var FTL = "Flight Time ";
-			impactCharts[2] = new Chart(document.getElementById("penChart2"), {
+			impactCharts[2] = new Chart($("#penChart2"), {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: response.impactVelocity[0],
+							data: chartData.impactVelocity[0],
 							label: IVL + shipName[0], 
 							yAxisID: "Impact Velocity",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.flightTime[0],
+							data: chartData.flightTime[0],
 							label: FTL + shipName[0], 
 							yAxisID: "Time",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.impactVelocity[1],
+							data: chartData.impactVelocity[1],
 							label: IVL + shipName[1], 
 							yAxisID: "Impact Velocity",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.flightTime[1],
+							data: chartData.flightTime[1],
 							label: FTL + shipName[1], 
 							yAxisID: "Time",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
@@ -1106,37 +1230,37 @@
 			var ra0L = "Start Ricochet "
 			var ra1L = "Always Ricochet "
 			//var FTL = " ";
-			angleCharts[0] = new Chart(document.getElementById("angleChart0"), {
+			angleCharts[0] = new Chart($("#angleChart0"), {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: response.maxArmor[0],
+							data: chartData.maxArmor[0],
 							label: armorL + shipName[0], 
 							yAxisID: "angle",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.ra0[0],
+							data: chartData.ra0[0],
 							label: ra0L + shipName[0], 
 							yAxisID: "angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.ra1[0],
+							data: chartData.ra1[0],
 							label: ra1L + shipName[0], 
 							yAxisID: "angle",
 							borderColor: "#FFD700", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.maxArmor[1],
+							data: chartData.maxArmor[1],
 							label: armorL + shipName[1], 
 							yAxisID: "angle",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.ra0[1],
+							data: chartData.ra0[1],
 							label: ra0L + shipName[1], 
 							yAxisID: "angle",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.ra1[1],
+							data: chartData.ra1[1],
 							label: ra1L + shipName[1], 
 							yAxisID: "angle",
 							borderColor: "#DC143C", fill: false, pointRadius: 0, pointHitRadius: 5
@@ -1169,37 +1293,37 @@
 			}
 			var fuseL = "Minimum Fusing Angle ";
 			//var FTL = " ";
-			angleCharts[1] = new Chart(document.getElementById("angleChart1"), {
+			angleCharts[1] = new Chart($("#angleChart1"), {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: response.minFuse[0],
+							data: chartData.minFuse[0],
 							label: fuseL + shipName[0], 
 							yAxisID: "angle",
 							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.ra0[0],
+							data: chartData.ra0[0],
 							label: ra0L + shipName[0], 
 							yAxisID: "angle",
 							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.ra1[0],
+							data: chartData.ra1[0],
 							label: ra1L + shipName[0], 
 							yAxisID: "angle",
 							borderColor: "#FFD700", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.minFuse[1],
+							data: chartData.minFuse[1],
 							label: fuseL + shipName[1], 
 							yAxisID: "angle",
 							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.ra0[1],
+							data: chartData.ra0[1],
 							label: ra0L + shipName[1], 
 							yAxisID: "angle",
 							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 						},{
-							data: response.ra1[1],
+							data: chartData.ra1[1],
 							label: ra1L + shipName[1], 
 							yAxisID: "angle",
 							borderColor: "#DC143C", fill: false, pointRadius: 0, pointHitRadius: 5
@@ -1228,39 +1352,39 @@
 			});
 			
 			//Set PostPen
-			var width = document.getElementById("width").value
+			var width = $('#width').value
 			var i;
 			var WFL = "Check Fusing ";
 			var NFL = "Always Fusing ";
 			for(i=0; i<numAngles; i++){
 				var str = "Lateral Angle " + i + ": " + v_angles[i] + "°";
-				document.getElementById("A" + i).textContent = str;
+				$("#A" + i)[0].textContent = str;
 				if(postCharts[i]){
 					postCharts[i].destroy()
 				}
 
-				postCharts[i] = new Chart(document.getElementById("postPen" + i), {
+				postCharts[i] = new Chart($("#postPen" + i), {
 					type: 'scatter',
 					data: {
 						datasets: [
 							{
-								data: response.detDistF[0][i],
+								data: chartData.detDistF[0][i],
 								label: WFL + shipName[0],
 								borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
-								data: response.detDist[0][i],
+								data: chartData.detDist[0][i],
 								label: NFL + shipName[0],
 								borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
-								data: response.detDistF[1][i],
+								data: chartData.detDistF[1][i],
 								label: WFL + shipName[1],
 								borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
-								data: response.detDist[1][i],
+								data: chartData.detDist[1][i],
 								label: NFL + shipName[1],
 								borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
 							},{
-								data: response.width,
+								data: chartData.width,
 								label: "Ship Width (m)",
 								borderColor: "#505050", fill: false, pointRadius: 0, pointHitRadius: 5
 							}
@@ -1284,27 +1408,6 @@
 				});
 			}
 		}
-        //Buttons 
-		//Add Hide buttons
-        let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-		document.getElementById("generate").addEventListener(touchEvent, function(){jQCall();});
-
-		$(document).ready(function(){
-			generateVersion(0);
-            generateVersion(1);
-			showCollapsibles();
-            //copyStartValues();
-
-            initialized = true;
-		})
-
-		var Module = {
-			onRuntimeInitialized: function() {
-				console.log("Wasm Compile Successful");
-                compiled = true;
-
-			}
-		};
     </script>
 	<script src="shellWasm1.js"></script>
 	<p>If you find a bug or want a new feature, please <a href="https://github.com/jcw780/overpen_calculator/issues">open an issue</a> at GitHub. Your suggestions will be considered at later development.</p>
