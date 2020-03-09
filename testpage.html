@@ -26,47 +26,111 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
 		<style>
 			body{
-				background-color: lightgray;
+				background-color: white;
 			}
 			table{
-                border: 15px solid lightgray;
-                background-color: lightgray;
+                border: 15px solid white;
+                background-color: white;
             }
             td{
-                border: 5px solid lightgray;
-                background-color: lightgray;
+                border: 5px solid white;
+                background-color: white;
             }
             tr {
-			    border: 5px solid lightgray;
-                background-color: lightgray;
+			    border: 5px solid white;
+                background-color: white;
 			}
 
             th{
-                border: 15px solid lightgray;
-                background-color: lightgray;
+                border: 15px solid white;
+                background-color: white;
             }
             canvas{
                 background-color: white;
             }
-
-			.btn btn-info {
-				background-color: #777;
-				color: white;
-				cursor: pointer;
-				padding: 18px;
-				width: 100%;
-				border: none;
-				text-align: left;
-				outline: none;
-				font-size: 15px;
+			input{
+				box-shadow: 0px 0px #888888;
+				border-style: solid;
+  				border-width: 2px;
+			}
+			select{
+				box-shadow: 0px 0px #888888;
+				border-style: solid;
+  				border-width: 2px;
 			}
 
-			.active, .collapsible:hover {
-				background-color: #555;
+			.btn-info{
+				background-color: teal;
+				border-color: teal;
+			}
+
+			.btn-info:hover{
+				background-color: rgb(0,96,96);
+				border-color: rgb(0,96,96);
+			}
+
+			.btn-info:not(:disabled):not(.disabled).active, 
+			.btn-info:not(:disabled):not(.disabled):active, 
+			.show>.btn-info.dropdown-toggle {
+				background-color: rgb(0,96,96);
+				border-color: rgb(0,96,96);
+			}
+
+			.btn-info:not(:disabled):not(.disabled).active:focus, 
+			.btn-info:not(:disabled):not(.disabled):active:focus, 
+			.show>.btn-info.dropdown-toggle:focus {
+				box-shadow: 0 0 0 0.2rem rgba(0,96,96,.5);
+			}
+
+			.btn-primary{
+				background-color: orange;
+				border-color: orange;
+			}
+
+			.btn-primary:hover{
+				background-color: rgb(192,124,0);
+				border-color: rgb(192,124,0);
+			}
+
+			.btn-primary:not(:disabled):not(.disabled).active, 
+			.btn-primary:not(:disabled):not(.disabled):active, 
+			.show>.btn-primary.dropdown-toggle {
+				background-color: rgb(192,124,0);
+				border-color: rgb(192,124,0);
+			}
+
+			.btn-primary:not(:disabled):not(.disabled).active:focus, 
+			.btn-primary:not(:disabled):not(.disabled):active:focus, 
+			.show>.btn-primary.dropdown-toggle:focus {
+				box-shadow: 0 0 0 0.2rem rgba(192,124,0,.5);
+			}
+
+			.btn-success{
+				background-color: purple;
+				border-color: purple;
+			}
+
+			.btn-success:hover{
+				background-color: rgb(96,0,96);
+				border-color: rgb(96,0,96);
+			}
+
+			.btn-success:not(:disabled):not(.disabled).active, 
+			.btn-success:not(:disabled):not(.disabled):active, 
+			.show>.btn-success.dropdown-toggle {
+				color: #fff;
+				background-color: rgb(96,0,96);
+				border-color: rgb(96,0,96);
+			}
+
+			.btn-success:not(:disabled):not(.disabled).active:focus, 
+			.btn-success:not(:disabled):not(.disabled):active:focus, 
+			.show>.btn-success.dropdown-toggle:focus {
+				box-shadow: 0 0 0 0.2rem rgba(96,0,96,.5);
 			}
 
 			.margin-bottom {
@@ -75,16 +139,22 @@
 
 		</style>
 		<center><h1>World of Warships Overpenetration Calculator</h1></center>
-		<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#descriptions">Description</button>
+		<button id="descriptionsToggle" class="btn btn-info btn-lg btn-block" 
+		data-toggle="collapse" data-target="#descriptions">Description
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+		</button>
 		<div class="collapse" id=descriptions style="width: 100%;">
 			<p>&nbsp;Overpen calculations are experimental - further testing may be needed to confirm results.</p>
 			<p>&nbsp;Site will be updated if and when more accurate information becomes available.</p>
 		</div>
 
-		<button class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#parameters">Input Data</button>
+		<button id="parametersToggle" class="btn btn-info btn-lg btn-block" 
+		data-toggle="collapse" data-target="#parameters">Input Data
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+		</button>
 		<div class="collapse" id=parameters style="width: 100%; background-color: lightgray;" >
 		<table id=parameterTable style="width: 100%;">
-			<tr>
+			<tr style="width: 100%;">
 				<th>
 					<center><h3><u>Predefined Shells</u></h3></center>
 				</th>
@@ -95,7 +165,7 @@
 					<center><h3><u>Target Data</u></h3></center>
 				</th>
 			</tr>
-			<tr>
+			<tr style="width: 100%;">
 				<td>
 					<form>
 						<div class="row margin-bottom">
@@ -403,11 +473,14 @@
 				</td>
 			</tr>
 		</table>
-		<center><button id=generate class="btn btn-success btn-lg btn-block" style="width: 50%;">Generate Graphs</button></center>
+		<center style="background-color: white;"><button id=generate class="btn btn-success btn-lg btn-block" style="width: 50%; margin-bottom: 20px;">Generate Graphs</button></center>
 		</div>
 
-		<button class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#graphParameters">Settings</button>
-		<div class="collapse" id=graphParameters style="width: 100%; background-color: lightgray;">
+		<button id="settingsToggle" class="btn btn-info btn-lg btn-block" 
+		data-toggle="collapse" data-target="#settingsTab">Settings
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+		</button>
+		<div class="collapse" id=settingsTab style="width: 100%">
 			<table>
 				<tr>
 					<th><h3>Graphs</h3></th>
@@ -440,24 +513,36 @@
 		</div>
 
 		<h2 style="text-align:center">Graphs</h2>
-		<button id=impactChartToggle class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#impactCharts">At Impact</button>
+		<button id=impactChartToggle class="btn btn-primary btn-lg btn-block" 
+		data-toggle="collapse" data-target="#impactCharts">At Impact
+			<span class="fa fa-chevron-up fa-resize-full"></span>	
+		</button>
 		<div class="collapse" id=impactCharts>
 
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC0" id="PCT0"> Horizontal Penetration</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#pC0" id="PCT0"> Horizontal Penetration
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="pC0">
 				<div class='col-sm-12'>
 					<canvas id="penChart0" width="1200" height="300"></canvas>
 				</div>	
 			</div>
 			
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC1" id="PCT1"> Deck Penetration</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#pC1" id="PCT1"> Deck Penetration
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="pC1">
 				<div class='col-sm-12'>
 					<canvas id="penChart1" width="1200" height="300"></canvas>
 				</div>	
 			</div>
 			
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#pC2" id="PCT2"> Shell Speed</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#pC2" id="PCT2"> Shell Speed
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="pC2">
 				<div class='col-sm-12'>
 					<canvas id="penChart2" width="1200" height="300"></canvas>
@@ -465,16 +550,25 @@
 			</div>
 		</div>
 		
-		<button id=angleChartToggle class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#angleCharts">Critical Lateral Angles</button>
+		<button id=angleChartToggle class="btn btn-primary btn-lg btn-block" 
+		data-toggle="collapse" data-target="#angleCharts">Critical Lateral Angles
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+		</button>
 		<div class="collapse" id=angleCharts>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA0" id="AC0"> Maximum Lateral Angle for Perforation</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#CA0" id="ACT0"> Maximum Lateral Angle for Perforation
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="CA0">
 				<div class='col-sm-12'>
 					<canvas id="angleChart0" width="1200" height="300"></canvas>
 				</div>	
 			</div>
 
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#CA1" id="AC1"> Minimum Lateral Angle for Fusing</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#CA1" id="ACT1"> Minimum Lateral Angle for Fusing
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="CA1">
 				<div class='col-sm-12'>
 					<canvas id="angleChart1" width="1200" height="300"></canvas>
@@ -482,51 +576,78 @@
 			</div>
 		</div>
 
-		<button id=postPenChartToggle class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#postPenCharts">Post Penetration</button>
+		<button id=postPenChartToggle class="btn btn-primary btn-lg btn-block" 
+		data-toggle="collapse" data-target="#postPenCharts">Post Penetration
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+		</button>
 		<div class="collapse" id=postPenCharts>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA0" id="A0">Lateral Angle 0</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#LA0" id="AT0">Lateral Angle 0
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="LA0">
 				<div class='col-sm-12'>
 					<canvas id="postPen0" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA1" id="A1">Lateral Angle 1</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#LA1" id="AT1">Lateral Angle 1
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="LA1">
 				<div class='col-sm-12'>
 					<canvas id="postPen1" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA2" id="A2">Lateral Angle 2</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#LA2" id="AT2">Lateral Angle 2
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="LA2">
 				<div class='col-sm-12'>
 					<canvas id="postPen2" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA3" id="A3">Lateral Angle 3</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#LA3" id="AT3">Lateral Angle 3
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="LA3">
 				<div class='col-sm-12'>
 					<canvas id="postPen3" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA4" id="A4">Lateral Angle 4</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#LA4" id="AT4">Lateral Angle 4
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="LA4">
 				<div class='col-sm-12'>
 					<canvas id="postPen4" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA5" id="A5">Lateral Angle 5</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#LA5" id="AT5">Lateral Angle 5
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="LA5">
 				<div class='col-sm-12'>
 					<canvas id="postPen5" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA6" id="A6">Lateral Angle 6</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#LA6" id="AT6">Lateral Angle 6
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="LA6">
 				<div class='col-sm-12'>
 					<canvas id="postPen6" width="1200" height="300"></canvas>
 				</div>
 			</div>
-			<button class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#LA7" id="A7">Lateral Angle 7</button>
+			<button class="btn btn-info btn-lg btn-block" 
+			data-toggle="collapse" data-target="#LA7" id="AT7">Lateral Angle 7
+			<span class="fa fa-chevron-up fa-resize-full"></span>
+			</button>
 			<div class='collapse' id="LA7">
 				<div class='col-sm-12'>
 					<canvas id="postPen7" width="1200" height="300"></canvas>
@@ -541,6 +662,41 @@
 		let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 		$("#generate")[0].addEventListener(touchEvent, makeGraphs);
 
+		function changeChevron(){
+			console.log($(this), $(this).prev('button'));
+			$(this).prev('button').find('span.fa').toggleClass('fa-chevron-up fa-chevron-down');
+		}
+
+		function addChevrons(){
+			var collapseButtons = [
+				'descriptions',
+				'parameters',
+				'settingsTab',
+				'impactCharts',
+				'angleCharts',
+				'postPenCharts',
+			]
+			
+			var graphs = {
+				'PC': 3,
+				'CA': 2,
+				'LA': 8,
+			}
+			for(const id of collapseButtons){
+				//$('#' + id)[0].addEventListener(touchEvent, changeChevron);
+				$('#' + id).on('shown.bs.collapse hidden.bs.collapse', changeChevron);
+			}
+			
+			for(const [id, num] of Object.entries(graphs)){
+				for(var i=0; i<num; i++){
+					console.log('#' + id + i);
+					$('#' + id + i).on('shown.bs.collapse hidden.bs.collapse', changeChevron);
+				}
+			}
+		}
+
+		addChevrons();
+
 		function applyButton(){
 			onSubmitPredefined((this.id).slice(-1)); 
 		}
@@ -548,7 +704,7 @@
 		for(var i=0; i<2; i++){
 			$('#apply' + i)[0].addEventListener(touchEvent, applyButton);
 		}
-		
+
 		$(document).ready(function(){
 			showCollapsibles();
 			generateVersion(0);
@@ -567,13 +723,13 @@
 
 		function showCollapsibles(){
 			var targets = [
-				'parameters',
-				'impactCharts',
-				'angleCharts',
-				'postPenCharts'
+				'parametersToggle',
+				'impactChartToggle',
+				'angleChartToggle',
+				'postPenChartToggle'
 			]
 			for(const target of targets){
-				$('#' + target).collapse('show');
+				$('#' + target).click();
 			}
 		}
 		
@@ -1433,7 +1589,7 @@
 			var NFL = "Always Fusing ";
 			for(i=0; i<numAngles; i++){
 				var str = "Lateral Angle " + i + ": " + v_angles[i] + "°";
-				$("#A" + i)[0].textContent = str;
+				$("#AT" + i)[0].value = str;
 				if(postCharts[i]){
 					postCharts[i].destroy()
 				}
