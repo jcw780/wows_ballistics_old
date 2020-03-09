@@ -1,4 +1,4 @@
-# World of Warships Overpenetration Calculator
+# World of Warships Ballistics Calculator
 ### Link
 https://jcw780.github.io/overpen_calculator/
 ## Code Information
