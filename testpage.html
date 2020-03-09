@@ -81,7 +81,7 @@
 			<p>&nbsp;Site will be updated if and when more accurate information becomes available.</p>
 		</div>
 		
-		<button class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#parameters">Parameters</button>
+		<button class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#parameters">General Parameters</button>
 		<div class="collapse" id=parameters style="width: 100%; background-color: lightgray;" >
 		<table id=parameterTable style="width: 100%;">
 			<tr>
@@ -97,59 +97,88 @@
 			</tr>
 			<tr>
 				<td>
-					<table>
-						<tr><td><h4>Ship A:</h4></td></tr>
-						<tr>
-							<td>Version</td>
-							<td><select id=version0 class="form-control" onchange="onChangeVersion('version0')"></select></td>
-						</tr>
-						<tr>
-							<td>Nation</td>
-							<td><select id=nation0 class="form-control" onchange="onChangeNation('nation0')"></select></td>
-						</tr>
-						<tr>
-							<td>Type</td>
-							<td><select id=type0 class="form-control" onchange="onChangeType('type0')"></select></td>
-						</tr>
-						<tr>
-							<td>Ship</td>
-							<td><select id=ship0 class="form-control" onchange="onChangeShip('ship0')"></select></td>
-						</tr>
-						<tr>
-							<td>Artillery</td>
-							<td><select id=shell0 class="form-control"  onchange="onChangeShell('shell0')"></select></td>
-						</tr>
-						<tr>
-							<td>Shell Type</td>
-							<td><select id=shellType0 class="form-control" onchange="onChangeShellType('shellType0')"></select></td>
-						</tr>
-
-						<tr><td><h4>Ship B:</h4></td></tr>
-						<tr>
-							<td>Version</td>
-							<td><select id=version1   class="form-control" onchange="onChangeVersion('version1')"></select></td>
-						</tr>
-						<tr>
-							<td>Nation</td>
-							<td><select id=nation1    class="form-control" onchange="onChangeNation('nation1')"></select></td>
-						</tr>
-						<tr>
-							<td>Type</td>
-							<td><select id=type1      class="form-control"   onchange="onChangeType('type1')"></select></td>
-						</tr>
-						<tr>
-							<td>Ship</td>
-							<td><select id=ship1      class="form-control"   onchange="onChangeShip('ship1')"></select></td>
-						</tr>
-						<tr>
-							<td>Artillery</td>
-							<td><select id=shell1     class="form-control"  onchange="onChangeShell('shell1')"></select></td>
-						</tr>
-						<tr>
-							<td>Shell Type</td>
-							<td><select id=shellType1 class="form-control"  onchange="onChangeShellType('shellType1')"></select></td>
-						</tr>
-					</table>
+					<form>
+						<div class="row margin-bottom">
+							<div class="col-sm-4"><h4>Ship A:</h4></div>
+							<div class="col-sm-8"></div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Version</label>
+							<div class="col-sm-8">
+								<select id=version0   class="form-control" onchange="onChangeVersion('version0')"></select>
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Nation</label>
+							<div class="col-sm-8">
+								<select id=nation0    class="form-control" onchange="onChangeNation('nation0')"></select>
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Type</label>
+							<div class="col-sm-8">
+								<select id=type0      class="form-control"   onchange="onChangeType('type0')"></select>
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Ship</label>
+							<div class="col-sm-8">
+								<select id=ship0      class="form-control"   onchange="onChangeShip('ship0')"></select>
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Artillery</label>
+							<div class="col-sm-8">
+								<select id=shell0     class="form-control"  onchange="onChangeShell('shell0')"></select>
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Shell Type</label>
+							<div class="col-sm-8">
+								<select id=shellType0 class="form-control"  onchange="onChangeShellType('shellType0')"></select>
+							</div>
+						</div>
+						<div class="row margin-bottom">
+							<div class="col-sm-4"><h4>Ship B:</h4></div>
+							<div class="col-sm-8"></div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Version</label>
+							<div class="col-sm-8">
+								<select id=version1   class="form-control" onchange="onChangeVersion('version1')"></select>
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Nation</label>
+							<div class="col-sm-8">
+								<select id=nation1    class="form-control" onchange="onChangeNation('nation1')"></select>
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Type</label>
+							<div class="col-sm-8">
+								<select id=type1      class="form-control"   onchange="onChangeType('type1')"></select>
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Ship</label>
+							<div class="col-sm-8">
+								<select id=ship1      class="form-control"   onchange="onChangeShip('ship1')"></select>
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Artillery</label>
+							<div class="col-sm-8">
+								<select id=shell1     class="form-control"  onchange="onChangeShell('shell1')"></select>
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-4 col-form-label">Shell Type</label>
+							<div class="col-sm-8">
+								<select id=shellType1 class="form-control"  onchange="onChangeShellType('shellType1')"></select>
+							</div>
+						</div>
+					</form>
 					<!--<button onclick="onSubmitPredefined()">Apply</button>-->
 				</td>
 				<td>
@@ -376,6 +405,40 @@
 		</table>
 		<button id=generate class="btn btn-success btn-lg btn-block">Generate Graphs</button>
 		</div>
+
+		<button class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#graphParameters">Settings</button>
+		<div class="collapse" id=graphParameters style="width: 100%; background-color: lightgray;">
+			<table>
+				<tr>
+					<th><h3>Graphs</h3></th>
+				</tr>
+				<tr>
+					<td>
+						<form>
+							<div class="form-row margin-bottom">
+								<label class="col-sm-5 col-form-label">Minimum Distance</label>
+								<div class="col-sm-4">
+									<input class="form-control" type="number" step="any" id="minDist" value="0" >
+								</div>
+							</div>
+							<div class="form-row margin-bottom">
+								<label class="col-sm-5 col-form-label">Maximum Distance</label>
+								<div class="col-sm-4">
+									<input class="form-control" type="number" step="any" id="maxDist" value="" >
+								</div>
+							</div>
+							<div class="form-row margin-bottom">
+								<label class="col-sm-5 col-form-label">Tick Size</label>
+								<div class="col-sm-4">
+									<input class="form-control" type="number" step="any" id="tickDist" value="2500" >
+								</div>
+							</div>
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+
 		<h2 style="text-align:center">Graphs</h2>
 		<button id=impactChartToggle class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#impactCharts">At Impact</button>
 		<div class="collapse" id=impactCharts>
@@ -737,6 +800,10 @@
 			return parseFloat($('#' + elementId)[0].value);
 		}
 
+		function getIntValues(elementId){
+			return parseInt($('#' + elementId)[0].value);
+		}
+
 		var impactCharts = []
 		var angleCharts = []
 		var postCharts = []
@@ -1019,7 +1086,6 @@
 				instances[k].delete();
 			}
 
-			var xStepSize = 2500
 			//Set Impact
 			if(impactCharts[0]){
 				impactCharts[0].destroy();
@@ -1036,7 +1102,7 @@
 
 			shipName = [];
 			for(var k=0; k<2; k++){
-				shipName[k] = $("#shipName" + k).value;
+				shipName[k] = $("#shipName" + k)[0].value;
 			}
 			
 			xAxesDistance = [{
@@ -1045,9 +1111,18 @@
 					labelString: "Distance from Launch (m)",
 				},
 				ticks:{
-					min: 0, stepSize: xStepSize
 				}
 			}];
+			
+			if($('#minDist')[0].value){
+				xAxesDistance[0].ticks['min'] = getIntValues('minDist');
+			}
+			if($('#maxDist')[0].value){
+				xAxesDistance[0].ticks['max'] = getIntValues('maxDist');
+			}
+			if($('#tickDist')[0].value){
+				xAxesDistance[0].ticks['stepSize'] = getIntValues('tickDist');
+			}
 
 			yAxesPenetration = {
 				id: "Penetration", postition: "left",
