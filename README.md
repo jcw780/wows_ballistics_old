@@ -21,7 +21,8 @@ https://jcw780.github.io/wows_ballistics/
 - Directly download graphs without browser extension
 - Raw data
 ### Updates
-- 3/9/2020 Improved collapsibles, color scheme, Added Chart settings, Changed site name and link - redirect added for origin link
+- 3/9/2020 f6399ca4cf2d605ad5e167da2cae0f6d6a1003f9
+Improved collapsibles, color scheme, Added Chart settings, Changed site name and link - redirect added for origin link
 - 3/6/2020 Improved formatting, Added support for different shell types, Added Chart Titles, Various internal refactors
 - 3/2/2020 Added version 0.9.1.1 shells
 - 2/29/2020 Added critical lateral angle graphs
