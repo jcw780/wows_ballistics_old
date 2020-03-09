@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-    <title>World of Warships Overpenetration Calculator</title>
+    <title>World of Warships Ballistics Calculator</title>
 	</head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155844497-1"></script>
@@ -141,14 +141,25 @@
 			}
 
 		</style>
-		<center><h1>World of Warships Overpenetration Calculator</h1></center>
+		<center><h1>World of Warships Ballistics Calculator</h1></center>
 		<button id="descriptionsToggle" class="btn btn-info btn-lg btn-block" 
 		data-toggle="collapse" data-target="#descriptions">Description
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 		</button>
 		<div class="collapse" id=descriptions style="width: 100%;">
-			<p>&nbsp;Overpen calculations are experimental - further testing may be needed to confirm results.</p>
-			<p>&nbsp;Site will be updated if and when more accurate information becomes available.</p>
+			<div style="padding-left: 2em;">
+				<h4>Functionality</h4>
+				<h5 style="padding-left: 2em;">Calculate shell performance at impact and in flight</h5>
+				<p style="padding-left: 4em;">Belt/Deck penetration - Belt/Deck Impact Angle - Impact Velocity - Flight Time</p>
+				<p style="padding-left: 4em;">Includes all shell types (AP, HE, SAP(CS)) - only for 0.9.1.1 and later</p>
+				<h5 style="padding-left: 2em;">Calculate Critical Angles</h5>
+				<p style="padding-left: 4em;">Maximum angle for penetration - Minimum angle for fusing - Lateral ricochet angles</p>
+				<h5 style="padding-left: 2em;">Calculate AP performance post penetration</h5> 
+				<p style="padding-left: 4em;">Shell detonation distance after penetration - Checking whether the armor is thick enough to arm the shell</p>
+				<p>Overpen calculations are experimental - further testing may be needed to confirm results.</p>
+				<p>Site will be updated if and when more accurate information becomes available.</p>
+			</div>
+			
 		</div>
 
 		<button id="parametersToggle" class="btn btn-info btn-lg btn-block" 
