@@ -1,6 +1,6 @@
 # World of Warships Ballistics Calculator
 ### Link
-https://jcw780.github.io/overpen_calculator/
+https://jcw780.github.io/wows_ballistics/
 ## Code Information
 ### Languages
 - HTML, CSS, JS
@@ -21,6 +21,7 @@ https://jcw780.github.io/overpen_calculator/
 - Directly download graphs without browser extension
 - Raw data
 ### Updates
+- 3/9/2020 Improved collapsibles, color scheme, Added Chart settings, Changed site name and link - redirect added for origin link
 - 3/6/2020 Improved formatting, Added support for different shell types, Added Chart Titles, Various internal refactors
 - 3/2/2020 Added version 0.9.1.1 shells
 - 2/29/2020 Added critical lateral angle graphs
