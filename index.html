@@ -1059,7 +1059,6 @@
 				targetData['angle'][i] = parseFloat($('#' + "angle" + i)[0].value);
 			}
 			var data = Object.assign({}, shellData, targetData);
-			console.log(data);
 			makeGraphs(data);
 		}
 		
@@ -1320,7 +1319,6 @@
 					}
 				}
 			}
-			console.log(chartData)
 			for(var k=0; k<2; k++){
 				instances[k].delete();
 			}

@@ -725,7 +725,7 @@
 			$('#apply' + i)[0].addEventListener(touchEvent, applyButton);
 		}
 
-		function firstRun(){
+		async function firstRun(){
 			data = {
 				'mv'         : [ 841, 841 ],
 				'caliber'    : [.152, .152],
@@ -764,7 +764,7 @@
 		};
 		//Buttons
 
-		function showCollapsibles(){
+		async function showCollapsibles(){
 			const targets = [
 				'parametersToggle',
 				'impactChartToggle',
@@ -827,7 +827,7 @@
 		var initialized = false;
         var compiled = false;
         var dataURL = "static/data/"
-		function generateVersion(id){
+		async function generateVersion(id){
 			$.ajax({
 				url: dataURL + "versions.json",
 				type: "GET",
@@ -1059,7 +1059,6 @@
 				targetData['angle'][i] = parseFloat($('#' + "angle" + i)[0].value);
 			}
 			var data = Object.assign({}, shellData, targetData);
-			console.log(data);
 			makeGraphs(data);
 		}
 		
@@ -1320,7 +1319,6 @@
 					}
 				}
 			}
-			console.log(chartData)
 			for(var k=0; k<2; k++){
 				instances[k].delete();
 			}
