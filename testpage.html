@@ -682,12 +682,11 @@
 		//Add Hide buttons
         addTitles();
 		let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-		$("#generate")[0].addEventListener(touchEvent, makeGraphs);
+		$("#generate")[0].addEventListener(touchEvent, collectMake);
 
 		function changeChevron(e){
 			e.stopPropagation();
 			$(e.target).prev('button').find('span.fa').toggleClass('fa-chevron-up fa-chevron-down');
-			//$(e.target).prev('button').find('span.fa').toggleClass('fa-chevron-up fa-chevron-down');
 		}
 
 		function addChevrons(){
@@ -706,7 +705,6 @@
 				'LA': 8,
 			}
 			for(const id of collapseButtons){
-				//$('#' + id)[0].addEventListener(touchEvent, changeChevron);
 				$('#' + id).on('shown.bs.collapse hidden.bs.collapse', changeChevron);
 			}
 			
@@ -727,24 +725,47 @@
 			$('#apply' + i)[0].addEventListener(touchEvent, applyButton);
 		}
 
+		function firstRun(){
+			data = {
+				'mv'         : [ 841, 841 ],
+				'caliber'    : [.152, .152],
+				'krupp'      : [2609, 2609],
+				'mass'       : [50.8, 50.8],
+				'normal'     : [ 8.5,  8.5],
+				'cD'         : [.3297, .3297],
+				'threshold'  : [25, 25],
+				'fusetime'   : [.025, .025],
+				'ra0_'       : [45, 45],
+				'ra1_'       : [60, 60],
+				'HESAP'      : [0, 0],
+				'shellType'  : ['AP', 'AP'],
+				'angle'      : [0, 5, 10, 25, 20, 25, 30, 35],
+				'armor'      : 70,
+				'inclination': 0,
+				'width'      : 18,
+				'shipName'   : ['PUSC506_Perth_1942 0', 'PUSC506_Perth_1942 0']
+			}
+			makeGraphs(data);
+		}
+
+		
 		$(document).ready(function(){
 			showCollapsibles();
 			generateVersion(0);
             generateVersion(1);
-            initialized = true;
 		})
 
 		var Module = {
 			onRuntimeInitialized: function() {
 				console.log("Wasm Compile Successful");
                 compiled = true;
-
+				firstRun();
 			}
 		};
 		//Buttons
 
 		function showCollapsibles(){
-			var targets = [
+			const targets = [
 				'parametersToggle',
 				'impactChartToggle',
 				'angleChartToggle',
@@ -752,6 +773,17 @@
 			]
 			for(const target of targets){
 				$('#' + target).click();
+			}
+			const graphToggles = {
+				'PCT': 3,
+				'ACT': 2,
+				'AT' : 8
+			}
+
+			for(const [k, v] of Object.entries(graphToggles)){
+				for(var i = 0; i < v; i++){
+					$('#' + k + i).click();
+				}
 			}
 		}
 		
@@ -986,40 +1018,71 @@
 		var angleCharts = []
 		var postCharts = []
 
-		function makeGraphs(){
-			var v_mv = [];
-			var v_caliber = [];
-			var v_krupp = [];
-			var v_mass = [];
-			var v_normal = [];
-			var v_cD = [];
-			var v_threshold = [];
-			var v_fusetime = [];
-			var v_ra0 = [];
-			var v_ra1 = [];
-			var v_HESAP = [];
+		function collectMake(){
+			var shellData = {
+				'mv': [],
+				'caliber': [],
+				'krupp': [],
+				'mass': [],
+				'normal': [],
+				'cD': [],
+				'threshold': [],
+				'fusetime': [],
+				'ra0_': [],
+				'ra1_': [],
+				'HESAP': [],
+			}
+
+			var targetData = {
+				'shellType': [],
+				'angle': [],
+				'armor': 0,
+				'inclination': 0,
+				'width': 0,
+				'shipName':[]
+			}
+
+			targetData.shellType = shellType;
 			
 			for(var i=0; i<2; i++){
-				v_mv[i]        = getFloatValues("mv" + i);
-				v_caliber[i]   = getFloatValues("caliber" + i);
-				v_krupp[i]     = getFloatValues("krupp" + i);
-				v_mass[i]      = getFloatValues("mass" + i);
-				v_normal[i]    = getFloatValues("normal" + i);
-				v_cD[i]        = getFloatValues("cD" + i);
-				v_threshold[i] = getFloatValues("threshold" + i);
-				v_fusetime[i]  = getFloatValues("fusetime" + i);
-				v_ra0[i]       = getFloatValues("ra0_" + i);
-				v_ra1[i]       = getFloatValues("ra1_" + i);
-				v_HESAP[i]     = getFloatValues("HESAP" + i);
+				for(var key in shellData){
+
+					shellData[key][i] = getFloatValues(key + i);
+				}
+				targetData.shipName[i] = $("#shipName" + i)[0].value;
 			}
-			
-			var v_armor       = getFloatValues("armor");
-			var v_inclination = getFloatValues("inclination");
-			var width         = getFloatValues("width");
+
+			targetData['armor']       = getFloatValues("armor");
+			targetData['inclination'] = getFloatValues("inclination");
+			targetData['width']       = getFloatValues("width");
 			for(var i=0; i<numAngles; i++){
-				v_angles[i] = parseFloat($('#' + "angle" + i)[0].value);
+				targetData['angle'][i] = parseFloat($('#' + "angle" + i)[0].value);
 			}
-			
+			var data = Object.assign({}, shellData, targetData);
+			console.log(data);
+			makeGraphs(data);
+		}
+		
+		function makeGraphs(data){
+			var v_mv = data.mv;
+			var v_caliber = data.caliber;
+			var v_krupp = data.krupp;
+			var v_mass = data.mass;
+			var v_normal = data.normal;
+			var v_cD = data.cD;
+			var v_threshold = data.threshold;
+			var v_fusetime = data.fusetime;
+			var v_ra0 = data.ra0_;
+			var v_ra1 = data.ra1_;
+			var v_HESAP = data.HESAP;
+
+			var v_armor       = data.armor;
+			var v_inclination = data.inclination;
+			var width         = data.width;
+			var v_angles      = data.angle;
+
+			var shipName = data.shipName;
+
 			var instances = []
 			for(var k=0; k<2; k++){
 				instances[k] = new Module.shell(
@@ -1052,8 +1115,8 @@
 				
 				ra0              : [[], []],
 				ra1              : [[], []],
-				maxArmor      : [[], []],
-				minFuse     : [[], []],
+				maxArmor         : [[], []],
+				minFuse          : [[], []],
 
 				detDist          : [[], []],
 				detDistF         : [[], []],
@@ -1087,9 +1150,8 @@
             }
 
 			for(var k=0; k<2; k++){
-				if(shellType[k] == 'AP'){
+				if(data.shellType[k] == 'AP'){
 					for(var i=0; i<impactSize; i++){
-						//chartData.labels[k].push(          instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.distance.value));
 						chartData.effectivePen[k].push(
 							{
 								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
@@ -1174,7 +1236,6 @@
 					}
 				}else{
 					for(var i=0; i<impactSize; i++){
-						//chartData.labels[k].push(          instances[k].impactData().get(i+impactSizeAligned*Module.impactDataIndex.distance.value));
 						chartData.effectivePen[k].push(
 							{
 								x: instances[k].getImpactPoint(i, Module.impactDataIndex.distance.value),
@@ -1259,7 +1320,7 @@
 					}
 				}
 			}
-			
+			console.log(chartData)
 			for(var k=0; k<2; k++){
 				instances[k].delete();
 			}
@@ -1267,20 +1328,6 @@
 			//Set Impact
 			if(impactCharts[0]){
 				impactCharts[0].destroy();
-			}
-			var svs = []
-			if(initialized){
-				for(var k=0; k<2; k++){
-					svs[k] = shellValue[k].slice(-1);
-				}
-			}else{
-				svs[0] = 0;
-				svs[1] = 0;
-			}
-
-			shipName = [];
-			for(var k=0; k<2; k++){
-				shipName[k] = $("#shipName" + k)[0].value;
 			}
 			
 			xAxesDistance = [{
