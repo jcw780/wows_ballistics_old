@@ -27,10 +27,13 @@ https://jcw780.github.io/wows_ballistics/
 - Added Chart settings
 - Changed site name and link - redirect added for origin link
 #### 3/6/2020 
-- Improved formatting, Added support for different shell types, Added Chart Titles, Various internal refactors
-#### 3/2/2020 
+- Improved formatting
+- Added support for different shell types [374e9e4](https://github.com/jcw780/wows_ballistics/commit/f3b819676b6698b9bd6ca26e0ecfb33a83a8653d)
+- Added Chart Titles [8c95e1e](https://github.com/jcw780/wows_ballistics/commit/63d331c73d632a57886f0d828cc022f8002bc93e)
+- Various internal refactors
+#### 3/2/2020 [b710e99](https://github.com/jcw780/wows_ballistics/commit/4becb9de0ebf969d60625ef05ffff83192d1ae82)
 - Added version 0.9.1.1 shells
-#### 2/29/2020 
+#### 2/29/2020
 - Added critical lateral angle graphs
 #### 1/15/2020 
 - Fixed bug with penetration calculations, Fixed bug where buttons won't work on iOS
