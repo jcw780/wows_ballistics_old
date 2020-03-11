@@ -1,0 +1,369 @@
+{
+    "PXSB001_Mr_Hyde": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.5337,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 47.0,
+                "bulletDiametr": 0.283,
+                "bulletKrupp": 2789.0,
+                "bulletMass": 302.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 855.0,
+                "name": "PXPA002_283MM_AP_HYDE"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 100.0,
+                "bulletAirDrag": 0.5337,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.283,
+                "bulletKrupp": 1.0,
+                "bulletMass": 302.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 855.0,
+                "name": "PXPA003_283MM_HE_HYDE"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 3,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PXSB002_Rasputin": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.4595,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2627.0,
+                "bulletMass": 470.9,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 762.0,
+                "name": "PXPA006_305MM_AP_RASPUTIN"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.4595,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 470.9,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 762.0,
+                "name": "PXPA005_305MM_HE_RASPUTIN"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PXSB004_Tirpiz_1942_H2017": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2763,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 63.0,
+                "bulletDiametr": 0.38,
+                "bulletKrupp": 2450.0,
+                "bulletMass": 800.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PGPA001_380mm_AP_APC_L_4_4"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 95.0,
+                "bulletAirDrag": 0.2763,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.381,
+                "bulletKrupp": 32.0,
+                "bulletMass": 800.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PGPA002_380mm_HE_HE_L_4_6"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 8,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PXSB005_Bismarck_H2017": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2763,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 63.0,
+                "bulletDiametr": 0.38,
+                "bulletKrupp": 2450.0,
+                "bulletMass": 800.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PXPA060_380MM_AP_APC_L_4_4_B"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 95.0,
+                "bulletAirDrag": 0.2763,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.381,
+                "bulletKrupp": 32.0,
+                "bulletMass": 800.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PXPA059_380MM_HE_HE_L_4_6_B"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PXSB006_Paris": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.35,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 72.0,
+                "bulletDiametr": 0.431,
+                "bulletKrupp": 2550.0,
+                "bulletMass": 1321.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 840.0,
+                "name": "PXPA041_431MM_50_1939_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 72.0,
+                "bulletAirDrag": 0.35,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.431,
+                "bulletKrupp": 1.0,
+                "bulletMass": 1321.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 840.0,
+                "name": "PXPA032_431MM_50_1939_HE"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PXSB007_Alldestroyer": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2527.0,
+                "bulletMass": 1030.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 810.0,
+                "name": "PXPA037_406MM_AP_PZ_GR_L4_4"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 101.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 1.0,
+                "bulletMass": 1030.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 810.0,
+                "name": "PXPA035_406MM_HE_SPR_GR_L4_4_KZ"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 70.0,
+                "bulletDiametr": 0.42,
+                "bulletKrupp": 2415.0,
+                "bulletMass": 1220.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 800.0,
+                "name": "PXPA027_420MM_AP_APC_L_4_6"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 105.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.42,
+                "bulletKrupp": 1.0,
+                "bulletMass": 1220.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 800.0,
+                "name": "PXPA026_420MM_HE_HE_L_4_6"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Battleship",
+        "ammo_num": 2
+    },
+    "PXSB008_North_Carolina_H2018": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.352,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 1225.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 701.0,
+                "name": "PXPA051_Shell_406mm_AP_AP_Mk_8"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.346,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0,
+                "bulletMass": 862.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 820.0,
+                "name": "PXPA052_Shell_406mm_HE_HC_Mk_13E"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PXSB009_Yamato_H2019": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.292,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 77.0,
+                "bulletDiametr": 0.46,
+                "bulletKrupp": 2574.0,
+                "bulletMass": 1460.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 780.0,
+                "name": "PXPA091_YAMATO_H2019_AP"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 10,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PXSB010_France_H2019": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.35,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 72.0,
+                "bulletDiametr": 0.431,
+                "bulletKrupp": 2550.0,
+                "bulletMass": 1321.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 840.0,
+                "name": "PXPA089_REPUBLIQ_H2019_AP"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 9,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PXSB011_Montana_H2019": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.352,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2520.0,
+                "bulletMass": 1225.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 762.0,
+                "name": "PXPA087_MONTANA_H2019_AP"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 10,
+        "Type": "Battleship",
+        "ammo_num": 1
+    }
+}

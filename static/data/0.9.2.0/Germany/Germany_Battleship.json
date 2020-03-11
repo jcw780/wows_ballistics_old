@@ -1,0 +1,770 @@
+{
+    "PGSB002_Tirpiz_1942": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2763,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 63.0,
+                "bulletDiametr": 0.38,
+                "bulletKrupp": 2450.0,
+                "bulletMass": 800.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PGPA001_380mm_AP_APC_L_4_4"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 95.0,
+                "bulletAirDrag": 0.2763,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.381,
+                "bulletKrupp": 32.0,
+                "bulletMass": 800.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PGPA002_380mm_HE_HE_L_4_6"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 8,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PGSB103_Nassau": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.5337,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 47.0,
+                "bulletDiametr": 0.283,
+                "bulletKrupp": 2789.0,
+                "bulletMass": 302.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 855.0,
+                "name": "PGPA056_283MM_AP_PZ_GR_L3_2"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 71.0,
+                "bulletAirDrag": 0.5337,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.283,
+                "bulletKrupp": 1.0,
+                "bulletMass": 302.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 855.0,
+                "name": "PGPA057_283MM_HE_SPR_GR_L3_6"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 3,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PGSB104_Kaiser": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3093,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2289.0,
+                "bulletMass": 415.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 850.0,
+                "name": "PGPA045_305MM_AP_PZ_GR_L4_9"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 76.0,
+                "bulletAirDrag": 0.3093,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 405.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 855.0,
+                "name": "PGPA046_305MM_HE_SPR_GR_L4_8_KZ"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.4195,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2311.0,
+                "bulletMass": 405.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 855.0,
+                "name": "PGPA032_305MM_AP_PZ_GR_L3_4"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 76.0,
+                "bulletAirDrag": 0.414,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 406.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 850.0,
+                "name": "PGPA033_305MM_HE_SPR_GR_L3_8_BDZ"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 4,
+        "Type": "Battleship",
+        "ammo_num": 2
+    },
+    "PGSB105_Koenig": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.4195,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2311.0,
+                "bulletMass": 405.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 855.0,
+                "name": "PGPA032_305MM_AP_PZ_GR_L3_4"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 76.0,
+                "bulletAirDrag": 0.414,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 406.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 850.0,
+                "name": "PGPA033_305MM_HE_SPR_GR_L3_8_BDZ"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3093,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2289.0,
+                "bulletMass": 415.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 850.0,
+                "name": "PGPA045_305MM_AP_PZ_GR_L4_9"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 76.0,
+                "bulletAirDrag": 0.3093,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 415.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 850.0,
+                "name": "PGPA058_305MM_HE_SPR_GR_L5"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 5,
+        "Type": "Battleship",
+        "ammo_num": 2
+    },
+    "PGSB106_Bayern": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.4092,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 63.0,
+                "bulletDiametr": 0.38,
+                "bulletKrupp": 2454.0,
+                "bulletMass": 750.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 800.0,
+                "name": "PGPA036_380MM_AP_PZ_GR_L3_5"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 95.0,
+                "bulletAirDrag": 0.413,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.38,
+                "bulletKrupp": 1.0,
+                "bulletMass": 750.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 800.0,
+                "name": "PGPA037_380MM_HE_SPR_GR_L4_1_BDZ"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 6,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PGSB107_Gneisenau": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2763,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 63.0,
+                "bulletDiametr": 0.38,
+                "bulletKrupp": 2450.0,
+                "bulletMass": 800.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PGPA048_380MM_AP_APC_L_4_4_B"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 95.0,
+                "bulletAirDrag": 0.2763,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.381,
+                "bulletKrupp": 32.0,
+                "bulletMass": 800.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PGPA049_380MM_HE_HE_L_4_6_B"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 7,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PGSB108_Bismarck": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2763,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 63.0,
+                "bulletDiametr": 0.38,
+                "bulletKrupp": 2450.0,
+                "bulletMass": 800.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PGPA048_380MM_AP_APC_L_4_4_B"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 95.0,
+                "bulletAirDrag": 0.2763,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.381,
+                "bulletKrupp": 32.0,
+                "bulletMass": 800.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PGPA049_380MM_HE_HE_L_4_6_B"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 8,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PGSB109_Friedrich_der_Grosse": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 70.0,
+                "bulletDiametr": 0.42,
+                "bulletKrupp": 2415.0,
+                "bulletMass": 1220.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 800.0,
+                "name": "PGPA052_420MM_AP_APC_L_4_6"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 105.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.42,
+                "bulletKrupp": 1.0,
+                "bulletMass": 1220.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 800.0,
+                "name": "PGPA053_420MM_HE_HE_L_4_6"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2527.0,
+                "bulletMass": 1030.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 810.0,
+                "name": "PGPA038_406MM_AP_PZ_GR_L4_4"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 102.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 1.0,
+                "bulletMass": 1030.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 810.0,
+                "name": "PGPA039_406MM_HE_SPR_GR_L4_4_KZ"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 9,
+        "Type": "Battleship",
+        "ammo_num": 2
+    },
+    "PGSB110_Grossdeutschland": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 70.0,
+                "bulletDiametr": 0.42,
+                "bulletKrupp": 2415.0,
+                "bulletMass": 1220.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 800.0,
+                "name": "PGPA052_420MM_AP_APC_L_4_6"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 105.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.42,
+                "bulletKrupp": 1.0,
+                "bulletMass": 1220.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 800.0,
+                "name": "PGPA053_420MM_HE_HE_L_4_6"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2527.0,
+                "bulletMass": 1030.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 810.0,
+                "name": "PGPA038_406MM_AP_PZ_GR_L4_4"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 102.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 1.0,
+                "bulletMass": 1030.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 810.0,
+                "name": "PGPA039_406MM_HE_SPR_GR_L4_4_KZ"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 10,
+        "Type": "Battleship",
+        "ammo_num": 2
+    },
+    "PGSB503_Koenig_Albert": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.4195,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2311.0,
+                "bulletMass": 405.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 855.0,
+                "name": "PGPA061_305MM_AP_KA"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 76.0,
+                "bulletAirDrag": 0.414,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 406.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 850.0,
+                "name": "PGPA062_305MM_HE_KA"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 3,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PGSB506_Prinz_Eithel_Friedrich": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.4075,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 59.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 2460.0,
+                "bulletMass": 600.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 815.0,
+                "name": "PGPA082_350MM_AP_PEFRIEDRICH"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 88.0,
+                "bulletAirDrag": 0.4075,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.35,
+                "bulletKrupp": 385.0,
+                "bulletMass": 600.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 815.0,
+                "name": "PGPA081_350MM_HE_PEFRIEDRICH"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 6,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PGSB507_Scharnhorst": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2827,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 47.0,
+                "bulletDiametr": 0.283,
+                "bulletKrupp": 2312.0,
+                "bulletMass": 330.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 890.0,
+                "name": "PGPA054_283MM_AP_SCHARNHORST"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 71.0,
+                "bulletAirDrag": 0.2827,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.283,
+                "bulletKrupp": 1.0,
+                "bulletMass": 315.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 890.0,
+                "name": "PGPA055_283MM_HE_SCHARNHORST"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 7,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PGSB508_Odin": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2798,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2450.0,
+                "bulletMass": 415.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 865.0,
+                "name": "PGPA090_305MM_AP_L3_8_ODIN"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 76.0,
+                "bulletAirDrag": 0.2798,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 415.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 865.0,
+                "name": "PGPA091_305MM_HE_L4_9_ODIN"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 8,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PGSB597_Black_Scharnhorst": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2827,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 47.0,
+                "bulletDiametr": 0.283,
+                "bulletKrupp": 2312.0,
+                "bulletMass": 330.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 890.0,
+                "name": "PGPA054_283MM_AP_SCHARNHORST"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 71.0,
+                "bulletAirDrag": 0.2827,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.283,
+                "bulletKrupp": 1.0,
+                "bulletMass": 315.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 890.0,
+                "name": "PGPA055_283MM_HE_SCHARNHORST"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 7,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PGSB598_Black_Tirpitz": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2763,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 63.0,
+                "bulletDiametr": 0.38,
+                "bulletKrupp": 2450.0,
+                "bulletMass": 800.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PGPA001_380mm_AP_APC_L_4_4"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 95.0,
+                "bulletAirDrag": 0.2763,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.381,
+                "bulletKrupp": 32.0,
+                "bulletMass": 800.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PGPA002_380mm_HE_HE_L_4_6"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 8,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PGSB910_Grossdeutschland": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 70.0,
+                "bulletDiametr": 0.42,
+                "bulletKrupp": 2415.0,
+                "bulletMass": 1220.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 800.0,
+                "name": "PGPA052_420MM_AP_APC_L_4_6"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 105.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.42,
+                "bulletKrupp": 1.0,
+                "bulletMass": 1220.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 800.0,
+                "name": "PGPA053_420MM_HE_HE_L_4_6"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2527.0,
+                "bulletMass": 1030.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 810.0,
+                "name": "PGPA038_406MM_AP_PZ_GR_L4_4"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 102.0,
+                "bulletAirDrag": 0.2994,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 1.0,
+                "bulletMass": 1030.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 810.0,
+                "name": "PGPA039_406MM_HE_SPR_GR_L4_4_KZ"
+            }
+        },
+        "Nation": "Germany",
+        "Tier": 10,
+        "Type": "Battleship",
+        "ammo_num": 2
+    }
+}

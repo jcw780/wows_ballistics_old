@@ -1,0 +1,794 @@
+{
+    "PASD002_Sampson_1917": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.33,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 17.0,
+                "bulletDiametr": 0.102,
+                "bulletKrupp": 1451.0,
+                "bulletMass": 14.97,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 884.0,
+                "name": "PAPA033_Shell_102mm_AP_SC_Mk_16"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 17.0,
+                "bulletAirDrag": 0.33,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.102,
+                "bulletKrupp": 3.0,
+                "bulletMass": 14.97,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 884.0,
+                "name": "PAPA034_Shell_102mm_HE_HC_Mk_15"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 2,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD005_Farragut_1944": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA004_Shell_127mm_AP_SC_Mk_38"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA044_Main_127mm_HE_C_Mk_32"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 6,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD006_Mahan_1936": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA004_Shell_127mm_AP_SC_Mk_38"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA044_Main_127mm_HE_C_Mk_32"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 7,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD008_Benson_1945": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA004_Shell_127mm_AP_SC_Mk_38"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA044_Main_127mm_HE_C_Mk_32"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 8,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD013_Gearing_1945": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA004_Shell_127mm_AP_SC_Mk_38"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA044_Main_127mm_HE_C_Mk_32"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD014_Leader_1919": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA004_Shell_127mm_AP_SC_Mk_38"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA044_Main_127mm_HE_C_Mk_32"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.36,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1400.0,
+                "bulletMass": 22.7,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 960.0,
+                "name": "PAPA043_Shell_127_AP_C_Mk_15"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.3,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 475.0,
+                "bulletMass": 22.7,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 960.0,
+                "name": "PAPA042_Shell_127_HE_HC_Mk_39"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 5,
+        "Type": "Destroyer",
+        "ammo_num": 2
+    },
+    "PASD019_Clemson_1920": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.33,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 17.0,
+                "bulletDiametr": 0.102,
+                "bulletKrupp": 1451.0,
+                "bulletMass": 14.97,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 884.0,
+                "name": "PAPA033_Shell_102mm_AP_SC_Mk_16"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 17.0,
+                "bulletAirDrag": 0.33,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.102,
+                "bulletKrupp": 3.0,
+                "bulletMass": 14.97,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 884.0,
+                "name": "PAPA034_Shell_102mm_HE_HC_Mk_15"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 4,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD021_Fletcher_1943": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA004_Shell_127mm_AP_SC_Mk_38"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA044_Main_127mm_HE_C_Mk_32"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 9,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD027_Wickes_1918": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.33,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 17.0,
+                "bulletDiametr": 0.102,
+                "bulletKrupp": 1451.0,
+                "bulletMass": 14.97,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 884.0,
+                "name": "PAPA033_Shell_102mm_AP_SC_Mk_16"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 17.0,
+                "bulletAirDrag": 0.33,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.102,
+                "bulletKrupp": 3.0,
+                "bulletMass": 14.97,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 884.0,
+                "name": "PAPA034_Shell_102mm_HE_HC_Mk_15"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 3,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD029_Sims_1941": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA004_Shell_127mm_AP_SC_Mk_38"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA044_Main_127mm_HE_C_Mk_32"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 7,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD502_Smith": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.47,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 13.0,
+                "bulletDiametr": 0.076,
+                "bulletKrupp": 2480.0,
+                "bulletMass": 5.9,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 823.0,
+                "name": "PAPA023_Shell_76mm_AP_AP_Mk_29"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 13.0,
+                "bulletAirDrag": 0.47,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.076,
+                "bulletKrupp": 3.0,
+                "bulletMass": 5.9,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 823.0,
+                "name": "PAPA041_Shell_76mm_HE_C"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 2,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD505_Hill": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA110_127MM_AP_HILL"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA111_127MM_HE_HILL"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 5,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD506_Monaghan": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA086_127MM_AP_MONAGHAN"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA085_127MM_HE_MONAGHAN"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 6,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD508_Kidd": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA078_127MM_AP_KIDD"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA079_127MM_HE_KIDD"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 8,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD509_Benham": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA109_127MM_AP_BENHAM"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA108_127MM_HE_BENHAM"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 9,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD510_Somers": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA113_127mm_AP_SOMERS"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA112_127mm_HE_SOMERS"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD597_Black_Sims": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA004_Shell_127mm_AP_SC_Mk_38"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA044_Main_127mm_HE_C_Mk_32"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 7,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD709_Black": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA070_127MM_AP_BLACK"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA071_127MM_HE_BLACK"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 9,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD810_TST_GEARING": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA100_127_AP_TST_GEARING"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA101_127_HE_TST_GEARING"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PASD913_Gearing_1945": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA004_Shell_127mm_AP_SC_Mk_38"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA044_Main_127mm_HE_C_Mk_32"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    }
+}

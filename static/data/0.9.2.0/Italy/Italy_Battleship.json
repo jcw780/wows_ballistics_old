@@ -1,0 +1,116 @@
+{
+    "PISB505_Giulio_Cesare": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.4098,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 53.0,
+                "bulletDiametr": 0.32,
+                "bulletKrupp": 2600.0,
+                "bulletMass": 525.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 830.0,
+                "name": "PIPA005_320MM_AP_Model1936"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 55.0,
+                "bulletAirDrag": 0.3786,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.32,
+                "bulletKrupp": 32.0,
+                "bulletMass": 485.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 830.0,
+                "name": "PIPA006_320MM_HE_Model1936"
+            }
+        },
+        "Nation": "Italy",
+        "Tier": 5,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PISB508_Roma": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2954,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 64.0,
+                "bulletDiametr": 0.381,
+                "bulletKrupp": 2434.0,
+                "bulletMass": 884.8,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 850.0,
+                "name": "PIPA012_381MM_50_AP_ROMA"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 64.0,
+                "bulletAirDrag": 0.275,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 45.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.381,
+                "bulletKrupp": 1.0,
+                "bulletMass": 824.3,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 880.0,
+                "name": "PIPA013_381MM_50_HE_ROMA"
+            }
+        },
+        "Nation": "Italy",
+        "Tier": 8,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PISB805_TST_CESARE": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.4098,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 53.0,
+                "bulletDiametr": 0.32,
+                "bulletKrupp": 2600.0,
+                "bulletMass": 525.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 830.0,
+                "name": "PIPA018_320MM_AP_GCESARE"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 55.0,
+                "bulletAirDrag": 0.3786,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.32,
+                "bulletKrupp": 32.0,
+                "bulletMass": 485.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 830.0,
+                "name": "PIPA019_320MM_HE_GCESARE"
+            }
+        },
+        "Nation": "Italy",
+        "Tier": 6,
+        "Type": "Battleship",
+        "ammo_num": 1
+    }
+}
