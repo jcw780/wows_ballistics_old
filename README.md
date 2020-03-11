@@ -21,6 +21,10 @@ https://jcw780.github.io/wows_ballistics/
 - Directly download graphs without browser extension
 - Raw data
 ### Updates
+#### 3/11/2020 [0fc3594](https://github.com/jcw780/wows_ballistics/commit/0fc35949232badc70527ce7f496adc35dd5e8328)
+- Added version 0.9.2.0
+[8302d3d](https://github.com/jcw780/wows_ballistics/commit/8302d3da49f037ce18428c6d616a6a575bb18ac4)
+- Fixed Issues Link
 #### 3/9/2020 [f6399ca](https://github.com/jcw780/wows_ballistics/commit/f6399ca4cf2d605ad5e167da2cae0f6d6a1003f9)
 - Improved collapsibles 
 - Improved color scheme
