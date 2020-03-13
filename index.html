@@ -1357,7 +1357,7 @@
 
 			function completed(){
 				var graphId = this.chart.ctx.canvas.id;
-				console.log($('#' + graphId)[0]);
+				//console.log($('#' + graphId)[0]);
 				//var url = this.toBase64Image();
 				var url = $('#' + graphId)[0].toDataURL("image/png");
 				var target = $('#' + graphId.slice(0, -1) + 'Link' + graphId.slice(-1))[0];
