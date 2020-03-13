@@ -140,6 +140,13 @@
 				margin-bottom:5px;
 			}
 
+			.download-align{
+				margin-left: 45%;
+				width: 10%;
+				margin-right: 45%;
+				margin-bottom: 10px;
+			}
+
 		</style>
 		<center><h1>World of Warships Ballistics Calculator</h1></center>
 		<button id="descriptionsToggle" class="btn btn-info btn-lg btn-block" 
@@ -540,7 +547,8 @@
 			<div class='collapse' id="pC0">
 				<div class='col-sm-12'>
 					<canvas id="penChart0" width="1200" height="300"></canvas>
-				</div>	
+				</div>
+				<a id='penChartLink0' class='btn btn-success download-align'>Download Graph</a>	
 			</div>
 			
 			<button class="btn btn-info btn-lg btn-block" 
@@ -550,7 +558,8 @@
 			<div class='collapse' id="pC1">
 				<div class='col-sm-12'>
 					<canvas id="penChart1" width="1200" height="300"></canvas>
-				</div>	
+				</div>
+				<a id='penChartLink1' class='btn btn-success download-align'>Download Graph</a>
 			</div>
 			
 			<button class="btn btn-info btn-lg btn-block" 
@@ -561,6 +570,7 @@
 				<div class='col-sm-12'>
 					<canvas id="penChart2" width="1200" height="300"></canvas>
 				</div>	
+				<a id='penChartLink2' class='btn btn-success download-align'>Download Graph</a>
 			</div>
 		</div>
 		
@@ -577,6 +587,7 @@
 				<div class='col-sm-12'>
 					<canvas id="angleChart0" width="1200" height="300"></canvas>
 				</div>	
+				<a id='angleChartLink0' class='btn btn-success download-align'>Download Graph</a>
 			</div>
 
 			<button class="btn btn-info btn-lg btn-block" 
@@ -587,6 +598,7 @@
 				<div class='col-sm-12'>
 					<canvas id="angleChart1" width="1200" height="300"></canvas>
 				</div>	
+				<a id='angleChartLink1' class='btn btn-success download-align'>Download Graph</a>
 			</div>
 		</div>
 
@@ -604,6 +616,7 @@
 				<div class='col-sm-12'>
 					<canvas id="postPen0" width="1200" height="300"></canvas>
 				</div>
+				<a id='postPenLink0' class='btn btn-success download-align'>Download Graph</a>
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA1" id="AT1">
@@ -614,6 +627,7 @@
 				<div class='col-sm-12'>
 					<canvas id="postPen1" width="1200" height="300"></canvas>
 				</div>
+				<a id='postPenLink1' class='btn btn-success download-align'>Download Graph</a>
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA2" id="AT2">
@@ -624,6 +638,7 @@
 				<div class='col-sm-12'>
 					<canvas id="postPen2" width="1200" height="300"></canvas>
 				</div>
+				<a id='postPenLink2' class='btn btn-success download-align'>Download Graph</a>
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA3" id="AT3">
@@ -634,6 +649,7 @@
 				<div class='col-sm-12'>
 					<canvas id="postPen3" width="1200" height="300"></canvas>
 				</div>
+				<a id='postPenLink3' class='btn btn-success download-align'>Download Graph</a>
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA4" id="AT4">
@@ -644,6 +660,7 @@
 				<div class='col-sm-12'>
 					<canvas id="postPen4" width="1200" height="300"></canvas>
 				</div>
+				<a id='postPenLink4' class='btn btn-success download-align'>Download Graph</a>
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA5" id="AT5">
@@ -654,6 +671,7 @@
 				<div class='col-sm-12'>
 					<canvas id="postPen5" width="1200" height="300"></canvas>
 				</div>
+				<a id='postPenLink5' class='btn btn-success download-align'>Download Graph</a>
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA6" id="AT6">
@@ -664,6 +682,7 @@
 				<div class='col-sm-12'>
 					<canvas id="postPen6" width="1200" height="300"></canvas>
 				</div>
+				<a id='postPenLink6' class='btn btn-success download-align'>Download Graph</a>
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA7" id="AT7">
@@ -674,6 +693,7 @@
 				<div class='col-sm-12'>
 					<canvas id="postPen7" width="1200" height="300"></canvas>
 				</div>
+				<a id='postPenLink7' class='btn btn-success download-align'>Download Graph</a>
             </div>
 		</div>
     
@@ -725,7 +745,7 @@
 			$('#apply' + i)[0].addEventListener(touchEvent, applyButton);
 		}
 
-		function firstRun(){
+		async function firstRun(){
 			data = {
 				'mv'         : [ 841, 841 ],
 				'caliber'    : [.152, .152],
@@ -764,7 +784,7 @@
 		};
 		//Buttons
 
-		function showCollapsibles(){
+		async function showCollapsibles(){
 			const targets = [
 				'parametersToggle',
 				'impactChartToggle',
@@ -827,7 +847,7 @@
 		var initialized = false;
         var compiled = false;
         var dataURL = "static/data/"
-		function generateVersion(id){
+		async function generateVersion(id){
 			$.ajax({
 				url: dataURL + "versions.json",
 				type: "GET",
@@ -1323,6 +1343,32 @@
 				instances[k].delete();
 			}
 
+			//For downloading graphs
+			
+			//https://github.com/chartjs/Chart.js/issues/2830
+			//Chart.js defaults to transparent background - makes downloaded images look bad
+			Chart.plugins.register({
+				beforeDraw: function(chartInstance) {
+					var ctx = chartInstance.chart.ctx;
+					ctx.fillStyle = "white";
+					ctx.fillRect(0, 0, chartInstance.chart.width, chartInstance.chart.height);
+				}
+			});
+
+			function completed(){
+				var graphId = this.chart.ctx.canvas.id;
+				console.log($('#' + graphId)[0]);
+				//var url = this.toBase64Image();
+				var url = $('#' + graphId)[0].toDataURL("image/png");
+				var target = $('#' + graphId.slice(0, -1) + 'Link' + graphId.slice(-1))[0];
+				target.href = url;
+				target.download = this.chart.config.options.title.text + '.png';
+			}
+
+			animationCommon = {
+				onComplete: completed
+			}
+
 			//Set Impact
 			if(impactCharts[0]){
 				impactCharts[0].destroy();
@@ -1405,10 +1451,11 @@
 							},
 						}
 						]
-					}
+					},
+					animation: animationCommon,
 				}
 			});
-
+			
 			if(impactCharts[1]){
 				impactCharts[1].destroy();
 			}
@@ -1456,7 +1503,8 @@
 							},
 						}
 						]
-					}
+					},
+					animation: animationCommon,
 				}
 			});
 
@@ -1516,7 +1564,8 @@
 							},
 						}
 						]
-					}
+					},
+					animation: animationCommon,
 				}
 			});
 
@@ -1582,7 +1631,8 @@
 								min: 0
 							}
 						}]
-					}
+					},
+					animation: animationCommon,
 				}
 			});
 			
@@ -1645,7 +1695,8 @@
 								min: 0
 							}
 						}]
-					}
+					},
+					animation: animationCommon,
 				}
 			});
 			
@@ -1701,7 +1752,8 @@
 									labelString: "Shell Detonation Distance (m)",
 								},
 							}]
-						}
+						},
+						animation: animationCommon,
 					}
 				});
 			}
