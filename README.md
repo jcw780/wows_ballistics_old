@@ -18,9 +18,10 @@ https://jcw780.github.io/wows_ballistics/
 - Currently still recently released so expect changes 
 - Calculations may be refined if contradicting data is provided
 ### Possible Future Features
-- Directly download graphs without browser extension
 - Raw data
 ### Updates
+#### 3/13/2020 [108216c](https://github.com/jcw780/wows_ballistics/commit/108216c78bc83239472077c694c723992b046579)
+- Directly download graphs without browser extension
 #### 3/11/2020 [0fc3594](https://github.com/jcw780/wows_ballistics/commit/0fc35949232badc70527ce7f496adc35dd5e8328), [8302d3d](https://github.com/jcw780/wows_ballistics/commit/8302d3da49f037ce18428c6d616a6a575bb18ac4)
 - Added version 0.9.2.0
 - Fixed Issues Link
