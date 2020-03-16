@@ -779,6 +779,7 @@
 			onRuntimeInitialized: function() {
 				console.log("Wasm Compile Successful");
                 compiled = true;
+				shellInstance = new Module.shell(2);
 				firstRun();
 			}
 		};
@@ -1081,7 +1082,8 @@
 			var data = Object.assign({}, shellData, targetData);
 			makeGraphs(data);
 		}
-		
+		var shellInstance;
+
 		function makeGraphs(data){
 			var v_mv = data.mv;
 			var v_caliber = data.caliber;
@@ -1102,9 +1104,9 @@
 
 			var shipName = data.shipName;
 
-			var instances = []
+			//var instances = []
 			for(var k=0; k<2; k++){
-				instances[k] = new Module.shell(
+				/*instances[k] = new Module.shell(
 					v_caliber[k], 
 					v_mv[k], 
 					v_cD[k], 
@@ -1115,14 +1117,32 @@
 					v_threshold[k], 
 					v_ra0[k], 
 					v_ra1[k]
-				);
+				);*/
+				shellInstance.setValues(
+					v_caliber[k], 
+					v_mv[k], 
+					v_cD[k], 
+					v_mass[k], 
+					v_krupp[k], 
+					v_normal[k], 
+					v_fusetime[k], 
+					v_threshold[k], 
+					v_ra0[k], 
+					v_ra1[k],
+					k
+				)
+
 			}
 
-			for(var k=0; k<2; k++){
+			/*for(var k=0; k<2; k++){
 				instances[k].calcImpact();
 				instances[k].calcAngles(v_armor, v_inclination);
 				instances[k].calcPostPen(v_armor, v_inclination, v_angles, true, false);
-			}
+			}*/
+			shellInstance.calcImpact()
+			shellInstance.calcAngles(v_armor, v_inclination);
+			shellInstance.calcPostPen(v_armor, v_inclination, v_angles, true, false);
+			shellInstance.printImpact(0);
 			chartData = {
                 width            : [],
 				effectivePen     : [[], []],
@@ -1759,7 +1779,7 @@
 			}
 		}
     </script>
-	<script src="shellWasm1.js"></script>
+	<script src="shellWasm.js"></script>
 	<p>If you find a bug or want a new feature, please <a href="https://github.com/jcw780/wows_ballistics/issues">open an issue</a> at GitHub. Your suggestions will be considered at later development.</p>
 	</body>
 </html>
