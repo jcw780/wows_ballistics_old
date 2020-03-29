@@ -22,6 +22,11 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://unpkg.com/wasm-feature-detect/dist/umd/index.js"></script>
+		<script src="https://unpkg.com/bowser@2.7.0/es5.js"></script>
+		<script src="shellWasm.js"></script>
+		<script src="shellWasmV.js"></script>
+
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -780,14 +785,39 @@
 			const results = await Promise.all(tasks);
 		})
 
-		var Module = {
+		/*var Module = {
 			onRuntimeInitialized: function() {
 				console.log("Wasm Compile Successful");
                 compiled = true;
 				shellInstance = new Module.shell(2);
 				firstRun();
 			}
-		};
+		};*/
+		var Module;
+
+		wasmFeatureDetect.simd().then(simdSupported => {
+			if (simdSupported) {
+				console.log('vectorized');
+				ShellWasmV().then(function (M) {
+					//console.log('Ready', M);
+					Module = M;
+					shellInstance = new Module.shell(2);
+					firstRun();
+				})
+			} else {
+				console.log('unvectorized');
+				var result = bowser.getParser(window.navigator.userAgent);
+				if(result.parsedResult.browser.name){
+					alert('Enable WebAssembly SIMD support in chrome://flags for increased performance.');
+				}
+				ShellWasm().then(function (M) {
+					//console.log('Ready', M);
+					Module = M;
+					shellInstance = new Module.shell(2);
+					firstRun();
+				})
+			}
+		});
 		//Buttons
 
 		async function showCollapsibles(){
@@ -1158,7 +1188,7 @@
 
 			shellInstance.calcImpact()
 			shellInstance.calcAngles(v_armor, v_inclination);
-			shellInstance.calcPostPen(v_armor, v_inclination, v_angles, true, false);
+			shellInstance.calcPostPen(v_armor, v_inclination, v_angles, true, true);
 
 			//instance.printPostPen();
 			//Values same for both shells
@@ -1214,14 +1244,10 @@
 
 			targetedArmor = 'Armor Thickness: ' + v_armor + 'mm';
 			targetInclination = 'Vertical Inclination: ' + v_inclination + '°'; 
-
-			const charts = [
-				makeImpactCharts,
-				makeAngleCharts,
-				makePostPenCharts,
-			]
-			const tasks = charts.map(func => func());
-			await Promise.all(tasks);
+			
+			makeImpactCharts();
+			makeAngleCharts();
+			makePostPenCharts();
 		}
 
 		async function generatePoint(ship, dType, index, angle){
@@ -1696,7 +1722,6 @@
 			}
 		}
     </script>
-	<script src="shellWasm.js"></script>
 	<p>If you find a bug or want a new feature, please <a href="https://github.com/jcw780/wows_ballistics/issues">open an issue</a> at GitHub. Your suggestions will be considered at later development.</p>
 	</body>
 </html>
