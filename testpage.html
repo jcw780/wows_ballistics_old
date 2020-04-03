@@ -510,6 +510,8 @@
 			<table>
 				<tr>
 					<th><h3>Graphs</h3></th>
+					<th><h3>Calculation Method</h3></th>
+					<th><h3>Calculation Parameters</h3></th>
 				</tr>
 				<tr>
 					<td>
@@ -533,6 +535,41 @@
 								</div>
 							</div>
 						</form>
+					</td>
+					<td>
+						<div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+							<label class="btn btn-secondary active">
+							  <input type="radio" onchange="setComputation('AB5')" autocomplete="off" checked> Adams Bashforth 5
+							</label>
+							<label class="btn btn-secondary">
+							  <input type="radio" onchange="setComputation('RK2')" autocomplete="off"> Runge Kutta 2
+							</label>
+							<label class="btn btn-secondary">
+							  <input type="radio" onchange="setComputation('RK4')" autocomplete="off"> Runge Kutta 4
+							</label>
+							<label class="btn btn-secondary">
+								<input type="radio" onchange="setComputation('FE')" autocomplete="off"> Forward Euler
+							  </label>
+						  </div>
+					</td>
+					<td>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-6 col-form-label">Time Step (s)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min=".000001" max="10" id="timeStep" value="0.02" >
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-6 col-form-label">Minimum Launch Angle (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="-90" max="90" id="timeStep" value="25" >
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-6 col-form-label">Minimum Launch Angle (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="-90" max="90" id="timeStep" value="0" >
+							</div>
 					</td>
 				</tr>
 			</table>
@@ -703,6 +740,13 @@
 		</div>
     
     <script>
+		var computationMethod = 'AB5';
+
+		function setComputation(value){
+			console.log(value);
+			computationMethod = value;
+		}
+
 		//Buttons 
 		//Add Hide buttons
         addTitles();
@@ -807,7 +851,7 @@
 			} else {
 				console.log('unvectorized');
 				var result = bowser.getParser(window.navigator.userAgent);
-				if(result.parsedResult.browser.name){
+				if(result.parsedResult.browser.name == 'Chrome'){
 					alert('Enable WebAssembly SIMD support in chrome://flags for increased performance.');
 				}
 				ShellWasm().then(function (M) {
@@ -1185,8 +1229,23 @@
 				)
 
 			}
+			
+			switch(computationMethod){
+				case 'AB5':
+					shellInstance.calcImpactAdamsBashforth5();
+				break;
+				case 'RK2':
+					shellInstance.calcImpactRungeKutta2();
+				break;
+				case 'RK4':
+					shellInstance.calcImpactRungeKutta4();
+				break;
+				case 'FE':
+					shellInstance.calcImpactForwardEuler();
+				break;
 
-			shellInstance.calcImpact()
+			}
+			
 			shellInstance.calcAngles(v_armor, v_inclination);
 			shellInstance.calcPostPen(v_armor, v_inclination, v_angles, true, true);
 
