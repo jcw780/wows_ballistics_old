@@ -377,10 +377,10 @@
 						<div class="form-row margin-bottom">
 							<label id="HESAPL" class="col-sm-4 col-form-label">HE/SAP penetration (mm)</label>
 							<div class="col-sm-4">
-								<input class="form-control" type="number" step="any" min="0" id="HESAP0"   value="">
+								<input class="form-control" type="number" step="any" min="0" id="HESAP0"   value="0">
 							</div>
 							<div class="col-sm-4">
-								<input class="form-control" type="number" step="any" min="0" id="HESAP1"   value="">
+								<input class="form-control" type="number" step="any" min="0" id="HESAP1"   value="0">
 							</div>
 						</div>
 						<div class="form-row margin-bottom">
@@ -538,16 +538,16 @@
 					</td>
 					<td>
 						<div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-							<label class="btn btn-secondary active">
-							  <input type="radio" onchange="setComputation('AB5')" autocomplete="off" checked> Adams Bashforth 5
+							<label class="btn btn-success active">
+							  <input type="radio" onchange="setComputation('AB5')" autocomplete="off" checked> Adams-Bashforth 5
 							</label>
-							<label class="btn btn-secondary">
-							  <input type="radio" onchange="setComputation('RK2')" autocomplete="off"> Runge Kutta 2
+							<label class="btn btn-success">
+							  <input type="radio" onchange="setComputation('RK2')" autocomplete="off"> Runge-Kutta 2
 							</label>
-							<label class="btn btn-secondary">
-							  <input type="radio" onchange="setComputation('RK4')" autocomplete="off"> Runge Kutta 4
+							<label class="btn btn-success">
+							  <input type="radio" onchange="setComputation('RK4')" autocomplete="off"> Runge-Kutta 4
 							</label>
-							<label class="btn btn-secondary">
+							<label class="btn btn-success">
 								<input type="radio" onchange="setComputation('FE')" autocomplete="off"> Forward Euler
 							  </label>
 						  </div>
@@ -556,19 +556,19 @@
 						<div class="form-row margin-bottom">
 							<label class="col-sm-6 col-form-label">Time Step (s)</label>
 							<div class="col-sm-4">
-								<input class="form-control" type="number" step="any" min=".000001" max="10" id="timeStep" value="0.02" >
+								<input class="form-control" type="number" step="any" min=".00001" max="10" id="timeStep" value="0.02" >
 							</div>
 						</div>
 						<div class="form-row margin-bottom">
 							<label class="col-sm-6 col-form-label">Minimum Launch Angle (°)</label>
 							<div class="col-sm-4">
-								<input class="form-control" type="number" step="any" min="-90" max="90" id="timeStep" value="25" >
+								<input class="form-control" type="number" step="any" min="-90" max="90" id="minLaunch" value="25" >
 							</div>
 						</div>
 						<div class="form-row margin-bottom">
-							<label class="col-sm-6 col-form-label">Minimum Launch Angle (°)</label>
+							<label class="col-sm-6 col-form-label">Maximum Launch Angle (°)</label>
 							<div class="col-sm-4">
-								<input class="form-control" type="number" step="any" min="-90" max="90" id="timeStep" value="0" >
+								<input class="form-control" type="number" step="any" min="-90" max="90" id="maxLaunch" value="0" >
 							</div>
 					</td>
 				</tr>
@@ -741,10 +741,125 @@
     
     <script>
 		var computationMethod = 'AB5';
+		var inputData = {
+			'mv'         : [ 841, 841 ],
+			'caliber'    : [.152, .152],
+			'krupp'      : [2609, 2609],
+			'mass'       : [50.8, 50.8],
+			'normal'     : [ 8.5,  8.5],
+			'cD'         : [.3297, .3297],
+			'threshold'  : [25, 25],
+			'fusetime'   : [.025, .025],
+			'ra0_'       : [45, 45],
+			'ra1_'       : [60, 60],
+			'HESAP'      : [0, 0],
+			'shellType'  : ['AP', 'AP'],
+			'angle'      : [0, 5, 10, 25, 20, 25, 30, 35],
+			'armor'      : 70,
+			'inclination': 0,
+			'width'      : 18,
+			'shipName'   : ['PUSC506_Perth_1942 0', 'PUSC506_Perth_1942 0']
+		}
+
+		var graphSettings = {
+			'minDist': '0',
+			'maxDist': '',
+			'tickDist': '2500',
+		};
 
 		function setComputation(value){
-			console.log(value);
+			//console.log(value);
 			computationMethod = value;
+		}
+		
+		
+
+		function addFormChange(){
+			function settingsChange(){
+				inputData[this.id] = parseFloat(this.value);
+			}
+			const targetSettingsTargets = [
+				'armor', 'inclination', 'width',
+			];
+			targetSettingsTargets.map(function(value){
+				document.getElementById(value).addEventListener('change', settingsChange);
+			});
+			function angleChange(){
+				var id = this.id.slice(-1);
+				inputData['angle'][id] = parseFloat(this.value);
+
+			}
+			const angleTargets = [
+				'angle0', 'angle1', 'angle2', 'angle3', 
+				'angle4', 'angle5', 'angle6', 'angle7', 
+			];
+			angleTargets.map(function(value){
+				document.getElementById(value).addEventListener('change', angleChange);
+			});
+
+			function shipChange(){
+				var id = this.id.slice(-1);
+				var dataType = this.id.slice(0, -1);
+				inputData[dataType][id] = parseFloat(this.value);	
+			}
+
+			const shipTargets = [
+				'caliber0', 'caliber1',
+				'mv0', 'mv1',
+				'cD0', 'cD1',
+				'mass0', 'mass1',
+				'krupp0', 'krupp1',
+				'fusetime0', 'fusetime1',
+				'threshold0', 'threshold1',
+				'normal0', 'normal1',
+				'ra0_0', 'ra0_1',
+				'ra1_0', 'ra1_1',
+				'HESAP0', 'HESAP1',
+			];
+
+			shipTargets.map(function(value){
+				document.getElementById(value).addEventListener('change', shipChange);
+			});
+
+			function shipNameChange(){
+				var id = this.id.slice(-1);
+				inputData['shipName'][id] = this.value;
+			}
+
+			const shipName = [
+				'shipName0', 'shipName1',
+			];
+
+			shipName.map(function(value){
+				document.getElementById(value).addEventListener('change', shipNameChange);
+			});
+
+			function changeTimeStep(){
+				shellInstance.setDtMin(parseFloat(this.value));
+			}
+			function changeMinLaunch(){
+				shellInstance.setMin(parseFloat(this.value));
+			}
+			function changeMaxLaunch(){
+				shellInstance.setMax(parseFloat(this.value));
+			}
+			function changeGraphSettings(){
+				console.log(this.id, this.value);
+				graphSettings[this.id] = this.value;
+			}
+
+			const settings = [
+				['minDist'  , changeGraphSettings],
+				['maxDist'  , changeGraphSettings],
+				['tickDist' , changeGraphSettings],
+				['timeStep' , changeTimeStep ], 
+				['minLaunch', changeMinLaunch], 
+				['maxLaunch', changeMaxLaunch],
+			]
+
+			settings.map(function(value){
+				document.getElementById(value[0]).addEventListener('change', value[1]);
+			});
 		}
 
 		//Buttons 
@@ -785,6 +900,7 @@
 		}
 
 		addChevrons();
+		addFormChange();
 
 		function applyButton(){
 			onSubmitPredefined((this.id).slice(-1)); 
@@ -829,14 +945,6 @@
 			const results = await Promise.all(tasks);
 		})
 
-		/*var Module = {
-			onRuntimeInitialized: function() {
-				console.log("Wasm Compile Successful");
-                compiled = true;
-				shellInstance = new Module.shell(2);
-				firstRun();
-			}
-		};*/
 		var Module;
 
 		wasmFeatureDetect.simd().then(simdSupported => {
@@ -851,9 +959,9 @@
 			} else {
 				console.log('unvectorized');
 				var result = bowser.getParser(window.navigator.userAgent);
-				if(result.parsedResult.browser.name == 'Chrome'){
+				/*if(result.parsedResult.browser.name == 'Chrome'){
 					alert('Enable WebAssembly SIMD support in chrome://flags for increased performance.');
-				}
+				}*/
 				ShellWasm().then(function (M) {
 					//console.log('Ready', M);
 					Module = M;
@@ -1075,27 +1183,41 @@
 				onSubmitPredefined(id);
 			}
 		}
+		
+		const changeEvent = new Event('change');
+
+		function changeFormValue(elementID, newValue){
+			var event = new Event('change');
+			let element = $(elementID)[0];
+			if(newValue != element.value){
+				element.value = newValue;
+				element.dispatchEvent(changeEvent);
+			}
+		}
 
 		function onSubmitPredefined(id){
 			var targetShell = typeData[id][shipValue[id]][shellValue[id]][shellType[id]];
-			$("#shipName"  + id)[0].value = shipValue[id] + " " + shellValue[id].slice(-1);
-			$("#mv"        + id)[0].value = targetShell["bulletSpeed"];
-			$("#caliber"   + id)[0].value = targetShell["bulletDiametr"];
-			$("#krupp"     + id)[0].value = targetShell["bulletKrupp"];
-			$("#mass"      + id)[0].value = targetShell["bulletMass"];
-			$("#cD"        + id)[0].value = targetShell["bulletAirDrag"];
-			$("#threshold" + id)[0].value = targetShell["bulletDetonatorThreshold"];
-			$("#fusetime"  + id)[0].value = targetShell["bulletDetonator"];
-			$("#ra0_"      + id)[0].value = targetShell["bulletRicochetAt"];
-			$("#ra1_"      + id)[0].value = targetShell["bulletAlwaysRicochetAt"];
-			$("#normal"    + id)[0].value = targetShell['bulletCapNormalizeMaxAngle']
+			changeFormValue("#shipName"  + id, shipValue[id] + " " + shellValue[id].slice(-1));
+			changeFormValue("#mv"        + id, targetShell["bulletSpeed"]);
+			changeFormValue("#caliber"   + id, targetShell["bulletDiametr"]);
+			changeFormValue("#krupp"     + id, targetShell["bulletKrupp"]);
+			changeFormValue("#mass"      + id, targetShell["bulletMass"]);
+			changeFormValue("#cD"        + id, targetShell["bulletAirDrag"]);
+			changeFormValue("#threshold" + id, targetShell["bulletDetonatorThreshold"]);
+			changeFormValue("#fusetime"  + id, targetShell["bulletDetonator"]);
+			changeFormValue("#ra0_"      + id, targetShell["bulletRicochetAt"]);
+			changeFormValue("#ra1_"      + id, targetShell["bulletAlwaysRicochetAt"]);
+			changeFormValue("#normal"    + id, targetShell['bulletCapNormalizeMaxAngle']);
+			var HESAPv = 0;
 			if(shellType[id] == 'AP'){
-				$("#HESAP" + id)[0].value = 0;
+				HESAPv = 0;
 			}else if(shellType[id] == 'HE'){
-				$("#HESAP" + id)[0].value = targetShell["alphaPiercingHE"];
+				HESAPv = targetShell["alphaPiercingHE"];
 			}else if(shellType[id] == 'CS'){
-				$("#HESAP" + id)[0].value = targetShell["alphaPiercingCS"];
-			}   
+				HESAPv = targetShell["alphaPiercingCS"];
+			}
+
+			changeFormValue("#HESAP"     + id, HESAPv);
 		}
 
 		//Graphs
@@ -1116,47 +1238,7 @@
 		var postCharts = []
 
 		function collectMake(){
-			var shellData = {
-				'mv': [],
-				'caliber': [],
-				'krupp': [],
-				'mass': [],
-				'normal': [],
-				'cD': [],
-				'threshold': [],
-				'fusetime': [],
-				'ra0_': [],
-				'ra1_': [],
-				'HESAP': [],
-			}
-
-			var targetData = {
-				'shellType': [],
-				'angle': [],
-				'armor': 0,
-				'inclination': 0,
-				'width': 0,
-				'shipName':[]
-			}
-
-			targetData.shellType = shellType;
-			
-			for(let i=0; i<2; i++){
-				for(let key in shellData){
-
-					shellData[key][i] = getFloatValues(key + i);
-				}
-				targetData.shipName[i] = $("#shipName" + i)[0].value;
-			}
-
-			targetData['armor']       = getFloatValues("armor");
-			targetData['inclination'] = getFloatValues("inclination");
-			targetData['width']       = getFloatValues("width");
-			for(let i=0; i<numAngles; i++){
-				targetData['angle'][i] = parseFloat($('#' + "angle" + i)[0].value);
-			}
-			var data = Object.assign({}, shellData, targetData);
-			makeGraphs(data);
+			makeGraphs(inputData);
 		}
 
 		var shellInstance;
@@ -1291,14 +1373,14 @@
 				}
 			}];
 			
-			if($('#minDist')[0].value){
-				xAxesDistance[0].ticks['min'] = getIntValues('minDist');
+			if(!(graphSettings['minDist'] === '')){
+				xAxesDistance[0].ticks['min'] = parseFloat(graphSettings['minDist']);
 			}
-			if($('#maxDist')[0].value){
-				xAxesDistance[0].ticks['max'] = getIntValues('maxDist');
+			if(!(graphSettings['maxDist'] === '')){
+				xAxesDistance[0].ticks['max'] = parseFloat(graphSettings['maxDist']);
 			}
-			if($('#tickDist')[0].value){
-				xAxesDistance[0].ticks['stepSize'] = getIntValues('tickDist');
+			if(!(graphSettings['tickDist'] === '')){
+				xAxesDistance[0].ticks['stepSize'] = parseFloat(graphSettings['tickDist']);
 			}
 
 			targetedArmor = 'Armor Thickness: ' + v_armor + 'mm';
