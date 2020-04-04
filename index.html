@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +23,8 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<!-- Latest compiled and minified JavaScript -->
+		<script src="shellWasm.js"></script>
+
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -780,14 +783,20 @@
 			const results = await Promise.all(tasks);
 		})
 
-		var Module = {
+		/*var Module = {
 			onRuntimeInitialized: function() {
 				console.log("Wasm Compile Successful");
                 compiled = true;
 				shellInstance = new Module.shell(2);
 				firstRun();
 			}
-		};
+		};*/
+		ShellWasm().then(function (M) {
+			//console.log('Ready', M);
+			Module = M;
+			shellInstance = new Module.shell(2);
+			firstRun();
+		})
 		//Buttons
 
 		async function showCollapsibles(){
@@ -1696,7 +1705,6 @@
 			}
 		}
     </script>
-	<script src="shellWasm.js"></script>
 	<p>If you find a bug or want a new feature, please <a href="https://github.com/jcw780/wows_ballistics/issues">open an issue</a> at GitHub. Your suggestions will be considered at later development.</p>
 	</body>
 </html>
