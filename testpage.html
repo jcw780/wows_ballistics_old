@@ -538,25 +538,25 @@
 					</td>
 					<td>
 						<div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+							<label class="btn btn-success">
+							  	<input type="radio" onchange="setComputation('AB5')" autocomplete="off"> Adams-Bashforth 5
+							</label>
+							<label class="btn btn-success">
+							  	<input type="radio" onchange="setComputation('RK2')" autocomplete="off"> Runge-Kutta 2
+							</label>
+							<label class="btn btn-success">
+							  	<input type="radio" onchange="setComputation('RK4')" autocomplete="off"> Runge-Kutta 4
+							</label>
 							<label class="btn btn-success active">
-							  <input type="radio" onchange="setComputation('AB5')" autocomplete="off" checked> Adams-Bashforth 5
+								<input type="radio" onchange="setComputation('FE')"  autocomplete="off" checked> Forward Euler
 							</label>
-							<label class="btn btn-success">
-							  <input type="radio" onchange="setComputation('RK2')" autocomplete="off"> Runge-Kutta 2
-							</label>
-							<label class="btn btn-success">
-							  <input type="radio" onchange="setComputation('RK4')" autocomplete="off"> Runge-Kutta 4
-							</label>
-							<label class="btn btn-success">
-								<input type="radio" onchange="setComputation('FE')" autocomplete="off"> Forward Euler
-							  </label>
 						  </div>
 					</td>
 					<td>
 						<div class="form-row margin-bottom">
 							<label class="col-sm-6 col-form-label">Time Step (s)</label>
 							<div class="col-sm-4">
-								<input class="form-control" type="number" step="any" min=".00001" max="10" id="timeStep" value="0.02" >
+								<input class="form-control" type="number" step="any" min=".00001" max="10" id="timeStep" value="0.01" >
 							</div>
 						</div>
 						<div class="form-row margin-bottom">
@@ -740,7 +740,7 @@
 		</div>
     
     <script>
-		var computationMethod = 'AB5';
+		var computationMethod = 'FE';
 		var inputData = {
 			'mv'         : [ 841, 841 ],
 			'caliber'    : [.152, .152],
@@ -911,6 +911,9 @@
 		}
 
 		async function firstRun(){
+			shellInstance.setDtMin(.01);
+			shellInstance.setMin(0.0);
+			shellInstance.setMax(25.0);
 			data = {
 				'mv'         : [ 841, 841 ],
 				'caliber'    : [.152, .152],
@@ -1373,6 +1376,7 @@
 				}
 			}];
 			
+
 			if(!(graphSettings['minDist'] === '')){
 				xAxesDistance[0].ticks['min'] = parseFloat(graphSettings['minDist']);
 			}
