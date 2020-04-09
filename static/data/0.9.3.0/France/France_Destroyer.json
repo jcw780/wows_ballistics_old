@@ -1,0 +1,572 @@
+{
+    "PFSD102_Enseigne_Gabolde": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3143,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 17.0,
+                "bulletDiametr": 0.1,
+                "bulletKrupp": 2100.0,
+                "bulletMass": 13.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 780.0,
+                "name": "PFPA060_100MM_45_1892_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 17.0,
+                "bulletAirDrag": 0.3143,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.1,
+                "bulletKrupp": 1.0,
+                "bulletMass": 13.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 780.0,
+                "name": "PFPA061_100MM_45_1892_HE_MG"
+            }
+        },
+        "Nation": "France",
+        "Tier": 2,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD103_Fusilier": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3143,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 17.0,
+                "bulletDiametr": 0.1,
+                "bulletKrupp": 2100.0,
+                "bulletMass": 13.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 780.0,
+                "name": "PFPA060_100MM_45_1892_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 17.0,
+                "bulletAirDrag": 0.3143,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.1,
+                "bulletKrupp": 1.0,
+                "bulletMass": 13.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 780.0,
+                "name": "PFPA061_100MM_45_1892_HE_MG"
+            }
+        },
+        "Nation": "France",
+        "Tier": 3,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD104_Bourrasque": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3225,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 22.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1803.0,
+                "bulletMass": 32.05,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 725.0,
+                "name": "PFPA028_130MM_40_1919_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 22.0,
+                "bulletAirDrag": 0.3225,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1.0,
+                "bulletMass": 34.85,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 725.0,
+                "name": "PFPA029_130MM_40_1919_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 4,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD105_Jaguar": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3225,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 22.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1803.0,
+                "bulletMass": 32.05,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 725.0,
+                "name": "PFPA028_130MM_40_1919_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 22.0,
+                "bulletAirDrag": 0.3225,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1.0,
+                "bulletMass": 34.85,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 725.0,
+                "name": "PFPA029_130MM_40_1919_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 5,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD106_Guepard": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2998,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 23.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 2124.0,
+                "bulletMass": 40.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 700.0,
+                "name": "PFPA004_138MM_40_1923_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 23.0,
+                "bulletAirDrag": 0.2998,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 360.0,
+                "bulletMass": 40.2,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 700.0,
+                "name": "PFPA068_138MM_40_1923_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 6,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD107_Vauquelin": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2998,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 23.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 2124.0,
+                "bulletMass": 40.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 700.0,
+                "name": "PFPA004_138MM_40_1923_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 23.0,
+                "bulletAirDrag": 0.2998,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 360.0,
+                "bulletMass": 40.2,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 700.0,
+                "name": "PFPA068_138MM_40_1923_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 7,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD108_Le_Fantasque": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.234,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 23.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 2400.0,
+                "bulletMass": 39.9,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 840.0,
+                "name": "PFPA055_AP_TST_TERRIBLE"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 23.0,
+                "bulletAirDrag": 0.234,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 360.0,
+                "bulletMass": 40.2,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 840.0,
+                "name": "PFPA054_HE_TST_TERRIBLE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 8,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD109_Mogador": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.234,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 23.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 2400.0,
+                "bulletMass": 39.9,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 840.0,
+                "name": "PFPA059_139MM_55_1924_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 23.0,
+                "bulletAirDrag": 0.234,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 360.0,
+                "bulletMass": 40.2,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 840.0,
+                "name": "PFPA058_139MM_55_1928_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 9,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD110_Kleber": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.234,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 23.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 2400.0,
+                "bulletMass": 39.9,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 840.0,
+                "name": "PFPA059_139MM_55_1924_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 23.0,
+                "bulletAirDrag": 0.234,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 360.0,
+                "bulletMass": 40.2,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 840.0,
+                "name": "PFPA058_139MM_55_1928_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD210_Marceau": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.42,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2200.0,
+                "bulletMass": 32.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 808.0,
+                "name": "PFPA070_127MM_AP_MARCEAU"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.42,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 475.0,
+                "bulletMass": 31.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 808.0,
+                "name": "PFPA069_127MM_HE_MARCEAU"
+            }
+        },
+        "Nation": "France",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD504_Siroco": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3225,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 22.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1803.0,
+                "bulletMass": 32.05,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 725.0,
+                "name": "PFPA057_130MM_AP_SIROCCO"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 22.0,
+                "bulletAirDrag": 0.3225,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 360.0,
+                "bulletMass": 34.85,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 725.0,
+                "name": "PFPA056_130MM_HE_SIROCCO"
+            }
+        },
+        "Nation": "France",
+        "Tier": 5,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD506_Aigle": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2998,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 23.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 2124.0,
+                "bulletMass": 40.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 700.0,
+                "name": "PFPA030_138MM_AP_AIGLE"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 23.0,
+                "bulletAirDrag": 0.2998,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 1.0,
+                "bulletMass": 40.2,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 700.0,
+                "name": "PFPA031_138MM_HE_AIGLE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 6,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD508_Le_Terrible": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.234,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 23.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 2400.0,
+                "bulletMass": 39.9,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 840.0,
+                "name": "PFPA051_139MM_AP_TERRIBLE_1924"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 23.0,
+                "bulletAirDrag": 0.234,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 360.0,
+                "bulletMass": 40.2,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 840.0,
+                "name": "PFPA050_139MM_HE_TERRIBLE_1928"
+            }
+        },
+        "Nation": "France",
+        "Tier": 8,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD605_Cyclone_event": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3225,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 22.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1803.0,
+                "bulletMass": 32.05,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 725.0,
+                "name": "PFPA028_130MM_40_1919_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 22.0,
+                "bulletAirDrag": 0.3225,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1.0,
+                "bulletMass": 34.85,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 725.0,
+                "name": "PFPA029_130MM_40_1919_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 5,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PFSD808_TST_TERRIBLE": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.234,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 23.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 2400.0,
+                "bulletMass": 39.9,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 840.0,
+                "name": "PFPA055_AP_TST_TERRIBLE"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 23.0,
+                "bulletAirDrag": 0.234,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 360.0,
+                "bulletMass": 40.2,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 840.0,
+                "name": "PFPA054_HE_TST_TERRIBLE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 8,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    }
+}

@@ -1,0 +1,615 @@
+{
+    "PFSC101_Bougainville": {
+        "Artillery0": {
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 23.0,
+                "bulletAirDrag": 0.2998,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 360.0,
+                "bulletMass": 40.2,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 700.0,
+                "name": "PFPA005_138MM_40_1923_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 1,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PFSC102_Jurien": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.42,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 28.0,
+                "bulletDiametr": 0.165,
+                "bulletKrupp": 1883.0,
+                "bulletMass": 54.2,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 770.0,
+                "name": "PFPA006_165MM_45_1893_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 28.0,
+                "bulletAirDrag": 0.42,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.165,
+                "bulletKrupp": 1.0,
+                "bulletMass": 45.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 770.0,
+                "name": "PFPA025_165MM_45_1893_45KG_HE"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.42,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 28.0,
+                "bulletDiametr": 0.165,
+                "bulletKrupp": 1883.0,
+                "bulletMass": 54.2,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 770.0,
+                "name": "PFPA006_165MM_45_1893_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 28.0,
+                "bulletAirDrag": 0.42,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.165,
+                "bulletKrupp": 1.0,
+                "bulletMass": 52.6,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 770.0,
+                "name": "PFPA007_165MM_45_1893_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 2,
+        "Type": "Cruiser",
+        "ammo_num": 2
+    },
+    "PFSC103_Friant": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3916,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 23.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 2041.0,
+                "bulletMass": 39.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 790.0,
+                "name": "PFPA008_139MM_55_1923_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 23.0,
+                "bulletAirDrag": 0.3762,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.139,
+                "bulletKrupp": 360.0,
+                "bulletMass": 31.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 840.0,
+                "name": "PFPA009_139MM_55_1923_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 3,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PFSC104_Duguay_Trouin": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3401,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 26.0,
+                "bulletDiametr": 0.155,
+                "bulletKrupp": 2214.0,
+                "bulletMass": 56.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 870.0,
+                "name": "PFPA011_155MM_50_1920_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 26.0,
+                "bulletAirDrag": 0.3401,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.155,
+                "bulletKrupp": 1.0,
+                "bulletMass": 59.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 870.0,
+                "name": "PFPA012_155MM_50_1920_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 4,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PFSC105_Emile_Bertin": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3226,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2184.0,
+                "bulletMass": 56.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 870.0,
+                "name": "PFPA013_152MM_55_1930_AP_1931"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.3401,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 870.0,
+                "name": "PFPA014_152MM_55_1930_HE_1936"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3226,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2225.0,
+                "bulletMass": 57.1,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 870.0,
+                "name": "PFPA015_152MM_55_1930_AP_1937"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.3401,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 870.0,
+                "name": "PFPA014_152MM_55_1930_HE_1936"
+            }
+        },
+        "Nation": "France",
+        "Tier": 5,
+        "Type": "Cruiser",
+        "ammo_num": 2
+    },
+    "PFSC106_La_Galissonniere": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3226,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2225.0,
+                "bulletMass": 57.1,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 870.0,
+                "name": "PFPA015_152MM_55_1930_AP_1937"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.3401,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 870.0,
+                "name": "PFPA014_152MM_55_1930_HE_1936"
+            }
+        },
+        "Nation": "France",
+        "Tier": 6,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PFSC107_Algerie": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.33,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2434.0,
+                "bulletMass": 134.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PFPA019_203MM_50_1924_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 34.0,
+                "bulletAirDrag": 0.3296,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 1.0,
+                "bulletMass": 123.82,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 850.0,
+                "name": "PFPA020_203MM_50_1924_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 7,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PFSC108_Charles_Martel": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.33,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2434.0,
+                "bulletMass": 134.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 845.0,
+                "name": "PFPA021_203MM_55_1931_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 34.0,
+                "bulletAirDrag": 0.3296,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 1.0,
+                "bulletMass": 123.82,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 876.0,
+                "name": "PFPA022_203MM_55_1931_HE"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.33,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2434.0,
+                "bulletMass": 134.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PFPA019_203MM_50_1924_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 34.0,
+                "bulletAirDrag": 0.3296,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 1.0,
+                "bulletMass": 123.82,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 850.0,
+                "name": "PFPA020_203MM_50_1924_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 8,
+        "Type": "Cruiser",
+        "ammo_num": 2
+    },
+    "PFSC109_Saint_Louis": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.33,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2434.0,
+                "bulletMass": 134.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 845.0,
+                "name": "PFPA021_203MM_55_1931_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 34.0,
+                "bulletAirDrag": 0.3296,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 1.0,
+                "bulletMass": 123.82,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 876.0,
+                "name": "PFPA022_203MM_55_1931_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 9,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PFSC110_Henri_IV": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2764,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 40.0,
+                "bulletDiametr": 0.24,
+                "bulletKrupp": 2882.0,
+                "bulletMass": 220.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 845.0,
+                "name": "PFPA023_240MM_55_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 40.0,
+                "bulletAirDrag": 0.3376,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.24,
+                "bulletKrupp": 1.0,
+                "bulletMass": 220.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 845.0,
+                "name": "PFPA024_240MM_55_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PFSC506_De_Grasse": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3226,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2225.0,
+                "bulletMass": 57.1,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 870.0,
+                "name": "PFPA027_152MM_GRASSE_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.3401,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 870.0,
+                "name": "PFPA026_152MM_GRASSE_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 6,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PFSC508_Bayard": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3226,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2225.0,
+                "bulletMass": 57.1,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 870.0,
+                "name": "PFPA067_152MM_BAYARD"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.3401,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 870.0,
+                "name": "PFPA066_152MM_BAYARD"
+            }
+        },
+        "Nation": "France",
+        "Tier": 8,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PFSC510_Colbert": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3079,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2200.0,
+                "bulletMass": 32.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 808.0,
+                "name": "PFPA065_127MM_54_1948_AP_MG"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.3079,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1.0,
+                "bulletMass": 31.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 808.0,
+                "name": "PFPA064_127MM_54_1948_HE_MG"
+            }
+        },
+        "Nation": "France",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PFSC810_Henri_IV": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2764,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 40.0,
+                "bulletDiametr": 0.24,
+                "bulletKrupp": 2882.0,
+                "bulletMass": 220.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 845.0,
+                "name": "PFPA023_240MM_55_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 40.0,
+                "bulletAirDrag": 0.3376,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.24,
+                "bulletKrupp": 1.0,
+                "bulletMass": 220.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 845.0,
+                "name": "PFPA024_240MM_55_HE"
+            }
+        },
+        "Nation": "France",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    }
+}

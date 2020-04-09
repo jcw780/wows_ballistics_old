@@ -1,0 +1,902 @@
+{
+    "PASB001_Michigan_1916": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.435,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2408.0,
+                "bulletMass": 394.6,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 823.0,
+                "name": "PAPA025_Shell_305mm_AP_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.435,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 450.0,
+                "bulletMass": 394.6,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 823.0,
+                "name": "PAPA026_Shell_305mm_HE_C"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 3,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB004_Arkansas_1912": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.337,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2226.0,
+                "bulletMass": 394.6,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 884.0,
+                "name": "PAPA055_305mm_AP_AP_870lbs"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.337,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 394.6,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 884.0,
+                "name": "PAPA057_305mm_HE_Common_870lbs"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.337,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2523.0,
+                "bulletMass": 394.6,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 884.0,
+                "name": "PAPA054_Shell_305mm_AP_AP_Mk15"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.328,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 38.0,
+                "bulletMass": 335.7,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 914.0,
+                "name": "PAPA056_305mm_HE_HC_Mk8"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 4,
+        "Type": "Battleship",
+        "ammo_num": 2
+    },
+    "PASB006_New_York_1934": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.332,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 59.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 2604.0,
+                "bulletMass": 680.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA035_Shell_356mm_AP_AP_Mk_16"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 59.0,
+                "bulletAirDrag": 0.325,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 395.0,
+                "bulletMass": 578.34,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 834.0,
+                "name": "PAPA036_Shell_356mm_HE_HC_Mk_22"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.31,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 59.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 1603.0,
+                "bulletMass": 635.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA039_Shell_356mm_AP_AP_1400lbs"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 59.0,
+                "bulletAirDrag": 0.31,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 385.0,
+                "bulletMass": 635.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA040_Shell_356mm_HE_C_1400lbs"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 5,
+        "Type": "Battleship",
+        "ammo_num": 2
+    },
+    "PASB008_Colorado_1945": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.336,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2636.0,
+                "bulletMass": 1016.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 768.0,
+                "name": "PAPA059_Shell_406mm_AP_AP_Mk_5"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.346,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0,
+                "bulletMass": 861.8,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 803.0,
+                "name": "PAPA010_Shell_406mm_HE_HC_Mk_13"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 7,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB012_North_Carolina_1945": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.352,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 1225.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 701.0,
+                "name": "PAPA011_Shell_406mm_AP_AP_Mk_8"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.346,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0,
+                "bulletMass": 862.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 820.0,
+                "name": "PAPA084_Shell_406mm_HE_HC_Mk_13E"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 8,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB013_Arkansas_1912": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.337,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2226.0,
+                "bulletMass": 394.6,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 884.0,
+                "name": "PAPA055_305mm_AP_AP_870lbs"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.337,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 394.6,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 884.0,
+                "name": "PAPA057_305mm_HE_Common_870lbs"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 4,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB017_Montana_1945": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.352,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2520.0,
+                "bulletMass": 1225.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 762.0,
+                "name": "PAPA014_Shell_406mm_AP_AP_Mk_8"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.346,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0,
+                "bulletMass": 862.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 820.0,
+                "name": "PAPA015_Shell_406mm_HE_HC_Mk_13"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 10,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB018_Iowa_1944": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.352,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2520.0,
+                "bulletMass": 1225.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 762.0,
+                "name": "PAPA014_Shell_406mm_AP_AP_Mk_8"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.346,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0,
+                "bulletMass": 862.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 820.0,
+                "name": "PAPA015_Shell_406mm_HE_HC_Mk_13"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 9,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB034_New_Mexico_1941": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.331,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 59.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 2545.0,
+                "bulletMass": 680.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 823.0,
+                "name": "PAPA006_Shell_356mm_AP_AP_Mk_16"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 59.0,
+                "bulletAirDrag": 0.325,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 395.0,
+                "bulletMass": 578.34,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 861.0,
+                "name": "PAPA007_Shell_356mm_HE_HC_Mk_22"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 6,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB506_Arizona_1941": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.332,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 59.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 2604.0,
+                "bulletMass": 680.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA062_SHELL_356MM_AP_MK_16_ARIZONA"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 59.0,
+                "bulletAirDrag": 0.325,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 1.0,
+                "bulletMass": 578.34,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 834.0,
+                "name": "PAPA063_SHELL_356MM_HE_MK_22_ARIZONA"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 6,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB507_West_Virginia": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.336,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2636.0,
+                "bulletMass": 1016.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 768.0,
+                "name": "PAPA097_406MM_AP_WVIRGINIA"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.346,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0,
+                "bulletMass": 861.8,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 803.0,
+                "name": "PAPA096_406MM_HE_WVIRGINIA"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 6,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB508_Alabama": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.352,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 1225.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 701.0,
+                "name": "PAPA076_406MM_AP_ALABAMA"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.3452,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 1.0,
+                "bulletMass": 862.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 803.0,
+                "name": "PAPA077_406MM_HE_ALABAMA"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 8,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB509_Missouri": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.352,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2520.0,
+                "bulletMass": 1225.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 762.0,
+                "name": "PAPA072_406MM_AP_MISSOURI"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.346,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0,
+                "bulletMass": 862.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 820.0,
+                "name": "PAPA073_406MM_HE_MISSOURI"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 9,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB510_Ohio": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.341,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 76.0,
+                "bulletDiametr": 0.457,
+                "bulletKrupp": 2390.0,
+                "bulletMass": 1746.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 732.0,
+                "name": "PAPA115_457MM_AP_OHIO_SH"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 77.0,
+                "bulletAirDrag": 0.341,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.46,
+                "bulletKrupp": 240.0,
+                "bulletMass": 1230.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 800.0,
+                "name": "PAPA114_457MM_HE_OHIO_SH"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 10,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB518_Massachusetts": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.352,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 1225.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 701.0,
+                "name": "PAPA080_406MM_AP_MASS"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.3452,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 1.0,
+                "bulletMass": 862.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 803.0,
+                "name": "PAPA081_406MM_HE_MASS"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 8,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB598_Black_Massachusetts": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.352,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 1225.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 701.0,
+                "name": "PAPA080_406MM_AP_MASS"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.3452,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 1.0,
+                "bulletMass": 862.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 803.0,
+                "name": "PAPA081_406MM_HE_MASS"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 8,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB705_Texas_1944": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.332,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 59.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 2604.0,
+                "bulletMass": 680.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PAPA066_SHELL_356MM_AP_MK_16_TEXAS"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 59.0,
+                "bulletAirDrag": 0.325,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 395.0,
+                "bulletMass": 578.34,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 834.0,
+                "name": "PAPA067_SHELL_356MM_HE_MK_22_TEXAS"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 5,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB707_California": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.331,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 59.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 2545.0,
+                "bulletMass": 680.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 823.0,
+                "name": "PAPA119_356MM_AP_MK16_CALIFORNIA"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 59.0,
+                "bulletAirDrag": 0.325,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.356,
+                "bulletKrupp": 395.0,
+                "bulletMass": 578.34,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 861.0,
+                "name": "PAPA118_356MM_HE_MK22_CALIFORNIA"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 7,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB708_Alabama": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.352,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 1225.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 701.0,
+                "name": "PAPA074_406MM_AP_ALABAMA"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.3452,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 1.0,
+                "bulletMass": 862.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 803.0,
+                "name": "PAPA075_406MM_HE_ALABAMA"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 8,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB729_Georgia": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.341,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 76.0,
+                "bulletDiametr": 0.457,
+                "bulletKrupp": 2390.0,
+                "bulletMass": 1746.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 732.0,
+                "name": "PAPA105_457MM_AP_GEORGIA_SH"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 77.0,
+                "bulletAirDrag": 0.341,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.46,
+                "bulletKrupp": 240.0,
+                "bulletMass": 1230.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 800.0,
+                "name": "PAPA104_457MM_HE_GEORGIA_SH"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 9,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB810_TST_MONTANA": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.352,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2520.0,
+                "bulletMass": 1225.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 762.0,
+                "name": "PAPA103_406_AP_TST_MONTANA"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.346,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0,
+                "bulletMass": 862.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 820.0,
+                "name": "PAPA102_406_HE_TST_MONTANA"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 10,
+        "Type": "Battleship",
+        "ammo_num": 1
+    },
+    "PASB917_Montana_1945": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.352,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 2520.0,
+                "bulletMass": 1225.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 762.0,
+                "name": "PAPA014_Shell_406mm_AP_AP_Mk_8"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.346,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.406,
+                "bulletKrupp": 250.0,
+                "bulletMass": 862.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 820.0,
+                "name": "PAPA015_Shell_406mm_HE_HC_Mk_13"
+            }
+        },
+        "Nation": "USA",
+        "Tier": 10,
+        "Type": "Battleship",
+        "ammo_num": 1
+    }
+}

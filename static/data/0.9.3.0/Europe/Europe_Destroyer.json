@@ -1,0 +1,566 @@
+{
+    "PWSD102_Tatra": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3915,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 17.0,
+                "bulletDiametr": 0.102,
+                "bulletKrupp": 1721.0,
+                "bulletMass": 13.75,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 880.0,
+                "name": "PWPA015_100MM_AP_50_K11"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 17.0,
+                "bulletAirDrag": 0.3915,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.1,
+                "bulletKrupp": 32.0,
+                "bulletMass": 13.75,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 880.0,
+                "name": "PWPA014_100MM_HE_50_K11"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 2,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PWSD103_Romulus": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 1721.0,
+                "bulletMass": 21.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 800.0,
+                "name": "PWPA009_120MM_AP_45_M24"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 32.0,
+                "bulletMass": 24.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 800.0,
+                "name": "PWPA008_120MM_HE_45_M24"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 17.0,
+                "bulletDiametr": 0.102,
+                "bulletKrupp": 1721.0,
+                "bulletMass": 13.8,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 840.0,
+                "name": "PWPA011_100MM_AP_47_OTO1931"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 17.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.1,
+                "bulletKrupp": 32.0,
+                "bulletMass": 13.8,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 840.0,
+                "name": "PWPA010_100MM_HE_47_OTO1931"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 3,
+        "Type": "Destroyer",
+        "ammo_num": 2
+    },
+    "PWSD104_Klas_Horn": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 1721.0,
+                "bulletMass": 21.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 800.0,
+                "name": "PWPA009_120MM_AP_45_M24"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 32.0,
+                "bulletMass": 24.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 800.0,
+                "name": "PWPA008_120MM_HE_45_M24"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 4,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PWSD105_Visby": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 1721.0,
+                "bulletMass": 24.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 900.0,
+                "name": "PWPA021_120_AP_50_M36"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 32.0,
+                "bulletMass": 24.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 900.0,
+                "name": "PWPA020_120_HE_50_M36"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 5,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PWSD106_Vasteras": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 1721.0,
+                "bulletMass": 24.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 900.0,
+                "name": "PWPA021_120_AP_50_M36"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 32.0,
+                "bulletMass": 24.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 900.0,
+                "name": "PWPA020_120_HE_50_M36"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 6,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PWSD107_Skane": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3344,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 2500.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 850.0,
+                "name": "PWPA013_120_50_AP_M42"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3344,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 480.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 850.0,
+                "name": "PWPA012_120_50_HE_M42"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 7,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PWSD108_Oland": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3344,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 2500.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 850.0,
+                "name": "PWPA013_120_50_AP_M42"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3344,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 480.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 850.0,
+                "name": "PWPA012_120_50_HE_M42"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 8,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PWSD109_Ostergotland": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3344,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 2500.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 850.0,
+                "name": "PWPA013_120_50_AP_M42"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3344,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 480.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 850.0,
+                "name": "PWPA012_120_50_HE_M42"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 9,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PWSD110_Halland": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3215,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 2400.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 825.0,
+                "name": "PWPA017_120_AP_50_M50"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3215,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 480.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 825.0,
+                "name": "PWPA016_120_HE_50_M50"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PWSD501_Blyskawica": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 1721.0,
+                "bulletMass": 24.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 900.0,
+                "name": "PWPA002_120_AP_BLYSKAWICA"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 32.0,
+                "bulletMass": 24.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 900.0,
+                "name": "PWPA001_120_HE_BLYSKAWICA"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 7,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PWSD508_Orkan": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.343,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 2300.0,
+                "bulletMass": 28.12,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 774.0,
+                "name": "PWPA023_120MM_AP_ORKAN"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.343,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 480.0,
+                "bulletMass": 28.12,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 774.0,
+                "name": "PWPA022_120MM_HE_ORKAN"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 8,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PWSD510_Friesland": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3215,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 2400.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 825.0,
+                "name": "PHPA002_120_AP_FRIESLAND"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3215,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 480.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 825.0,
+                "name": "PHPA001_120_HE_FRIESLAND"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 9,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PWSD610_Smaland": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3215,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 2400.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 825.0,
+                "name": "PWPA019_120MM_AP_SMALAND"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3215,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 480.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 825.0,
+                "name": "PWPA018_120MM_HE_SMALAND"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PWSD910_Lappland": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3215,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 2400.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 825.0,
+                "name": "PWPA017_120_AP_50_M50"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3215,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 480.0,
+                "bulletMass": 23.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 825.0,
+                "name": "PWPA016_120_HE_50_M50"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    }
+}

@@ -1,0 +1,1404 @@
+{
+    "PRSC001_Avrora_1917": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.51,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1445.0,
+                "bulletMass": 41.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.5,
+                "name": "PRPA001_Shell_152mm_AP_AP_91lbs"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.4468,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 166.0,
+                "bulletMass": 49.76,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 753.0,
+                "name": "PRPA002_Shell_152mm_HE_HE_109lbs"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 3,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC002_Diana_1905": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.51,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1445.0,
+                "bulletMass": 41.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.5,
+                "name": "PRPA001_Shell_152mm_AP_AP_91lbs"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.4468,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 166.0,
+                "bulletMass": 49.76,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 753.0,
+                "name": "PRPA002_Shell_152mm_HE_HE_109lbs"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 2,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC003_Murmansk_1944": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.315,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2692.0,
+                "bulletMass": 47.7,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 914.0,
+                "name": "PRPA006_Shell_152mm_AP_SC_Mk_27_Mod_2"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.315,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 350.0,
+                "bulletMass": 47.7,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 914.0,
+                "name": "PAPA030_Shell_152mm_HE_HC_Mark_34_Mod_1"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 5,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC010_Diana_1905_Asus": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.51,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1445.0,
+                "bulletMass": 41.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.5,
+                "name": "PRPA001_Shell_152mm_AP_AP_91lbs"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.4468,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 166.0,
+                "bulletMass": 49.76,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 753.0,
+                "name": "PRPA002_Shell_152mm_HE_HE_109lbs"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 2,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC101_Orlan": {
+        "Artillery0": {
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 22.0,
+                "bulletAirDrag": 0.2857,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 52.0,
+                "bulletMass": 33.4,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 870.0,
+                "name": "PRPA018_130MM_HE_OF_46_ORLAN"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 1,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC102_Novik": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.496,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 1410.0,
+                "bulletMass": 20.47,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 823.0,
+                "name": "PRPA041_120_AP_P_1905"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.487,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 1.0,
+                "bulletMass": 20.48,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 823.0,
+                "name": "PRPA027_120MM_HE_P_1907"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 2,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC103_Bogatyr": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.4143,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 22.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1450.0,
+                "bulletMass": 36.86,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 823.0,
+                "name": "PRPA040_130_AP_P_1911"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 22.0,
+                "bulletAirDrag": 0.4143,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1.0,
+                "bulletMass": 36.86,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 823.0,
+                "name": "PRPA030_130_HE_1911_MG"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.51,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1445.0,
+                "bulletMass": 41.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.5,
+                "name": "PRPA042_152_AP_C"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.4468,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 166.0,
+                "bulletMass": 49.76,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 753.0,
+                "name": "PRPA043_152_HE_C"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 3,
+        "Type": "Cruiser",
+        "ammo_num": 2
+    },
+    "PRSC104_Svetlana": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.291,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 22.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1652.0,
+                "bulletMass": 33.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 861.0,
+                "name": "PRPA048_130_AP_P_1917"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 22.0,
+                "bulletAirDrag": 0.291,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1.0,
+                "bulletMass": 33.4,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 861.0,
+                "name": "PRPA049_130_HE_P_1917"
+            }
+        },
+        "Artillery1": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.4143,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 22.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1450.0,
+                "bulletMass": 36.86,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 823.0,
+                "name": "PRPA040_130_AP_P_1911"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 22.0,
+                "bulletAirDrag": 0.4143,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1.0,
+                "bulletMass": 36.86,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 823.0,
+                "name": "PRPA030_130_HE_1911_MG"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 4,
+        "Type": "Cruiser",
+        "ammo_num": 2
+    },
+    "PRSC105_Kirov": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3096,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 30.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 2300.0,
+                "bulletMass": 97.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 800.0,
+                "name": "PRPA037_180_AP_B_32_S"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.3096,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 1.0,
+                "bulletMass": 97.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 800.0,
+                "name": "PRPA031_180_HE_OF_42_S"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 5,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC106_Pr_94_Budeny": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2216.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA035_152MM_B35"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 6.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA034_152MM_OFU35"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 6,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC107_Schors": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2216.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA035_152MM_B35"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 6.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA034_152MM_OFU35"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 7,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC108_Pr_68_Chapaev": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2216.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA035_152MM_B35"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 6.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA189_152MM_OFU35"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 8,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC109_Dmitry_Donskoy": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2778,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 30.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 2370.0,
+                "bulletMass": 97.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 920.0,
+                "name": "PRPA038_180_AP_B_32_F"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.2654,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 1.0,
+                "bulletMass": 97.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 920.0,
+                "name": "PRPA032_180_HE_OF_42_F"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 9,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC110_Pr_66_Moskva": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2549,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 37.0,
+                "bulletDiametr": 0.22,
+                "bulletKrupp": 2590.0,
+                "bulletMass": 176.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 985.0,
+                "name": "PRPA036_220_AP_B_23"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 37.0,
+                "bulletAirDrag": 0.2549,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.22,
+                "bulletKrupp": 1.0,
+                "bulletMass": 176.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 985.0,
+                "name": "PRPA033_220_HE_OF_23"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC208_Tallin": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2778,
+                "bulletAlwaysRicochetAt": 65.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.022,
+                "bulletDetonatorThreshold": 30.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 2370.0,
+                "bulletMass": 114.66,
+                "bulletRicochetAt": 50.0,
+                "bulletSpeed": 920.0,
+                "name": "PRPA124_180_AP_B_33_F"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.2654,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 560.0,
+                "bulletMass": 109.2,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 920.0,
+                "name": "PRPA125_180_HE_OF_43_F"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 8,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC209_Riga": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.27,
+                "bulletAlwaysRicochetAt": 65.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.022,
+                "bulletDetonatorThreshold": 37.0,
+                "bulletDiametr": 0.22,
+                "bulletKrupp": 2800.0,
+                "bulletMass": 182.0,
+                "bulletRicochetAt": 50.0,
+                "bulletSpeed": 965.0,
+                "name": "PRPA109_220MM_AP_B43"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 37.0,
+                "bulletAirDrag": 0.27,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.22,
+                "bulletKrupp": 560.0,
+                "bulletMass": 182.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 965.0,
+                "name": "PRPA108_220MM_HE_B43"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 9,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC210_Pr_84_Alexander_Nevsky": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.243,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 30.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 2400.0,
+                "bulletMass": 97.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 1000.0,
+                "name": "PRPA113_180MM_AP_CM_48"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.243,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 560.0,
+                "bulletMass": 97.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 1000.0,
+                "name": "PRPA112_180MM_HE_CM_48"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC215_Kotovsky": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2488,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2300.0,
+                "bulletMass": 51.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 880.0,
+                "name": "PRPA111_152MM_AP_MK2"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.2488,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1150.0,
+                "bulletMass": 51.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 880.0,
+                "name": "PRPA110_152MM_HE_MK2"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 5,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC310_Petropavlovsk": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2549,
+                "bulletAlwaysRicochetAt": 65.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.022,
+                "bulletDetonatorThreshold": 37.0,
+                "bulletDiametr": 0.22,
+                "bulletKrupp": 2950.0,
+                "bulletMass": 207.0,
+                "bulletRicochetAt": 50.0,
+                "bulletSpeed": 995.0,
+                "name": "PRPA123_220MM_AP_B44"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 37.0,
+                "bulletAirDrag": 0.2549,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.22,
+                "bulletKrupp": 560.0,
+                "bulletMass": 207.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 995.0,
+                "name": "PRPA122_220MM_HE_B44"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC503_Oleg": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.51,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1445.0,
+                "bulletMass": 41.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.5,
+                "name": "PRPA052_AP_OLEG"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.4468,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 166.0,
+                "bulletMass": 49.76,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 753.0,
+                "name": "PRPA053_HE_OLEG"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 3,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC505_KrasniKrym": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.291,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 22.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1652.0,
+                "bulletMass": 33.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 861.0,
+                "name": "PRPA045_130_AP_KK"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 22.0,
+                "bulletAirDrag": 0.291,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1.0,
+                "bulletMass": 33.4,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 861.0,
+                "name": "PRPA044_130_HE_KK"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 5,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC506_Molotov_1943": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2778,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 30.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 2370.0,
+                "bulletMass": 97.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 920.0,
+                "name": "PRPA047_180_AP_MOLOTOV"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.2654,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 1.0,
+                "bulletMass": 97.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 920.0,
+                "name": "PRPA046_180_HE_MOLOTOV"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 6,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC508_Kutuzov_1952": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2216.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA021_152MM_B35_KUTUZOV"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 6.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA024_152MM_OFU35_KUTUZOV"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 8,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC509_Kronshtadt": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2298,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2400.0,
+                "bulletMass": 471.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 900.0,
+                "name": "PRPA086_305MM_AP_KRON"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.2474,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 374.7,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 920.0,
+                "name": "PRPA087_305MM_HE_KRON"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 9,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC510_Stalingrad": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2831,
+                "bulletAlwaysRicochetAt": 65.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.022,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2700.0,
+                "bulletMass": 467.0,
+                "bulletRicochetAt": 55.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA082_305MM_AP_STALINGRAD"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.2417,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 374.7,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA088_305MM_HE_STALINGRAD"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC513_Varyag": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.51,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1445.0,
+                "bulletMass": 41.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.5,
+                "name": "PRPA084_152_AP_VARYAG"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.4468,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 166.0,
+                "bulletMass": 49.76,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 753.0,
+                "name": "PRPA083_152_HE_VARYAG"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 3,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC515_Mikoyan": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2778,
+                "bulletAlwaysRicochetAt": 65.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.022,
+                "bulletDetonatorThreshold": 30.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 2370.0,
+                "bulletMass": 109.2,
+                "bulletRicochetAt": 55.0,
+                "bulletSpeed": 920.0,
+                "name": "PRPA117_180_AP_B_32_S_MIKOYAN"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.2654,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 560.0,
+                "bulletMass": 109.2,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 920.0,
+                "name": "PRPA116_180_HE_OF_42_S_MIKOYAN"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 5,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC518_Lazo": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2216.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA089_152MM_AP_LAZO"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 6.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA090_152MM_HE_LAZO"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 7,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC520_Stalingrad": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2831,
+                "bulletAlwaysRicochetAt": 67.5,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.022,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2700.0,
+                "bulletMass": 467.0,
+                "bulletRicochetAt": 60.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA188_305MM_AP_STALINGRAD_2"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC525_Kirov": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3096,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 30.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 2300.0,
+                "bulletMass": 97.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 800.0,
+                "name": "PRPA037_180_AP_B_32_S"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.3096,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 1.0,
+                "bulletMass": 97.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 800.0,
+                "name": "PRPA031_180_HE_OF_42_S"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 5,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC528_Ochakov": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2216.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA115_152MM_B35_OCHAKOV"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1150.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA114_152MM_OFU35_OCHAKOV"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 8,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC538_Petr_Bagration": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2778,
+                "bulletAlwaysRicochetAt": 65.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.022,
+                "bulletDetonatorThreshold": 30.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 2370.0,
+                "bulletMass": 109.2,
+                "bulletRicochetAt": 55.0,
+                "bulletSpeed": 930.0,
+                "name": "PRPA119_180_AP_BAGRATION"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.2654,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.18,
+                "bulletKrupp": 560.0,
+                "bulletMass": 109.2,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 920.0,
+                "name": "PRPA118_180_HE_BAGRATION"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 8,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC606_Admiral_Makarov": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3307,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.15,
+                "bulletKrupp": 1862.0,
+                "bulletMass": 45.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 960.0,
+                "name": "PRPA067_150MM_AP_MAKAROV"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 38.0,
+                "bulletAirDrag": 0.3307,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.15,
+                "bulletKrupp": 32.0,
+                "bulletMass": 45.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 960.0,
+                "name": "PRPA068_150MM_HE_MAKAROV"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 6,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC610_Smolensk": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2941,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 22.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1900.0,
+                "bulletMass": 33.4,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA102_130MM_AP_SMOLENSK"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 22.0,
+                "bulletAirDrag": 0.2906,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1.0,
+                "bulletMass": 33.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA101_130MM_HE_SMOLENSK"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC910_Pr_66_Moskva": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2549,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 37.0,
+                "bulletDiametr": 0.22,
+                "bulletKrupp": 2590.0,
+                "bulletMass": 176.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 985.0,
+                "name": "PRPA036_220_AP_B_23"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 37.0,
+                "bulletAirDrag": 0.2549,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.22,
+                "bulletKrupp": 1.0,
+                "bulletMass": 176.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 985.0,
+                "name": "PRPA033_220_HE_OF_23"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PRSC999_Seal": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3696,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 23.0,
+                "bulletDiametr": 0.14,
+                "bulletKrupp": 1794.0,
+                "bulletMass": 38.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 1500.0,
+                "name": "PJPA999_Useless_AP_Special"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 23.0,
+                "bulletAirDrag": 0.34,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.14,
+                "bulletKrupp": 360.0,
+                "bulletMass": 38.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 1500.0,
+                "name": "PJPA998_Useless_HE_Special"
+            }
+        },
+        "Nation": "Russia",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "PZSB509_Izumo_Bajie": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 68.0,
+                "bulletDiametr": 0.41,
+                "bulletKrupp": 2711.0,
+                "bulletMass": 1020.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 870.0,
+                "name": "PZPA028_410mm_AP_IZUMO_CN"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 68.0,
+                "bulletAirDrag": 0.505,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.41,
+                "bulletKrupp": 3.0,
+                "bulletMass": 938.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 869.0,
+                "name": "PZPA027_410mm_HE_IZUMO_CN"
+            }
+        },
+        "Nation": "Pan_Asia",
+        "Tier": 9,
+        "Type": "Battleship",
+        "ammo_num": 1
+    }
+}

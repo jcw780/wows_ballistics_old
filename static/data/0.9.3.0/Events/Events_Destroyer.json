@@ -1,0 +1,360 @@
+{
+    "PXSD001_VanHellsink": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.331,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 1750.0,
+                "bulletMass": 20.3,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 825.0,
+                "name": "PXPA014_120MM_AP_HELLSINK"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 100.0,
+                "bulletAirDrag": 0.331,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 480.0,
+                "bulletMass": 20.3,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 825.0,
+                "name": "PXPA015_120MM_HE_HELLSINK"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 3,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PXSD002_Benson_1945_H2017": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PXPA064_Shell_127mm_AP_SC_Mk_38"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PXPA065_Main_127mm_HE_C_Mk_32"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PXSD003_Kagero_H2017": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.334,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2266.0,
+                "bulletMass": 23.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 915.0,
+                "name": "PJPA011_Shell_127mm_AP_Type_0"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.334,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 450.0,
+                "bulletMass": 23.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 915.0,
+                "name": "PJPA012_Shell_127mm_HE_Type_1"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 8,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PXSD004_FlyFire": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.03,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 2598.0,
+                "bulletMass": 25.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 792.0,
+                "name": "PXPA022_Shell_127mm_AP_SC_Mk_38"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.347,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1350.0,
+                "bulletMass": 24.5,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 792.0,
+                "name": "PXPA031_Main_127mm_HE_C_Mk_32"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PXSD005_Blue_Aster": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2752,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.128,
+                "bulletKrupp": 1647.0,
+                "bulletMass": 28.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 830.0,
+                "name": "PXPA025_128MM_AP_C41"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.2752,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.128,
+                "bulletKrupp": 1.0,
+                "bulletMass": 28.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 830.0,
+                "name": "PXPA024_128MM_HE_C41"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PXSD008_Z_23_H2018": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3447,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 21.0,
+                "bulletDiametr": 0.128,
+                "bulletKrupp": 1640.0,
+                "bulletMass": 28.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 830.0,
+                "name": "PXPA045_128MM_AP_SK_C34"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.3447,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.128,
+                "bulletKrupp": 1.0,
+                "bulletMass": 28.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 830.0,
+                "name": "PXPA044_128MM_HE_SK_C34"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PXSD009_Kiev_H2018": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2857,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 22.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 1700.0,
+                "bulletMass": 33.5,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 870.0,
+                "name": "PXPA047_130MM_AP_NEPREM"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 22.0,
+                "bulletAirDrag": 0.2857,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.13,
+                "bulletKrupp": 52.0,
+                "bulletMass": 33.4,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 870.0,
+                "name": "PXPA046_130MM_HE_NEPREM"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PXSD015_Grozovoy_PA": {
+        "Artillery0": {
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.5,
+                "bulletKrupp": 1.0,
+                "bulletMass": 2000.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 700.0,
+                "name": "PXPA074_ARROW"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PXSD018_Harugumo_PA": {
+        "Artillery0": {
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.5,
+                "bulletKrupp": 1.0,
+                "bulletMass": 2000.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 700.0,
+                "name": "PXPA074_ARROW"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PXSD020_Khabarovsk_PA": {
+        "Artillery0": {
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.5,
+                "bulletKrupp": 1.0,
+                "bulletMass": 2000.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 700.0,
+                "name": "PXPA074_ARROW"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PXSD024_Khabarovsk_H2019": {
+        "Artillery0": {
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.01,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.5,
+                "bulletKrupp": 1.0,
+                "bulletMass": 2000.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 700.0,
+                "name": "PXPA075_ARROW_H2019"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 10,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    }
+}
