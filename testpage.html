@@ -1503,9 +1503,11 @@
 				id: "Angle", position: "right",
 				scaleLabel: {
 					display: true,
-					labelString: "Belt Impact Angle (°)",
 				},
 			}
+
+			var hRAL = yAxesRightAngle;
+			hRAL.scaleLabel['labelString'] = "Belt Impact Angle (°)"
 
 			const  EPL = "Effective Penetration ";
 			const IAL = "Impact Angle ";
@@ -1548,13 +1550,16 @@
 					},
 					scales: {
 						xAxes: xAxesDistance,
-						yAxes: [yAxesPenetration , yAxesRightAngle,]
+						yAxes: [yAxesPenetration , hRAL,]
 					},
 					animation: animationCommon,
 				}
 			}
 
 			createUpdateChart(impactCharts, 0, "penChart0", configPC0);
+
+			var vRAL = yAxesRightAngle;
+			vRAL.scaleLabel['labelString'] = "Deck Impact Angle (°)"
 			
 			const EDP = "Effective Deck Penetration ";
 			const DIA = "Deck Impact Angle ";
@@ -1592,7 +1597,7 @@
 					},
 					scales: {
 						xAxes: xAxesDistance,
-						yAxes: [yAxesPenetration, yAxesRightAngle,]
+						yAxes: [yAxesPenetration, vRAL,]
 					},
 					animation: animationCommon,
 				}
