@@ -32,7 +32,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
 		<style>
 			body{
 				background-color: white;
@@ -1274,7 +1274,7 @@
 		const animationCommon = {
 			onComplete: completed
 		}
-
+		
 		var targetedArmor;
 		var targetInclination;
 
@@ -1455,11 +1455,24 @@
 			}
 			return output;
 		}
+		
+		function createUpdateChart(chartArray, index, target, config){
+			if(chartArray[index]){
+				chartArray[index].type = config.type;
+				chartArray[index].data = config.data;
+				chartArray[index].options = config.options;
+				chartArray[index].update();
+			}else{
+				chartArray[index] = new Chart($("#" + target), config);
+			}
+		}	
+
+		const commonPointRadius = 0;
 
 		async function makeImpactCharts(){ //Set Impact
-			if(impactCharts[0]){
+			/*if(impactCharts[0]){
 				impactCharts[0].destroy();
-			}
+			}*/
 
 			const points = [
 				[0, 0, Module.impactDataIndex.ePenHN.value   , 0],
@@ -1496,34 +1509,39 @@
 
 			const  EPL = "Effective Penetration ";
 			const IAL = "Impact Angle ";
-			impactCharts[0] = new Chart($("#penChart0"), {
+			var configPC0 = {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: results[0],
+							data: results[0], showLine: true, 
 							label: EPL + shipName[0], 
 							yAxisID: "Penetration",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[1],
+							data: results[1], showLine: true,
 							label: IAL + shipName[0], 
 							yAxisID: "Angle",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[2],
+							data: results[2], showLine: true,
 							label: EPL + shipName[1], 
 							yAxisID: "Penetration",
-							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[3],
+							data: results[3], showLine: true,
 							label: IAL + shipName[1], 
 							yAxisID: "Angle",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						}
 					]
 				},
 				options: {
+					elements: {
+						line: {
+						cubicInterpolationMode: 'default' 
+						}
+					},
 					title: {
 						display: true,
 						text: 'Horizontal Penetration and Impact Angle'
@@ -1534,37 +1552,36 @@
 					},
 					animation: animationCommon,
 				}
-			});
-			
-			if(impactCharts[1]){
-				impactCharts[1].destroy();
 			}
+
+			createUpdateChart(impactCharts, 0, "penChart0", configPC0);
+			
 			const EDP = "Effective Deck Penetration ";
 			const DIA = "Deck Impact Angle ";
-			impactCharts[1] = new Chart($("#penChart1"), {
+			var configPC1 = {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: results[4],
+							data: results[4], showLine: true,
 							label: EDP + shipName[0],
 							yAxisID: "Penetration",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[5],
+							data: results[5], showLine: true,
 							label: DIA + shipName[0], 
 							yAxisID: "Angle",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[6],
+							data: results[6], showLine: true,
 							label: EDP + shipName[1],
 							yAxisID: "Penetration",
-							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[7],
+							data: results[7], showLine: true,
 							label: DIA + shipName[1], 
 							yAxisID: "Angle",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						}
 					]
 				},
@@ -1579,37 +1596,37 @@
 					},
 					animation: animationCommon,
 				}
-			});
+			};
+			
+			createUpdateChart(impactCharts, 1, "penChart1", configPC1);
 
-			if(impactCharts[2]){
-				impactCharts[2].destroy();
-			}
 			const IVL = "Impact Velocity ";
 			const FTL = "Flight Time ";
-			impactCharts[2] = new Chart($("#penChart2"), {
+			//impactCharts[2] = new Chart($("#penChart2"), 
+			var configPC2 = {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: results[8],
+							data: results[8], showLine: true,
 							label: IVL + shipName[0], 
 							yAxisID: "Impact Velocity",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[9],
+							data: results[9], showLine: true,
 							label: FTL + shipName[0], 
 							yAxisID: "Time",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[10],
+							data: results[10], showLine: true,
 							label: IVL + shipName[1], 
 							yAxisID: "Impact Velocity",
-							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[11],
+							data: results[11], showLine: true,
 							label: FTL + shipName[1], 
 							yAxisID: "Time",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						}
 					]
 				},
@@ -1640,7 +1657,9 @@
 					},
 					animation: animationCommon,
 				}
-			});
+
+			};
+			createUpdateChart(impactCharts, 2, "penChart2", configPC2);
 		}
 
 		async function makeAngleCharts(){//Set Angle Charts
@@ -1664,47 +1683,45 @@
 			)
 			const results = await Promise.all(tasks);
 
-			if(angleCharts[0]){
-				angleCharts[0].destroy();
-			}
 			const armorL = "Maximum Perforation Angle ";
 			const ra0L = "Start Ricochet "
 			const ra1L = "Always Ricochet "
 			//var FTL = " ";
-			angleCharts[0] = new Chart($("#angleChart0"), {
+			//angleCharts[0] = new Chart($("#angleChart0"), 
+			var configAC0 = {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: results[0],
+							data: results[0], showLine: true,
 							label: armorL + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[1],
+							data: results[1], showLine: true,
 							label: ra0L + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[2],
+							data: results[2], showLine: true,
 							label: ra1L + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#FFD700", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFD700", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[3],
+							data: results[3], showLine: true,
 							label: armorL + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[4],
+							data: results[4], showLine: true,
 							label: ra0L + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[5],
+							data: results[5], showLine: true,
 							label: ra1L + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#DC143C", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#DC143C", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						}
 					]
 				},
@@ -1728,47 +1745,46 @@
 					},
 					animation: animationCommon,
 				}
-			});
+			};
+			createUpdateChart(angleCharts, 0, "angleChart0", configAC0);
 			
-			if(angleCharts[1]){
-				angleCharts[1].destroy();
-			}
 			const fuseL = "Minimum Fusing Angle ";
 			//var FTL = " ";
-			angleCharts[1] = new Chart($("#angleChart1"), {
+			//angleCharts[1] = new Chart($("#angleChart1"), 
+			var configAC1 = {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: results[6],
+							data: results[6], showLine: true,
 							label: fuseL + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[1],
+							data: results[1], showLine: true,
 							label: ra0L + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[2],
+							data: results[2], showLine: true,
 							label: ra1L + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#FFD700", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFD700", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[7],
+							data: results[7], showLine: true,
 							label: fuseL + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[4],
+							data: results[4], showLine: true,
 							label: ra0L + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[5],
+							data: results[5], showLine: true,
 							label: ra1L + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#DC143C", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#DC143C", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						}
 					]
 				},
@@ -1792,19 +1808,19 @@
 					},
 					animation: animationCommon,
 				}
-			});
+			};
+
+			createUpdateChart(angleCharts, 1, "angleChart1", configAC1);
 		}
 
 		async function makePostPenCharts(){ //Set PostPen
 			const width = $('#width').value;
 			const WFL = "Check Fusing ";
 			const NFL = "Always Fusing ";
+			var configs = [];
 			for(let i=0; i<numAngles; i++){
 				var str = "Lateral Angle " + i + ": " + v_angles[i] + "°";
 				$("#AT" + i).children('text')[0].textContent = str;
-				if(postCharts[i]){
-					postCharts[i].destroy()
-				}
 
 				const points = [
 					[0, 2, Module.postPenDataIndex.xwf.value, i],
@@ -1820,30 +1836,31 @@
 				)
 				const results = await Promise.all(tasks);
 
-				postCharts[i] = new Chart($("#postPen" + i), {
+				//postCharts[i] = new Chart($("#postPen" + i), 
+				configs[i] = {
 					type: 'scatter',
 					data: {
 						datasets: [
 							{
-								data: results[0],
+								data: results[0], showLine: true,
 								label: WFL + shipName[0],
-								borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 							},{
-								data: results[1],
+								data: results[1], showLine: true,
 								label: NFL + shipName[0],
-								borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 							},{
-								data: results[2],
+								data: results[2], showLine: true,
 								label: WFL + shipName[1],
-								borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 							},{
-								data: results[3],
+								data: results[3], showLine: true,
 								label: NFL + shipName[1],
-								borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 							},{
 								data: shipWidth,
 								label: "Ship Width (m)",
-								borderColor: "#505050", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#505050", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 							}
 						]
 					},
@@ -1863,7 +1880,8 @@
 						},
 						animation: animationCommon,
 					}
-				});
+				};
+				createUpdateChart(postCharts, i, "postPen" + i, configs[i]);
 			}
 		}
     </script>
