@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,14 +22,17 @@
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://unpkg.com/wasm-feature-detect/dist/umd/index.js"></script>
+		<script src="https://unpkg.com/bowser@2.7.0/es5.js"></script>
 		<script src="shellWasm.js"></script>
+		<script src="shellWasmV.js"></script>
 
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
 		<style>
 			body{
 				background-color: white;
@@ -375,10 +377,10 @@
 						<div class="form-row margin-bottom">
 							<label id="HESAPL" class="col-sm-4 col-form-label">HE/SAP penetration (mm)</label>
 							<div class="col-sm-4">
-								<input class="form-control" type="number" step="any" min="0" id="HESAP0"   value="">
+								<input class="form-control" type="number" step="any" min="0" id="HESAP0"   value="0">
 							</div>
 							<div class="col-sm-4">
-								<input class="form-control" type="number" step="any" min="0" id="HESAP1"   value="">
+								<input class="form-control" type="number" step="any" min="0" id="HESAP1"   value="0">
 							</div>
 						</div>
 						<div class="form-row margin-bottom">
@@ -508,6 +510,8 @@
 			<table>
 				<tr>
 					<th><h3>Graphs</h3></th>
+					<th><h3>Calculation Method</h3></th>
+					<th><h3>Calculation Parameters</h3></th>
 				</tr>
 				<tr>
 					<td>
@@ -531,6 +535,41 @@
 								</div>
 							</div>
 						</form>
+					</td>
+					<td>
+						<div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+							<label class="btn btn-success">
+							  	<input type="radio" onchange="setComputation('AB5')" autocomplete="off"> Adams-Bashforth 5
+							</label>
+							<label class="btn btn-success">
+							  	<input type="radio" onchange="setComputation('RK2')" autocomplete="off"> Runge-Kutta 2
+							</label>
+							<label class="btn btn-success">
+							  	<input type="radio" onchange="setComputation('RK4')" autocomplete="off"> Runge-Kutta 4
+							</label>
+							<label class="btn btn-success active">
+								<input type="radio" onchange="setComputation('FE')"  autocomplete="off" checked> Forward Euler
+							</label>
+						  </div>
+					</td>
+					<td>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-6 col-form-label">Time Step (s)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min=".00001" max="10" id="timeStep" value="0.01" >
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-6 col-form-label">Minimum Launch Angle (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="-90" max="90" id="minLaunch" value="0" >
+							</div>
+						</div>
+						<div class="form-row margin-bottom">
+							<label class="col-sm-6 col-form-label">Maximum Launch Angle (°)</label>
+							<div class="col-sm-4">
+								<input class="form-control" type="number" step="any" min="-90" max="90" id="maxLaunch" value="25" >
+							</div>
 					</td>
 				</tr>
 			</table>
@@ -701,6 +740,128 @@
 		</div>
     
     <script>
+		var computationMethod = 'FE';
+		var inputData = {
+			'mv'         : [ 841, 841 ],
+			'caliber'    : [.152, .152],
+			'krupp'      : [2609, 2609],
+			'mass'       : [50.8, 50.8],
+			'normal'     : [ 8.5,  8.5],
+			'cD'         : [.3297, .3297],
+			'threshold'  : [25, 25],
+			'fusetime'   : [.025, .025],
+			'ra0_'       : [45, 45],
+			'ra1_'       : [60, 60],
+			'HESAP'      : [0, 0],
+			'shellType'  : ['AP', 'AP'],
+			'angle'      : [0, 5, 10, 25, 20, 25, 30, 35],
+			'armor'      : 70,
+			'inclination': 0,
+			'width'      : 18,
+			'shipName'   : ['PUSC506_Perth_1942 0', 'PUSC506_Perth_1942 0']
+		}
+
+		var graphSettings = {
+			'minDist': '0',
+			'maxDist': '',
+			'tickDist': '2500',
+		};
+
+		function setComputation(value){
+			//console.log(value);
+			computationMethod = value;
+		}
+		
+		
+
+		function addFormChange(){
+			function settingsChange(){
+				inputData[this.id] = parseFloat(this.value);
+			}
+			const targetSettingsTargets = [
+				'armor', 'inclination', 'width',
+			];
+			targetSettingsTargets.map(function(value){
+				document.getElementById(value).addEventListener('change', settingsChange);
+			});
+			function angleChange(){
+				var id = this.id.slice(-1);
+				inputData['angle'][id] = parseFloat(this.value);
+
+			}
+			const angleTargets = [
+				'angle0', 'angle1', 'angle2', 'angle3', 
+				'angle4', 'angle5', 'angle6', 'angle7', 
+			];
+			angleTargets.map(function(value){
+				document.getElementById(value).addEventListener('change', angleChange);
+			});
+
+			function shipChange(){
+				var id = this.id.slice(-1);
+				var dataType = this.id.slice(0, -1);
+				inputData[dataType][id] = parseFloat(this.value);	
+			}
+
+			const shipTargets = [
+				'caliber0', 'caliber1',
+				'mv0', 'mv1',
+				'cD0', 'cD1',
+				'mass0', 'mass1',
+				'krupp0', 'krupp1',
+				'fusetime0', 'fusetime1',
+				'threshold0', 'threshold1',
+				'normal0', 'normal1',
+				'ra0_0', 'ra0_1',
+				'ra1_0', 'ra1_1',
+				'HESAP0', 'HESAP1',
+			];
+
+			shipTargets.map(function(value){
+				document.getElementById(value).addEventListener('change', shipChange);
+			});
+
+			function shipNameChange(){
+				var id = this.id.slice(-1);
+				inputData['shipName'][id] = this.value;
+			}
+
+			const shipName = [
+				'shipName0', 'shipName1',
+			];
+
+			shipName.map(function(value){
+				document.getElementById(value).addEventListener('change', shipNameChange);
+			});
+
+			function changeTimeStep(){
+				shellInstance.setDtMin(parseFloat(this.value));
+			}
+			function changeMinLaunch(){
+				shellInstance.setMin(parseFloat(this.value));
+			}
+			function changeMaxLaunch(){
+				shellInstance.setMax(parseFloat(this.value));
+			}
+			function changeGraphSettings(){
+				console.log(this.id, this.value);
+				graphSettings[this.id] = this.value;
+			}
+
+			const settings = [
+				['minDist'  , changeGraphSettings],
+				['maxDist'  , changeGraphSettings],
+				['tickDist' , changeGraphSettings],
+				['timeStep' , changeTimeStep ], 
+				['minLaunch', changeMinLaunch], 
+				['maxLaunch', changeMaxLaunch],
+			]
+
+			settings.map(function(value){
+				document.getElementById(value[0]).addEventListener('change', value[1]);
+			});
+		}
+
 		//Buttons 
 		//Add Hide buttons
         addTitles();
@@ -739,6 +900,7 @@
 		}
 
 		addChevrons();
+		addFormChange();
 
 		function applyButton(){
 			onSubmitPredefined((this.id).slice(-1)); 
@@ -749,6 +911,9 @@
 		}
 
 		async function firstRun(){
+			shellInstance.setDtMin(.01);
+			shellInstance.setMin(0.0);
+			shellInstance.setMax(25.0);
 			data = {
 				'mv'         : [ 841, 841 ],
 				'caliber'    : [.152, .152],
@@ -783,20 +948,31 @@
 			const results = await Promise.all(tasks);
 		})
 
-		/*var Module = {
-			onRuntimeInitialized: function() {
-				console.log("Wasm Compile Successful");
-                compiled = true;
-				shellInstance = new Module.shell(2);
-				firstRun();
+		var Module;
+
+		wasmFeatureDetect.simd().then(simdSupported => {
+			if (simdSupported) {
+				console.log('vectorized');
+				ShellWasmV().then(function (M) {
+					//console.log('Ready', M);
+					Module = M;
+					shellInstance = new Module.shell(2);
+					firstRun();
+				})
+			} else {
+				console.log('unvectorized');
+				var result = bowser.getParser(window.navigator.userAgent);
+				/*if(result.parsedResult.browser.name == 'Chrome'){
+					alert('Enable WebAssembly SIMD support in chrome://flags for increased performance.');
+				}*/
+				ShellWasm().then(function (M) {
+					//console.log('Ready', M);
+					Module = M;
+					shellInstance = new Module.shell(2);
+					firstRun();
+				})
 			}
-		};*/
-		ShellWasm().then(function (M) {
-			//console.log('Ready', M);
-			Module = M;
-			shellInstance = new Module.shell(2);
-			firstRun();
-		})
+		});
 		//Buttons
 
 		async function showCollapsibles(){
@@ -1010,27 +1186,41 @@
 				onSubmitPredefined(id);
 			}
 		}
+		
+		const changeEvent = new Event('change');
+
+		function changeFormValue(elementID, newValue){
+			var event = new Event('change');
+			let element = $(elementID)[0];
+			if(newValue != element.value){
+				element.value = newValue;
+				element.dispatchEvent(changeEvent);
+			}
+		}
 
 		function onSubmitPredefined(id){
 			var targetShell = typeData[id][shipValue[id]][shellValue[id]][shellType[id]];
-			$("#shipName"  + id)[0].value = shipValue[id] + " " + shellValue[id].slice(-1);
-			$("#mv"        + id)[0].value = targetShell["bulletSpeed"];
-			$("#caliber"   + id)[0].value = targetShell["bulletDiametr"];
-			$("#krupp"     + id)[0].value = targetShell["bulletKrupp"];
-			$("#mass"      + id)[0].value = targetShell["bulletMass"];
-			$("#cD"        + id)[0].value = targetShell["bulletAirDrag"];
-			$("#threshold" + id)[0].value = targetShell["bulletDetonatorThreshold"];
-			$("#fusetime"  + id)[0].value = targetShell["bulletDetonator"];
-			$("#ra0_"      + id)[0].value = targetShell["bulletRicochetAt"];
-			$("#ra1_"      + id)[0].value = targetShell["bulletAlwaysRicochetAt"];
-			$("#normal"    + id)[0].value = targetShell['bulletCapNormalizeMaxAngle']
+			changeFormValue("#shipName"  + id, shipValue[id] + " " + shellValue[id].slice(-1));
+			changeFormValue("#mv"        + id, targetShell["bulletSpeed"]);
+			changeFormValue("#caliber"   + id, targetShell["bulletDiametr"]);
+			changeFormValue("#krupp"     + id, targetShell["bulletKrupp"]);
+			changeFormValue("#mass"      + id, targetShell["bulletMass"]);
+			changeFormValue("#cD"        + id, targetShell["bulletAirDrag"]);
+			changeFormValue("#threshold" + id, targetShell["bulletDetonatorThreshold"]);
+			changeFormValue("#fusetime"  + id, targetShell["bulletDetonator"]);
+			changeFormValue("#ra0_"      + id, targetShell["bulletRicochetAt"]);
+			changeFormValue("#ra1_"      + id, targetShell["bulletAlwaysRicochetAt"]);
+			changeFormValue("#normal"    + id, targetShell['bulletCapNormalizeMaxAngle']);
+			var HESAPv = 0;
 			if(shellType[id] == 'AP'){
-				$("#HESAP" + id)[0].value = 0;
+				HESAPv = 0;
 			}else if(shellType[id] == 'HE'){
-				$("#HESAP" + id)[0].value = targetShell["alphaPiercingHE"];
+				HESAPv = targetShell["alphaPiercingHE"];
 			}else if(shellType[id] == 'CS'){
-				$("#HESAP" + id)[0].value = targetShell["alphaPiercingCS"];
-			}   
+				HESAPv = targetShell["alphaPiercingCS"];
+			}
+
+			changeFormValue("#HESAP"     + id, HESAPv);
 		}
 
 		//Graphs
@@ -1051,47 +1241,7 @@
 		var postCharts = []
 
 		function collectMake(){
-			var shellData = {
-				'mv': [],
-				'caliber': [],
-				'krupp': [],
-				'mass': [],
-				'normal': [],
-				'cD': [],
-				'threshold': [],
-				'fusetime': [],
-				'ra0_': [],
-				'ra1_': [],
-				'HESAP': [],
-			}
-
-			var targetData = {
-				'shellType': [],
-				'angle': [],
-				'armor': 0,
-				'inclination': 0,
-				'width': 0,
-				'shipName':[]
-			}
-
-			targetData.shellType = shellType;
-			
-			for(let i=0; i<2; i++){
-				for(let key in shellData){
-
-					shellData[key][i] = getFloatValues(key + i);
-				}
-				targetData.shipName[i] = $("#shipName" + i)[0].value;
-			}
-
-			targetData['armor']       = getFloatValues("armor");
-			targetData['inclination'] = getFloatValues("inclination");
-			targetData['width']       = getFloatValues("width");
-			for(let i=0; i<numAngles; i++){
-				targetData['angle'][i] = parseFloat($('#' + "angle" + i)[0].value);
-			}
-			var data = Object.assign({}, shellData, targetData);
-			makeGraphs(data);
+			makeGraphs(inputData);
 		}
 
 		var shellInstance;
@@ -1124,7 +1274,7 @@
 		const animationCommon = {
 			onComplete: completed
 		}
-
+		
 		var targetedArmor;
 		var targetInclination;
 
@@ -1164,10 +1314,25 @@
 				)
 
 			}
+			
+			switch(computationMethod){
+				case 'AB5':
+					shellInstance.calcImpactAdamsBashforth5();
+				break;
+				case 'RK2':
+					shellInstance.calcImpactRungeKutta2();
+				break;
+				case 'RK4':
+					shellInstance.calcImpactRungeKutta4();
+				break;
+				case 'FE':
+					shellInstance.calcImpactForwardEuler();
+				break;
 
-			shellInstance.calcImpact()
+			}
+			
 			shellInstance.calcAngles(v_armor, v_inclination);
-			shellInstance.calcPostPen(v_armor, v_inclination, v_angles, true, false);
+			shellInstance.calcPostPen(v_armor, v_inclination, v_angles, true, true);
 
 			//instance.printPostPen();
 			//Values same for both shells
@@ -1211,26 +1376,23 @@
 				}
 			}];
 			
-			if($('#minDist')[0].value){
-				xAxesDistance[0].ticks['min'] = getIntValues('minDist');
+
+			if(!(graphSettings['minDist'] === '')){
+				xAxesDistance[0].ticks['min'] = parseFloat(graphSettings['minDist']);
 			}
-			if($('#maxDist')[0].value){
-				xAxesDistance[0].ticks['max'] = getIntValues('maxDist');
+			if(!(graphSettings['maxDist'] === '')){
+				xAxesDistance[0].ticks['max'] = parseFloat(graphSettings['maxDist']);
 			}
-			if($('#tickDist')[0].value){
-				xAxesDistance[0].ticks['stepSize'] = getIntValues('tickDist');
+			if(!(graphSettings['tickDist'] === '')){
+				xAxesDistance[0].ticks['stepSize'] = parseFloat(graphSettings['tickDist']);
 			}
 
 			targetedArmor = 'Armor Thickness: ' + v_armor + 'mm';
 			targetInclination = 'Vertical Inclination: ' + v_inclination + '°'; 
-
-			const charts = [
-				makeImpactCharts,
-				makeAngleCharts,
-				makePostPenCharts,
-			]
-			const tasks = charts.map(func => func());
-			await Promise.all(tasks);
+			
+			makeImpactCharts();
+			makeAngleCharts();
+			makePostPenCharts();
 		}
 
 		async function generatePoint(ship, dType, index, angle){
@@ -1293,11 +1455,24 @@
 			}
 			return output;
 		}
+		
+		function createUpdateChart(chartArray, index, target, config){
+			if(chartArray[index]){
+				chartArray[index].type = config.type;
+				chartArray[index].data = config.data;
+				chartArray[index].options = config.options;
+				chartArray[index].update();
+			}else{
+				chartArray[index] = new Chart($("#" + target), config);
+			}
+		}	
+
+		const commonPointRadius = 0;
 
 		async function makeImpactCharts(){ //Set Impact
-			if(impactCharts[0]){
+			/*if(impactCharts[0]){
 				impactCharts[0].destroy();
-			}
+			}*/
 
 			const points = [
 				[0, 0, Module.impactDataIndex.ePenHN.value   , 0],
@@ -1328,81 +1503,90 @@
 				id: "Angle", position: "right",
 				scaleLabel: {
 					display: true,
-					labelString: "Belt Impact Angle (°)",
 				},
 			}
 
+			var hRAL = yAxesRightAngle;
+			hRAL.scaleLabel['labelString'] = "Belt Impact Angle (°)"
+
 			const  EPL = "Effective Penetration ";
 			const IAL = "Impact Angle ";
-			impactCharts[0] = new Chart($("#penChart0"), {
+			var configPC0 = {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: results[0],
+							data: results[0], showLine: true, 
 							label: EPL + shipName[0], 
 							yAxisID: "Penetration",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[1],
+							data: results[1], showLine: true,
 							label: IAL + shipName[0], 
 							yAxisID: "Angle",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[2],
+							data: results[2], showLine: true,
 							label: EPL + shipName[1], 
 							yAxisID: "Penetration",
-							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[3],
+							data: results[3], showLine: true,
 							label: IAL + shipName[1], 
 							yAxisID: "Angle",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						}
 					]
 				},
 				options: {
+					elements: {
+						line: {
+						cubicInterpolationMode: 'default' 
+						}
+					},
 					title: {
 						display: true,
 						text: 'Horizontal Penetration and Impact Angle'
 					},
 					scales: {
 						xAxes: xAxesDistance,
-						yAxes: [yAxesPenetration , yAxesRightAngle,]
+						yAxes: [yAxesPenetration , hRAL,]
 					},
 					animation: animationCommon,
 				}
-			});
-			
-			if(impactCharts[1]){
-				impactCharts[1].destroy();
 			}
+
+			createUpdateChart(impactCharts, 0, "penChart0", configPC0);
+
+			var vRAL = yAxesRightAngle;
+			vRAL.scaleLabel['labelString'] = "Deck Impact Angle (°)"
+			
 			const EDP = "Effective Deck Penetration ";
 			const DIA = "Deck Impact Angle ";
-			impactCharts[1] = new Chart($("#penChart1"), {
+			var configPC1 = {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: results[4],
+							data: results[4], showLine: true,
 							label: EDP + shipName[0],
 							yAxisID: "Penetration",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[5],
+							data: results[5], showLine: true,
 							label: DIA + shipName[0], 
 							yAxisID: "Angle",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[6],
+							data: results[6], showLine: true,
 							label: EDP + shipName[1],
 							yAxisID: "Penetration",
-							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[7],
+							data: results[7], showLine: true,
 							label: DIA + shipName[1], 
 							yAxisID: "Angle",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						}
 					]
 				},
@@ -1413,41 +1597,41 @@
 					},
 					scales: {
 						xAxes: xAxesDistance,
-						yAxes: [yAxesPenetration, yAxesRightAngle,]
+						yAxes: [yAxesPenetration, vRAL,]
 					},
 					animation: animationCommon,
 				}
-			});
+			};
+			
+			createUpdateChart(impactCharts, 1, "penChart1", configPC1);
 
-			if(impactCharts[2]){
-				impactCharts[2].destroy();
-			}
 			const IVL = "Impact Velocity ";
 			const FTL = "Flight Time ";
-			impactCharts[2] = new Chart($("#penChart2"), {
+			//impactCharts[2] = new Chart($("#penChart2"), 
+			var configPC2 = {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: results[8],
+							data: results[8], showLine: true,
 							label: IVL + shipName[0], 
 							yAxisID: "Impact Velocity",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[9],
+							data: results[9], showLine: true,
 							label: FTL + shipName[0], 
 							yAxisID: "Time",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[10],
+							data: results[10], showLine: true,
 							label: IVL + shipName[1], 
 							yAxisID: "Impact Velocity",
-							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[11],
+							data: results[11], showLine: true,
 							label: FTL + shipName[1], 
 							yAxisID: "Time",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						}
 					]
 				},
@@ -1478,7 +1662,9 @@
 					},
 					animation: animationCommon,
 				}
-			});
+
+			};
+			createUpdateChart(impactCharts, 2, "penChart2", configPC2);
 		}
 
 		async function makeAngleCharts(){//Set Angle Charts
@@ -1502,47 +1688,45 @@
 			)
 			const results = await Promise.all(tasks);
 
-			if(angleCharts[0]){
-				angleCharts[0].destroy();
-			}
 			const armorL = "Maximum Perforation Angle ";
 			const ra0L = "Start Ricochet "
 			const ra1L = "Always Ricochet "
 			//var FTL = " ";
-			angleCharts[0] = new Chart($("#angleChart0"), {
+			//angleCharts[0] = new Chart($("#angleChart0"), 
+			var configAC0 = {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: results[0],
+							data: results[0], showLine: true,
 							label: armorL + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[1],
+							data: results[1], showLine: true,
 							label: ra0L + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[2],
+							data: results[2], showLine: true,
 							label: ra1L + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#FFD700", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFD700", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[3],
+							data: results[3], showLine: true,
 							label: armorL + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[4],
+							data: results[4], showLine: true,
 							label: ra0L + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[5],
+							data: results[5], showLine: true,
 							label: ra1L + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#DC143C", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#DC143C", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						}
 					]
 				},
@@ -1566,47 +1750,46 @@
 					},
 					animation: animationCommon,
 				}
-			});
+			};
+			createUpdateChart(angleCharts, 0, "angleChart0", configAC0);
 			
-			if(angleCharts[1]){
-				angleCharts[1].destroy();
-			}
 			const fuseL = "Minimum Fusing Angle ";
 			//var FTL = " ";
-			angleCharts[1] = new Chart($("#angleChart1"), {
+			//angleCharts[1] = new Chart($("#angleChart1"), 
+			var configAC1 = {
 				type: 'scatter',
 				data: {
 					datasets: [
 						{
-							data: results[6],
+							data: results[6], showLine: true,
 							label: fuseL + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[1],
+							data: results[1], showLine: true,
 							label: ra0L + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[2],
+							data: results[2], showLine: true,
 							label: ra1L + shipName[0], 
 							yAxisID: "angle",
-							borderColor: "#FFD700", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FFD700", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[7],
+							data: results[7], showLine: true,
 							label: fuseL + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[4],
+							data: results[4], showLine: true,
 							label: ra0L + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[5],
+							data: results[5], showLine: true,
 							label: ra1L + shipName[1], 
 							yAxisID: "angle",
-							borderColor: "#DC143C", fill: false, pointRadius: 0, pointHitRadius: 5
+							borderColor: "#DC143C", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						}
 					]
 				},
@@ -1630,19 +1813,19 @@
 					},
 					animation: animationCommon,
 				}
-			});
+			};
+
+			createUpdateChart(angleCharts, 1, "angleChart1", configAC1);
 		}
 
 		async function makePostPenCharts(){ //Set PostPen
 			const width = $('#width').value;
 			const WFL = "Check Fusing ";
 			const NFL = "Always Fusing ";
+			var configs = [];
 			for(let i=0; i<numAngles; i++){
 				var str = "Lateral Angle " + i + ": " + v_angles[i] + "°";
 				$("#AT" + i).children('text')[0].textContent = str;
-				if(postCharts[i]){
-					postCharts[i].destroy()
-				}
 
 				const points = [
 					[0, 2, Module.postPenDataIndex.xwf.value, i],
@@ -1658,30 +1841,31 @@
 				)
 				const results = await Promise.all(tasks);
 
-				postCharts[i] = new Chart($("#postPen" + i), {
+				//postCharts[i] = new Chart($("#postPen" + i), 
+				configs[i] = {
 					type: 'scatter',
 					data: {
 						datasets: [
 							{
-								data: results[0],
+								data: results[0], showLine: true,
 								label: WFL + shipName[0],
-								borderColor: "#FFA500", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 							},{
-								data: results[1],
+								data: results[1], showLine: true,
 								label: NFL + shipName[0],
-								borderColor: "#3e95cd", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 							},{
-								data: results[2],
+								data: results[2], showLine: true,
 								label: WFL + shipName[1],
-								borderColor: "#FF0000", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 							},{
-								data: results[3],
+								data: results[3], showLine: true,
 								label: NFL + shipName[1],
-								borderColor: "#008000", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 							},{
-								data: shipWidth,
+								data: shipWidth, showLine: true,
 								label: "Ship Width (m)",
-								borderColor: "#505050", fill: false, pointRadius: 0, pointHitRadius: 5
+								borderColor: "#505050", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 							}
 						]
 					},
@@ -1701,7 +1885,8 @@
 						},
 						animation: animationCommon,
 					}
-				});
+				};
+				createUpdateChart(postCharts, i, "postPen" + i, configs[i]);
 			}
 		}
     </script>
