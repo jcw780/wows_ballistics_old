@@ -33,6 +33,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+		<script src='https://chartjs.org/samples/latest/utils.js'></script>
 		<style>
 			body{
 				background-color: white;
@@ -395,10 +396,10 @@
 						<div class="row margin-bottom">
 							<div class="col-sm-4"></div>
 							<div class="col-sm-4">
-								<button type="button" class="btn btn-success btn-block" id="apply0">Apply</button>
+								<button type="button" class="btn btn-info btn-block" id="apply0">Apply</button>
 							</div>
 							<div class="col-sm-4">
-								<button type="button" class="btn btn-success btn-block" id="apply1">Apply</button>
+								<button type="button" class="btn btn-info btn-block" id="apply1">Apply</button>
 							</div>
 						</div>
 						<div class="row margin-bottom">
@@ -414,6 +415,23 @@
 								<div class="btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-block btn-info active">
 									  	<input id="autoApply1" type="checkbox" checked autocomplete="off"> Auto-Apply
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row margin-bottom">
+							<div class="col-sm-4"></div>
+							<div class="col-sm-4">
+								<div class="btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-block btn-info active">
+									  	<input id="graphShip0" type="checkbox" checked autocomplete="off"> Graph
+									</label>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-block btn-info active">
+									  	<input id="graphShip1" type="checkbox" checked autocomplete="off"> Graph
 									</label>
 								</div>
 							</div>
@@ -844,7 +862,7 @@
 				shellInstance.setMax(parseFloat(this.value));
 			}
 			function changeGraphSettings(){
-				console.log(this.id, this.value);
+				//console.log(this.id, this.value);
 				graphSettings[this.id] = this.value;
 			}
 
@@ -859,6 +877,26 @@
 
 			settings.map(function(value){
 				document.getElementById(value[0]).addEventListener('change', value[1]);
+			});
+
+			const autoApplyButtons = [
+				"autoApply0", "autoApply1"
+			]
+
+			autoApplyButtons.map(function(value){
+				$("#"+value).change(function(){
+					autoApply[this.id.slice(-1)] = this.checked;
+				});
+			});
+
+			const graphShipButtons = [
+				"graphShip0", "graphShip1"
+			]
+
+			graphShipButtons.map(function(value){
+				$("#"+value).change(function(){
+					graphShip[this.id.slice(-1)] = this.checked;
+				});
 			});
 		}
 
@@ -1035,6 +1073,7 @@
 		var shellValue = [];
 		var typeData = [];
 		var shellType = [];
+		var autoApply = [true, true];
 		var initialized = false;
         var compiled = false;
         var dataURL = "static/data/"
@@ -1182,7 +1221,7 @@
 		function onChangeShellType(shellTypeID){
 			var id = parseInt(shellTypeID.slice(-1));
 			shellType[id] = $('#' + shellTypeID)[0].value;
-			if($('#autoApply'+id)[0].checked){
+			if(autoApply[id]){
 				onSubmitPredefined(id);
 			}
 		}
@@ -1252,16 +1291,6 @@
 		var shipWidth = [];
 
 		var xAxesDistance;
-		const yAxesPenetration = {
-				id: "Penetration", postition: "left",
-				scaleLabel: {
-					display: true,
-					labelString: "Belt Penetration (mm)",
-				},
-				ticks: {
-					stepSize: 100
-				}
-			}
 
 		function completed(){
 			var graphId = this.chart.ctx.canvas.id;
@@ -1275,6 +1304,10 @@
 			onComplete: completed
 		}
 		
+		function addCommas(value, index, values) {
+			return value.toLocaleString();
+		}
+
 		var targetedArmor;
 		var targetInclination;
 
@@ -1373,6 +1406,7 @@
 					labelString: "Distance from Launch (m)",
 				},
 				ticks:{
+					callback: addCommas,
 				}
 			}];
 			
@@ -1430,12 +1464,14 @@
 			}else if(dType == 2){
 				if(index != Module.postPenDataIndex.xwf.value){
 					for(let i=0; i<impactSize; i++){
-						output.push(
-							{
-								x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
-								y: shellInstance.getPostPenPoint(i, index, angle, ship),
-							}
-						);
+						if(shellInstance.getPostPenPoint(i, Module.postPenDataIndex.xwf.value, angle, ship) < 0){
+							output.push(
+								{
+									x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+									y: shellInstance.getPostPenPoint(i, index, angle, ship),
+								}
+							);
+						}
 					}
 				}else{
 					for(let i=0; i<impactSize; i++){
@@ -1468,12 +1504,13 @@
 		}	
 
 		const commonPointRadius = 0;
+		var graphShip = [true, true];
+		var colors = [
+			["#3e95cd", "#FFA500", "#FFD700"],
+			["#008000", "#FF0000", "#DC143C"],
+		]
 
 		async function makeImpactCharts(){ //Set Impact
-			/*if(impactCharts[0]){
-				impactCharts[0].destroy();
-			}*/
-
 			const points = [
 				[0, 0, Module.impactDataIndex.ePenHN.value   , 0],
 				[0, 0, Module.impactDataIndex.impactAHD.value, 0],
@@ -1498,6 +1535,16 @@
 			)
 			const results = await Promise.all(tasks);
 			//console.log(results)
+			const yAxesPenetration = {
+				id: "Penetration", postition: "left",
+				scaleLabel: {
+					display: true,
+				},
+				ticks: {
+					stepSize: 100,
+					callback: addCommas,
+				}
+			}
 
 			const yAxesRightAngle = {
 				id: "Angle", position: "right",
@@ -1507,37 +1554,15 @@
 			}
 
 			var hRAL = yAxesRightAngle;
-			hRAL.scaleLabel['labelString'] = "Belt Impact Angle (°)"
+			hRAL.scaleLabel['labelString'] = "Belt Impact Angle (°)";
+			var hRPL = yAxesPenetration;
+			hRPL.scaleLabel['labelString'] = "Belt Penetration (mm)";
 
 			const  EPL = "Effective Penetration ";
 			const IAL = "Impact Angle ";
 			var configPC0 = {
 				type: 'scatter',
-				data: {
-					datasets: [
-						{
-							data: results[0], showLine: true, 
-							label: EPL + shipName[0], 
-							yAxisID: "Penetration",
-							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[1], showLine: true,
-							label: IAL + shipName[0], 
-							yAxisID: "Angle",
-							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[2], showLine: true,
-							label: EPL + shipName[1], 
-							yAxisID: "Penetration",
-							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[3], showLine: true,
-							label: IAL + shipName[1], 
-							yAxisID: "Angle",
-							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						}
-					]
-				},
+				data: {datasets: []},
 				options: {
 					elements: {
 						line: {
@@ -1550,46 +1575,41 @@
 					},
 					scales: {
 						xAxes: xAxesDistance,
-						yAxes: [yAxesPenetration , hRAL,]
+						yAxes: [hRPL , hRAL,]
 					},
 					animation: animationCommon,
 				}
 			}
-
+			graphShip.map(function callback(currentValue, index){
+				if(currentValue){
+					configPC0.data.datasets.push(
+						{
+							data: results[index* 2], showLine: true, 
+							label: EPL + shipName[index], 
+							yAxisID: "Penetration",
+							borderColor: colors[index][0], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
+						},{
+							data: results[index * 2 + 1], showLine: true,
+							label: IAL + shipName[index], 
+							yAxisID: "Angle",
+							borderColor: colors[index][1], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
+						},
+					)
+				}
+			});
+			
 			createUpdateChart(impactCharts, 0, "penChart0", configPC0);
 
 			var vRAL = yAxesRightAngle;
-			vRAL.scaleLabel['labelString'] = "Deck Impact Angle (°)"
+			vRAL.scaleLabel['labelString'] = "Deck Impact Angle (°)";
+			var vRPL = yAxesPenetration;
+			vRPL.scaleLabel['labelString'] = "Deck Penetration (mm)";
 			
 			const EDP = "Effective Deck Penetration ";
 			const DIA = "Deck Impact Angle ";
 			var configPC1 = {
 				type: 'scatter',
-				data: {
-					datasets: [
-						{
-							data: results[4], showLine: true,
-							label: EDP + shipName[0],
-							yAxisID: "Penetration",
-							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[5], showLine: true,
-							label: DIA + shipName[0], 
-							yAxisID: "Angle",
-							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[6], showLine: true,
-							label: EDP + shipName[1],
-							yAxisID: "Penetration",
-							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[7], showLine: true,
-							label: DIA + shipName[1], 
-							yAxisID: "Angle",
-							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						}
-					]
-				},
+				data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1597,12 +1617,30 @@
 					},
 					scales: {
 						xAxes: xAxesDistance,
-						yAxes: [yAxesPenetration, vRAL,]
+						yAxes: [vRPL, vRAL,]
 					},
 					animation: animationCommon,
 				}
 			};
 			
+			graphShip.map(function callback(currentValue, index){
+				if(currentValue){
+					configPC1.data.datasets.push(
+						{
+							data: results[index*2+4], showLine: true,
+							label: EDP + shipName[index],
+							yAxisID: "Penetration",
+							borderColor: colors[index][0], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
+						},{
+							data: results[index*2+5], showLine: true,
+							label: DIA + shipName[index], 
+							yAxisID: "Angle",
+							borderColor: colors[index][1], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
+						},
+					)
+				}
+			});
+
 			createUpdateChart(impactCharts, 1, "penChart1", configPC1);
 
 			const IVL = "Impact Velocity ";
@@ -1610,31 +1648,7 @@
 			//impactCharts[2] = new Chart($("#penChart2"), 
 			var configPC2 = {
 				type: 'scatter',
-				data: {
-					datasets: [
-						{
-							data: results[8], showLine: true,
-							label: IVL + shipName[0], 
-							yAxisID: "Impact Velocity",
-							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[9], showLine: true,
-							label: FTL + shipName[0], 
-							yAxisID: "Time",
-							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[10], showLine: true,
-							label: IVL + shipName[1], 
-							yAxisID: "Impact Velocity",
-							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[11], showLine: true,
-							label: FTL + shipName[1], 
-							yAxisID: "Time",
-							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						}
-					]
-				},
+				data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1664,6 +1678,25 @@
 				}
 
 			};
+
+			graphShip.map(function callback(currentValue, index){
+				if(currentValue){
+					configPC2.data.datasets.push(
+						{
+							data: results[index*2+8], showLine: true,
+							label: IVL + shipName[index], 
+							yAxisID: "Impact Velocity",
+							borderColor: colors[index][0], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
+						},{
+							data: results[index*2+9], showLine: true,
+							label: FTL + shipName[index], 
+							yAxisID: "Time",
+							borderColor: colors[index][1], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
+						},
+					)
+				}
+			});
+
 			createUpdateChart(impactCharts, 2, "penChart2", configPC2);
 		}
 
@@ -1695,41 +1728,7 @@
 			//angleCharts[0] = new Chart($("#angleChart0"), 
 			var configAC0 = {
 				type: 'scatter',
-				data: {
-					datasets: [
-						{
-							data: results[0], showLine: true,
-							label: armorL + shipName[0], 
-							yAxisID: "angle",
-							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[1], showLine: true,
-							label: ra0L + shipName[0], 
-							yAxisID: "angle",
-							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[2], showLine: true,
-							label: ra1L + shipName[0], 
-							yAxisID: "angle",
-							borderColor: "#FFD700", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[3], showLine: true,
-							label: armorL + shipName[1], 
-							yAxisID: "angle",
-							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[4], showLine: true,
-							label: ra0L + shipName[1], 
-							yAxisID: "angle",
-							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[5], showLine: true,
-							label: ra1L + shipName[1], 
-							yAxisID: "angle",
-							borderColor: "#DC143C", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						}
-					]
-				},
+				data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1751,6 +1750,29 @@
 					animation: animationCommon,
 				}
 			};
+			graphShip.map(function callback(currentValue, index){
+				if(currentValue){
+					configAC0.data.datasets.push(
+						{
+							data: results[index*3+0], showLine: true,
+							label: armorL + shipName[index], 
+							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
+							borderColor: colors[index][0], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
+						},{
+							data: results[index*3+1], showLine: true,
+							label: ra0L + shipName[index], 
+							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][1]),
+							borderColor: colors[index][1], fill: true, pointRadius: commonPointRadius, pointHitRadius: 5
+						},{
+							data: results[index*3+2], showLine: true,
+							label: ra1L + shipName[index], 
+							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][2]),
+							borderColor: colors[index][2], fill: '-1', pointRadius: commonPointRadius, pointHitRadius: 5
+						},
+					);
+				}
+			});
+
 			createUpdateChart(angleCharts, 0, "angleChart0", configAC0);
 			
 			const fuseL = "Minimum Fusing Angle ";
@@ -1758,41 +1780,7 @@
 			//angleCharts[1] = new Chart($("#angleChart1"), 
 			var configAC1 = {
 				type: 'scatter',
-				data: {
-					datasets: [
-						{
-							data: results[6], showLine: true,
-							label: fuseL + shipName[0], 
-							yAxisID: "angle",
-							borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[1], showLine: true,
-							label: ra0L + shipName[0], 
-							yAxisID: "angle",
-							borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[2], showLine: true,
-							label: ra1L + shipName[0], 
-							yAxisID: "angle",
-							borderColor: "#FFD700", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[7], showLine: true,
-							label: fuseL + shipName[1], 
-							yAxisID: "angle",
-							borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[4], showLine: true,
-							label: ra0L + shipName[1], 
-							yAxisID: "angle",
-							borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						},{
-							data: results[5], showLine: true,
-							label: ra1L + shipName[1], 
-							yAxisID: "angle",
-							borderColor: "#DC143C", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-						}
-					]
-				},
+				data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1814,14 +1802,35 @@
 					animation: animationCommon,
 				}
 			};
-
+			graphShip.map(function callback(currentValue, index){
+				if(currentValue){
+					configAC1.data.datasets.push(
+						{
+							data: results[index+6], showLine: true,
+							label: fuseL + shipName[index], 
+							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
+							borderColor: colors[index][0], fill: 'end', pointRadius: commonPointRadius, pointHitRadius: 5
+						},{
+							data: results[index*3+1], showLine: true,
+							label: ra0L + shipName[index], 
+							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][1]),
+							borderColor: colors[index][1], fill: true, pointRadius: commonPointRadius, pointHitRadius: 5
+						},{
+							data: results[index*3+2], showLine: true,
+							label: ra1L + shipName[index], 
+							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][2]),
+							borderColor: colors[index][2], fill: '-1', pointRadius: commonPointRadius, pointHitRadius: 5
+						},
+					);
+				}
+			});
 			createUpdateChart(angleCharts, 1, "angleChart1", configAC1);
 		}
 
 		async function makePostPenCharts(){ //Set PostPen
 			const width = $('#width').value;
-			const WFL = "Check Fusing ";
-			const NFL = "Always Fusing ";
+			const WFL = "Fused ";
+			const NFL = "No Fusing ";
 			var configs = [];
 			for(let i=0; i<numAngles; i++){
 				var str = "Lateral Angle " + i + ": " + v_angles[i] + "°";
@@ -1841,33 +1850,14 @@
 				)
 				const results = await Promise.all(tasks);
 
-				//postCharts[i] = new Chart($("#postPen" + i), 
 				configs[i] = {
 					type: 'scatter',
 					data: {
-						datasets: [
-							{
-								data: results[0], showLine: true,
-								label: WFL + shipName[0],
-								borderColor: "#FFA500", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-							},{
-								data: results[1], showLine: true,
-								label: NFL + shipName[0],
-								borderColor: "#3e95cd", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-							},{
-								data: results[2], showLine: true,
-								label: WFL + shipName[1],
-								borderColor: "#FF0000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-							},{
-								data: results[3], showLine: true,
-								label: NFL + shipName[1],
-								borderColor: "#008000", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-							},{
+						datasets: [{
 								data: shipWidth, showLine: true,
-								label: "Ship Width (m)",
+								label: "Ship Width (m)", //backgroundColor: Samples.utils.transparentize("#505050"),
 								borderColor: "#505050", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
-							}
-						]
+						}]
 					},
 					options: {
 						title: {
@@ -1886,6 +1876,23 @@
 						animation: animationCommon,
 					}
 				};
+
+				graphShip.map(function callback(currentValue, index){
+					if(currentValue){
+						configs[i].data.datasets.push(
+							{
+								data: results[2*index+0], showLine: true,
+								label: WFL + shipName[index], backgroundColor: Samples.utils.transparentize(colors[index][0]),
+								borderColor: colors[index][0], fill: true, pointRadius: commonPointRadius, pointHitRadius: 5
+							},{
+								data: results[2*index+1], showLine: true,
+								label: NFL + shipName[index], backgroundColor: Samples.utils.transparentize(colors[index][1]),
+								borderColor: colors[index][1], fill: true, pointRadius: commonPointRadius, pointHitRadius: 5
+							},
+						);
+					}
+				});
+
 				createUpdateChart(postCharts, i, "postPen" + i, configs[i]);
 			}
 		}
