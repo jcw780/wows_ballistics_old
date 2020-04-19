@@ -235,6 +235,16 @@
 								<select id=shellType0 class="form-control"  onchange="onChangeShellType('shellType0')"></select>
 							</div>
 						</div>
+						<div class="form-row margin-bottom">
+							<div class="col-sm-4">
+								<button type="button" class="btn btn-info btn-block" id="apply0">Apply</button>
+							</div>
+							<div class="btn-group-toggle" data-toggle="buttons">
+								<label class="btn btn-block btn-info active">
+									  <input id="autoApply0" type="checkbox" checked autocomplete="off"> Apply On Change
+								</label>
+							</div>
+						</div>
 						<div class="row margin-bottom">
 							<div class="col-sm-4"><h4>Ship B:</h4></div>
 							<div class="col-sm-8"></div>
@@ -275,8 +285,17 @@
 								<select id=shellType1 class="form-control"  onchange="onChangeShellType('shellType1')"></select>
 							</div>
 						</div>
+						<div class="form-row margin-bottom">
+							<div class="col-sm-4">
+								<button type="button" class="btn btn-info btn-block" id="apply1">Apply</button>
+							</div>
+							<div class="btn-group-toggle" data-toggle="buttons">
+								<label class="btn btn-block btn-info active">
+									  <input id="autoApply1" type="checkbox" checked autocomplete="off"> Apply On Change
+								</label>
+							</div>
+						</div>
 					</form>
-					<!--<button onclick="onSubmitPredefined()">Apply</button>-->
 				</td>
 				<td>
 					<form>
@@ -391,32 +410,6 @@
 							</div>
 							<div class="col-sm-4">
 								<input class="form-control" id="shipName1" value="">
-							</div>
-						</div>
-						<div class="row margin-bottom">
-							<div class="col-sm-4"></div>
-							<div class="col-sm-4">
-								<button type="button" class="btn btn-info btn-block" id="apply0">Apply</button>
-							</div>
-							<div class="col-sm-4">
-								<button type="button" class="btn btn-info btn-block" id="apply1">Apply</button>
-							</div>
-						</div>
-						<div class="row margin-bottom">
-							<div class="col-sm-4"></div>
-							<div class="col-sm-4">
-								<div class="btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-block btn-info active">
-									  	<input id="autoApply0" type="checkbox" checked autocomplete="off"> Auto-Apply
-									</label>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-block btn-info active">
-									  	<input id="autoApply1" type="checkbox" checked autocomplete="off"> Auto-Apply
-									</label>
-								</div>
 							</div>
 						</div>
 						<div class="row margin-bottom">
@@ -1759,15 +1752,15 @@
 							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
 							borderColor: colors[index][0], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[index*3+1], showLine: true,
+							data: results[index*3+1], showLine: true, borderDash: [5, 5],
 							label: ra0L + shipName[index], 
 							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][1]),
-							borderColor: colors[index][1], fill: true, pointRadius: commonPointRadius, pointHitRadius: 5
+							borderColor: colors[index][1], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[index*3+2], showLine: true,
+							data: results[index*3+2], showLine: true, borderDash: [5, 5],
 							label: ra1L + shipName[index], 
 							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][2]),
-							borderColor: colors[index][2], fill: '-1', pointRadius: commonPointRadius, pointHitRadius: 5
+							borderColor: colors[index][2], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},
 					);
 				}
@@ -1809,17 +1802,17 @@
 							data: results[index+6], showLine: true,
 							label: fuseL + shipName[index], 
 							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
-							borderColor: colors[index][0], fill: 'end', pointRadius: commonPointRadius, pointHitRadius: 5
+							borderColor: colors[index][0], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[index*3+1], showLine: true,
+							data: results[index*3+1], showLine: true, borderDash: [5, 5],
 							label: ra0L + shipName[index], 
 							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][1]),
-							borderColor: colors[index][1], fill: true, pointRadius: commonPointRadius, pointHitRadius: 5
+							borderColor: colors[index][1], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},{
-							data: results[index*3+2], showLine: true,
+							data: results[index*3+2], showLine: true, borderDash: [5, 5],
 							label: ra1L + shipName[index], 
 							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][2]),
-							borderColor: colors[index][2], fill: '-1', pointRadius: commonPointRadius, pointHitRadius: 5
+							borderColor: colors[index][2], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},
 					);
 				}
@@ -1854,7 +1847,7 @@
 					type: 'scatter',
 					data: {
 						datasets: [{
-								data: shipWidth, showLine: true,
+								data: shipWidth, showLine: true, borderDash: [5, 5],
 								label: "Ship Width (m)", //backgroundColor: Samples.utils.transparentize("#505050"),
 								borderColor: "#505050", fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						}]
