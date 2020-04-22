@@ -1603,6 +1603,10 @@
 			return '(' + x + 'm, ' + y + 's)';
 		}
 
+		function filterLegend(item, chart){
+			return !(item.text == '_remove_');
+		}
+
 		const commonPointRadius = 0;
 		var graphShip = [true, true];
 		var colors = [
@@ -1661,8 +1665,7 @@
 			const  EPL = "Effective Penetration ";
 			const IAL = "Impact Angle ";
 			var configPC0 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					elements: {
 						line: {
@@ -1708,8 +1711,7 @@
 			const EDP = "Effective Deck Penetration ";
 			const DIA = "Deck Impact Angle ";
 			var configPC1 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1746,8 +1748,7 @@
 			const FTL = "Flight Time ";
 			//impactCharts[2] = new Chart($("#penChart2"), 
 			var configPC2 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1820,6 +1821,65 @@
 			}
 		}
 
+		function generateAngleFillArmor(ship){
+			var fills = [[], [], []];
+			for(let i=0; i<impactSize; i++){
+				var armor = shellInstance.getAnglePoint(i, Module.angleDataIndex.armorD.value, ship);
+				var ra0 = shellInstance.getAnglePoint(i, Module.angleDataIndex.ra0D.value, ship);
+				var ra1 = shellInstance.getAnglePoint(i, Module.angleDataIndex.ra1D.value, ship);
+				if(armor > ra1){
+					fills[2].push({ //Armor - ra1
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: armor,
+					});
+				}
+				var armorRa1 = armor < ra1 ? armor : ra1; 
+				if(armorRa1 > ra0){
+					fills[1].push({ //ArmorRa1 - Ra0
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: armorRa1,
+					});
+				}
+				var armorRa0 = armor < ra0 ? armor : ra0;
+				if(true){
+					fills[0].push({ //ArmorRa0 - Bottom
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: armorRa0,
+					});
+				}
+			}
+			console.log(fills);
+			return fills;
+		}
+
+		function generateAngleFillFuse(ship){
+			var fills = [[], [], []];
+			for(let i=0; i<impactSize; i++){
+				var fuse = shellInstance.getAnglePoint(i, Module.angleDataIndex.fuseD.value, ship);
+				var ra0 = shellInstance.getAnglePoint(i, Module.angleDataIndex.ra0D.value, ship);
+				var ra1 = shellInstance.getAnglePoint(i, Module.angleDataIndex.ra1D.value, ship);
+				var fuseRa0 = fuse < ra0 ? ra0 : fuse;
+				var fuseRa1 = fuse < ra1 ? ra1 : fuse;
+				if(fuse < ra0){
+					fills[0].push({
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: fuse
+					});
+				}
+				if(fuseRa0 < ra1){
+					fills[1].push({
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: fuseRa0
+					});
+				}
+				fills[2].push({
+					x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+					y: fuseRa1
+				});
+			}
+			return fills;
+		}
+
 		async function makeAngleCharts(){//Set Angle Charts
 			const points = [
 				[0, 1, Module.angleDataIndex.armorD.value, 0],
@@ -1847,8 +1907,7 @@
 			//var FTL = " ";
 			//angleCharts[0] = new Chart($("#angleChart0"), 
 			var configAC0 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1862,19 +1921,18 @@
 								display: true,
 								labelString: "Lateral Angle (°)",
 							},
-							ticks:{
-								min: 0
-							}
+							ticks:{min: 0}
 						}]
 					},
+					legend: {labels: {filter: filterLegend},},
 					animation: animationCommon,
 				}
 			};
 			addTooltipCallbackAngles(configAC0);
 			graphShip.map(function callback(currentValue, index){
 				if(currentValue){
-					configAC0.data.datasets.push(
-						{
+					var fills = generateAngleFillArmor(index);
+					configAC0.data.datasets.push({
 							data: results[index*3+0], showLine: true,
 							label: armorL + shipName[index], 
 							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
@@ -1889,17 +1947,29 @@
 							label: ra1L + shipName[index], 
 							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][2]),
 							borderColor: colors[index][2], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
+						},{
+							data: fills[2], showLine: true, borderWidth: 0,
+							label: '_remove_', 
+							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
+							borderColor: colors[index][0], fill: '-1', pointRadius: 0, pointHitRadius: 0
+						},{
+							data: fills[1], showLine: true, borderWidth: 0,
+							label: '_remove_', 
+							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][2]),
+							borderColor: colors[index][2], fill: '-3', pointRadius: 0, pointHitRadius: 0
+						},{
+							data: fills[0], showLine: true, borderWidth: 0,
+							label: '_remove_', 
+							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][1]),
+							borderColor: colors[index][1], fill: true, pointRadius: 0, pointHitRadius: 0
 						},
 					);
 				}
 			});
 			createUpdateChart(angleCharts, 0, "angleChart0", configAC0);
 			const fuseL = "Minimum Fusing Angle ";
-			//var FTL = " ";
-			//angleCharts[1] = new Chart($("#angleChart1"), 
 			var configAC1 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1913,17 +1983,17 @@
 								display: true,
 								labelString: "Lateral Angle (°)",
 							},
-							ticks:{
-								min: 0
-							}
+							ticks:{min: 0}
 						}]
 					},
+					legend: {labels: {filter: filterLegend},},
 					animation: animationCommon,
 				}
 			};
 			addTooltipCallbackAngles(configAC1);
 			graphShip.map(function callback(currentValue, index){
 				if(currentValue){
+					var fills = generateAngleFillFuse(index);
 					configAC1.data.datasets.push(
 						{
 							data: results[index+6], showLine: true,
@@ -1940,7 +2010,23 @@
 							label: ra1L + shipName[index], 
 							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][2]),
 							borderColor: colors[index][2], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
+						},{
+							data: fills[0], showLine: true, borderWidth: 0,
+							label: '_remove_', 
+							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][2]),
+							borderColor: colors[index][2], fill: '-2', pointRadius: 0, pointHitRadius: 0
+						},{
+							data: fills[1], showLine: true, borderWidth: 0,
+							label: '_remove_', 
+							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][1]),
+							borderColor: colors[index][1], fill: '-2', pointRadius: 0, pointHitRadius: 0
+						},{
+							data: fills[2], showLine: true, borderWidth: 0,
+							label: '_remove_', 
+							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
+							borderColor: colors[index][0], fill: 'end', pointRadius: 0, pointHitRadius: 0
 						},
+
 					);
 				}
 			});
