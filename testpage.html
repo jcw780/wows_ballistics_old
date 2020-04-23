@@ -23,13 +23,13 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://unpkg.com/wasm-feature-detect/dist/umd/index.js"></script>
-		<script src="https://unpkg.com/bowser@2.7.0/es5.js"></script>
+
 		<script src="shellWasm.js"></script>
 		<script src="shellWasmV.js"></script>
 
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
@@ -131,18 +131,15 @@
 				background-color: rgb(96,0,96);
 				border-color: rgb(96,0,96);
 			}
-
 			.btn-success:not(:disabled):not(.disabled).active:focus, 
 			.btn-success:not(:disabled):not(.disabled):active:focus,
 			.btn-success.focus, .btn-success:focus,
 			.show>.btn-success.dropdown-toggle:focus {
 				box-shadow: 0 0 0 0.2rem rgba(96,0,96,.5);
 			}
-
 			.margin-bottom {
 				margin-bottom:5px;
 			}
-
 			.download-align{
 				margin-left: 45%;
 				width: 10%;
@@ -798,7 +795,6 @@
 		});
 
 		function setComputation(value){computationMethod = value;}
-		
 		function addFormChange(){
 			function settingsChange(){inputData[this.id] = parseFloat(this.value);}
 			const targetSettingsTargets = [
@@ -818,13 +814,11 @@
 			angleTargets.map(function(value){
 				document.getElementById(value).addEventListener('change', angleChange);
 			});
-
 			function shipChange(){
 				var id = this.id.slice(-1);
 				var dataType = this.id.slice(0, -1);
 				inputData[dataType][id] = parseFloat(this.value);	
 			}
-
 			const shipTargets = [
 				'caliber0', 'caliber1',
 				'mv0', 'mv1',
@@ -838,30 +832,22 @@
 				'ra1_0', 'ra1_1',
 				'HESAP0', 'HESAP1',
 			];
-
 			shipTargets.map(function(value){
 				document.getElementById(value).addEventListener('change', shipChange);
 			});
-
 			function shipNameChange(){
 				var id = this.id.slice(-1);
 				inputData['shipName'][id] = this.value;
 			}
-
-			const shipName = [
-				'shipName0', 'shipName1',
-			];
-
+			const shipName = ['shipName0', 'shipName1',];
 			shipName.map(function(value){
 				document.getElementById(value).addEventListener('change', shipNameChange);
 			});
-
 			function changeTimeStep(){shellInstance.setDtMin(parseFloat(this.value));}
 			function changeMinLaunch(){shellInstance.setMin(parseFloat(this.value));}
 			function changeMaxLaunch(){shellInstance.setMax(parseFloat(this.value));}
 			function changeGraphSettings(){graphSettings[this.id] = this.value;}
 			function changeGraphButtons(){graphSettings[this.id] = this.checked;}
-
 			const settings = [
 				['minDist'  , changeGraphSettings],
 				['maxDist'  , changeGraphSettings],
@@ -874,7 +860,6 @@
 				['minLaunch', changeMinLaunch], 
 				['maxLaunch', changeMaxLaunch],
 			]
-
 			settings.map(function(value){
 				//document.getElementById(value[0]).addEventListener('change', value[1]);
 				$("#"+value[0]).change(value[1]);
@@ -890,9 +875,7 @@
 				});
 			});
 
-			const graphShipButtons = [
-				"graphShip0", "graphShip1"
-			]
+			const graphShipButtons = ["graphShip0", "graphShip1"]
 
 			graphShipButtons.map(function(value){
 				$("#"+value).change(function(){
@@ -979,14 +962,11 @@
 		$(document).ready(async function(){
 			showCollapsibles();
 			const versions = [0, 1];
-			const tasks = versions.map(
-				function(input){return generateVersion(input);}
-			)
+			const tasks = versions.map(function(input){return generateVersion(input);})
 			const results = await Promise.all(tasks);
 		})
 
 		var Module;
-
 		wasmFeatureDetect.simd().then(simdSupported => {
 			if (simdSupported) {
 				console.log('vectorized');
@@ -998,7 +978,7 @@
 				})
 			} else {
 				console.log('unvectorized');
-				var result = bowser.getParser(window.navigator.userAgent);
+				//var result = bowser.getParser(window.navigator.userAgent);
 				/*if(result.parsedResult.browser.name == 'Chrome'){
 					alert('Enable WebAssembly SIMD support in chrome://flags for increased performance.');
 				}*/
@@ -1027,7 +1007,6 @@
 				'ACT': 2,
 				'AT' : 8
 			}
-
 			for(const [k, v] of Object.entries(graphToggles)){
 				for(let i = 0; i < v; i++){
 					$('#' + k + i).click();
