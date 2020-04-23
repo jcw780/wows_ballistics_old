@@ -8,10 +8,9 @@
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-
 	gtag('config', 'UA-155844497-1');
 	</script>
-	
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -155,7 +154,7 @@
 			}
 
 		</style>
-		<center><h1>World of Warships Ballistics Calculator</h1></center>
+		<h1 style="text-align: center;">World of Warships Ballistics Calculator</h1>
 		<button id="descriptionsToggle" class="btn btn-info btn-lg btn-block" 
 		data-toggle="collapse" data-target="#descriptions">Description
 			<span class="fa fa-chevron-up fa-resize-full"></span>
@@ -184,13 +183,13 @@
 		<table id=parameterTable style="width: 100%;">
 			<tr style="width: 100%;">
 				<th>
-					<center><h3><u>Predefined Shells</u></h3></center>
+					<h3 style="text-align: center;"><u>Predefined Shells</u></h3>
 				</th>
 				<th>
-					<center><h3><u>Shell Data</u></h3></center>
+					<h3 style="text-align: center;"><u>Shell Data</u></h3>
 				</th>
 				<th>
-					<center><h3><u>Target Data</u></h3></center>
+					<h3 style="text-align: center;"><u>Target Data</u></h3>
 				</th>
 			</tr>
 			<tr style="width: 100%;">
@@ -453,7 +452,7 @@
 							<label class="col-sm-5 col-form-label" 
 							title="Width (Beam) of the targeted ship in meters.">Ship Width (m)</label>
 							<div class="col-sm-4">
-								<input class="form-control" type="number" step="any" min="0" id="width" value="18"> </p>
+								<input class="form-control" type="number" step="any" min="0" id="width" value="18">
 							</div>
 						</div>
 					</form>
@@ -511,7 +510,7 @@
 				</td>
 			</tr>
 		</table>
-		<center style="background-color: white;"><button id=generate class="btn btn-success btn-lg btn-block" style="width: 50%; margin-bottom: 20px;">Generate Graphs</button></center>
+		<div style="background-color: white;"><button id=generate class="btn btn-success btn-lg btn-block" style="margin-left:auto; margin-right:auto; width: 50%; margin-bottom: 20px;">Generate Graphs</button></div>
 		</div>
 
 		<button id="settingsToggle" class="btn btn-info btn-lg btn-block" 
@@ -555,7 +554,7 @@
 							<div class="col-sm-8">
 								<div class="btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-block btn-info active">
-										  <input id="enableFills" type="checkbox" checked autocomplete="off"> Enable Fills
+										  <input id="enableFills" type="checkbox" checked> Enable Fills
 									</label>
 								</div>
 							</div>
@@ -564,16 +563,16 @@
 					<td>
 						<div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
 							<label class="btn btn-info">
-							  	<input type="radio" onchange="setComputation('AB5')" autocomplete="off"> Adams-Bashforth 5
+							  	<input type="radio" onchange="setComputation('AB5')"> Adams-Bashforth 5
 							</label>
 							<label class="btn btn-info">
-							  	<input type="radio" onchange="setComputation('RK2')" autocomplete="off"> Runge-Kutta 2
+							  	<input type="radio" onchange="setComputation('RK2')"> Runge-Kutta 2
 							</label>
 							<label class="btn btn-info">
-							  	<input type="radio" onchange="setComputation('RK4')" autocomplete="off"> Runge-Kutta 4
+							  	<input type="radio" onchange="setComputation('RK4')"> Runge-Kutta 4
 							</label>
 							<label class="btn btn-info active">
-								<input type="radio" onchange="setComputation('FE')"  autocomplete="off" checked> Forward Euler
+								<input type="radio" onchange="setComputation('FE')" checked> Forward Euler
 							</label>
 						  </div>
 					</td>
@@ -677,7 +676,7 @@
 		<div class="collapse" id=postPenCharts>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA0" id="AT0">
-			<text>Lateral Angle 0</text>
+			Lateral Angle 0
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA0">
@@ -688,7 +687,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA1" id="AT1">
-			<text>Lateral Angle 1</text>
+			Lateral Angle 1
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA1">
@@ -699,7 +698,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA2" id="AT2">
-			<text>Lateral Angle 2</text>
+			Lateral Angle 2
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA2">
@@ -710,7 +709,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA3" id="AT3">
-			<text>Lateral Angle 3</text>
+			Lateral Angle 3
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA3">
@@ -721,7 +720,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA4" id="AT4">
-			<text>Lateral Angle 4</text>
+			Lateral Angle 4
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA4">
@@ -732,7 +731,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA5" id="AT5">
-			<text>Lateral Angle 5</text>
+			Lateral Angle 5
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA5">
@@ -743,7 +742,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA6" id="AT6">
-			<text>Lateral Angle 6</text>
+			Lateral Angle 6
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA6">
@@ -754,7 +753,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA7" id="AT7">
-			<text>Lateral Angle 7</text>
+			Lateral Angle 7
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA7">
@@ -2075,7 +2074,7 @@
 			var configs = [];
 			for(let i=0; i<numAngles; i++){
 				var str = "Lateral Angle " + i + ": " + v_angles[i] + "°";
-				$("#AT" + i).children('text')[0].textContent = str;
+				$("#AT" + i)[0].textContent = str;
 
 				const points = [
 					[0, 2, Module.postPenDataIndex.xwf.value, i],
