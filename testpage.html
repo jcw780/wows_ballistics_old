@@ -551,6 +551,13 @@
 									<input class="form-control" type="number" step="any" id="rounding" value="3" >
 								</div>
 							</div>
+							<div class="col-sm-8">
+								<div class="btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-block btn-info active">
+										  <input id="enableFills" type="checkbox" checked autocomplete="off"> Enable Fills
+									</label>
+								</div>
+							</div>
 						</form>
 					</td>
 					<td>
@@ -587,6 +594,7 @@
 							<div class="col-sm-4">
 								<input class="form-control" type="number" step="any" min="-90" max="90" id="maxLaunch" value="25" >
 							</div>
+						</div>
 					</td>
 				</tr>
 			</table>
@@ -758,15 +766,15 @@
     
     <script>
 		var computationMethod = 'FE';
-		var inputData = {
-			'mv'         : [ 841, 841 ],
-			'caliber'    : [.152, .152],
-			'krupp'      : [2609, 2609],
-			'mass'       : [50.8, 50.8],
-			'normal'     : [ 8.5,  8.5],
-			'cD'         : [.3297, .3297],
-			'threshold'  : [25, 25],
-			'fusetime'   : [.025, .025],
+		var inputData = Object.seal({
+			'mv'         : [  805,  805],
+			'caliber'    : [ .102, .102],
+			'krupp'      : [ 2300, 2300],
+			'mass'       : [ 15.2, 15.2],
+			'normal'     : [   10,   10],
+			'cD'         : [.3536,.3536],
+			'threshold'  : [   17,   17],
+			'fusetime'   : [  .01,  .01],
 			'ra0_'       : [45, 45],
 			'ra1_'       : [60, 60],
 			'HESAP'      : [0, 0],
@@ -775,15 +783,16 @@
 			'armor'      : 70,
 			'inclination': 0,
 			'width'      : 18,
-			'shipName'   : ['PUSC506_Perth_1942 0', 'PUSC506_Perth_1942 0']
-		}
+			'shipName'   : ['PUSD503_Vampire 0', 'PUSD503_Vampire 0']
+		});
 
-		var graphSettings = {
+		var graphSettings = Object.seal({
 			'minDist': '0',
 			'maxDist': '',
 			'tickDist': '2500',
 			'rounding': '3',
-		};
+			'enableFills': true,
+		});
 
 		function setComputation(value){
 			//console.log(value);
@@ -852,32 +861,28 @@
 				document.getElementById(value).addEventListener('change', shipNameChange);
 			});
 
-			function changeTimeStep(){
-				shellInstance.setDtMin(parseFloat(this.value));
-			}
-			function changeMinLaunch(){
-				shellInstance.setMin(parseFloat(this.value));
-			}
-			function changeMaxLaunch(){
-				shellInstance.setMax(parseFloat(this.value));
-			}
-			function changeGraphSettings(){
-				//console.log(this.id, this.value);
-				graphSettings[this.id] = this.value;
-			}
+			function changeTimeStep(){shellInstance.setDtMin(parseFloat(this.value));}
+			function changeMinLaunch(){shellInstance.setMin(parseFloat(this.value));}
+			function changeMaxLaunch(){shellInstance.setMax(parseFloat(this.value));}
+			function changeGraphSettings(){graphSettings[this.id] = this.value;}
+			function changeGraphButtons(){graphSettings[this.id] = this.checked;}
 
 			const settings = [
 				['minDist'  , changeGraphSettings],
 				['maxDist'  , changeGraphSettings],
 				['tickDist' , changeGraphSettings],
 				['rounding' , changeGraphSettings],
+
+				['enableFills', changeGraphButtons],
+
 				['timeStep' , changeTimeStep ], 
 				['minLaunch', changeMinLaunch], 
 				['maxLaunch', changeMaxLaunch],
 			]
 
 			settings.map(function(value){
-				document.getElementById(value[0]).addEventListener('change', value[1]);
+				//document.getElementById(value[0]).addEventListener('change', value[1]);
+				$("#"+value[0]).change(value[1]);
 			});
 
 			const autoApplyButtons = [
@@ -953,15 +958,15 @@
 			shellInstance.setDtMin(.01);
 			shellInstance.setMin(0.0);
 			shellInstance.setMax(25.0);
-			data = {
-				'mv'         : [ 841, 841 ],
-				'caliber'    : [.152, .152],
-				'krupp'      : [2609, 2609],
-				'mass'       : [50.8, 50.8],
-				'normal'     : [ 8.5,  8.5],
-				'cD'         : [.3297, .3297],
-				'threshold'  : [25, 25],
-				'fusetime'   : [.025, .025],
+			const data = {
+				'mv'         : [  805,  805],
+				'caliber'    : [ .102, .102],
+				'krupp'      : [ 2300, 2300],
+				'mass'       : [ 15.2, 15.2],
+				'normal'     : [   10,   10],
+				'cD'         : [.3536,.3536],
+				'threshold'  : [   17,   17],
+				'fusetime'   : [  .01,  .01],
 				'ra0_'       : [45, 45],
 				'ra1_'       : [60, 60],
 				'HESAP'      : [0, 0],
@@ -970,7 +975,7 @@
 				'armor'      : 70,
 				'inclination': 0,
 				'width'      : 18,
-				'shipName'   : ['PUSC506_Perth_1942 0', 'PUSC506_Perth_1942 0']
+				'shipName'   : ['PUSD503_Vampire 0', 'PUSD503_Vampire 0']
 			}
 			makeGraphs(data);
 		}
@@ -1603,11 +1608,15 @@
 			return '(' + x + 'm, ' + y + 's)';
 		}
 
+		function filterLegend(item, chart){
+			return !(item.text == '_remove_');
+		}
+
 		const commonPointRadius = 0;
 		var graphShip = [true, true];
 		var colors = [
 			["#3e95cd", "#FFA500", "#FFD700"],
-			["#008000", "#FF0000", "#DC143C"],
+			["#008000", "#FF0000", "#FF0090"],
 		]
 
 		async function makeImpactCharts(){ //Set Impact
@@ -1661,8 +1670,7 @@
 			const  EPL = "Effective Penetration ";
 			const IAL = "Impact Angle ";
 			var configPC0 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					elements: {
 						line: {
@@ -1708,8 +1716,7 @@
 			const EDP = "Effective Deck Penetration ";
 			const DIA = "Deck Impact Angle ";
 			var configPC1 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1746,8 +1753,7 @@
 			const FTL = "Flight Time ";
 			//impactCharts[2] = new Chart($("#penChart2"), 
 			var configPC2 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1820,6 +1826,64 @@
 			}
 		}
 
+		function generateAngleFillArmor(ship){
+			var fills = [[], [], []];
+			for(let i=0; i<impactSize; i++){
+				var armor = shellInstance.getAnglePoint(i, Module.angleDataIndex.armorD.value, ship);
+				var ra0 = shellInstance.getAnglePoint(i, Module.angleDataIndex.ra0D.value, ship);
+				var ra1 = shellInstance.getAnglePoint(i, Module.angleDataIndex.ra1D.value, ship);
+				if(armor > ra1){
+					fills[2].push({ //Armor - ra1
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: armor,
+					});
+				}
+				var armorRa1 = armor < ra1 ? armor : ra1; 
+				if(armorRa1 > ra0){
+					fills[1].push({ //ArmorRa1 - Ra0
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: armorRa1,
+					});
+				}
+				var armorRa0 = armor < ra0 ? armor : ra0;
+				if(true){
+					fills[0].push({ //ArmorRa0 - Bottom
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: armorRa0,
+					});
+				}
+			}
+			return fills;
+		}
+
+		function generateAngleFillFuse(ship){
+			var fills = [[], [], []];
+			for(let i=0; i<impactSize; i++){
+				var fuse = shellInstance.getAnglePoint(i, Module.angleDataIndex.fuseD.value, ship);
+				var ra0 = shellInstance.getAnglePoint(i, Module.angleDataIndex.ra0D.value, ship);
+				var ra1 = shellInstance.getAnglePoint(i, Module.angleDataIndex.ra1D.value, ship);
+				var fuseRa0 = fuse < ra0 ? ra0 : fuse;
+				var fuseRa1 = fuse < ra1 ? ra1 : fuse;
+				if(fuse < ra0){
+					fills[0].push({
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: fuse
+					});
+				}
+				if(fuseRa0 < ra1){
+					fills[1].push({
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: fuseRa0
+					});
+				}
+				fills[2].push({
+					x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+					y: fuseRa1
+				});
+			}
+			return fills;
+		}
+
 		async function makeAngleCharts(){//Set Angle Charts
 			const points = [
 				[0, 1, Module.angleDataIndex.armorD.value, 0],
@@ -1847,8 +1911,7 @@
 			//var FTL = " ";
 			//angleCharts[0] = new Chart($("#angleChart0"), 
 			var configAC0 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1862,19 +1925,17 @@
 								display: true,
 								labelString: "Lateral Angle (°)",
 							},
-							ticks:{
-								min: 0
-							}
+							ticks:{min: 0}
 						}]
 					},
+					legend: {labels: {filter: filterLegend},},
 					animation: animationCommon,
 				}
 			};
 			addTooltipCallbackAngles(configAC0);
 			graphShip.map(function callback(currentValue, index){
 				if(currentValue){
-					configAC0.data.datasets.push(
-						{
+					configAC0.data.datasets.push({
 							data: results[index*3+0], showLine: true,
 							label: armorL + shipName[index], 
 							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
@@ -1891,15 +1952,33 @@
 							borderColor: colors[index][2], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},
 					);
+					if(graphSettings['enableFills']){
+						var fills = generateAngleFillArmor(index);
+						configAC0.data.datasets.push(
+							{
+								data: fills[2], showLine: true, borderWidth: 0,
+								label: '_remove_', 
+								yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
+								borderColor: colors[index][0], fill: '-1', pointRadius: 0, pointHitRadius: 0
+							},{
+								data: fills[1], showLine: true, borderWidth: 0,
+								label: '_remove_', 
+								yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][2]),
+								borderColor: colors[index][2], fill: '-3', pointRadius: 0, pointHitRadius: 0
+							},{
+								data: fills[0], showLine: true, borderWidth: 0,
+								label: '_remove_', 
+								yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][1]),
+								borderColor: colors[index][1], fill: true, pointRadius: 0, pointHitRadius: 0
+							},
+						);
+					}
 				}
 			});
 			createUpdateChart(angleCharts, 0, "angleChart0", configAC0);
 			const fuseL = "Minimum Fusing Angle ";
-			//var FTL = " ";
-			//angleCharts[1] = new Chart($("#angleChart1"), 
 			var configAC1 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1913,11 +1992,10 @@
 								display: true,
 								labelString: "Lateral Angle (°)",
 							},
-							ticks:{
-								min: 0
-							}
+							ticks:{min: 0}
 						}]
 					},
+					legend: {labels: {filter: filterLegend},},
 					animation: animationCommon,
 				}
 			};
@@ -1942,6 +2020,27 @@
 							borderColor: colors[index][2], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},
 					);
+					if(graphSettings.enableFills){
+						var fills = generateAngleFillFuse(index);
+						configAC1.data.datasets.push(
+							{
+								data: fills[0], showLine: true, borderWidth: 0,
+								label: '_remove_', 
+								yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][2]),
+								borderColor: colors[index][2], fill: '-2', pointRadius: 0, pointHitRadius: 0
+							},{
+								data: fills[1], showLine: true, borderWidth: 0,
+								label: '_remove_', 
+								yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][1]),
+								borderColor: colors[index][1], fill: '-2', pointRadius: 0, pointHitRadius: 0
+							},{
+								data: fills[2], showLine: true, borderWidth: 0,
+								label: '_remove_', 
+								yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
+								borderColor: colors[index][0], fill: 'end', pointRadius: 0, pointHitRadius: 0
+							},
+						);
+					}
 				}
 			});
 			createUpdateChart(angleCharts, 1, "angleChart1", configAC1);
