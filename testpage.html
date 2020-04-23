@@ -888,7 +888,7 @@
 		//Add Hide buttons
         addTitles();
 		let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-		$("#generate")[0].addEventListener(touchEvent, collectMake);
+		document.getElementById("generate").addEventListener(touchEvent, collectMake);
 
 		function changeChevron(e){
 			e.stopPropagation();
@@ -929,7 +929,7 @@
 		}
 
 		for(let i=0; i<2; i++){
-			$('#apply' + i)[0].addEventListener(touchEvent, applyButton);
+			document.getElementById('apply' + i).addEventListener(touchEvent, applyButton);
 		}
 
 		async function firstRun(){
@@ -1040,7 +1040,7 @@
 					"How many degrees of impact angle the shell can reduce. Higher normalization increases decreases effective armor thickness."
 			}
 			for(const [key, value] of Object.entries(targets)){
-				$('#'+key)[0].title = value;
+				document.getElementById(key).title = value;
 			}
 		}
 
@@ -1054,123 +1054,101 @@
 		var autoApply = [true, true];
 		var initialized = false;
         var compiled = false;
-        var dataURL = "static/data/"
-		function generateVersion(id){
-			$.ajax({
-				url: dataURL + "versions.json",
-				type: "GET",
-				dataType: "json",
-				success: function (data) {
-					$('#' + "version" + id)[0].innerHTML = '';
-					for(let i=data.length - 1; i>=0; i--){
-						$('#' + "version" + id)[0].innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+		var dataURL = "static/data/"
+		
+		function fetchJson(target, onSucess){
+			fetch(target)
+				.then((response) => {
+					if (!response.ok) {
+					throw new Error('Network response was not ok');
 					}
-					onChangeVersion("version" + id);
-				},
-				error: function(response){
-					console.log("Generating version failed");
-					console.log(response);
-					console.log(response['status']);
-					console.log(response.statusCode());
+					return response.json();
+				})
+				.then(onSucess)
+				.catch((error) => {
+					console.error('There has been a problem with your fetch operation:', error);
 				}
-			})
+			);
+		}
+
+		function generateVersion(id){
+			fetchJson(dataURL + "versions.json", function(data){
+				var target = document.getElementById("version" + id);
+				target.innerHTML = '';
+				for(let i=data.length - 1; i>=0; i--){
+					target.innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+				}
+				onChangeVersion("version" + id);
+			});
 		}
 		function onChangeVersion(versionID){
 			var id = parseInt(versionID.slice(-1));
-			versionValue[id] = $('#' + versionID)[0].value;
+			versionValue[id] = document.getElementById(versionID).value;
 			generateNation("nation" + id);
 		}
 
 		function generateNation(nationID){
 			var id = parseInt(nationID.slice(-1));
-			$.ajax({
-				url: dataURL + versionValue[id] + "/nations.json",
-				type: "GET",
-				dataType: "json",
-				success: function (data) {
-					$('#' + nationID)[0].innerHTML = '';
-					for(let i=0; i<data.length; i++){
-						$('#' + nationID)[0].innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
-					}
-					onChangeNation(nationID);
-				},
-				error: function(response){
-					console.log("Generating nation failed");
-					console.log(response);
-					console.log(response['status']);
-					console.log(response.statusCode());
+			fetchJson(dataURL + versionValue[id] + "/nations.json", function (data) {
+				var target = document.getElementById(nationID);
+				target.innerHTML = '';
+				for(let i=0; i<data.length; i++){
+					target.innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
 				}
-			})
+				onChangeNation(nationID);
+			});
 		}
 		function onChangeNation(nationID){
 			var id = parseInt(nationID.slice(-1));
-			nationValue[id] = $('#' + nationID)[0].value;
+			nationValue[id] = document.getElementById(nationID).value;
 			generateType('type' + id);
 		}
 
 		function generateType(typeID){
 			var id = parseInt(typeID.slice(-1));
-			$.ajax({
-				url: dataURL + versionValue[id] + "/" + nationValue[id] + "/shiptypes.json",
-				type: "GET",
-				dataType: "json",
-				success: function (data) {
-					$('#' + typeID)[0].innerHTML = '';
-					for(let i=0; i<data.length; i++){
-						$('#' + typeID)[0].innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
-					}
-					onChangeType(typeID);
-				},
-				error: function(response){
-					console.log("Generating type failed");
-					console.log(response);
-					console.log(response['status']);
-					console.log(response.statusCode());
+			fetchJson(dataURL + versionValue[id] + "/" + nationValue[id] + "/shiptypes.json",
+			function (data) {
+				var target = document.getElementById(typeID);
+				target.innerHTML = '';
+				for(let i=0; i<data.length; i++){
+					target.innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
 				}
-			})
+				onChangeType(typeID);
+			});
 		}
 		function onChangeType(typeID){
 			var id = parseInt(typeID.slice(-1));
-			typeValue[id] = $('#' + typeID)[0].value;
+			typeValue[id] = document.getElementById(typeID).value;
 			generateShip('ship' + id)
 		}
 
 		function generateShip(shipID){
 			var id = parseInt(shipID.slice(-1));
-			$.ajax({
-				url: dataURL + versionValue[id] + "/" + nationValue[id] + "/" + nationValue[id] + "_" + typeValue[id] + ".json",
-				type: "GET",
-				dataType: "json",
-				success: function (data) {
-					typeData[id] = data;
-					$('#' + shipID)[0].innerHTML = '';
-					var sorted = []
-					for(let ship in data){
-						sorted.push(ship);
-					}
-					sorted.sort(function(a, b){return data[a]['Tier'] - data[b]['Tier']});
-					for(let ship of sorted){
-						$('#' + shipID)[0].innerHTML += "<option value=" + ship + ">" + "Tier " + data[ship]['Tier'] + " " + ship + "</option>"
-					}
-					onChangeShip(shipID);
-				},
-				error: function(response){
-					console.log("Generating ship failed");
-					console.log(response);
-					console.log(response['status']);
-					console.log(response.statusCode());
+			fetchJson(dataURL + versionValue[id] + "/" + nationValue[id] + "/" + nationValue[id] + "_" + typeValue[id] + ".json", 
+			function (data) {
+				typeData[id] = data;
+				var target = document.getElementById(shipID);
+				target.innerHTML = '';
+				var sorted = []
+				for(let ship in data){
+					sorted.push(ship);
 				}
-			})
+				sorted.sort(function(a, b){return data[a]['Tier'] - data[b]['Tier']});
+				for(let ship of sorted){
+					target.innerHTML += "<option value=" + ship + ">" + "Tier " + data[ship]['Tier'] + " " + ship + "</option>"
+				}
+				onChangeShip(shipID);
+			});
 		}
 		function onChangeShip(shipID){
 			var id = parseInt(shipID.slice(-1));
-			shipValue[id] = $('#' + shipID)[0].value;
+			shipValue[id] = document.getElementById(shipID).value;
 			generateShell('shell' + id);
 		}
 
 		function generateShell(shellID){
 			var id = parseInt(shellID.slice(-1));
-			selector = $('#' + shellID)[0];
+			var selector = document.getElementById(shellID);
 			selector.innerHTML = '';
 			for(let shell in typeData[id][shipValue[id]]){
 				if(shell.includes('Artillery')){
@@ -1181,13 +1159,13 @@
 		}
 		function onChangeShell(shellID){
 			var id = parseInt(shellID.slice(-1));
-			shellValue[id] = $('#' + shellID)[0].value;
+			shellValue[id] = document.getElementById(shellID).value;
 			generateShellType("shellType" + id);
 		}
 
 		function generateShellType(shellTypeID){
 			var id = parseInt(shellTypeID.slice(-1));
-			selector = $('#' + shellTypeID)[0];
+			var selector = document.getElementById(shellTypeID);
 			selector.innerHTML = '';
 			for(let shellType in typeData[id][shipValue[id]][shellValue[id]]){
 				selector.innerHTML += "<option value=" + shellType + ">" + shellType + "</option>";
@@ -1197,7 +1175,7 @@
 
 		function onChangeShellType(shellTypeID){
 			var id = parseInt(shellTypeID.slice(-1));
-			shellType[id] = $('#' + shellTypeID)[0].value;
+			shellType[id] = document.getElementById(shellTypeID).value;
 			if(autoApply[id]){
 				onSubmitPredefined(id);
 			}
@@ -1206,8 +1184,7 @@
 		const changeEvent = new Event('change');
 
 		function changeFormValue(elementID, newValue){
-			var event = new Event('change');
-			let element = $(elementID)[0];
+			let element = document.getElementById(elementID);
 			if(newValue != element.value){
 				element.value = newValue;
 				element.dispatchEvent(changeEvent);
@@ -1216,17 +1193,17 @@
 
 		function onSubmitPredefined(id){
 			var targetShell = typeData[id][shipValue[id]][shellValue[id]][shellType[id]];
-			changeFormValue("#shipName"  + id, shipValue[id] + " " + shellValue[id].slice(-1));
-			changeFormValue("#mv"        + id, targetShell["bulletSpeed"]);
-			changeFormValue("#caliber"   + id, targetShell["bulletDiametr"]);
-			changeFormValue("#krupp"     + id, targetShell["bulletKrupp"]);
-			changeFormValue("#mass"      + id, targetShell["bulletMass"]);
-			changeFormValue("#cD"        + id, targetShell["bulletAirDrag"]);
-			changeFormValue("#threshold" + id, targetShell["bulletDetonatorThreshold"]);
-			changeFormValue("#fusetime"  + id, targetShell["bulletDetonator"]);
-			changeFormValue("#ra0_"      + id, targetShell["bulletRicochetAt"]);
-			changeFormValue("#ra1_"      + id, targetShell["bulletAlwaysRicochetAt"]);
-			changeFormValue("#normal"    + id, targetShell['bulletCapNormalizeMaxAngle']);
+			changeFormValue("shipName"  + id, shipValue[id] + " " + shellValue[id].slice(-1));
+			changeFormValue("mv"        + id, targetShell["bulletSpeed"]);
+			changeFormValue("caliber"   + id, targetShell["bulletDiametr"]);
+			changeFormValue("krupp"     + id, targetShell["bulletKrupp"]);
+			changeFormValue("mass"      + id, targetShell["bulletMass"]);
+			changeFormValue("cD"        + id, targetShell["bulletAirDrag"]);
+			changeFormValue("threshold" + id, targetShell["bulletDetonatorThreshold"]);
+			changeFormValue("fusetime"  + id, targetShell["bulletDetonator"]);
+			changeFormValue("ra0_"      + id, targetShell["bulletRicochetAt"]);
+			changeFormValue("ra1_"      + id, targetShell["bulletAlwaysRicochetAt"]);
+			changeFormValue("normal"    + id, targetShell['bulletCapNormalizeMaxAngle']);
 			var HESAPv = 0;
 			if(shellType[id] == 'AP'){
 				HESAPv = 0;
@@ -1235,7 +1212,7 @@
 			}else if(shellType[id] == 'CS'){
 				HESAPv = targetShell["alphaPiercingCS"];
 			}
-			changeFormValue("#HESAP"     + id, HESAPv);
+			changeFormValue("HESAP"     + id, HESAPv);
 		}
 
 		//Graphs
@@ -1243,8 +1220,8 @@
 		var v_angles = [];
 		var numAngles = 8;
 
-		function getFloatValues(elementId){return parseFloat($('#' + elementId)[0].value);}
-		function getIntValues(elementId){return parseInt($('#' + elementId)[0].value);}
+		function getFloatValues(elementId){return parseFloat(document.getElementById(elementId).value);}
+		function getIntValues(elementId){return parseInt(document.getElementById(elementId).value);}
 
 		var impactCharts = []
 		var angleCharts = []
@@ -1265,19 +1242,16 @@
 
 		function completed(){
 			var graphId = this.chart.ctx.canvas.id;
-			var url = $('#' + graphId)[0].toDataURL("image/png");
-			var target = $('#' + graphId.slice(0, -1) + 'Link' + graphId.slice(-1))[0];
+			var url = document.getElementById(graphId).toDataURL("image/png");
+			var target = document.getElementById(
+				graphId.slice(0, -1) + 'Link' + graphId.slice(-1));
 			target.href = url;
 			target.download = this.chart.config.options.title.text + '.png';
 		}
 
-		const animationCommon = {
-			onComplete: completed
-		}
+		const animationCommon = {onComplete: completed}
 		
-		function addCommas(value, index, values) {
-			return value.toLocaleString();
-		}
+		function addCommas(value, index, values) {return value.toLocaleString();}
 
 		var targetedArmor;
 		var targetInclination;
@@ -1316,7 +1290,6 @@
 					v_ra1[k],
 					k
 				)
-
 			}
 			
 			switch(computationMethod){
@@ -1465,7 +1438,8 @@
 				chartArray[index].options = config.options;
 				chartArray[index].update();
 			}else{
-				chartArray[index] = new Chart($("#" + target), config);
+				chartArray[index] = new Chart(
+					document.getElementById(target), config);
 			}
 		}	
 
@@ -1513,10 +1487,8 @@
 						break;
 					}
 				}
-
 				finalNumber = beforePoint + '.' + afterPoint;
 			}
-
 			// Remove trailing zeroes from fractional part before returning
 			return finalNumber.replace(/0+$/, '')
 		}
@@ -1555,22 +1527,11 @@
 				};
 			}
 		}
-		function penetrationToolTipLabel(x, y){
-			return '(' + x + 'm, ' + y + 'mm)';
-		}
-		function angleTooltipLabel(x, y){
-			return '(' + x + 'm, ' + y + '°)';
-		}
-		function velocityTooltipLabel(x, y){
-			return '(' + x + 'm, ' + y + 'm/s)';
-		}
-		function timeTooltipLabel(x, y){
-			return '(' + x + 'm, ' + y + 's)';
-		}
-
-		function filterLegend(item, chart){
-			return !(item.text == '_remove_');
-		}
+		function penetrationToolTipLabel(x, y){return '(' + x + 'm, ' + y + 'mm)';}
+		function angleTooltipLabel(x, y){return '(' + x + 'm, ' + y + '°)';}
+		function velocityTooltipLabel(x, y){return '(' + x + 'm, ' + y + 'm/s)';}
+		function timeTooltipLabel(x, y){return '(' + x + 'm, ' + y + 's)';}
+		function filterLegend(item, chart){return !(item.text == '_remove_');}
 
 		const commonPointRadius = 0;
 		var graphShip = [true, true];
@@ -1597,18 +1558,12 @@
 				[1, 0, Module.impactDataIndex.tToTargetA.value, 0],
 			]
 
-			const tasks = points.map(
-				function(input){
-					return generatePoint(input[0], input[1], input[2], input[3]);
-				}
-			)
+			const tasks = points.map(function(input){return generatePoint(input[0], input[1], input[2], input[3]);})
 			const results = await Promise.all(tasks);
 			//console.log(results)
 			const yAxesPenetration = {
 				id: "Penetration", postition: "left",
-				scaleLabel: {
-					display: true,
-				},
+				scaleLabel: {display: true,},
 				ticks: {
 					stepSize: 100,
 					callback: addCommas,
@@ -1617,9 +1572,7 @@
 
 			const yAxesRightAngle = {
 				id: "Angle", position: "right",
-				scaleLabel: {
-					display: true,
-				},
+				scaleLabel: {display: true,},
 			}
 
 			var hRAL = yAxesRightAngle;
@@ -1632,18 +1585,13 @@
 			var configPC0 = {
 				type: 'scatter', data: {datasets: []},
 				options: {
-					elements: {
-						line: {
-						cubicInterpolationMode: 'default' 
-						}
-					},
 					title: {
 						display: true,
 						text: 'Horizontal Penetration and Impact Angle'
 					},
 					scales: {
 						xAxes: xAxesDistance,
-						yAxes: [hRPL , hRAL,]
+						yAxes: [hRPL , hRAL,],
 					},
 					animation: animationCommon,
 				}
@@ -1684,7 +1632,7 @@
 					},
 					scales: {
 						xAxes: xAxesDistance,
-						yAxes: [vRPL, vRAL,]
+						yAxes: [vRPL, vRAL,],
 					},
 					animation: animationCommon,
 				}
@@ -1727,17 +1675,14 @@
 								display: true,
 								labelString: "Impact Velocity (m/s)",
 							},
-							ticks: {
-								stepSize: 100
-							}
+							ticks: {stepSize: 100}
 						},{
 							id: "Time", position: "right",
 							scaleLabel: {
 								display: true,
 								labelString: "Flight Time (s)",
 							},
-						}
-						]
+						}],
 					},
 					animation: animationCommon,
 				}
@@ -1758,7 +1703,7 @@
 							yAxisID: "Time",
 							borderColor: colors[index][1], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},
-					)
+					);
 				}
 			});
 			createUpdateChart(impactCharts, 2, "penChart2", configPC2);
@@ -1953,7 +1898,7 @@
 								labelString: "Lateral Angle (°)",
 							},
 							ticks:{min: 0}
-						}]
+						}],
 					},
 					legend: {labels: {filter: filterLegend},},
 					animation: animationCommon,
@@ -2029,12 +1974,12 @@
 			return '(' + x + ' m, ' + y + ' m)';
 		}
 		async function makePostPenCharts(){ //Set PostPen
-			const width = $('#width').value;
+			const width = document.getElementById('width').value;
 			const WFL = "Fused ", NFL = "No Fusing ";
 			var configs = [];
 			for(let i=0; i<numAngles; i++){
 				var str = "Lateral Angle " + i + ": " + v_angles[i] + "°";
-				$("#AT" + i)[0].textContent = str;
+				document.getElementById("AT" + i).textContent = str;
 
 				const points = [
 					[0, 2, Module.postPenDataIndex.xwf.value, i],
@@ -2069,7 +2014,7 @@
 									display: true,
 									labelString: "Shell Detonation Distance (m)",
 								},
-							}]
+							}],
 						},
 						animation: animationCommon,
 					}
