@@ -172,7 +172,6 @@
 				<p>Overpen calculations are experimental - further testing may be needed to confirm results.</p>
 				<p>Site will be updated if and when more accurate information becomes available.</p>
 			</div>
-			
 		</div>
 
 		<button id="parametersToggle" class="btn btn-info btn-lg btn-block" 
@@ -241,7 +240,7 @@
 							</div>
 							<div class="btn-group-toggle" data-toggle="buttons">
 								<label class="btn btn-block btn-info active">
-									  <input id="autoApply0" type="checkbox" checked autocomplete="off"> Apply On Change
+									  <input id="autoApply0" type="checkbox" checked> Apply On Change
 								</label>
 							</div>
 						</div>
@@ -291,7 +290,7 @@
 							</div>
 							<div class="btn-group-toggle" data-toggle="buttons">
 								<label class="btn btn-block btn-info active">
-									  <input id="autoApply1" type="checkbox" checked autocomplete="off"> Apply On Change
+									  <input id="autoApply1" type="checkbox" checked> Apply On Change
 								</label>
 							</div>
 						</div>
@@ -417,14 +416,14 @@
 							<div class="col-sm-4">
 								<div class="btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-block btn-info active">
-									  	<input id="graphShip0" type="checkbox" checked autocomplete="off"> Graph
+									  	<input id="graphShip0" type="checkbox" checked> Graph
 									</label>
 								</div>
 							</div>
 							<div class="col-sm-4">
 								<div class="btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-block btn-info active">
-									  	<input id="graphShip1" type="checkbox" checked autocomplete="off"> Graph
+									  	<input id="graphShip1" type="checkbox" checked> Graph
 									</label>
 								</div>
 							</div>
@@ -794,17 +793,10 @@
 			'enableFills': true,
 		});
 
-		function setComputation(value){
-			//console.log(value);
-			computationMethod = value;
-		}
+		function setComputation(value){computationMethod = value;}
 		
-		
-
 		function addFormChange(){
-			function settingsChange(){
-				inputData[this.id] = parseFloat(this.value);
-			}
+			function settingsChange(){inputData[this.id] = parseFloat(this.value);}
 			const targetSettingsTargets = [
 				'armor', 'inclination', 'width',
 			];
@@ -814,7 +806,6 @@
 			function angleChange(){
 				var id = this.id.slice(-1);
 				inputData['angle'][id] = parseFloat(this.value);
-
 			}
 			const angleTargets = [
 				'angle0', 'angle1', 'angle2', 'angle3', 
@@ -985,9 +976,7 @@
 			showCollapsibles();
 			const versions = [0, 1];
 			const tasks = versions.map(
-				function(input){
-					return generateVersion(input);
-				}
+				function(input){return generateVersion(input);}
 			)
 			const results = await Promise.all(tasks);
 		})
@@ -1093,14 +1082,13 @@
 					for(let i=data.length - 1; i>=0; i--){
 						$('#' + "version" + id)[0].innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
 					}
-
 					onChangeVersion("version" + id);
 				},
 				error: function(response){
-					console.log("Generating version failed")
+					console.log("Generating version failed");
 					console.log(response);
-					console.log(response['status'])
-					console.log(response.statusCode())
+					console.log(response['status']);
+					console.log(response.statusCode());
 				}
 			})
 		}
@@ -1124,10 +1112,10 @@
 					onChangeNation(nationID);
 				},
 				error: function(response){
-					console.log("Generating nation failed")
+					console.log("Generating nation failed");
 					console.log(response);
-					console.log(response['status'])
-					console.log(response.statusCode())
+					console.log(response['status']);
+					console.log(response.statusCode());
 				}
 			})
 		}
@@ -1151,10 +1139,10 @@
 					onChangeType(typeID);
 				},
 				error: function(response){
-					console.log("Generating type failed")
+					console.log("Generating type failed");
 					console.log(response);
-					console.log(response['status'])
-					console.log(response.statusCode())
+					console.log(response['status']);
+					console.log(response.statusCode());
 				}
 			})
 		}
@@ -1184,10 +1172,10 @@
 					onChangeShip(shipID);
 				},
 				error: function(response){
-					console.log("Generating ship failed")
+					console.log("Generating ship failed");
 					console.log(response);
-					console.log(response['status'])
-					console.log(response.statusCode())
+					console.log(response['status']);
+					console.log(response.statusCode());
 				}
 			})
 		}
@@ -1264,7 +1252,6 @@
 			}else if(shellType[id] == 'CS'){
 				HESAPv = targetShell["alphaPiercingCS"];
 			}
-
 			changeFormValue("#HESAP"     + id, HESAPv);
 		}
 
@@ -1273,13 +1260,8 @@
 		var v_angles = [];
 		var numAngles = 8;
 
-		function getFloatValues(elementId){
-			return parseFloat($('#' + elementId)[0].value);
-		}
-
-		function getIntValues(elementId){
-			return parseInt($('#' + elementId)[0].value);
-		}
+		function getFloatValues(elementId){return parseFloat($('#' + elementId)[0].value);}
+		function getIntValues(elementId){return parseInt($('#' + elementId)[0].value);}
 
 		var impactCharts = []
 		var angleCharts = []
@@ -1367,7 +1349,6 @@
 				case 'FE':
 					shellInstance.calcImpactForwardEuler();
 				break;
-
 			}
 			
 			shellInstance.calcAngles(v_armor, v_inclination);
@@ -1386,12 +1367,10 @@
 			
 			shipWidth = [];
             for(let i=0; i<impactSize; i++){
-                shipWidth.push(
-                    {
-                        x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, max),
-                        y: width
-                    }
-                )
+                shipWidth.push({
+					x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, max),
+					y: width
+                })
             }
 
 			//For downloading graphs
@@ -1411,9 +1390,7 @@
 					display: true,
 					labelString: "Distance from Launch (m)",
 				},
-				ticks:{
-					callback: addCommas,
-				}
+				ticks:{callback: addCommas,}
 			}];
 			
 
@@ -2084,9 +2061,7 @@
 				]
 
 				const tasks = points.map(
-					function(input){
-						return generatePoint(input[0], input[1], input[2], input[3]);
-					}
+					function(input){return generatePoint(input[0], input[1], input[2], input[3]);}
 				)
 				const results = await Promise.all(tasks);
 
