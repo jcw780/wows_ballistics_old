@@ -2,12 +2,6 @@
 <html lang="en">
 
 	<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-    <title>World of Warships Ballistics Calculator</title>
-	</head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155844497-1"></script>
 	<script>
@@ -17,6 +11,13 @@
 
 	gtag('config', 'UA-155844497-1');
 	</script>
+	
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>World of Warships Ballistics Calculator</title>
+	</head>
 
 	<body>
 		<!-- Latest compiled and minified CSS -->
@@ -2047,9 +2048,7 @@
 		}
 
 		function addTooltipCallbackPostPen(config){
-			config.options['tooltips'] = {
-				enabled: true, callbacks: {}
-			}
+			config.options['tooltips'] = {enabled: true, callbacks: {}}
 			if(!(graphSettings['rounding'] === '' || graphSettings['rounding'] === '0')){
 				var decimalPlaces = parseInt(graphSettings['rounding']);
 				config.options.tooltips.callbacks = {
@@ -2072,8 +2071,7 @@
 		}
 		async function makePostPenCharts(){ //Set PostPen
 			const width = $('#width').value;
-			const WFL = "Fused ";
-			const NFL = "No Fusing ";
+			const WFL = "Fused ", NFL = "No Fusing ";
 			var configs = [];
 			for(let i=0; i<numAngles; i++){
 				var str = "Lateral Angle " + i + ": " + v_angles[i] + "°";
