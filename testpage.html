@@ -847,37 +847,45 @@
 			function changeGraphSettings(){graphSettings[this.id] = this.value;}
 			function changeGraphButtons(){graphSettings[this.id] = this.checked;}
 			const settings = [
-				['minDist'  , changeGraphSettings],
-				['maxDist'  , changeGraphSettings],
-				['tickDist' , changeGraphSettings],
-				['rounding' , changeGraphSettings],
-
-				['enableFills', changeGraphButtons],
-
-				['timeStep' , changeTimeStep ], 
-				['minLaunch', changeMinLaunch], 
-				['maxLaunch', changeMaxLaunch],
+				[changeGraphSettings,
+					['minDist','maxDist','tickDist','rounding']
+				],
+				[changeTimeStep, 
+					['timeStep']
+				],
+				[changeMinLaunch,
+					['minLaunch']
+				],
+				[changeMaxLaunch,
+					['maxLaunch']
+				],
 			]
 			settings.map(function(value){
-				//document.getElementById(value[0]).addEventListener('change', value[1]);
-				$("#"+value[0]).change(value[1]);
-			});
-
-			const autoApplyButtons = [
-				"autoApply0", "autoApply1"
-			]
-
-			autoApplyButtons.map(function(value){
-				$("#"+value).change(function(){
-					autoApply[this.id.slice(-1)] = this.checked;
+				value[1].map(function(id){
+					document.getElementById(id).addEventListener('change', value[0]);
 				});
 			});
+			
+			function autoApply(){autoApply[this.id.slice(-1)] = this.checked;}
+			function graphShips(){
+				console.log(this);
+				graphShip[this.id.slice(-1)] = this.checked;
+			}
 
-			const graphShipButtons = ["graphShip0", "graphShip1"]
-
-			graphShipButtons.map(function(value){
-				$("#"+value).change(function(){
-					graphShip[this.id.slice(-1)] = this.checked;
+			const buttons = [
+				[changeGraphButtons, 
+					['enableFills']
+				], 
+				[autoApply,
+					['autoApply0', 'autoApply1']
+				],
+				[graphShips,
+					["graphShip0", "graphShip1"]
+				]
+			]
+			buttons.map(function(value){
+				value[1].map(function(id){
+					document.getElementById(id).addEventListener(touchEvent, value[0]);
 				});
 			});
 		}
