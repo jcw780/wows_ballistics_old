@@ -794,59 +794,53 @@
 
 		function setComputation(value){computationMethod = value;}
 		function addFormChange(){
-			function settingsChange(){inputData[this.id] = parseFloat(this.value);}
-			const targetSettingsTargets = [
-				'armor', 'inclination', 'width',
-			];
-			targetSettingsTargets.map(function(value){
-				document.getElementById(value).addEventListener('change', settingsChange);
-			});
+			function targetChange(){inputData[this.id] = parseFloat(this.value);}
 			function angleChange(){
 				var id = this.id.slice(-1);
 				inputData['angle'][id] = parseFloat(this.value);
 			}
-			const angleTargets = [
-				'angle0', 'angle1', 'angle2', 'angle3', 
-				'angle4', 'angle5', 'angle6', 'angle7', 
-			];
-			angleTargets.map(function(value){
-				document.getElementById(value).addEventListener('change', angleChange);
-			});
 			function shipChange(){
 				var id = this.id.slice(-1);
 				var dataType = this.id.slice(0, -1);
 				inputData[dataType][id] = parseFloat(this.value);	
 			}
-			const shipTargets = [
-				'caliber0', 'caliber1',
-				'mv0', 'mv1',
-				'cD0', 'cD1',
-				'mass0', 'mass1',
-				'krupp0', 'krupp1',
-				'fusetime0', 'fusetime1',
-				'threshold0', 'threshold1',
-				'normal0', 'normal1',
-				'ra0_0', 'ra0_1',
-				'ra1_0', 'ra1_1',
-				'HESAP0', 'HESAP1',
-			];
-			shipTargets.map(function(value){
-				document.getElementById(value).addEventListener('change', shipChange);
-			});
 			function shipNameChange(){
 				var id = this.id.slice(-1);
 				inputData['shipName'][id] = this.value;
 			}
-			const shipName = ['shipName0', 'shipName1',];
-			shipName.map(function(value){
-				document.getElementById(value).addEventListener('change', shipNameChange);
-			});
 			function changeTimeStep(){shellInstance.setDtMin(parseFloat(this.value));}
 			function changeMinLaunch(){shellInstance.setMin(parseFloat(this.value));}
 			function changeMaxLaunch(){shellInstance.setMax(parseFloat(this.value));}
 			function changeGraphSettings(){graphSettings[this.id] = this.value;}
 			function changeGraphButtons(){graphSettings[this.id] = this.checked;}
-			const settings = [
+			const forms = [
+				[targetChange, 
+					['armor', 'inclination', 'width']
+				],
+				[angleChange,
+					[
+						'angle0', 'angle1', 'angle2', 'angle3', 
+						'angle4', 'angle5', 'angle6', 'angle7', 
+					]
+				],
+				[shipChange,
+					[
+						'caliber0', 'caliber1',
+						'mv0', 'mv1',
+						'cD0', 'cD1',
+						'mass0', 'mass1',
+						'krupp0', 'krupp1',
+						'fusetime0', 'fusetime1',
+						'threshold0', 'threshold1',
+						'normal0', 'normal1',
+						'ra0_0', 'ra0_1',
+						'ra1_0', 'ra1_1',
+						'HESAP0', 'HESAP1',
+					]
+				],
+				[shipNameChange, 
+					['shipName0', 'shipName1',]
+				],
 				[changeGraphSettings,
 					['minDist','maxDist','tickDist','rounding']
 				],
@@ -860,7 +854,7 @@
 					['maxLaunch']
 				],
 			]
-			settings.map(function(value){
+			forms.map(function(value){
 				value[1].map(function(id){
 					document.getElementById(id).addEventListener('change', value[0]);
 				});
@@ -910,7 +904,6 @@
 				'angleCharts',
 				'postPenCharts',
 			]
-			
 			var graphs = {
 				'pC': 3,
 				'CA': 2,
