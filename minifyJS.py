@@ -11,7 +11,11 @@ params = urllib.parse.urlencode([
     ('compilation_level', 'SIMPLE_OPTIMIZATIONS'),
     ('output_format', 'text'),
     ('output_info', 'compiled_code'),
+<<<<<<< HEAD
 ])
+=======
+  ])
+>>>>>>> master
 
 '''
 OPTIMIZATIONS
