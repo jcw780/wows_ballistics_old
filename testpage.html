@@ -889,7 +889,7 @@
 			]
 			buttons.map(function(value){
 				value[1].map(function(id){
-					document.getElementById(id).addEventListener(touchEvent, value[0]);
+					document.getElementById(id).addEventListener(touchEvent, value[0], opts);
 				});
 			});
 		}
@@ -897,8 +897,13 @@
 		//Buttons 
 		//Add Hide buttons
         addTitles();
+		var opts = Object.defineProperty({}, 'passive', {
+			get: function() {
+			supportsPassive = true;
+			}
+		});
 		let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-		document.getElementById("generate").addEventListener(touchEvent, collectMake);
+		document.getElementById("generate").addEventListener(touchEvent, collectMake, opts);
 
 		function changeChevron(e){
 			e.stopPropagation();
@@ -938,7 +943,7 @@
 		}
 
 		for(let i=0; i<2; i++){
-			document.getElementById('apply' + i).addEventListener(touchEvent, applyButton);
+			document.getElementById('apply' + i).addEventListener(touchEvent, applyButton, opts);
 		}
 
 		async function firstRun(){
