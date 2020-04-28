@@ -1,0 +1,443 @@
+{
+    "PXSC001_Dr_Frankenship": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.4036,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1830.0,
+                "bulletMass": 47.7,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 853.0,
+                "name": "PXPA012_152MM_AP_DR_FRANKY"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 100.0,
+                "bulletAirDrag": 0.4036,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1150.0,
+                "bulletMass": 47.7,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 853.0,
+                "name": "PXPA013_152MM_HE_DR_FRANKY"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 3,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PXSC002_Charles_Martel_H2017": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.33,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2434.0,
+                "bulletMass": 134.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 820.0,
+                "name": "PXPA062_203MM_50_1924_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 34.0,
+                "bulletAirDrag": 0.3296,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 1.0,
+                "bulletMass": 123.82,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 850.0,
+                "name": "PXPA063_203MM_50_1924_HE"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PXSC003_Pr_68_Chapaev_H2017": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2216.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 950.0,
+                "name": "PRPA035_152MM_B35"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 6.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 950.0,
+                "name": "PXPA034_152MM_OFU35"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 8,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PXSC004_Galaxy": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.356,
+                "bulletAlwaysRicochetAt": 67.5,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2919.0,
+                "bulletMass": 152.0,
+                "bulletRicochetAt": 60.0,
+                "bulletSpeed": 762.0,
+                "name": "PXPA023_Shell_203mm_AP_AP_Mk_21"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 34.0,
+                "bulletAirDrag": 0.333,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 630.0,
+                "bulletMass": 118.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 823.0,
+                "name": "PXPA020_Shell_203mm_HE_HC_Mk_25"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PXSC005_Zaya": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.337,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2468.0,
+                "bulletMass": 155.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 920.0,
+                "name": "PXPA038_Shell_203mm_AP_AP_Type_92"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 34.0,
+                "bulletAirDrag": 0.337,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 560.0,
+                "bulletMass": 155.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 920.0,
+                "name": "PXPA039_Shell_203mm_HE_C_Type_1"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PXSC006_Norma": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3475,
+                "bulletAlwaysRicochetAt": 75.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.005,
+                "bulletDetonatorThreshold": 12.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2672.0,
+                "bulletMass": 58.85,
+                "bulletRicochetAt": 60.0,
+                "bulletSpeed": 768.0,
+                "name": "PXPA017_152MM_AP_MK5"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PXSC007_Aurora": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2549,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 37.0,
+                "bulletDiametr": 0.22,
+                "bulletKrupp": 2590.0,
+                "bulletMass": 176.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 985.0,
+                "name": "PXPA036_220_AP_B_23"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 37.0,
+                "bulletAirDrag": 0.2549,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.22,
+                "bulletKrupp": 1.0,
+                "bulletMass": 176.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 985.0,
+                "name": "PXPA033_220_HE_OF_23"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PXSC009_Mogami_H2018": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.335,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 26.0,
+                "bulletDiametr": 0.155,
+                "bulletKrupp": 2429.0,
+                "bulletMass": 55.87,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 925.0,
+                "name": "PXPA048_Shell_155mm_AP_APC_Type_91"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 26.0,
+                "bulletAirDrag": 0.335,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.155,
+                "bulletKrupp": 300.0,
+                "bulletMass": 300.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 975.0,
+                "name": "PXPA042_Shell_155mm_HE_O_Type_0"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PXSC010_Hinden_Apr2019": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2974,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2409.0,
+                "bulletMass": 122.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 925.0,
+                "name": "PXPA069_203MM_AP_PZ_SPR_GGR_L4_4"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.2974,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 32.0,
+                "bulletMass": 122.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 925.0,
+                "name": "PXPA070_203MM_HE_SPR_GR_L4_7_KZ"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 7,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PXSC011_Alaska_H2019": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3343,
+                "bulletAlwaysRicochetAt": 67.5,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2470.0,
+                "bulletMass": 300.0,
+                "bulletRicochetAt": 60.0,
+                "bulletSpeed": 1000.0,
+                "name": "PXPA078_305MM_AP_ALASKA_H2019"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.3433,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 462.3,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 1000.0,
+                "name": "PXPA077_305MM_HE_ALASKA_H2019"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PXSC012_Hindenburg_H2019": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2974,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2409.0,
+                "bulletMass": 122.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 1000.0,
+                "name": "PXPA084_HINDEN_H2019_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.2974,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 32.0,
+                "bulletMass": 122.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 1000.0,
+                "name": "PXPA083_HINDEN_H2019_HE"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 9,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PXSC013_Henri_H2019": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.2764,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 40.0,
+                "bulletDiametr": 0.24,
+                "bulletKrupp": 2882.0,
+                "bulletMass": 220.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 1000.0,
+                "name": "PXPA081_HENRI_H2019_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 40.0,
+                "bulletAirDrag": 0.3376,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.24,
+                "bulletKrupp": 1.0,
+                "bulletMass": 220.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 1000.0,
+                "name": "PXPA080_HENRI_H2019_HE"
+            }
+        },
+        "Nation": "Events",
+        "Tier": 10,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    }
+}

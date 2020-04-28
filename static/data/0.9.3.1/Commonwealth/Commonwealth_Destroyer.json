@@ -1,0 +1,78 @@
+{
+    "PUSD503_Vampire": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3536,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 17.0,
+                "bulletDiametr": 0.102,
+                "bulletKrupp": 2300.0,
+                "bulletMass": 15.2,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 805.0,
+                "name": "PUPA006_102MM_SAP_VAMPIRE"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 17.0,
+                "bulletAirDrag": 0.3536,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.102,
+                "bulletKrupp": 1.0,
+                "bulletMass": 14.06,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 805.0,
+                "name": "PUPA005_102MM_HE_VAMPIRE"
+            }
+        },
+        "Nation": "Commonwealth",
+        "Tier": 3,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    },
+    "PUSD507_Haida": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3927,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 10.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 20.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 2438.0,
+                "bulletMass": 22.68,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 808.0,
+                "name": "PUPA008_120_AP_HAIDA"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3927,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 1.0,
+                "bulletMass": 22.68,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 808.0,
+                "name": "PUPA007_120_HE_HAIDA"
+            }
+        },
+        "Nation": "Commonwealth",
+        "Tier": 7,
+        "Type": "Destroyer",
+        "ammo_num": 1
+    }
+}
