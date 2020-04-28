@@ -30,8 +30,8 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
-		<script src='https://chartjs.org/samples/latest/utils.js'></script>
+		<script defer src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+		<script defer src='https://chartjs.org/samples/latest/utils.js'></script>
 		<style>
 			table{
                 border: 15px solid white;
@@ -540,7 +540,7 @@
 							<div class="form-row margin-bottom">
 								<label class="col-sm-5 col-form-label">Tick Size</label>
 								<div class="col-sm-4">
-									<input class="form-control" type="number" step="any" id="tickDist" value="2500" >
+									<input class="form-control" type="number" step="any" id="tickDist" value="1000" >
 								</div>
 							</div>
 							<div class="form-row margin-bottom">
@@ -794,7 +794,7 @@
 		var graphSettings = Object.seal({
 			'minDist': '0',
 			'maxDist': '',
-			'tickDist': '2500',
+			'tickDist': '1000',
 			'rounding': '3',
 			'enableFills': false,
 			'shortNames': true,
@@ -1022,7 +1022,7 @@
 		}
 		
 		function addTitles(){
-			var targets = {
+			const targets = {
 				'caliberL' : 
 					'Diameter of the shell in meters. All else equal, higher caliber increase shell flight time and reduces penetration.',
 				'mvL': 
@@ -1045,7 +1045,7 @@
 					"HE/SAP penetration of shell - if applicable.",
 				'normalL':
 					"How many degrees of impact angle the shell can reduce. Higher normalization increases decreases effective armor thickness."
-			}
+			};
 			for(const [key, value] of Object.entries(targets)){
 				document.getElementById(key).title = value;
 			}
@@ -2027,15 +2027,16 @@
 				addTooltipCallbackPostPen(configs[i]);
 				graphShip.map(function callback(currentValue, index){
 					if(currentValue){
+						var fill = graphSettings.enableFills;
 						configs[i].data.datasets.push(
 							{
 								data: results[2*index+0], showLine: true,
 								label: WFL + shipName[index], backgroundColor: Samples.utils.transparentize(colors[index][0]),
-								borderColor: colors[index][0], fill: true, pointRadius: commonPointRadius, pointHitRadius: 5
+								borderColor: colors[index][0], fill: fill, pointRadius: commonPointRadius, pointHitRadius: 5
 							},{
 								data: results[2*index+1], showLine: true,
 								label: NFL + shipName[index], backgroundColor: Samples.utils.transparentize(colors[index][1]),
-								borderColor: colors[index][1], fill: true, pointRadius: commonPointRadius, pointHitRadius: 5
+								borderColor: colors[index][1], fill: fill, pointRadius: commonPointRadius, pointHitRadius: 5
 							},
 						);
 					}
