@@ -551,8 +551,15 @@
 							</div>
 							<div class="col-sm-8">
 								<div class="btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-block btn-info active">
-										  <input id="enableFills" type="checkbox" checked> Enable Fills
+									<label class="btn btn-block btn-info">
+										  <input id="shortNames" type="checkbox" checked> Short Names
+									</label>
+								</div>
+							</div>
+							<div class="col-sm-8">
+								<div class="btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-block btn-info">
+										  <input id="enableFills" type="checkbox"> Enable Fills
 									</label>
 								</div>
 							</div>
@@ -789,7 +796,8 @@
 			'maxDist': '',
 			'tickDist': '2500',
 			'rounding': '3',
-			'enableFills': true,
+			'enableFills': false,
+			'shortNames': true,
 		});
 
 		function setComputation(value){computationMethod = value;}
@@ -868,7 +876,7 @@
 
 			const buttons = [
 				[changeGraphButtons, 
-					['enableFills']
+					['enableFills', 'shortNames']
 				], 
 				[autoApply,
 					['autoApply0', 'autoApply1']
@@ -1192,7 +1200,12 @@
 
 		function onSubmitPredefined(id){
 			var targetShell = typeData[id][shipValue[id]][shellValue[id]][shellType[id]];
-			changeFormValue("shipName"  + id, shipValue[id] + " " + shellValue[id].slice(-1));
+			var shipName = shipValue[id];
+			if(graphSettings.shortNames){
+				shipName = shipName.split("_").slice(1).join("");
+			}
+			shipName += " " + shellValue[id].slice(-1);
+			changeFormValue("shipName"  + id, shipName);
 			changeFormValue("mv"        + id, targetShell["bulletSpeed"]);
 			changeFormValue("caliber"   + id, targetShell["bulletDiametr"]);
 			changeFormValue("krupp"     + id, targetShell["bulletKrupp"]);
