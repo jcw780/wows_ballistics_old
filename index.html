@@ -2,42 +2,37 @@
 <html lang="en">
 
 	<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-    <title>World of Warships Ballistics Calculator</title>
-	</head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155844497-1"></script>
 	<script>
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-
 	gtag('config', 'UA-155844497-1');
 	</script>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This website calculate shell performance of ships in World of Warships such as penetration, flight time, impact angle. It also checks for angle need to penetrate, fuse, and overpenetrate for given armor thicknesses.">
+	
+    <title>World of Warships Ballistics Calculator</title>
+	</head>
+
 	<body>
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://unpkg.com/wasm-feature-detect/dist/umd/index.js"></script>
-		<script src="https://unpkg.com/bowser@2.7.0/es5.js"></script>
+
 		<script src="shellWasm.js"></script>
 		<script src="shellWasmV.js"></script>
 
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
-		<script src='https://chartjs.org/samples/latest/utils.js'></script>
+		<script defer src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
+		<script defer src='https://chartjs.org/samples/latest/utils.js'></script>
 		<style>
-			body{
-				background-color: white;
-			}
 			table{
                 border: 15px solid white;
                 background-color: white;
@@ -134,27 +129,34 @@
 				background-color: rgb(96,0,96);
 				border-color: rgb(96,0,96);
 			}
-
 			.btn-success:not(:disabled):not(.disabled).active:focus, 
 			.btn-success:not(:disabled):not(.disabled):active:focus,
 			.btn-success.focus, .btn-success:focus,
 			.show>.btn-success.dropdown-toggle:focus {
 				box-shadow: 0 0 0 0.2rem rgba(96,0,96,.5);
 			}
-
 			.margin-bottom {
 				margin-bottom:5px;
 			}
-
 			.download-align{
 				margin-left: 45%;
 				width: 10%;
 				margin-right: 45%;
 				margin-bottom: 10px;
 			}
+			.th-header{
+				margin-bottom: .5rem;
+				font-family: inherit;
+				font-weight: 500;
+				line-height: 1.2;
+				color: inherit;
+			}
+			.th-h3{
+				font-size: 1.75rem;
+			}
 
 		</style>
-		<center><h1>World of Warships Ballistics Calculator</h1></center>
+		<h1 style="text-align: center;">World of Warships Ballistics Calculator</h1>
 		<button id="descriptionsToggle" class="btn btn-info btn-lg btn-block" 
 		data-toggle="collapse" data-target="#descriptions">Description
 			<span class="fa fa-chevron-up fa-resize-full"></span>
@@ -172,7 +174,6 @@
 				<p>Overpen calculations are experimental - further testing may be needed to confirm results.</p>
 				<p>Site will be updated if and when more accurate information becomes available.</p>
 			</div>
-			
 		</div>
 
 		<button id="parametersToggle" class="btn btn-info btn-lg btn-block" 
@@ -182,14 +183,11 @@
 		<div class="collapse" id=parameters style="width: 100%; background-color: lightgray;" >
 		<table id=parameterTable style="width: 100%;">
 			<tr style="width: 100%;">
-				<th>
-					<center><h3><u>Predefined Shells</u></h3></center>
+				<th style="text-align: center" class="th-header th-h3"><u>Predefined Shells</u>
 				</th>
-				<th>
-					<center><h3><u>Shell Data</u></h3></center>
+				<th style="text-align: center" class="th-header th-h3"><u>Shell Data</u>
 				</th>
-				<th>
-					<center><h3><u>Target Data</u></h3></center>
+				<th style="text-align: center" class="th-header th-h3"><u>Target Data</u>
 				</th>
 			</tr>
 			<tr style="width: 100%;">
@@ -241,7 +239,7 @@
 							</div>
 							<div class="btn-group-toggle" data-toggle="buttons">
 								<label class="btn btn-block btn-info active">
-									  <input id="autoApply0" type="checkbox" checked autocomplete="off"> Apply On Change
+									  <input id="autoApply0" type="checkbox" checked> Apply On Change
 								</label>
 							</div>
 						</div>
@@ -291,7 +289,7 @@
 							</div>
 							<div class="btn-group-toggle" data-toggle="buttons">
 								<label class="btn btn-block btn-info active">
-									  <input id="autoApply1" type="checkbox" checked autocomplete="off"> Apply On Change
+									  <input id="autoApply1" type="checkbox" checked> Apply On Change
 								</label>
 							</div>
 						</div>
@@ -417,14 +415,14 @@
 							<div class="col-sm-4">
 								<div class="btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-block btn-info active">
-									  	<input id="graphShip0" type="checkbox" checked autocomplete="off"> Graph
+									  	<input id="graphShip0" type="checkbox" checked> Graph
 									</label>
 								</div>
 							</div>
 							<div class="col-sm-4">
 								<div class="btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-block btn-info active">
-									  	<input id="graphShip1" type="checkbox" checked autocomplete="off"> Graph
+									  	<input id="graphShip1" type="checkbox" checked> Graph
 									</label>
 								</div>
 							</div>
@@ -452,7 +450,7 @@
 							<label class="col-sm-5 col-form-label" 
 							title="Width (Beam) of the targeted ship in meters.">Ship Width (m)</label>
 							<div class="col-sm-4">
-								<input class="form-control" type="number" step="any" min="0" id="width" value="18"> </p>
+								<input class="form-control" type="number" step="any" min="0" id="width" value="18">
 							</div>
 						</div>
 					</form>
@@ -510,7 +508,7 @@
 				</td>
 			</tr>
 		</table>
-		<center style="background-color: white;"><button id=generate class="btn btn-success btn-lg btn-block" style="width: 50%; margin-bottom: 20px;">Generate Graphs</button></center>
+		<div style="background-color: white;"><button id=generate class="btn btn-success btn-lg btn-block" style="margin-left:auto; margin-right:auto; width: 50%; margin-bottom: 20px;">Generate Graphs</button></div>
 		</div>
 
 		<button id="settingsToggle" class="btn btn-info btn-lg btn-block" 
@@ -520,9 +518,9 @@
 		<div class="collapse" id=settingsTab style="width: 100%">
 			<table>
 				<tr>
-					<th><h3>Graphs</h3></th>
-					<th><h3>Calculation Method</h3></th>
-					<th><h3>Calculation Parameters</h3></th>
+					<th class="th-header th-h3">Graphs</th>
+					<th class="th-header th-h3">Calculation Method</th>
+					<th class="th-header th-h3">Calculation Parameters</th>
 				</tr>
 				<tr>
 					<td>
@@ -542,7 +540,7 @@
 							<div class="form-row margin-bottom">
 								<label class="col-sm-5 col-form-label">Tick Size</label>
 								<div class="col-sm-4">
-									<input class="form-control" type="number" step="any" id="tickDist" value="2500" >
+									<input class="form-control" type="number" step="any" id="tickDist" value="1000" >
 								</div>
 							</div>
 							<div class="form-row margin-bottom">
@@ -551,21 +549,35 @@
 									<input class="form-control" type="number" step="any" id="rounding" value="3" >
 								</div>
 							</div>
+							<div class="col-sm-8">
+								<div class="btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-block btn-info">
+										  <input id="shortNames" type="checkbox" checked> Short Names
+									</label>
+								</div>
+							</div>
+							<div class="col-sm-8">
+								<div class="btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-block btn-info">
+										  <input id="enableFills" type="checkbox"> Enable Fills
+									</label>
+								</div>
+							</div>
 						</form>
 					</td>
 					<td>
 						<div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
 							<label class="btn btn-info">
-							  	<input type="radio" onchange="setComputation('AB5')" autocomplete="off"> Adams-Bashforth 5
+							  	<input type="radio" onchange="setComputation('AB5')"> Adams-Bashforth 5
 							</label>
 							<label class="btn btn-info">
-							  	<input type="radio" onchange="setComputation('RK2')" autocomplete="off"> Runge-Kutta 2
+							  	<input type="radio" onchange="setComputation('RK2')"> Runge-Kutta 2
 							</label>
 							<label class="btn btn-info">
-							  	<input type="radio" onchange="setComputation('RK4')" autocomplete="off"> Runge-Kutta 4
+							  	<input type="radio" onchange="setComputation('RK4')"> Runge-Kutta 4
 							</label>
 							<label class="btn btn-info active">
-								<input type="radio" onchange="setComputation('FE')"  autocomplete="off" checked> Forward Euler
+								<input type="radio" onchange="setComputation('FE')" checked> Forward Euler
 							</label>
 						  </div>
 					</td>
@@ -587,6 +599,7 @@
 							<div class="col-sm-4">
 								<input class="form-control" type="number" step="any" min="-90" max="90" id="maxLaunch" value="25" >
 							</div>
+						</div>
 					</td>
 				</tr>
 			</table>
@@ -668,7 +681,7 @@
 		<div class="collapse" id=postPenCharts>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA0" id="AT0">
-			<text>Lateral Angle 0</text>
+			Lateral Angle 0
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA0">
@@ -679,7 +692,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA1" id="AT1">
-			<text>Lateral Angle 1</text>
+			Lateral Angle 1
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA1">
@@ -690,7 +703,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA2" id="AT2">
-			<text>Lateral Angle 2</text>
+			Lateral Angle 2
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA2">
@@ -701,7 +714,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA3" id="AT3">
-			<text>Lateral Angle 3</text>
+			Lateral Angle 3
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA3">
@@ -712,7 +725,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA4" id="AT4">
-			<text>Lateral Angle 4</text>
+			Lateral Angle 4
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA4">
@@ -723,7 +736,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA5" id="AT5">
-			<text>Lateral Angle 5</text>
+			Lateral Angle 5
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA5">
@@ -734,7 +747,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA6" id="AT6">
-			<text>Lateral Angle 6</text>
+			Lateral Angle 6
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA6">
@@ -745,7 +758,7 @@
 			</div>
 			<button class="btn btn-info btn-lg btn-block" 
 			data-toggle="collapse" data-target="#LA7" id="AT7">
-			<text>Lateral Angle 7</text>
+			Lateral Angle 7
 			<span class="fa fa-chevron-up fa-resize-full"></span>
 			</button>
 			<div class='collapse' id="LA7">
@@ -758,15 +771,15 @@
     
     <script>
 		var computationMethod = 'FE';
-		var inputData = {
-			'mv'         : [ 841, 841 ],
-			'caliber'    : [.152, .152],
-			'krupp'      : [2609, 2609],
-			'mass'       : [50.8, 50.8],
-			'normal'     : [ 8.5,  8.5],
-			'cD'         : [.3297, .3297],
-			'threshold'  : [25, 25],
-			'fusetime'   : [.025, .025],
+		var inputData = Object.seal({
+			'mv'         : [  805,  805],
+			'caliber'    : [ .102, .102],
+			'krupp'      : [ 2300, 2300],
+			'mass'       : [ 15.2, 15.2],
+			'normal'     : [   10,   10],
+			'cD'         : [.3536,.3536],
+			'threshold'  : [   17,   17],
+			'fusetime'   : [  .01,  .01],
 			'ra0_'       : [45, 45],
 			'ra1_'       : [60, 60],
 			'HESAP'      : [0, 0],
@@ -775,128 +788,106 @@
 			'armor'      : 70,
 			'inclination': 0,
 			'width'      : 18,
-			'shipName'   : ['PUSC506_Perth_1942 0', 'PUSC506_Perth_1942 0']
-		}
+			'shipName'   : ['PUSD503_Vampire 0', 'PUSD503_Vampire 0']
+		});
 
-		var graphSettings = {
+		var graphSettings = Object.seal({
 			'minDist': '0',
 			'maxDist': '',
-			'tickDist': '2500',
+			'tickDist': '1000',
 			'rounding': '3',
-		};
+			'enableFills': false,
+			'shortNames': true,
+		});
 
-		function setComputation(value){
-			//console.log(value);
-			computationMethod = value;
-		}
-		
-		
-
+		function setComputation(value){computationMethod = value;}
 		function addFormChange(){
-			function settingsChange(){
-				inputData[this.id] = parseFloat(this.value);
-			}
-			const targetSettingsTargets = [
-				'armor', 'inclination', 'width',
-			];
-			targetSettingsTargets.map(function(value){
-				document.getElementById(value).addEventListener('change', settingsChange);
-			});
+			function targetChange(){inputData[this.id] = parseFloat(this.value);}
 			function angleChange(){
 				var id = this.id.slice(-1);
 				inputData['angle'][id] = parseFloat(this.value);
-
 			}
-			const angleTargets = [
-				'angle0', 'angle1', 'angle2', 'angle3', 
-				'angle4', 'angle5', 'angle6', 'angle7', 
-			];
-			angleTargets.map(function(value){
-				document.getElementById(value).addEventListener('change', angleChange);
-			});
-
 			function shipChange(){
 				var id = this.id.slice(-1);
 				var dataType = this.id.slice(0, -1);
 				inputData[dataType][id] = parseFloat(this.value);	
 			}
-
-			const shipTargets = [
-				'caliber0', 'caliber1',
-				'mv0', 'mv1',
-				'cD0', 'cD1',
-				'mass0', 'mass1',
-				'krupp0', 'krupp1',
-				'fusetime0', 'fusetime1',
-				'threshold0', 'threshold1',
-				'normal0', 'normal1',
-				'ra0_0', 'ra0_1',
-				'ra1_0', 'ra1_1',
-				'HESAP0', 'HESAP1',
-			];
-
-			shipTargets.map(function(value){
-				document.getElementById(value).addEventListener('change', shipChange);
-			});
-
 			function shipNameChange(){
 				var id = this.id.slice(-1);
 				inputData['shipName'][id] = this.value;
 			}
-
-			const shipName = [
-				'shipName0', 'shipName1',
-			];
-
-			shipName.map(function(value){
-				document.getElementById(value).addEventListener('change', shipNameChange);
-			});
-
-			function changeTimeStep(){
-				shellInstance.setDtMin(parseFloat(this.value));
-			}
-			function changeMinLaunch(){
-				shellInstance.setMin(parseFloat(this.value));
-			}
-			function changeMaxLaunch(){
-				shellInstance.setMax(parseFloat(this.value));
-			}
-			function changeGraphSettings(){
-				//console.log(this.id, this.value);
-				graphSettings[this.id] = this.value;
-			}
-
-			const settings = [
-				['minDist'  , changeGraphSettings],
-				['maxDist'  , changeGraphSettings],
-				['tickDist' , changeGraphSettings],
-				['rounding' , changeGraphSettings],
-				['timeStep' , changeTimeStep ], 
-				['minLaunch', changeMinLaunch], 
-				['maxLaunch', changeMaxLaunch],
+			function changeTimeStep(){shellInstance.setDtMin(parseFloat(this.value));}
+			function changeMinLaunch(){shellInstance.setMin(parseFloat(this.value));}
+			function changeMaxLaunch(){shellInstance.setMax(parseFloat(this.value));}
+			function changeGraphSettings(){graphSettings[this.id] = this.value;}
+			function changeGraphButtons(){graphSettings[this.id] = this.checked;}
+			const forms = [
+				[targetChange, 
+					['armor', 'inclination', 'width']
+				],
+				[angleChange,
+					[
+						'angle0', 'angle1', 'angle2', 'angle3', 
+						'angle4', 'angle5', 'angle6', 'angle7', 
+					]
+				],
+				[shipChange,
+					[
+						'caliber0', 'caliber1',
+						'mv0', 'mv1',
+						'cD0', 'cD1',
+						'mass0', 'mass1',
+						'krupp0', 'krupp1',
+						'fusetime0', 'fusetime1',
+						'threshold0', 'threshold1',
+						'normal0', 'normal1',
+						'ra0_0', 'ra0_1',
+						'ra1_0', 'ra1_1',
+						'HESAP0', 'HESAP1',
+					]
+				],
+				[shipNameChange, 
+					['shipName0', 'shipName1',]
+				],
+				[changeGraphSettings,
+					['minDist','maxDist','tickDist','rounding']
+				],
+				[changeTimeStep, 
+					['timeStep']
+				],
+				[changeMinLaunch,
+					['minLaunch']
+				],
+				[changeMaxLaunch,
+					['maxLaunch']
+				],
 			]
-
-			settings.map(function(value){
-				document.getElementById(value[0]).addEventListener('change', value[1]);
-			});
-
-			const autoApplyButtons = [
-				"autoApply0", "autoApply1"
-			]
-
-			autoApplyButtons.map(function(value){
-				$("#"+value).change(function(){
-					autoApply[this.id.slice(-1)] = this.checked;
+			forms.map(function(value){
+				value[1].map(function(id){
+					document.getElementById(id).addEventListener('change', value[0]);
 				});
 			});
+			
+			function autoApply(){autoApply[this.id.slice(-1)] = this.checked;}
+			function graphShips(){
+				console.log(this);
+				graphShip[this.id.slice(-1)] = this.checked;
+			}
 
-			const graphShipButtons = [
-				"graphShip0", "graphShip1"
+			const buttons = [
+				[changeGraphButtons, 
+					['enableFills', 'shortNames']
+				], 
+				[autoApply,
+					['autoApply0', 'autoApply1']
+				],
+				[graphShips,
+					["graphShip0", "graphShip1"]
+				]
 			]
-
-			graphShipButtons.map(function(value){
-				$("#"+value).change(function(){
-					graphShip[this.id.slice(-1)] = this.checked;
+			buttons.map(function(value){
+				value[1].map(function(id){
+					document.getElementById(id).addEventListener(touchEvent, value[0]);
 				});
 			});
 		}
@@ -905,7 +896,7 @@
 		//Add Hide buttons
         addTitles();
 		let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-		$("#generate")[0].addEventListener(touchEvent, collectMake);
+		document.getElementById("generate").addEventListener(touchEvent, collectMake);
 
 		function changeChevron(e){
 			e.stopPropagation();
@@ -921,7 +912,6 @@
 				'angleCharts',
 				'postPenCharts',
 			]
-			
 			var graphs = {
 				'pC': 3,
 				'CA': 2,
@@ -946,22 +936,22 @@
 		}
 
 		for(let i=0; i<2; i++){
-			$('#apply' + i)[0].addEventListener(touchEvent, applyButton);
+			document.getElementById('apply' + i).addEventListener(touchEvent, applyButton);
 		}
 
 		async function firstRun(){
 			shellInstance.setDtMin(.01);
 			shellInstance.setMin(0.0);
 			shellInstance.setMax(25.0);
-			data = {
-				'mv'         : [ 841, 841 ],
-				'caliber'    : [.152, .152],
-				'krupp'      : [2609, 2609],
-				'mass'       : [50.8, 50.8],
-				'normal'     : [ 8.5,  8.5],
-				'cD'         : [.3297, .3297],
-				'threshold'  : [25, 25],
-				'fusetime'   : [.025, .025],
+			const data = {
+				'mv'         : [  805,  805],
+				'caliber'    : [ .102, .102],
+				'krupp'      : [ 2300, 2300],
+				'mass'       : [ 15.2, 15.2],
+				'normal'     : [   10,   10],
+				'cD'         : [.3536,.3536],
+				'threshold'  : [   17,   17],
+				'fusetime'   : [  .01,  .01],
 				'ra0_'       : [45, 45],
 				'ra1_'       : [60, 60],
 				'HESAP'      : [0, 0],
@@ -970,7 +960,7 @@
 				'armor'      : 70,
 				'inclination': 0,
 				'width'      : 18,
-				'shipName'   : ['PUSC506_Perth_1942 0', 'PUSC506_Perth_1942 0']
+				'shipName'   : ['PUSD503_Vampire 0', 'PUSD503_Vampire 0']
 			}
 			makeGraphs(data);
 		}
@@ -979,16 +969,11 @@
 		$(document).ready(async function(){
 			showCollapsibles();
 			const versions = [0, 1];
-			const tasks = versions.map(
-				function(input){
-					return generateVersion(input);
-				}
-			)
+			const tasks = versions.map(function(input){return generateVersion(input);})
 			const results = await Promise.all(tasks);
 		})
 
 		var Module;
-
 		wasmFeatureDetect.simd().then(simdSupported => {
 			if (simdSupported) {
 				console.log('vectorized');
@@ -1000,7 +985,7 @@
 				})
 			} else {
 				console.log('unvectorized');
-				var result = bowser.getParser(window.navigator.userAgent);
+				//var result = bowser.getParser(window.navigator.userAgent);
 				/*if(result.parsedResult.browser.name == 'Chrome'){
 					alert('Enable WebAssembly SIMD support in chrome://flags for increased performance.');
 				}*/
@@ -1029,7 +1014,6 @@
 				'ACT': 2,
 				'AT' : 8
 			}
-
 			for(const [k, v] of Object.entries(graphToggles)){
 				for(let i = 0; i < v; i++){
 					$('#' + k + i).click();
@@ -1038,7 +1022,7 @@
 		}
 		
 		function addTitles(){
-			var targets = {
+			const targets = {
 				'caliberL' : 
 					'Diameter of the shell in meters. All else equal, higher caliber increase shell flight time and reduces penetration.',
 				'mvL': 
@@ -1061,9 +1045,9 @@
 					"HE/SAP penetration of shell - if applicable.",
 				'normalL':
 					"How many degrees of impact angle the shell can reduce. Higher normalization increases decreases effective armor thickness."
-			}
+			};
 			for(const [key, value] of Object.entries(targets)){
-				$('#'+key)[0].title = value;
+				document.getElementById(key).title = value;
 			}
 		}
 
@@ -1077,124 +1061,101 @@
 		var autoApply = [true, true];
 		var initialized = false;
         var compiled = false;
-        var dataURL = "static/data/"
-		function generateVersion(id){
-			$.ajax({
-				url: dataURL + "versions.json",
-				type: "GET",
-				dataType: "json",
-				success: function (data) {
-					$('#' + "version" + id)[0].innerHTML = '';
-					for(let i=data.length - 1; i>=0; i--){
-						$('#' + "version" + id)[0].innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+		var dataURL = "static/data/"
+		
+		function fetchJson(target, onSucess){
+			fetch(target)
+				.then((response) => {
+					if (!response.ok) {
+					throw new Error('Network response was not ok');
 					}
-
-					onChangeVersion("version" + id);
-				},
-				error: function(response){
-					console.log("Generating version failed")
-					console.log(response);
-					console.log(response['status'])
-					console.log(response.statusCode())
+					return response.json();
+				})
+				.then(onSucess)
+				.catch((error) => {
+					console.error('There has been a problem with your fetch operation:', error);
 				}
-			})
+			);
+		}
+
+		function generateVersion(id){
+			fetchJson(dataURL + "versions.json", function(data){
+				var target = document.getElementById("version" + id);
+				target.innerHTML = '';
+				for(let i=data.length - 1; i>=0; i--){
+					target.innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
+				}
+				onChangeVersion("version" + id);
+			});
 		}
 		function onChangeVersion(versionID){
 			var id = parseInt(versionID.slice(-1));
-			versionValue[id] = $('#' + versionID)[0].value;
+			versionValue[id] = document.getElementById(versionID).value;
 			generateNation("nation" + id);
 		}
 
 		function generateNation(nationID){
 			var id = parseInt(nationID.slice(-1));
-			$.ajax({
-				url: dataURL + versionValue[id] + "/nations.json",
-				type: "GET",
-				dataType: "json",
-				success: function (data) {
-					$('#' + nationID)[0].innerHTML = '';
-					for(let i=0; i<data.length; i++){
-						$('#' + nationID)[0].innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
-					}
-					onChangeNation(nationID);
-				},
-				error: function(response){
-					console.log("Generating nation failed")
-					console.log(response);
-					console.log(response['status'])
-					console.log(response.statusCode())
+			fetchJson(dataURL + versionValue[id] + "/nations.json", function (data) {
+				var target = document.getElementById(nationID);
+				target.innerHTML = '';
+				for(let i=0; i<data.length; i++){
+					target.innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
 				}
-			})
+				onChangeNation(nationID);
+			});
 		}
 		function onChangeNation(nationID){
 			var id = parseInt(nationID.slice(-1));
-			nationValue[id] = $('#' + nationID)[0].value;
+			nationValue[id] = document.getElementById(nationID).value;
 			generateType('type' + id);
 		}
 
 		function generateType(typeID){
 			var id = parseInt(typeID.slice(-1));
-			$.ajax({
-				url: dataURL + versionValue[id] + "/" + nationValue[id] + "/shiptypes.json",
-				type: "GET",
-				dataType: "json",
-				success: function (data) {
-					$('#' + typeID)[0].innerHTML = '';
-					for(let i=0; i<data.length; i++){
-						$('#' + typeID)[0].innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
-					}
-					onChangeType(typeID);
-				},
-				error: function(response){
-					console.log("Generating type failed")
-					console.log(response);
-					console.log(response['status'])
-					console.log(response.statusCode())
+			fetchJson(dataURL + versionValue[id] + "/" + nationValue[id] + "/shiptypes.json",
+			function (data) {
+				var target = document.getElementById(typeID);
+				target.innerHTML = '';
+				for(let i=0; i<data.length; i++){
+					target.innerHTML += "<option value=" + data[i] + ">" + data[i] + "</option>"
 				}
-			})
+				onChangeType(typeID);
+			});
 		}
 		function onChangeType(typeID){
 			var id = parseInt(typeID.slice(-1));
-			typeValue[id] = $('#' + typeID)[0].value;
+			typeValue[id] = document.getElementById(typeID).value;
 			generateShip('ship' + id)
 		}
 
 		function generateShip(shipID){
 			var id = parseInt(shipID.slice(-1));
-			$.ajax({
-				url: dataURL + versionValue[id] + "/" + nationValue[id] + "/" + nationValue[id] + "_" + typeValue[id] + ".json",
-				type: "GET",
-				dataType: "json",
-				success: function (data) {
-					typeData[id] = data;
-					$('#' + shipID)[0].innerHTML = '';
-					var sorted = []
-					for(let ship in data){
-						sorted.push(ship);
-					}
-					sorted.sort(function(a, b){return data[a]['Tier'] - data[b]['Tier']});
-					for(let ship of sorted){
-						$('#' + shipID)[0].innerHTML += "<option value=" + ship + ">" + "Tier " + data[ship]['Tier'] + " " + ship + "</option>"
-					}
-					onChangeShip(shipID);
-				},
-				error: function(response){
-					console.log("Generating ship failed")
-					console.log(response);
-					console.log(response['status'])
-					console.log(response.statusCode())
+			fetchJson(dataURL + versionValue[id] + "/" + nationValue[id] + "/" + nationValue[id] + "_" + typeValue[id] + ".json", 
+			function (data) {
+				typeData[id] = data;
+				var target = document.getElementById(shipID);
+				target.innerHTML = '';
+				var sorted = []
+				for(let ship in data){
+					sorted.push(ship);
 				}
-			})
+				sorted.sort(function(a, b){return data[a]['Tier'] - data[b]['Tier']});
+				for(let ship of sorted){
+					target.innerHTML += "<option value=" + ship + ">" + "Tier " + data[ship]['Tier'] + " " + ship + "</option>"
+				}
+				onChangeShip(shipID);
+			});
 		}
 		function onChangeShip(shipID){
 			var id = parseInt(shipID.slice(-1));
-			shipValue[id] = $('#' + shipID)[0].value;
+			shipValue[id] = document.getElementById(shipID).value;
 			generateShell('shell' + id);
 		}
 
 		function generateShell(shellID){
 			var id = parseInt(shellID.slice(-1));
-			selector = $('#' + shellID)[0];
+			var selector = document.getElementById(shellID);
 			selector.innerHTML = '';
 			for(let shell in typeData[id][shipValue[id]]){
 				if(shell.includes('Artillery')){
@@ -1205,13 +1166,13 @@
 		}
 		function onChangeShell(shellID){
 			var id = parseInt(shellID.slice(-1));
-			shellValue[id] = $('#' + shellID)[0].value;
+			shellValue[id] = document.getElementById(shellID).value;
 			generateShellType("shellType" + id);
 		}
 
 		function generateShellType(shellTypeID){
 			var id = parseInt(shellTypeID.slice(-1));
-			selector = $('#' + shellTypeID)[0];
+			var selector = document.getElementById(shellTypeID);
 			selector.innerHTML = '';
 			for(let shellType in typeData[id][shipValue[id]][shellValue[id]]){
 				selector.innerHTML += "<option value=" + shellType + ">" + shellType + "</option>";
@@ -1221,7 +1182,7 @@
 
 		function onChangeShellType(shellTypeID){
 			var id = parseInt(shellTypeID.slice(-1));
-			shellType[id] = $('#' + shellTypeID)[0].value;
+			shellType[id] = document.getElementById(shellTypeID).value;
 			if(autoApply[id]){
 				onSubmitPredefined(id);
 			}
@@ -1230,8 +1191,7 @@
 		const changeEvent = new Event('change');
 
 		function changeFormValue(elementID, newValue){
-			var event = new Event('change');
-			let element = $(elementID)[0];
+			let element = document.getElementById(elementID);
 			if(newValue != element.value){
 				element.value = newValue;
 				element.dispatchEvent(changeEvent);
@@ -1240,17 +1200,22 @@
 
 		function onSubmitPredefined(id){
 			var targetShell = typeData[id][shipValue[id]][shellValue[id]][shellType[id]];
-			changeFormValue("#shipName"  + id, shipValue[id] + " " + shellValue[id].slice(-1));
-			changeFormValue("#mv"        + id, targetShell["bulletSpeed"]);
-			changeFormValue("#caliber"   + id, targetShell["bulletDiametr"]);
-			changeFormValue("#krupp"     + id, targetShell["bulletKrupp"]);
-			changeFormValue("#mass"      + id, targetShell["bulletMass"]);
-			changeFormValue("#cD"        + id, targetShell["bulletAirDrag"]);
-			changeFormValue("#threshold" + id, targetShell["bulletDetonatorThreshold"]);
-			changeFormValue("#fusetime"  + id, targetShell["bulletDetonator"]);
-			changeFormValue("#ra0_"      + id, targetShell["bulletRicochetAt"]);
-			changeFormValue("#ra1_"      + id, targetShell["bulletAlwaysRicochetAt"]);
-			changeFormValue("#normal"    + id, targetShell['bulletCapNormalizeMaxAngle']);
+			var shipName = shipValue[id];
+			if(graphSettings.shortNames){
+				shipName = shipName.split("_").slice(1).join("");
+			}
+			shipName += " " + shellValue[id].slice(-1);
+			changeFormValue("shipName"  + id, shipName);
+			changeFormValue("mv"        + id, targetShell["bulletSpeed"]);
+			changeFormValue("caliber"   + id, targetShell["bulletDiametr"]);
+			changeFormValue("krupp"     + id, targetShell["bulletKrupp"]);
+			changeFormValue("mass"      + id, targetShell["bulletMass"]);
+			changeFormValue("cD"        + id, targetShell["bulletAirDrag"]);
+			changeFormValue("threshold" + id, targetShell["bulletDetonatorThreshold"]);
+			changeFormValue("fusetime"  + id, targetShell["bulletDetonator"]);
+			changeFormValue("ra0_"      + id, targetShell["bulletRicochetAt"]);
+			changeFormValue("ra1_"      + id, targetShell["bulletAlwaysRicochetAt"]);
+			changeFormValue("normal"    + id, targetShell['bulletCapNormalizeMaxAngle']);
 			var HESAPv = 0;
 			if(shellType[id] == 'AP'){
 				HESAPv = 0;
@@ -1259,30 +1224,20 @@
 			}else if(shellType[id] == 'CS'){
 				HESAPv = targetShell["alphaPiercingCS"];
 			}
-
-			changeFormValue("#HESAP"     + id, HESAPv);
+			changeFormValue("HESAP"     + id, HESAPv);
 		}
-
 		//Graphs
-
 		var v_angles = [];
 		var numAngles = 8;
 
-		function getFloatValues(elementId){
-			return parseFloat($('#' + elementId)[0].value);
-		}
-
-		function getIntValues(elementId){
-			return parseInt($('#' + elementId)[0].value);
-		}
+		function getFloatValues(elementId){return parseFloat(document.getElementById(elementId).value);}
+		function getIntValues(elementId){return parseInt(document.getElementById(elementId).value);}
 
 		var impactCharts = []
 		var angleCharts = []
 		var postCharts = []
 
-		function collectMake(){
-			makeGraphs(inputData);
-		}
+		function collectMake(){makeGraphs(inputData);}
 
 		var shellInstance;
 		var impactSize;
@@ -1295,19 +1250,16 @@
 
 		function completed(){
 			var graphId = this.chart.ctx.canvas.id;
-			var url = $('#' + graphId)[0].toDataURL("image/png");
-			var target = $('#' + graphId.slice(0, -1) + 'Link' + graphId.slice(-1))[0];
+			var url = document.getElementById(graphId).toDataURL("image/png");
+			var target = document.getElementById(
+				graphId.slice(0, -1) + 'Link' + graphId.slice(-1));
 			target.href = url;
 			target.download = this.chart.config.options.title.text + '.png';
 		}
 
-		const animationCommon = {
-			onComplete: completed
-		}
+		const animationCommon = {onComplete: completed}
 		
-		function addCommas(value, index, values) {
-			return value.toLocaleString();
-		}
+		function addCommas(value, index, values) {return value.toLocaleString();}
 
 		var targetedArmor;
 		var targetInclination;
@@ -1346,7 +1298,6 @@
 					v_ra1[k],
 					k
 				)
-
 			}
 			
 			switch(computationMethod){
@@ -1362,7 +1313,6 @@
 				case 'FE':
 					shellInstance.calcImpactForwardEuler();
 				break;
-
 			}
 			
 			shellInstance.calcAngles(v_armor, v_inclination);
@@ -1381,16 +1331,13 @@
 			
 			shipWidth = [];
             for(let i=0; i<impactSize; i++){
-                shipWidth.push(
-                    {
-                        x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, max),
-                        y: width
-                    }
-                )
+                shipWidth.push({
+					x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, max),
+					y: width
+                })
             }
 
-			//For downloading graphs
-			
+			//For downloading graphs			
 			//https://github.com/chartjs/Chart.js/issues/2830
 			//Chart.js defaults to transparent background - makes downloaded images look bad
 			Chart.plugins.register({
@@ -1406,12 +1353,9 @@
 					display: true,
 					labelString: "Distance from Launch (m)",
 				},
-				ticks:{
-					callback: addCommas,
-				}
+				ticks:{callback: addCommas,}
 			}];
 			
-
 			if(!(graphSettings['minDist'] === '')){
 				xAxesDistance[0].ticks['min'] = parseFloat(graphSettings['minDist']);
 			}
@@ -1500,7 +1444,8 @@
 				chartArray[index].options = config.options;
 				chartArray[index].update();
 			}else{
-				chartArray[index] = new Chart($("#" + target), config);
+				chartArray[index] = new Chart(
+					document.getElementById(target), config);
 			}
 		}	
 
@@ -1548,10 +1493,8 @@
 						break;
 					}
 				}
-
 				finalNumber = beforePoint + '.' + afterPoint;
 			}
-
 			// Remove trailing zeroes from fractional part before returning
 			return finalNumber.replace(/0+$/, '')
 		}
@@ -1590,24 +1533,17 @@
 				};
 			}
 		}
-		function penetrationToolTipLabel(x, y){
-			return '(' + x + 'm, ' + y + 'mm)';
-		}
-		function angleTooltipLabel(x, y){
-			return '(' + x + 'm, ' + y + '°)';
-		}
-		function velocityTooltipLabel(x, y){
-			return '(' + x + 'm, ' + y + 'm/s)';
-		}
-		function timeTooltipLabel(x, y){
-			return '(' + x + 'm, ' + y + 's)';
-		}
+		function penetrationToolTipLabel(x, y){return '(' + x + 'm, ' + y + 'mm)';}
+		function angleTooltipLabel(x, y){return '(' + x + 'm, ' + y + '°)';}
+		function velocityTooltipLabel(x, y){return '(' + x + 'm, ' + y + 'm/s)';}
+		function timeTooltipLabel(x, y){return '(' + x + 'm, ' + y + 's)';}
+		function filterLegend(item, chart){return !(item.text == '_remove_');}
 
 		const commonPointRadius = 0;
 		var graphShip = [true, true];
 		var colors = [
 			["#3e95cd", "#FFA500", "#FFD700"],
-			["#008000", "#FF0000", "#DC143C"],
+			["#008000", "#FF0000", "#FF0090"],
 		]
 
 		async function makeImpactCharts(){ //Set Impact
@@ -1628,18 +1564,12 @@
 				[1, 0, Module.impactDataIndex.tToTargetA.value, 0],
 			]
 
-			const tasks = points.map(
-				function(input){
-					return generatePoint(input[0], input[1], input[2], input[3]);
-				}
-			)
+			const tasks = points.map(function(input){return generatePoint(input[0], input[1], input[2], input[3]);})
 			const results = await Promise.all(tasks);
 			//console.log(results)
 			const yAxesPenetration = {
 				id: "Penetration", postition: "left",
-				scaleLabel: {
-					display: true,
-				},
+				scaleLabel: {display: true,},
 				ticks: {
 					stepSize: 100,
 					callback: addCommas,
@@ -1648,9 +1578,7 @@
 
 			const yAxesRightAngle = {
 				id: "Angle", position: "right",
-				scaleLabel: {
-					display: true,
-				},
+				scaleLabel: {display: true,},
 			}
 
 			var hRAL = yAxesRightAngle;
@@ -1661,21 +1589,15 @@
 			const  EPL = "Effective Penetration ";
 			const IAL = "Impact Angle ";
 			var configPC0 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
-					elements: {
-						line: {
-						cubicInterpolationMode: 'default' 
-						}
-					},
 					title: {
 						display: true,
 						text: 'Horizontal Penetration and Impact Angle'
 					},
 					scales: {
 						xAxes: xAxesDistance,
-						yAxes: [hRPL , hRAL,]
+						yAxes: [hRPL , hRAL,],
 					},
 					animation: animationCommon,
 				}
@@ -1708,8 +1630,7 @@
 			const EDP = "Effective Deck Penetration ";
 			const DIA = "Deck Impact Angle ";
 			var configPC1 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1717,7 +1638,7 @@
 					},
 					scales: {
 						xAxes: xAxesDistance,
-						yAxes: [vRPL, vRAL,]
+						yAxes: [vRPL, vRAL,],
 					},
 					animation: animationCommon,
 				}
@@ -1746,8 +1667,7 @@
 			const FTL = "Flight Time ";
 			//impactCharts[2] = new Chart($("#penChart2"), 
 			var configPC2 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1761,21 +1681,17 @@
 								display: true,
 								labelString: "Impact Velocity (m/s)",
 							},
-							ticks: {
-								stepSize: 100
-							}
+							ticks: {stepSize: 100}
 						},{
 							id: "Time", position: "right",
 							scaleLabel: {
 								display: true,
 								labelString: "Flight Time (s)",
 							},
-						}
-						]
+						}],
 					},
 					animation: animationCommon,
 				}
-
 			};
 			addTooltipCallbackImpact(configPC2, velocityTooltipLabel, timeTooltipLabel);
 			graphShip.map(function callback(currentValue, index){
@@ -1792,7 +1708,7 @@
 							yAxisID: "Time",
 							borderColor: colors[index][1], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},
-					)
+					);
 				}
 			});
 			createUpdateChart(impactCharts, 2, "penChart2", configPC2);
@@ -1818,6 +1734,64 @@
 					}
 				};
 			}
+		}
+
+		function generateAngleFillArmor(ship){
+			var fills = [[], [], []];
+			for(let i=0; i<impactSize; i++){
+				var armor = shellInstance.getAnglePoint(i, Module.angleDataIndex.armorD.value, ship);
+				var ra0 = shellInstance.getAnglePoint(i, Module.angleDataIndex.ra0D.value, ship);
+				var ra1 = shellInstance.getAnglePoint(i, Module.angleDataIndex.ra1D.value, ship);
+				if(armor > ra1){
+					fills[2].push({ //Armor - ra1
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: armor,
+					});
+				}
+				var armorRa1 = armor < ra1 ? armor : ra1; 
+				if(armorRa1 > ra0){
+					fills[1].push({ //ArmorRa1 - Ra0
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: armorRa1,
+					});
+				}
+				var armorRa0 = armor < ra0 ? armor : ra0;
+				if(true){
+					fills[0].push({ //ArmorRa0 - Bottom
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: armorRa0,
+					});
+				}
+			}
+			return fills;
+		}
+
+		function generateAngleFillFuse(ship){
+			var fills = [[], [], []];
+			for(let i=0; i<impactSize; i++){
+				var fuse = shellInstance.getAnglePoint(i, Module.angleDataIndex.fuseD.value, ship);
+				var ra0 = shellInstance.getAnglePoint(i, Module.angleDataIndex.ra0D.value, ship);
+				var ra1 = shellInstance.getAnglePoint(i, Module.angleDataIndex.ra1D.value, ship);
+				var fuseRa0 = fuse < ra0 ? ra0 : fuse;
+				var fuseRa1 = fuse < ra1 ? ra1 : fuse;
+				if(fuse < ra0){
+					fills[0].push({
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: fuse
+					});
+				}
+				if(fuseRa0 < ra1){
+					fills[1].push({
+						x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+						y: fuseRa0
+					});
+				}
+				fills[2].push({
+					x: shellInstance.getImpactPoint(i, Module.impactDataIndex.distance.value, ship),
+					y: fuseRa1
+				});
+			}
+			return fills;
 		}
 
 		async function makeAngleCharts(){//Set Angle Charts
@@ -1847,8 +1821,7 @@
 			//var FTL = " ";
 			//angleCharts[0] = new Chart($("#angleChart0"), 
 			var configAC0 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1862,19 +1835,17 @@
 								display: true,
 								labelString: "Lateral Angle (°)",
 							},
-							ticks:{
-								min: 0
-							}
+							ticks:{min: 0}
 						}]
 					},
+					legend: {labels: {filter: filterLegend},},
 					animation: animationCommon,
 				}
 			};
 			addTooltipCallbackAngles(configAC0);
 			graphShip.map(function callback(currentValue, index){
 				if(currentValue){
-					configAC0.data.datasets.push(
-						{
+					configAC0.data.datasets.push({
 							data: results[index*3+0], showLine: true,
 							label: armorL + shipName[index], 
 							yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
@@ -1891,15 +1862,33 @@
 							borderColor: colors[index][2], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},
 					);
+					if(graphSettings['enableFills']){
+						var fills = generateAngleFillArmor(index);
+						configAC0.data.datasets.push(
+							{
+								data: fills[2], showLine: true, borderWidth: 0,
+								label: '_remove_', 
+								yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
+								borderColor: colors[index][0], fill: '-1', pointRadius: 0, pointHitRadius: 0
+							},{
+								data: fills[1], showLine: true, borderWidth: 0,
+								label: '_remove_', 
+								yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][2]),
+								borderColor: colors[index][2], fill: '-3', pointRadius: 0, pointHitRadius: 0
+							},{
+								data: fills[0], showLine: true, borderWidth: 0,
+								label: '_remove_', 
+								yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][1]),
+								borderColor: colors[index][1], fill: true, pointRadius: 0, pointHitRadius: 0
+							},
+						);
+					}
 				}
 			});
 			createUpdateChart(angleCharts, 0, "angleChart0", configAC0);
 			const fuseL = "Minimum Fusing Angle ";
-			//var FTL = " ";
-			//angleCharts[1] = new Chart($("#angleChart1"), 
 			var configAC1 = {
-				type: 'scatter',
-				data: {datasets: []},
+				type: 'scatter', data: {datasets: []},
 				options: {
 					title: {
 						display: true,
@@ -1913,11 +1902,10 @@
 								display: true,
 								labelString: "Lateral Angle (°)",
 							},
-							ticks:{
-								min: 0
-							}
-						}]
+							ticks:{min: 0}
+						}],
 					},
+					legend: {labels: {filter: filterLegend},},
 					animation: animationCommon,
 				}
 			};
@@ -1942,15 +1930,34 @@
 							borderColor: colors[index][2], fill: false, pointRadius: commonPointRadius, pointHitRadius: 5
 						},
 					);
+					if(graphSettings.enableFills){
+						var fills = generateAngleFillFuse(index);
+						configAC1.data.datasets.push(
+							{
+								data: fills[0], showLine: true, borderWidth: 0,
+								label: '_remove_', 
+								yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][2]),
+								borderColor: colors[index][2], fill: '-2', pointRadius: 0, pointHitRadius: 0
+							},{
+								data: fills[1], showLine: true, borderWidth: 0,
+								label: '_remove_', 
+								yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][1]),
+								borderColor: colors[index][1], fill: '-2', pointRadius: 0, pointHitRadius: 0
+							},{
+								data: fills[2], showLine: true, borderWidth: 0,
+								label: '_remove_', 
+								yAxisID: "angle", backgroundColor: Samples.utils.transparentize(colors[index][0]),
+								borderColor: colors[index][0], fill: 'end', pointRadius: 0, pointHitRadius: 0
+							},
+						);
+					}
 				}
 			});
 			createUpdateChart(angleCharts, 1, "angleChart1", configAC1);
 		}
 
 		function addTooltipCallbackPostPen(config){
-			config.options['tooltips'] = {
-				enabled: true, callbacks: {}
-			}
+			config.options['tooltips'] = {enabled: true, callbacks: {}}
 			if(!(graphSettings['rounding'] === '' || graphSettings['rounding'] === '0')){
 				var decimalPlaces = parseInt(graphSettings['rounding']);
 				config.options.tooltips.callbacks = {
@@ -1972,13 +1979,12 @@
 			return '(' + x + ' m, ' + y + ' m)';
 		}
 		async function makePostPenCharts(){ //Set PostPen
-			const width = $('#width').value;
-			const WFL = "Fused ";
-			const NFL = "No Fusing ";
+			const width = document.getElementById('width').value;
+			const WFL = "Fused ", NFL = "No Fusing ";
 			var configs = [];
 			for(let i=0; i<numAngles; i++){
 				var str = "Lateral Angle " + i + ": " + v_angles[i] + "°";
-				$("#AT" + i).children('text')[0].textContent = str;
+				document.getElementById("AT" + i).textContent = str;
 
 				const points = [
 					[0, 2, Module.postPenDataIndex.xwf.value, i],
@@ -1988,9 +1994,7 @@
 				]
 
 				const tasks = points.map(
-					function(input){
-						return generatePoint(input[0], input[1], input[2], input[3]);
-					}
+					function(input){return generatePoint(input[0], input[1], input[2], input[3]);}
 				)
 				const results = await Promise.all(tasks);
 
@@ -2015,7 +2019,7 @@
 									display: true,
 									labelString: "Shell Detonation Distance (m)",
 								},
-							}]
+							}],
 						},
 						animation: animationCommon,
 					}
@@ -2023,20 +2027,20 @@
 				addTooltipCallbackPostPen(configs[i]);
 				graphShip.map(function callback(currentValue, index){
 					if(currentValue){
+						var fill = graphSettings.enableFills;
 						configs[i].data.datasets.push(
 							{
 								data: results[2*index+0], showLine: true,
 								label: WFL + shipName[index], backgroundColor: Samples.utils.transparentize(colors[index][0]),
-								borderColor: colors[index][0], fill: true, pointRadius: commonPointRadius, pointHitRadius: 5
+								borderColor: colors[index][0], fill: fill, pointRadius: commonPointRadius, pointHitRadius: 5
 							},{
 								data: results[2*index+1], showLine: true,
 								label: NFL + shipName[index], backgroundColor: Samples.utils.transparentize(colors[index][1]),
-								borderColor: colors[index][1], fill: true, pointRadius: commonPointRadius, pointHitRadius: 5
+								borderColor: colors[index][1], fill: fill, pointRadius: commonPointRadius, pointHitRadius: 5
 							},
 						);
 					}
 				});
-
 				createUpdateChart(postCharts, i, "postPen" + i, configs[i]);
 			}
 		}
