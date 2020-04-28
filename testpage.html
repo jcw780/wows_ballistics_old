@@ -20,8 +20,6 @@
 	</head>
 
 	<body>
-		<script src="https://unpkg.com/wasm-feature-detect/dist/umd/index.js"></script>
-
 		<script src="shellWasm.js"></script>
 		<script src="shellWasmV.js"></script>
 
@@ -30,6 +28,8 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		
+		<script src="https://unpkg.com/wasm-feature-detect/dist/umd/index.js"></script>
 		<script defer src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js'></script>
 		<script defer src='https://chartjs.org/samples/latest/utils.js'></script>
 		<style>
@@ -799,6 +799,8 @@
 			'enableFills': false,
 			'shortNames': true,
 		});
+		
+		var autoApply = [true, true];
 
 		function setComputation(value){computationMethod = value;}
 		function addFormChange(){
@@ -868,7 +870,7 @@
 				});
 			});
 			
-			function autoApply(){autoApply[this.id.slice(-1)] = this.checked;}
+			function autoApplyF(){autoApply[parseInt(this.id.slice(-1))] = this.checked;}
 			function graphShips(){
 				console.log(this);
 				graphShip[this.id.slice(-1)] = this.checked;
@@ -878,7 +880,7 @@
 				[changeGraphButtons, 
 					['enableFills', 'shortNames']
 				], 
-				[autoApply,
+				[autoApplyF,
 					['autoApply0', 'autoApply1']
 				],
 				[graphShips,
@@ -1058,7 +1060,6 @@
 		var shellValue = [];
 		var typeData = [];
 		var shellType = [];
-		var autoApply = [true, true];
 		var initialized = false;
         var compiled = false;
 		var dataURL = "static/data/"
@@ -1183,6 +1184,7 @@
 		function onChangeShellType(shellTypeID){
 			var id = parseInt(shellTypeID.slice(-1));
 			shellType[id] = document.getElementById(shellTypeID).value;
+			console.log(id, autoApply, autoApply[id]);
 			if(autoApply[id]){
 				onSubmitPredefined(id);
 			}
