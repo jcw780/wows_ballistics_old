@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 var opts = Object.defineProperty({}, 'passive', {
     get: function() {
     supportsPassive = true;
     }
 });
 let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
-=======
->>>>>>> master
 var computationMethod = 'FE';
 var inputData = Object.seal({
     'mv'         : [  805,  805],
@@ -21,11 +18,7 @@ var inputData = Object.seal({
     'ra1_'       : [60, 60],
     'HESAP'      : [0, 0],
     'shellType'  : ['AP', 'AP'],
-<<<<<<< HEAD
     'angle'      : [0, 5, 10, 15, 20, 25, 30, 35],
-=======
-    'angle'      : [0, 5, 10, 25, 20, 25, 30, 35],
->>>>>>> master
     'armor'      : 70,
     'inclination': 0,
     'width'      : 18,
@@ -138,15 +131,6 @@ function addFormChange(){
 //Buttons 
 //Add Hide buttons
 addTitles();
-<<<<<<< HEAD
-=======
-var opts = Object.defineProperty({}, 'passive', {
-    get: function() {
-    supportsPassive = true;
-    }
-});
-let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
->>>>>>> master
 document.getElementById("generate").addEventListener(touchEvent, collectMake, opts);
 
 function changeChevron(e){
