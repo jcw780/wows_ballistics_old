@@ -1,8 +1,9 @@
-var opts = Object.defineProperty({}, 'passive', {
+/*var opts = Object.defineProperty({}, 'passive', {
     get: function() {
     supportsPassive = true;
     }
-});
+});*/
+const opts = {passive: true}
 let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 var computationMethod = 'FE';
 var inputData = Object.seal({
