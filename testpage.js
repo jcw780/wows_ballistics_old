@@ -1217,7 +1217,7 @@ async function makePostPenCharts(){ //Set PostPen
     const WFL = "Fused ", NFL = "No Fusing ";
     var configs = [];
     for(let i=0; i<numAngles; i++){
-        var str = "Lateral Angle " + i + ": " + v_angles[i] + "°";
+        var str = "Lateral Angle " + i + ": " + v_angles[i] + '°';
         document.getElementById("AT" + i).textContent = str;
 
         const points = [
