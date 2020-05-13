@@ -1,0 +1,40 @@
+{
+    "PUSC506_Perth_1942": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.3297,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2609.0,
+                "bulletMass": 50.8,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 841.0,
+                "name": "PUPA002_152MM_AP_PERTH"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.3297,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 1.0,
+                "bulletMass": 50.8,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 841.0,
+                "name": "PUPA001_152MM_HE_PERTH"
+            }
+        },
+        "Nation": "Commonwealth",
+        "Tier": 6,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    }
+}

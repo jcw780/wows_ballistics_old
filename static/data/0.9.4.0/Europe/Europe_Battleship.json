@@ -1,0 +1,40 @@
+{
+    "PWSB504_Viribus_Unitis": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.435,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 6.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 51.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 2800.0,
+                "bulletMass": 450.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 800.0,
+                "name": "PWPA004_305MM_AP_VIRIBUS"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 51.0,
+                "bulletAirDrag": 0.435,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.305,
+                "bulletKrupp": 1.0,
+                "bulletMass": 450.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 800.0,
+                "name": "PWPA003_305MM_HE_VIRIBUS"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 5,
+        "Type": "Battleship",
+        "ammo_num": 1
+    }
+}

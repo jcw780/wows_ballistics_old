@@ -1,0 +1,25 @@
+{
+    "PWSC101_Gryf": {
+        "Artillery0": {
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 20.0,
+                "bulletAirDrag": 0.3177,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.12,
+                "bulletKrupp": 480.0,
+                "bulletMass": 24.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 900.0,
+                "name": "PWPA006_120_HE_GRYF"
+            }
+        },
+        "Nation": "Europe",
+        "Tier": 1,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    }
+}

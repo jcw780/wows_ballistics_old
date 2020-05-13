@@ -1,0 +1,139 @@
+{
+    "PZSC101_Cheng_An": {
+        "Artillery0": {
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 21.0,
+                "bulletAirDrag": 0.3391,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 68.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.127,
+                "bulletKrupp": 1.0,
+                "bulletMass": 23.45,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 725.0,
+                "name": "PZPA017_127_HE_TYPE89"
+            }
+        },
+        "Nation": "Pan_Asia",
+        "Tier": 1,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PZSC506_Huang_he": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2216.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 950.0,
+                "name": "PZPA022_152MM_HUANGHE_AP"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 25.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 6.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 950.0,
+                "name": "PZPA021_152MM_HUANGHE_HE"
+            }
+        },
+        "Nation": "Pan_Asia",
+        "Tier": 6,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PZSC508_Irian": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.5,
+                "bulletDetonator": 0.025,
+                "bulletDetonatorThreshold": 25.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 2216.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 950.0,
+                "name": "PZPA023_152MM_B35_IRIAN"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 30.0,
+                "bulletAirDrag": 0.321,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.01,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.152,
+                "bulletKrupp": 6.0,
+                "bulletMass": 55.0,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 950.0,
+                "name": "PZPA024_152MM_OFU35_IRIAN"
+            }
+        },
+        "Nation": "Pan_Asia",
+        "Tier": 8,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    },
+    "PZSC518_Martel_Wukong": {
+        "Artillery0": {
+            "AP": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 0.0,
+                "bulletAirDrag": 0.33,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 7.0,
+                "bulletDetonator": 0.033,
+                "bulletDetonatorThreshold": 34.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 2434.0,
+                "bulletMass": 134.0,
+                "bulletRicochetAt": 45.0,
+                "bulletSpeed": 845.0,
+                "name": "PZPA030_203MM_AP_MARTEL_CN"
+            },
+            "HE": {
+                "alphaPiercingCS": 0,
+                "alphaPiercingHE": 34.0,
+                "bulletAirDrag": 0.3296,
+                "bulletAlwaysRicochetAt": 60.0,
+                "bulletCapNormalizeMaxAngle": 8.0,
+                "bulletDetonator": 0.001,
+                "bulletDetonatorThreshold": 2.0,
+                "bulletDiametr": 0.203,
+                "bulletKrupp": 1.0,
+                "bulletMass": 123.82,
+                "bulletRicochetAt": 91.0,
+                "bulletSpeed": 876.0,
+                "name": "PZPA029_203MM_HE_MARTEL_CN"
+            }
+        },
+        "Nation": "Pan_Asia",
+        "Tier": 8,
+        "Type": "Cruiser",
+        "ammo_num": 1
+    }
+}
