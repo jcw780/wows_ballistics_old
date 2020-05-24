@@ -1,6 +1,6 @@
-# World of Warships Ballistics Calculator
+# World of Warships Ballistics Calculator - Old
 ### Link
-https://jcw780.github.io/wows_ballistics/
+https://jcw780.github.io/wows_ballistics_old/
 ## Code Information
 ### Languages
 - HTML, CSS, JS
