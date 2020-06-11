@@ -18,10 +18,9 @@ https://jcw780.github.io/wows_ballistics_old/
 ### Calculate AP performance post penetration
 - Shell detonation distance after penetration - Checking whether the armor is thick enough to arm the shell
 ## Development Status
-- Currently still recently released so expect changes 
-- Calculations may be refined if contradicting data is provided
+- This site is now deprecated - switch to the [new site](https://jcw780.github.io/wows_ballistics/)
 ### Possible Future Features
-- Raw data
+- This site is now deprecated - switch to the [new site](https://jcw780.github.io/wows_ballistics/)
 ### Updates
 #### 3/13/2020 [108216c](https://github.com/jcw780/wows_ballistics/commit/108216c78bc83239472077c694c723992b046579)
 - Directly download graphs without browser extension
